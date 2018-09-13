@@ -1,5 +1,5 @@
 
-````
+```text
 shell> cat /etc/rsyncd.conf 
 uid=root
 gid=root
@@ -22,6 +22,6 @@ shell> sudo service rsync restart
 shell> rsync -avz --exclude="*.log" --progress test suhua@192.168.1.229::www
 ```
 
-## 参考
+参考
 
 1. [rsync命令](http://man.linuxde.net/rsync)
