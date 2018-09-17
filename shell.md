@@ -12,4 +12,11 @@ A5F5E9413C558753025495DAF6A0A7B47E55402B  TEST
 # 大写转换成小写
 shell> echo 'A5F5E9413C558753025495DAF6A0A7B47E55402B' | tr A-Z a-z
 a5f5e9413c558753025495daf6a0a7b47e55402b
+
+# bash 快捷键
+ctrl+a:光标移到行首
+ctrl+e:光标移到行尾
+ctrl+l:清屏，相当于clear
+ctrl+u: 清除光标前至行首间的所有内容
+https://blog.csdn.net/force_eagle/article/details/7999153
 ```
