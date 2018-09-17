@@ -32,3 +32,7 @@ https://askubuntu.com/questions/685775/bash-get-md5-of-online-file
 ```
 
 - [Bash get MD5 of online file](https://askubuntu.com/questions/685775/bash-get-md5-of-online-file)
+
+## 碰撞攻击
+
+- [Collision attack](https://en.wikipedia.org/wiki/Collision_attack)
