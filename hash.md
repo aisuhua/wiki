@@ -27,8 +27,6 @@ fclose($fp);
 ```shell
 curl -sL http://example.com/some-file.html | md5sum
 wget http://example.com/some-file.html -O- | md5sum
-
-https://askubuntu.com/questions/685775/bash-get-md5-of-online-file
 ```
 
 - [Bash get MD5 of online file](https://askubuntu.com/questions/685775/bash-get-md5-of-online-file)
