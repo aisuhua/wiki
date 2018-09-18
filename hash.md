@@ -3,7 +3,6 @@
 md5
 
 ```php
-# md5
 md5(file_get_contents('http://example.com/some-file.html');
 md5_file('http://example.com/some-file.html');
 ```
