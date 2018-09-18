@@ -20,6 +20,19 @@ A5F5E9413C558753025495DAF6A0A7B47E55402B  TEST
 shell> echo 'A5F5E9413C558753025495DAF6A0A7B47E55402B' | tr A-Z a-z
 a5f5e9413c558753025495daf6a0a7b47e55402b
 ```
+
+后台执行进程
+
+```shell
+shell> nohup php demo.php > /tmp/demo.log 2>&1 &
+```
+
+批量杀死进程
+
+```shell
+shell> ps -ef | grep demo.php | grep -v grep | awk '{print $2}' | xargs kill -9
+```
+
 bash 快捷键
 
 ```shell
