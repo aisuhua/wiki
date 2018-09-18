@@ -1,15 +1,20 @@
 ## PHP
 
+md5
+
 ```php
 # md5
 md5(file_get_contents('http://example.com/some-file.html');
 md5_file('http://example.com/some-file.html');
-
-# ed2k
-hash('md4', file_get_contents('20180918_174439.jpg'));
 ```
 
-增量计算 hash 值
+ed2k
+
+```php
+echo hash_file('md4', 'example.txt');
+```
+
+incremental hashing
 
 ```php
 $fp = fopen($file, "r");
