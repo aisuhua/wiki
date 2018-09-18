@@ -21,7 +21,3 @@ shell> sudo service rsync restart
 # 将本地文件备份到远程服务器
 shell> rsync -avz --exclude="*.log" --progress test suhua@192.168.1.229::www
 ```
-
-参考
-
-1. [rsync命令](http://man.linuxde.net/rsync)
