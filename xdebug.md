@@ -1,8 +1,8 @@
 phpstorm
 
 - Add CLI Interpreter. `File > Settings > Languages & Frameworks > PHP`
-- Set Xdebug Port (eg. 9001). `File > Settings > Languages & Frameworks > PHP > Debug > Xdebug`
-- Add a server for the project. `File > Settings > Languages & Frameworks > PHP > Debug > Servers`
+- Set Xdebug Port (eg. 9001). `... > PHP > Debug > Xdebug`
+- Add a server for the project. `... > PHP > Debug > Servers`
 - Apply and OK.
 - Add PHP Web Application. `Run > Edit Configurations > + PHP Web Application`
 
