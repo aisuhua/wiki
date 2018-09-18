@@ -21,9 +21,14 @@ debug
 ```shell
 shell> curl http://www.example.com/demo.php?XDEBUG_SESSION_START=session_name
 shell> curl -H 'Cookie: XDEBUG_SESSION=session_name' http://www.example.com/demo.php
+
+https://www.jetbrains.com/phpstorm/marklets/
 ```
 
 how it work?
 
 ![how it work?](https://xdebug.org/images/docs/dbgp-setup.gif)
+
+
+
 
