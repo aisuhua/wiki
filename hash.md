@@ -1,4 +1,4 @@
-## PHP
+## php
 
 md5
 
@@ -27,14 +27,12 @@ $hash = hash_final($ctx);
 fclose($fp);
 ```
 
-## Shell
+## shell
 
 ```shell
 curl -sL http://example.com/some-file.html | md5sum
 wget http://example.com/some-file.html -O- | md5sum
 ```
-
-## Links
 
 - [will-md5file-contents-as-string-equal-md5-file-path-to-file](https://stackoverflow.com/questions/10738866/will-md5file-contents-as-string-equal-md5-file-path-to-file)
 - [Ed2k-hash](https://wiki.anidb.info/w/Ed2k-hash)、
