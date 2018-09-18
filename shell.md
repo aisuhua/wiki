@@ -28,5 +28,3 @@ ctrl+e:光标移到行尾
 ctrl+l:清屏，相当于clear
 ctrl+u: 清除光标前至行首间的所有内容
 ```
-
-- [bash快捷建](https://blog.csdn.net/force_eagle/article/details/7999153)
