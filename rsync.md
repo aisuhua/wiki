@@ -19,7 +19,7 @@ hosts allow = *
 path = /www/web/xdebug
 ```
 
-restart
+重启
 
 ```shell
 shell> sudo service rsync restart
