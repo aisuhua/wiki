@@ -19,8 +19,8 @@ xdebug.remote_port=9001
 debug
 
 ```shell
-shell> curl http://www.example.com/demo.php?XDEBUG_SESSION_START=session_name
-shell> curl -H 'Cookie: XDEBUG_SESSION=session_name' http://www.example.com/demo.php
+shell> curl http://www.example.com?XDEBUG_SESSION_START=session_name
+shell> curl -H 'Cookie: XDEBUG_SESSION=session_name' http://www.example.com
 
 https://www.jetbrains.com/phpstorm/marklets/
 ```
