@@ -10,8 +10,8 @@ hash('md4', file_get_contents('20180918_174439.jpg'));
 ```
 
 - [will-md5file-contents-as-string-equal-md5-file-path-to-file](https://stackoverflow.com/questions/10738866/will-md5file-contents-as-string-equal-md5-file-path-to-file)
-- [ed2k URI scheme](https://en.wikipedia.org/wiki/Ed2k_URI_scheme)
-- [Ed2k-hash](https://wiki.anidb.info/w/Ed2k-hash)
+- [Ed2k-hash](https://wiki.anidb.info/w/Ed2k-hash)、
+- [PHP生成Ed2k(电驴)连接](https://cevin.me/archives/php-generate-ed2k-link.html)
 
 增量计算 hash 值
 
