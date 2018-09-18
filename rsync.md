@@ -1,5 +1,7 @@
 
-```text
+/etc/rsyncd.conf 
+
+```shell
 shell> cat /etc/rsyncd.conf 
 uid=root
 gid=root
@@ -15,9 +17,16 @@ hosts allow = *
 
 [www]
 path = /www/web/xdebug
+```
 
+restart
+
+```shell
 shell> sudo service rsync restart
+```
 
-# 将本地文件备份到远程服务器
+将本地文件备份到远程服务器
+
+```shell
 shell> rsync -avz --exclude="*.log" --progress test suhua@192.168.1.229::www
 ```
