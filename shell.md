@@ -24,7 +24,7 @@ a5f5e9413c558753025495daf6a0a7b47e55402b
 后台执行进程
 
 ```shell
-shell> nohup php demo.php > /tmp/demo.log 2>&1 &
+shell> nohup /usr/bin/php demo.php > /tmp/demo.log 2>&1 &
 ```
 
 批量杀死进程
