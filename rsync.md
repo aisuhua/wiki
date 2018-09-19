@@ -34,5 +34,12 @@ shell> rsync -avz /data /backup
 将本地文件同步到远程服务器
 
 ```shell
-shell> rsync -avz --exclude="*.log" --delete --progress test suhua@192.168.1.2::www
+shell> rsync -avz --exclude="*.log" --progress test suhua@192.168.1.2::www
 ```
+
+Options:
+
+```shell
+--delete 
+```
+
