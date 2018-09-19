@@ -16,7 +16,7 @@ hosts allow = *
 # hosts deny = *
 
 [www]
-path = /www/web/xdebug
+path = /www/web
 ```
 
 重启
@@ -34,5 +34,5 @@ shell> rsync -avz /data /backup
 将本地文件同步到远程服务器
 
 ```shell
-shell> rsync -avz --exclude="*.log" --delete --progress test suhua@192.168.1.229::www
+shell> rsync -avz --exclude="*.log" --delete --progress test suhua@192.168.1.2::www
 ```
