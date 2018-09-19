@@ -25,14 +25,14 @@ path = /www/web/xdebug
 shell> sudo service rsync restart
 ```
 
-本地同步文件
+同步本地文件
 
 ```shell
 shell> rsync -avz /data /backup
 ```
 
-将本地文件备份到远程服务器
+将本地文件同步到远程服务器
 
 ```shell
-shell> rsync -avz --exclude="*.log" --progress test suhua@192.168.1.229::www
+shell> rsync -avz --exclude="*.log" --delete --progress test suhua@192.168.1.229::www
 ```
