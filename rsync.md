@@ -40,6 +40,7 @@ shell> rsync -avz --exclude="*.log" --progress test suhua@192.168.1.2::www
 Options:
 
 ```shell
---delete 
+--delete  delete extraneous files from destination dirs
+--exclude 可使用通配符（子目录有也会匹配到），也可以指定完整的目录
 ```
 
