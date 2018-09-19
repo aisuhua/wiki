@@ -25,6 +25,12 @@ path = /www/web/xdebug
 shell> sudo service rsync restart
 ```
 
+本地同步文件
+
+```shell
+shell> rsync -avz /data /backup
+```
+
 将本地文件备份到远程服务器
 
 ```shell
