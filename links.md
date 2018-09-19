@@ -1,3 +1,4 @@
 - [php-fpm的status可以查看汇总信息和详细信息](https://www.cnblogs.com/tinywan/p/6848269.html)
 - [Zero-configuration Web Application Debugging with Xdebug and PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm)
 - [Ubuntu 配置生成器 ](https://mirrors.ustc.edu.cn/repogen/)
+- [rsync命令](http://man.linuxde.net/rsync)
