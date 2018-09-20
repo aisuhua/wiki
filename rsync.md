@@ -1,7 +1,7 @@
 
 /etc/rsyncd.conf 
 
-```shell
+```sh
 shell> cat /etc/rsyncd.conf 
 uid=root
 gid=root
@@ -21,25 +21,25 @@ path = /www/web
 
 重启
 
-```shell
+```sh
 shell> sudo service rsync restart
 ```
 
 同步本地文件
 
-```shell
+```sh
 shell> rsync -avz /data /backup
 ```
 
 将本地文件同步到远程服务器
 
-```shell
+```sh
 shell> rsync -avz --exclude="*.log" --progress test suhua@192.168.1.2::www
 ```
 
 Options:
 
-```shell
+```sh
 --delete  delete extraneous files from destination dirs
 --exclude 可使用通配符（子目录有也会匹配到），也可以指定完整的目录
 ```
