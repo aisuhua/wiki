@@ -2,7 +2,7 @@ install
 
 ```sh
 shell> apt-get install xl2tpd
-``
+```
 
 setting
 
@@ -77,11 +77,6 @@ start
 shell> systemctl start xl2tpd
 ```
 
-check 
-
-```sh
-shell> ip address
-```
 
 
 
