@@ -2,3 +2,4 @@
 - [Zero-configuration Web Application Debugging with Xdebug and PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm)
 - [Ubuntu 配置生成器 ](https://mirrors.ustc.edu.cn/repogen/)
 - [rsync命令](http://man.linuxde.net/rsync)
+- [Add bash syntax highlighting](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
