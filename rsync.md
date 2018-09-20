@@ -1,3 +1,15 @@
+install
+
+```sh
+shell> apt-get install rsync
+```
+
+setting
+
+```sh
+shell> vim /etc/default/rsync
+RSYNC_ENABLE=true
+```
 
 /etc/rsyncd.conf 
 
@@ -12,17 +24,17 @@ pid file=/var/run/rsyncd.pid
 lock file=/var/run/rsyncd.lock
 secrets file = /etc/rsyncd.sec
 read only = no
-hosts allow = *
-# hosts deny = *
+hosts allow = 192.168.1.0/24
+hosts deny = *
 
 [www]
 path = /www/web
 ```
 
-重启
+启动
 
 ```sh
-shell> sudo service rsync restart
+shell> service rsync start
 ```
 
 同步本地文件
