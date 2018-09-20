@@ -1,6 +1,6 @@
 快速生成大文件
 
-```shell
+```sh
 sell> dd if=/dev/zero of=test bs=1M count=1000
 记录了1000+0 的读入
 记录了1000+0 的写出
@@ -9,35 +9,50 @@ sell> dd if=/dev/zero of=test bs=1M count=1000
 
 小写转换成大写
 
-```shell
+```sh
 shell> sha1sum test | tr a-z A-Z
 A5F5E9413C558753025495DAF6A0A7B47E55402B  TEST
 ```
 
 大写转换成小写
 
-```shell
+```sh
 shell> echo 'A5F5E9413C558753025495DAF6A0A7B47E55402B' | tr A-Z a-z
 a5f5e9413c558753025495daf6a0a7b47e55402b
 ```
 
 后台执行进程
 
-```shell
+```sh
 shell> nohup /usr/bin/php demo.php > /tmp/demo.log 2>&1 &
 ```
 
 批量杀死进程
 
-```shell
+```sh
 shell> ps -ef | grep demo.php | grep -v grep | awk '{print $2}' | xargs kill -9
 ```
 
 bash 快捷键
 
-```shell
+```sh
 ctrl+a:光标移到行首
 ctrl+e:光标移到行尾
 ctrl+l:清屏，相当于clear
 ctrl+u: 清除光标前至行首间的所有内容
 ```
+
+查看特定端口所属进程
+
+```sh
+shell> netstat -anp | grep :4730
+```
+
+查看进程运行情况
+
+```sh
+shell> ps -ef | grep php
+shell> ps -aux | grep php
+```
+
+
