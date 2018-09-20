@@ -49,25 +49,26 @@ ipparam route:10.10.0.0/16,10.11.0.0/16,10.21.0.0/16,10.22.0.0/16,10.220.0.0/16,
 
 shell> vim /etc/ppp/ip-up.d/01-ipparam.sh
 #!/bin/sh
+  
 if [ -n "${5}" -a -n "${6}" ]; then
-interface=${1}
-remoteip=${5}
-ipparams=(${6//;/ })
-for ipparam in ${ipparams[@]} ; do
-kv=(${ipparam//:/ })
-case ${kv[0]} in
-route)
-values=(${kv[1]//,/ })
-for value in ${values[@]} ; do
-if [ `ip route | grep -c "${value}"` -eq 0 ]; then
-ip route add ${value} via ${remoteip} dev ${interface} proto static
-fi
-done
-;;
-*)
-;;
-esac
-done
+   interface=${1}
+   remoteip=${5}
+   ipparams=(${6//;/ })
+   for ipparam in ${ipparams[@]} ; do
+       kv=(${ipparam//:/ })
+       case ${kv[0]} in
+           route)
+               values=(${kv[1]//,/ })
+               for value in ${values[@]} ; do
+                   if [ `ip route | grep -c "${value}"` -eq 0 ]; then
+                       ip route add ${value} via ${remoteip} dev ${interface} proto static
+                   fi
+               done
+               ;;
+           *)
+               ;;
+       esac
+   done
 fi
 ```
 
