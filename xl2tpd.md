@@ -6,7 +6,7 @@ shell> apt-get install xl2tpd
 
 setting
 
-```
+```sh
 shell> /etc/xl2tpd/xl2tpd.conf
 [global]
 access control = no
