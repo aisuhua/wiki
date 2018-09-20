@@ -2,4 +2,5 @@
 2. [shell](shell)
 3. [hash](hash)
 4. [xdebug](xdebug)
+5. [thrift](thrift)
 5. [links](links)
