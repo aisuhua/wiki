@@ -23,4 +23,32 @@ function size_format($bytes, $length = 2, $max_unit = '')
     return round($bytes, $length) . $extension;
 }
 
+// Example:
+echo size_format(2184689650);
+// output: 2.03GB
 ```
+
+格式化时长
+
+```php
+/**
+ *  将时长格式化为：x小时x分钟x秒
+ *
+ * @param int $seconds
+ * @return string
+ */
+function format_seconds($seconds) 
+{
+    $hours = floor($seconds / 3600);
+    $minutes = floor(($seconds / 60) % 60);
+    $seconds = $seconds % 60;
+
+    $result = "{$hours}小时{$minutes}分钟{$seconds}秒";
+    return $result;
+}
+
+// Example:
+echo format_seconds(5461);
+// output: 1小时31分钟1秒
+```
+
