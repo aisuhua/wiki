@@ -58,6 +58,6 @@ shell> ps -aux | grep php
 删除文件名带 `-` 的文件
 
 ```sh
-rm ./-A_NNMHDB3MW3eB
+shell> rm ./-A_NNMHDB3MW3eB
 ```
 
