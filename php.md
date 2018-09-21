@@ -25,7 +25,8 @@ function size_format($bytes, $length = 2, $max_unit = '')
 
 // Example:
 echo size_format(2184689650);
-// output: 2.03GB
+// Output: 
+// 2.03GB
 ```
 
 格式化时长
@@ -48,6 +49,7 @@ function format_seconds($seconds)
 
 // Example:
 echo format_seconds(5461);
-// output: 1小时31分钟1秒
+// Output: 
+// 1小时31分钟1秒
 ```
 
