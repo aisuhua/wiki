@@ -55,4 +55,9 @@ shell> ps -ef | grep php
 shell> ps -aux | grep php
 ```
 
+删除文件名带 `-` 的文件
+
+```sh
+rm -rf ./-A_NNMHDB3MW3eB
+```
 
