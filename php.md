@@ -43,8 +43,7 @@ function format_seconds($seconds)
     $minutes = floor(($seconds / 60) % 60);
     $seconds = $seconds % 60;
 
-    $result = "{$hours}小时{$minutes}分钟{$seconds}秒";
-    return $result;
+    return "{$hours}小时{$minutes}分钟{$seconds}秒";
 }
 
 // Example:
