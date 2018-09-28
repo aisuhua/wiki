@@ -6,8 +6,9 @@ shell> supervisorctl stop download:*
 
 进程配置
 
-```conf
-[program:STATIS_DISPATCHER]
+```sh
+shell> cat /etc/supervisor/conf.d/program.conf 
+[program:PROCESS_NAME]
 command:/usr/bin/php /www/web/demo.php
 directory:%(here)s
 process_name:%(program_name)s_%(process_num)s
