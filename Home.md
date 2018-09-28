@@ -7,4 +7,5 @@
 7. [experiences](experiences)
 9. [php](php)
 10. [windows](windows)
+10. [ubuntu](ubuntu)
 10. [links](links)
