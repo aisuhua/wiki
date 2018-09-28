@@ -10,12 +10,6 @@ shell> ./configure
 shell> make && make install
 
 shell> ifstat
-       eth0       
- KB/s in  KB/s out
- 1003.77     51.67
-  999.17     45.02
-  922.40     37.69
-...
 
 http://gael.roualland.free.fr/ifstat/
 ```
