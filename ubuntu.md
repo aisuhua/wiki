@@ -13,3 +13,10 @@ shell> ifstat
 
 http://gael.roualland.free.fr/ifstat/
 ```
+
+查看多核 CPU 的使用情况
+
+```sh
+shell> top
+# 然后按数字 1 即可查看每个核心的状态
+```
