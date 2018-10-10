@@ -33,7 +33,8 @@ shell> rabbitmq-plugins enable rabbitmq_management
 
 允许 guest 帐号远程登录访问
 
-```ini
+```sh
+shell> vim /etc/rabbitmq/rabbitmq.conf
 ## Uncomment the following line if you want to allow access to the
 ## guest user from anywhere on the network.
 loopback_users.guest = false
