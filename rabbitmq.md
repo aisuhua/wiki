@@ -42,7 +42,7 @@ loopback_users.guest = false
 
 查看正在运行的实例配置信息
 
-```
+```sh
 shell> rabbitmqctl environment
 ```
 
