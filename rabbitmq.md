@@ -40,3 +40,9 @@ shell> vim /etc/rabbitmq/rabbitmq.conf
 loopback_users.guest = false
 ```
 
+查看正在运行的配置信息
+
+```
+shell> rabbitmqctl environment
+```
+
