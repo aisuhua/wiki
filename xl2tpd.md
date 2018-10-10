@@ -1,4 +1,4 @@
-安装 xl2tpd
+安装
 
 ```sh
 shell> apt-get install xl2tpd
