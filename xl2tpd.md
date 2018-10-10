@@ -1,10 +1,10 @@
-install
+安装 xl2tpd
 
 ```sh
 shell> apt-get install xl2tpd
 ```
 
-configure
+添加配置
 
 ```sh
 shell> /etc/xl2tpd/xl2tpd.conf
@@ -72,7 +72,7 @@ if [ -n "${5}" -a -n "${6}" ]; then
 fi
 ```
 
-start 
+启动服务
 
 ```sh
 shell> systemctl start xl2tpd
