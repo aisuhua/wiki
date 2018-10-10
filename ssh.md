@@ -7,3 +7,9 @@ b@B:~> chmod 600 ~/.ssh/authorized_keys
 
 http://www.linuxproblem.org/art_9.html
 ```
+
+生成密钥对
+
+```sh
+shell> ssh-keygen
+```
