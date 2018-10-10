@@ -4,7 +4,7 @@ install
 shell> apt-get install xl2tpd
 ```
 
-setting
+configure
 
 ```sh
 shell> /etc/xl2tpd/xl2tpd.conf
