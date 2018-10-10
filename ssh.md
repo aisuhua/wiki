@@ -1,4 +1,4 @@
-生成密钥对
+生成密钥
 
 ```sh
 shell> ssh-keygen
