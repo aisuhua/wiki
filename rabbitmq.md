@@ -12,6 +12,12 @@ shell> apt-get install rabbitmq-server
 
 - [Installing on Debian and Ubuntu](https://www.rabbitmq.com/install-debian.html)
 
+查看是否启动
+
+```sh
+shell> service rabbitmq-server status
+```
+
 创建配置文件
 
 ```sh
