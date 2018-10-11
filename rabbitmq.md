@@ -8,9 +8,9 @@ deb https://dl.bintray.com/rabbitmq/debian xenial main erlang
 shell> apt-get update
 shell> apt-get install erlang-nox
 shell> apt-get install rabbitmq-server
-
-https://www.rabbitmq.com/install-debian.html
 ```
+
+- [Installing on Debian and Ubuntu](https://www.rabbitmq.com/install-debian.html)
 
 创建配置文件
 
