@@ -1,3 +1,15 @@
+启动
+
+```sh
+shell> systemctl start docker
+```
+
+进入容器
+
+```sh
+shell> docker exec -i -t my_container /bin/bash
+```
+
 复制文件到未运行的容器
 
 ```sh
