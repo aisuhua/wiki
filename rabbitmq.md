@@ -18,9 +18,9 @@ shell> apt-get install rabbitmq-server
 shell> cd /etc/rabbitmq
 shell> wget https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/master/docs/rabbitmq.conf.example
 shell> mv rabbitmq.conf.example rabbitmq.conf
-
-https://www.rabbitmq.com/configure.html
 ```
+
+- [Configuration](https://www.rabbitmq.com/configure.html)
 
 安装控制台
 
