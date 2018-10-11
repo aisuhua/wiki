@@ -40,6 +40,12 @@ shell> vim /etc/rabbitmq/rabbitmq.conf
 loopback_users.guest = false
 ```
 
+查看运行状态，比如版本信息
+
+```sh
+shell> rabbitmqctl status
+```
+
 查看正在运行的实例配置信息
 
 ```sh
