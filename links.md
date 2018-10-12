@@ -9,3 +9,4 @@
 - [为何运行到一定阶段速度就开始变的越来越慢](https://bbs.csdn.net/topics/310043850)
 - [PHP Sandbox](http://sandbox.onlinephpfunctions.com/)
 - [Does a TCP socket connection have a “keep alive”?](https://stackoverflow.com/questions/1480236/does-a-tcp-socket-connection-have-a-keep-alive)
+- [Library error: a socket error occurred](https://github.com/pdezwart/php-amqp/issues/305)
