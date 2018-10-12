@@ -10,3 +10,4 @@
 - [PHP Sandbox](http://sandbox.onlinephpfunctions.com/)
 - [Does a TCP socket connection have a “keep alive”?](https://stackoverflow.com/questions/1480236/does-a-tcp-socket-connection-have-a-keep-alive)
 - [Library error: a socket error occurred](https://github.com/pdezwart/php-amqp/issues/305)
+- [[PHP7] [1.7.0alpha] Consumer timeout exceed](https://github.com/pdezwart/php-amqp/issues/305)
