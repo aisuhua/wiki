@@ -23,3 +23,15 @@ autostart:true
 autorestart:true
 user:www-data
 ```
+
+修复 too many open files to spawn 的错误
+
+```sh
+shell> vim /etc/supervisor/supervisord.conf
+[supervisord]
+minfds = 65535
+```
+
+- [Configuration File](http://supervisord.org/configuration.html)
+
+
