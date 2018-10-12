@@ -8,6 +8,15 @@
 - [Windows 7 Loader](http://winactivators.com/)
 - [为何运行到一定阶段速度就开始变的越来越慢](https://bbs.csdn.net/topics/310043850)
 - [PHP Sandbox](http://sandbox.onlinephpfunctions.com/)
+
+## Keepalive
+
 - [Does a TCP socket connection have a “keep alive”?](https://stackoverflow.com/questions/1480236/does-a-tcp-socket-connection-have-a-keep-alive)
+- [TCP Keepalive HOWTO](https://zzyongx.github.io/blogs/tcp-keepalive-howto.html)
+- [网络编程之 keepalive(zz)](http://www.cnblogs.com/strinkbug/p/7392585.html)
+- [不为人知的网络编程(四)：深入研究分析TCP的异常关闭](http://www.52im.net/thread-1014-1-1.html)
+
+### RabbitMQ
+
 - [Library error: a socket error occurred](https://github.com/pdezwart/php-amqp/issues/305)
 - [[PHP7] [1.7.0alpha] Consumer timeout exceed](https://github.com/pdezwart/php-amqp/issues/305)
