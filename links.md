@@ -11,8 +11,9 @@
 
 ## Keepalive
 
-- [Does a TCP socket connection have a “keep alive”?](https://stackoverflow.com/questions/1480236/does-a-tcp-socket-connection-have-a-keep-alive)
+- [TCP 连接断连问题剖析](https://www.ibm.com/developerworks/cn/aix/library/0808_zhengyong_tcp/index.html)
 - [TCP Keepalive HOWTO](https://zzyongx.github.io/blogs/tcp-keepalive-howto.html)
+- [Does a TCP socket connection have a “keep alive”?](https://stackoverflow.com/questions/1480236/does-a-tcp-socket-connection-have-a-keep-alive)
 - [网络编程之 keepalive(zz)](http://www.cnblogs.com/strinkbug/p/7392585.html)
 - [不为人知的网络编程(四)：深入研究分析TCP的异常关闭](http://www.52im.net/thread-1014-1-1.html)
 
