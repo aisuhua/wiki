@@ -20,3 +20,4 @@
 
 - [Library error: a socket error occurred](https://github.com/pdezwart/php-amqp/issues/305)
 - [[PHP7] [1.7.0alpha] Consumer timeout exceed](https://github.com/pdezwart/php-amqp/issues/305)
+- [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html)
