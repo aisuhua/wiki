@@ -61,3 +61,16 @@ shell> ps -aux | grep php
 shell> rm ./-A_NNMHDB3MW3eB
 ```
 
+grep 匹配
+
+```sh
+# 满足任意一个条件
+shell> grep -E 'word1|word2|word3' file.txt
+
+# 同时满足多个条件
+shell> grep word1 file.txt | grep word2 |grep word3
+```
+
+- [grep 同时满足多个关键字和满足任意关键字](https://www.cnblogs.com/smallrookie/p/6102691.html)
+
+
