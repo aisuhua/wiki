@@ -135,8 +135,20 @@ root@rabbit2:> rabbitmqctl set_policy ha-nodes "^nodes\." \
 所有队列都配置一份镜像
 
 ```sh
-root@rabbit2:> rabbitmqctl set_policy ha-two ".*" \
+root@rabbit2:> rabbitmqctl set_policy all-queue ".*" \
 '{"ha-mode":"exactly","ha-params":2,"ha-sync-mode":"automatic"}'
+```
+
+查看所有策略
+
+```sh
+root@rabbit2:> rabbitmqctl list_policies
+```
+
+删除指定策略
+
+```sh 
+root@rabbit2:> rabbitmqctl clear_policy ha-two
 ```
 
 镜像策略可以 RabbitMQ 运行期间随时取消或变更，会即时生效。
