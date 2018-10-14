@@ -104,7 +104,7 @@ root@rabbit2:> rabbitmq-plugins enable rabbitmq_management
 root@rabbit3:> rabbitmq-plugins enable rabbitmq_management
 ```
 
-参考文章
+参考文献
 
 - [Clustering Guide](https://www.rabbitmq.com/clustering.html)
 
