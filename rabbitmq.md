@@ -151,7 +151,7 @@ root@rabbit2:> rabbitmqctl list_policies
 root@rabbit2:> rabbitmqctl clear_policy ha-two
 ```
 
-镜像策略可以 RabbitMQ 运行期间随时取消或变更，会即时生效。
+镜像策略可以在 RabbitMQ 运行期间随时取消或变更，会即时生效。
 
 参考文献
 
