@@ -157,3 +157,17 @@ root@rabbit2:> rabbitmqctl clear_policy ha-two
 
 - [Highly Available (Mirrored) Queues](https://www.rabbitmq.com/ha.html#mirroring-arguments)
 - [Breaking things with RabbitMQ 3.0](http://www.rabbitmq.com/blog/2012/11/19/breaking-things-with-rabbitmq-3-0/)
+
+## 技巧
+
+清空所有队列
+
+```sh
+shell> rabbitmqctl list_queues | awk '{ print $1 }' | sed 's/Listing//' | xargs -L1 rabbitmqctl purge_queue
+```
+
+删除所有队列
+
+```sh
+shell> rabbitmqctl list_queues | awk '{ print $1 }' | sed 's/Listing//' | xargs -L1 rabbitmqctl delete_queue
+```
