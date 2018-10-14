@@ -58,3 +58,51 @@ shell> rabbitmqctl status
 shell> rabbitmqctl environment
 ```
 
+## 创建集群
+
+修改 hosts 
+
+```sh
+shell> vim /etc/hosts
+192.168.31.200 rabbit1
+192.168.31.201 rabbit2
+192.168.31.202 rabbit3
+```
+
+复制 Erlang Cookie
+
+```sh
+root@rabbit1:> scp /var/lib/rabbitmq/.erlang.cookie root@192.168.31.201:/var/lib/rabbitmq/.erlang.cookie
+root@rabbit1:> scp /var/lib/rabbitmq/.erlang.cookie root@192.168.31.202:/var/lib/rabbitmq/.erlang.cookie
+```
+
+重启节点，让 cookie 生效
+
+```sh
+root@rabbit2:> service rabbitmq-server restart
+root@rabbit3:> service rabbitmq-server restart
+```
+
+加入集群
+
+```sh
+root@rabbit2:> rabbitmqctl stop_app
+root@rabbit2:> rabbitmqctl join_cluster rabbit@rabbit1
+root@rabbit2:> rabbitmqctl start_app
+root@rabbit2:> rabbitmqctl cluster_status
+
+root@rabbit3:> rabbitmqctl stop_app
+root@rabbit3:> rabbitmqctl join_cluster rabbit@rabbit1
+root@rabbit3:> rabbitmqctl start_app
+root@rabbit3:> rabbitmqctl cluster_status
+```
+
+安装 management UI
+
+```sh
+root@rabbit2:> rabbitmq-plugins enable rabbitmq_management
+root@rabbit3:> rabbitmq-plugins enable rabbitmq_management
+```
+
+
+
