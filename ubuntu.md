@@ -31,7 +31,7 @@ shell> top
 shell> vim /etc/hostname
 rabbit1
 shell> vim /etc/hosts
-127.0.1.1       rabbit1
+127.0.1.1 rabbit1
 ```
 
 设置静态 IP
