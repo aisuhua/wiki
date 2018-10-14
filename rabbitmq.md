@@ -171,3 +171,5 @@ shell> rabbitmqctl list_queues | awk '{ print $1 }' | sed 's/Listing//' | xargs 
 ```sh
 shell> rabbitmqctl list_queues | awk '{ print $1 }' | sed 's/Listing//' | xargs -L1 rabbitmqctl delete_queue
 ```
+
+- [Delete all the queues from RabbitMQ?](https://stackoverflow.com/questions/11459676/delete-all-the-queues-from-rabbitmq)
