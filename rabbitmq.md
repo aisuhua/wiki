@@ -108,3 +108,40 @@ root@rabbit3:> rabbitmq-plugins enable rabbitmq_management
 
 - [Clustering Guide](https://www.rabbitmq.com/clustering.html)
 
+## 配置镜像队列
+
+添加 Policy 即可，只要队列名称与策略匹配上即会应用镜像策略，可在集群任意一节点执行添加操作。
+
+以 `two.` 开头的队列配置一个镜像
+
+```sh
+root@rabbit2:> rabbitmqctl set_policy ha-two ".*" \
+'{"ha-mode":"exactly","ha-params":2,"ha-sync-mode":"automatic"}'
+```
+
+以 `ha.` 开头的队列在所有节点配置一份镜像
+
+```
+root@rabbit2:> rabbitmqctl set_policy ha-all "^ha\." '{"ha-mode":"all"}'
+```
+
+以 `nodes.` 开头的队列在节点 rabbit1 和 rabbit2 各配一份镜像
+
+```sh
+root@rabbit2:> rabbitmqctl set_policy ha-nodes "^nodes\." \
+'{"ha-mode":"nodes","ha-params":["rabbit@rabbit1", "rabbit@rabbit2"]}'
+```
+
+所有队列都配置一份镜像
+
+```sh
+root@rabbit2:> rabbitmqctl set_policy ha-two ".*" \
+'{"ha-mode":"exactly","ha-params":2,"ha-sync-mode":"automatic"}'
+```
+
+镜像策略可以 RabbitMQ 运行期间随时取消或变更，会即时生效。
+
+参考文献
+
+- [Highly Available (Mirrored) Queues](https://www.rabbitmq.com/ha.html#mirroring-arguments)
+- [Breaking things with RabbitMQ 3.0](http://www.rabbitmq.com/blog/2012/11/19/breaking-things-with-rabbitmq-3-0/)
