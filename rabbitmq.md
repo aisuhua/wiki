@@ -135,7 +135,7 @@ root@rabbit2:> rabbitmqctl set_policy ha-nodes "^nodes\." \
 所有队列都配置一份镜像
 
 ```sh
-root@rabbit2:> rabbitmqctl set_policy all-queue ".*" \
+root@rabbit2:> rabbitmqctl set_policy ha-two-all ".*" \
 '{"ha-mode":"exactly","ha-params":2,"ha-sync-mode":"automatic"}'
 ```
 
