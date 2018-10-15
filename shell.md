@@ -36,10 +36,11 @@ shell> ps -ef | grep demo.php | grep -v grep | awk '{print $2}' | xargs kill -9
 bash 快捷键
 
 ```sh
-ctrl+a:光标移到行首
-ctrl+e:光标移到行尾
-ctrl+l:清屏，相当于clear
+ctrl+a: 光标移到行首
+ctrl+e: 光标移到行尾
+ctrl+l: 清屏，相当于clear
 ctrl+u: 清除光标前至行首间的所有内容
+ctrl+shift+t: 打开 Tab 新标签
 ```
 
 查看特定端口所属进程
