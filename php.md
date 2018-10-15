@@ -170,3 +170,48 @@ while(true)
     check_files(1, 1, true); 
 }
 ```
+
+检测正在执行的文件是否发生变化
+
+```php
+<?php
+require ('files/a.php');
+require ('files/b.php');
+
+$stats = [];
+
+while(true)
+{
+    $files = get_included_files();
+
+    foreach ($files as $file)
+    {
+        clearstatcache(true, $file);
+
+        if(!isset($stats[$file]))
+        {
+            $stats[$file] = [];
+            $stats[$file]['filemtime'] = filemtime($file);
+            $stats[$file]['filesize'] = filesize($file);
+            continue;
+        }
+
+        // 重新加载的文件信息
+        $filemtime = filemtime($file);
+        $filesize = filesize($file);
+
+        if($stats[$file]['filemtime'] != $filemtime || $filesize != $stats[$file]['filesize'])
+        {
+            echo 'file ', $file, ' changed.', PHP_EOL;
+        }
+
+        // 重新设值
+        $stats[$file]['filemtime'] = filemtime($file);
+        $stats[$file]['filesize'] = filesize($file);
+    }
+
+    // 如果不停顿一下，会偶现警告错误：
+    // PHP Warning:  filemtime(): stat failed for /www/web/learn/php/demo01.php in /www/web/learn/php/demo01.php on line 24
+    usleep(10000);
+}
+```
