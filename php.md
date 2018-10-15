@@ -210,7 +210,7 @@ while(true)
     }
 
     // 如果不停顿一下，会偶现警告错误：
-    // PHP Warning:  filemtime(): stat failed for /www/web/learn/php/demo01.php in /www/web/learn/php/demo01.php on line 24
+    // PHP Warning:  filemtime(): stat failed for /www/web/learn/php/demo01.php 
     usleep(10000);
 }
 ```
