@@ -110,7 +110,7 @@ root@rabbit3:> rabbitmq-plugins enable rabbitmq_management
 
 ## 配置镜像队列
 
-添加 Policy 即可，只要队列名称与策略匹配上即会应用镜像策略，可在集群任意一节点执行添加操作。
+添加 Policy 即可，只要队列名称与策略匹配上即会应用镜像，可在任一节点上执行添加操作。
 
 以 `two.` 开头的队列配置一个镜像
 
