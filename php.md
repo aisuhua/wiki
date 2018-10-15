@@ -174,7 +174,6 @@ while(true)
 检测正在执行的文件是否发生变化
 
 ```php
-<?php
 require ('files/a.php');
 require ('files/b.php');
 
