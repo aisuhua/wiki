@@ -153,6 +153,10 @@ root@rabbit2:> rabbitmqctl clear_policy ha-two
 
 镜像策略可以在 RabbitMQ 运行期间随时取消或变更，会即时生效。
 
+控制台显示效果，队列创建示例 [amqp_ha_consumer.php](https://github.com/aisuhua/rabbit/blob/master/demo04/amqp_ha_consumer.php)
+
+![](https://github.com/aisuhua/rabbit/raw/master/demo04/amqp_ha_consumer.png)
+
 参考文献
 
 - [Highly Available (Mirrored) Queues](https://www.rabbitmq.com/ha.html#mirroring-arguments)
