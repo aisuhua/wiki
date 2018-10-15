@@ -1,5 +1,4 @@
-- [php-fpm的status可以查看汇总信息和详细信息](https://www.cnblogs.com/tinywan/p/6848269.html)
-- [Zero-configuration Web Application Debugging with Xdebug and PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm)
+
 - [Ubuntu 配置生成器 ](https://mirrors.ustc.edu.cn/repogen/)
 - [rsync命令](http://man.linuxde.net/rsync)
 - [Add bash syntax highlighting](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
@@ -7,7 +6,14 @@
 - [WoeUSB](https://github.com/slacka/WoeUSB)
 - [Windows 7 Loader](http://winactivators.com/)
 - [为何运行到一定阶段速度就开始变的越来越慢](https://bbs.csdn.net/topics/310043850)
+
+
+## PHP
+
+- [php-fpm的status可以查看汇总信息和详细信息](https://www.cnblogs.com/tinywan/p/6848269.html)
+- [Zero-configuration Web Application Debugging with Xdebug and PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm)
 - [PHP Sandbox](http://sandbox.onlinephpfunctions.com/)
+- [PCNTL函数族--PHP多进程编程](https://blog.csdn.net/fafa211/article/details/5550558)
 
 ## Keepalive
 
