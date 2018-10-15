@@ -53,3 +53,120 @@ echo format_seconds(5461);
 // 1小时31分钟1秒
 ```
 
+检测文件是否被修改，并自动重启进程
+
+```php
+/**
+ * 检测文件修改
+ *
+ * @param int $period 时间间隔(<0:随机1秒到-$period之间; =0:每次; >0:距离上次$period秒后)
+ * @param int $delay  延迟时间(<0:随机1秒到-$delay之间; =0:不延迟; >0:延迟$delay秒)
+ * @param bool $rerun 是否重新运行
+ */
+function check_files($period = 60, $delay = 10, $rerun = true)
+{
+    if (PHP_SAPI != 'cli')
+    {
+        return;
+    }
+
+    static $last_time = 0;
+    static $files = array();
+
+    if ($period < 0)
+    {
+        $period = rand(1, -$period);
+    }
+
+    if (0 < $period && time() - $last_time < $period)
+    {
+        return;
+    }
+
+    $last_time = time();
+    $fs = get_included_files();
+
+    foreach ($fs as $f)
+    {
+        clearstatcache(true, $f);
+        $size = filesize($f);
+        $time = filemtime($f);
+
+        if (!isset($files[$f]))
+        {
+            $files[$f] = array('size' => $size, 'time' => $time);
+        }
+        elseif ($files[$f]['size'] != $size || $files[$f]['time'] != $time)
+        {
+            if ($delay < 0)
+            {
+                $delay = rand(1, -$delay);
+            }
+
+            $pid = posix_getpid();
+            echo sprintf("[%s] was modified at %s(%s), PID-{$pid} will exit/rerun after {$delay} seconds." . PHP_EOL,
+                basename($f), date('Y-m-d H:i:s', $time), $size);
+
+            if (0 < $delay)
+            {
+                sleep($delay);
+            }
+
+            if ($rerun)
+            {
+                restart_process();
+            }
+
+            exit();
+        }
+    }
+}
+
+/**
+ * 重启 cli 下的 php 进程
+ */
+function restart_process()
+{
+    if (PHP_SAPI != 'cli' || !function_exists('pcntl_exec') || !isset($_SERVER['argv']))
+    {
+        return;
+    }
+
+    // Supervisor 托管时 $_SERVER['_'] 不存在
+    // 执行 php demo.php 时 $_SERVER['_'] = '/usr/bin/php'，不会执行 pcntl_exec
+    // 执行 nohup php demo02.php > files/content 2>&1 &，$_SERVER['_'] = '/usr/bin/nohup'
+
+    // 如果用 nohup 启动的 PHP 进程 $_SERVER['_'] 是 /usr/bin/nohup
+    // 需要找到 PHP 命令路径覆盖 $_SERVER['_']
+    if (!isset($_SERVER['_']) ||
+        !in_array(basename($_SERVER['_']), array('php', 'php-cli')))
+    {
+        $paths = explode(':', $_SERVER['PATH']);
+        foreach ($paths as $path)
+        {
+            if (is_file("{$path}/php"))
+            {
+                $_SERVER['_'] = "{$path}/php";
+                break;
+            }
+            else if (file_exists("{$path}/php-cli"))
+            {
+                $_SERVER['_'] = "{$path}/php-cli";
+                break;
+            }
+        }
+
+        pcntl_exec($_SERVER['_'], $_SERVER['argv']);
+    }
+}
+
+// Example:
+require ('files/a.php');
+require ('files/b.php');
+
+while(true)
+{
+    // the third argument rerun is true/false.
+    check_files(1, 1, true); 
+}
+```
