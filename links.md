@@ -16,7 +16,15 @@
 - [PCNTL函数族--PHP多进程编程](https://blog.csdn.net/fafa211/article/details/5550558)
 - [Best way to run a background task?](https://www.reddit.com/r/PHP/comments/3n5d0f/best_way_to_run_a_background_task/)
 
-## Keepalive
+
+## Linux
+
+### Kill Signals and Commands
+
+- [Linux命令kill和signal](http://www.cnblogs.com/itech/archive/2012/03/05/2380794.html)
+- [Kill Signals and Commands (Revised)](https://www.linux.org/threads/kill-signals-and-commands-revised.11625/)
+
+### Keepalive
 
 - [TCP Keepalive HOWTO](https://zzyongx.github.io/blogs/tcp-keepalive-howto.html)
 - [TCP 连接断连问题剖析](https://www.ibm.com/developerworks/cn/aix/library/0808_zhengyong_tcp/index.html)
