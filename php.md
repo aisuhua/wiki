@@ -172,7 +172,7 @@ while(true)
 ```
 
 - [$_SERVER['_'] equivalent on Windows](https://stackoverflow.com/questions/3595434/server-equivalent-on-windows)
-
+- [Automatically Restart PHP Script on Exit](https://stackoverflow.com/questions/9798438/automatically-restart-php-script-on-exit)
 
 检测正在执行的文件是否发生变化
 
