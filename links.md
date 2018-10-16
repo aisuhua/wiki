@@ -21,7 +21,6 @@
 
 ### Kill Signals and Commands
 
-- [Linux命令kill和signal](http://www.cnblogs.com/itech/archive/2012/03/05/2380794.html)
 - [Kill Signals and Commands (Revised)](https://www.linux.org/threads/kill-signals-and-commands-revised.11625/)
 
 ### Keepalive
