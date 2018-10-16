@@ -51,8 +51,6 @@ function get_changed_files($passive = true)
     return $changed_files;
 }
 
-
-
 // 处理信号量
 $signals = [
     SIGTERM => 'SIGTERM',
@@ -130,5 +128,3 @@ while(true)
 
     echo 'memory_usage ' . memory_get_usage(true), ', running_time ', time() - $start_time, PHP_EOL;
 }
-
-
