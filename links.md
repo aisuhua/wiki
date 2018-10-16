@@ -14,6 +14,7 @@
 - [Zero-configuration Web Application Debugging with Xdebug and PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm)
 - [PHP Sandbox](http://sandbox.onlinephpfunctions.com/)
 - [PCNTL函数族--PHP多进程编程](https://blog.csdn.net/fafa211/article/details/5550558)
+- [Best way to run a background task?](https://www.reddit.com/r/PHP/comments/3n5d0f/best_way_to_run_a_background_task/)
 
 ## Keepalive
 
