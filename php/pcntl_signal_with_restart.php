@@ -19,9 +19,9 @@ $sig_handler = function ($signo) use($argv, $_) {
 };
 
 pcntl_signal(SIGTERM, $sig_handler); // kill
-pcntl_signal(SIGHUP,  $sig_handler); // kill -s HUP or kill -1
-pcntl_signal(SIGINT,  $sig_handler); // Ctrl-C
-pcntl_signal(SIGQUIT,  $sig_handler); // kill -3
+pcntl_signal(SIGHUP, $sig_handler); // kill -s HUP or kill -1
+pcntl_signal(SIGINT, $sig_handler); // Ctrl-C
+pcntl_signal(SIGQUIT, $sig_handler); // kill -3
 
 while(true) {
     // handle the signal at the beginning of your main loop
