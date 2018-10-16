@@ -3,7 +3,7 @@
  * 接收到特定的型号量后进行重启
  *
  * 使用 `pcntl_exec()` 在现有进程上重启，从而实现进程“永不退出”
- * 重启的进程已经包含了程序的最新源代码
+ * 重启后的进程已经包含了程序的最新源代码
  *
  * @link http://php.net/manual/en/function.pcntl-signal.php#92803
  */
