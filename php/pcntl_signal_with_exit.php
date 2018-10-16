@@ -25,5 +25,8 @@ while(true) {
     pcntl_signal_dispatch();
 
     // do something here
-    sleep(1);
+    $i = 0;
+    while($i++ < 10) {
+        sleep(1);
+    }
 }

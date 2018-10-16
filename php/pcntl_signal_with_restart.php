@@ -1,9 +1,11 @@
 <?php
 /**
- * 接收到特定的型号量后进行重启
+ * 接收到特定的信号量后进行重启
  *
  * 使用 `pcntl_exec()` 在现有进程上重启，从而实现进程“永不退出”
  * 重启后的进程已经包含了程序的最新源代码
+ *
+ * !!! 不建议在处理 Supervisor stop/restart 信号量时使用该方法
  *
  * @link http://php.net/manual/en/function.pcntl-signal.php#92803
  */
@@ -28,5 +30,8 @@ while(true) {
     pcntl_signal_dispatch();
 
     // do something here
-    sleep(1);
+    $i = 0;
+    while($i++ < 10) {
+        sleep(1);
+    }
 }
