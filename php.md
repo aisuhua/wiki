@@ -171,6 +171,9 @@ while(true)
 }
 ```
 
+- [$_SERVER['_'] equivalent on Windows](https://stackoverflow.com/questions/3595434/server-equivalent-on-windows)
+
+
 检测正在执行的文件是否发生变化
 
 ```php
