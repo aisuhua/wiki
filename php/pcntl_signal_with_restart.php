@@ -7,6 +7,7 @@
  *
  * !!! 不建议在处理 Supervisor stop/restart 信号量时使用该方法
  *
+ * @link https://stackoverflow.com/questions/9798438/automatically-restart-php-script-on-exit
  * @link http://php.net/manual/en/function.pcntl-signal.php#92803
  */
 

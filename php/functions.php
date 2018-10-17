@@ -74,7 +74,7 @@ function get_changed_files($period = 1, $passive = true)
  *
  * Example:
  * ```code
- * echo size_format(2184689650);
+ * echo format_size(2184689650);
  * ```
  */
 function format_size($bytes, $length = 2, $max_unit = '')
@@ -92,16 +92,17 @@ function format_size($bytes, $length = 2, $max_unit = '')
 }
 
 /**
- *  将时长格式化为：hours:minutes:seconds秒
+ *  将时长格式化为：hours:minutes:seconds
  *
  * @param int $seconds
+ * @param string $delimiter
  * @return string
  */
-function format_seconds($seconds)
+function format_seconds($seconds, $delimiter = ':')
 {
     $hours = floor($seconds / 3600);
     $minutes = floor(($seconds / 60) % 60);
     $seconds = $seconds % 60;
 
-    return "{$hours}:{$minutes}:{$seconds}";
+    return "{$hours}{$delimiter}{$minutes}{$delimiter}{$seconds}";
 }
