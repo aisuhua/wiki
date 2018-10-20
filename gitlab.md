@@ -90,4 +90,7 @@ shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "c
 shell> docker start gitlab
 ```
 
+## 参考文献
 
+- [Gitlab docker container – backup and restore](http://khmel.org/?p=1213)
+- [GitLab Docker images](https://docs.gitlab.com/omnibus/docker/)
