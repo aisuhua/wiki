@@ -62,13 +62,15 @@ shell> ps -aux | grep php
 shell> rm ./-A_NNMHDB3MW3eB
 ```
 
-grep 匹配
+查找包含任意一个关键字的行
 
 ```sh
-# 满足任意一个条件
 shell> grep -E 'word1|word2|word3' file.txt
+```
 
-# 同时满足多个条件
+查找包含所有关键字的行
+
+```sh
 shell> grep word1 file.txt | grep word2 |grep word3
 ```
 
