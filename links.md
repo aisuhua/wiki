@@ -41,7 +41,5 @@
 
 ## ElasticSearch
 
-## Tribe node
-
 - [Tribe node](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-tribe.html)
 - [Cross Cluster Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html)
