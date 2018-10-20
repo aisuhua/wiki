@@ -28,11 +28,11 @@ shell> service ssh restart
 
 ```sh
 shell> docker stop gitlab
-shell> docker commit gitlab local/gitlab-container-20181020
-shell> docker save local/gitlab-container-20181020 > /root/gitlab-container-20181020.tar
-shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-etc-20181020.tar /etc/gitlab
-shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-log-20181020.tar /var/log/gitlab
-shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-opt-20181020.tar /var/opt/gitlab
+shell> docker commit gitlab local/gitlab-container-20181010
+shell> docker save local/gitlab-container-20181020 > /root/gitlab-container-20181010.tar
+shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-etc-20181010.tar /etc/gitlab
+shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-log-20181010.tar /var/log/gitlab
+shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-opt-20181010.tar /var/opt/gitlab
 ```
 
 ## 全量恢复
@@ -51,7 +51,7 @@ shelll> tree
 加载镜像
 
 ```sh
-shell> docker load -i gitlab-container-20181020.tar 
+shell> docker load -i gitlab-container-20181010.tar 
 ```
 
 创建容器
@@ -65,7 +65,7 @@ shell> sudo docker create \
     --volume /srv/gitlab/config:/etc/gitlab \
     --volume /srv/gitlab/logs:/var/log/gitlab \
     --volume /srv/gitlab/data:/var/opt/gitlab \
-    local/gitlab-container-20181020
+    local/gitlab-container-20181010
 ```
 
 恢复数据
@@ -74,9 +74,9 @@ shell> sudo docker create \
 shell> mkdir -p /srv/gitlab/config
 shell> mkdir -p /srv/gitlab/logs
 shell> mkdir -p /srv/gitlab/data
-docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /etc && tar xvf /backup/gitlab-volume-etc-20181020.tar --strip 1"
-docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/log && tar xvf /backup/gitlab-volume-log-20181020.tar --strip 2"
-docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/opt && tar xvf /backup/gitlab-volume-opt-20181020.tar --strip 2"
+docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /etc && tar xvf /backup/gitlab-volume-etc-20181010.tar --strip 1"
+docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/log && tar xvf /backup/gitlab-volume-log-20181010.tar --strip 2"
+docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/opt && tar xvf /backup/gitlab-volume-opt-20181010.tar --strip 2"
 ```
 
 启动容器
