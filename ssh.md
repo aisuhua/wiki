@@ -34,16 +34,23 @@ b@B:~> chmod 600 ~/.ssh/authorized_keys
 管理多个密钥
 
 ```sh
-shell> ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "youremail@example.com"
-
+shell> ssh-keygen -t rsa -C "github.com" -f ~/.ssh/id_rsa_github
+shell> ssh-keygen -t rsa -C "gitlab.com" -f ~/.ssh/id_rsa_gitlab
 shell> vim ~/.ssh/config
 # github
 Host github.com
 HostName github.com
+PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_github
 
+# gitlab
+Host gitlab.com
+HostName gitlab.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_gitlab
 shell> chmod 600 ~/.ssh/config
 shell> ssh -T git@github.com
+shell> ssh -T git@gitlab.com
 ```
 
 使用私钥重新生成公钥
