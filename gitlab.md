@@ -24,7 +24,7 @@ Port 25680
 shell> service ssh restart
 ```
 
-## 备份
+## 全量备份
 
 ```sh
 shell> docker stop gitlab
@@ -35,7 +35,7 @@ shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /b
 shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-opt-20181020.tar /var/opt/gitlab
 ```
 
-## 恢复
+## 全量恢复
 
 用于恢复的文件列表
 
