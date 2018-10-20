@@ -61,4 +61,17 @@ dns-nameservers 223.5.5.5 223.6.6.6
 
 做完上面步骤后，重启即可。
 
+## 分区
+
+制作 ntfs 类型的分区
+
+```sh
+shell> fdisk /dev/sdx
+shell> mkfs.ntfs /dev/sdx1
+shell> mount /dev/sdx1 /mnt/myNtfsDevice
+```
+
+- [How can I use fdisk to create a ntfs partition on /dev/sdx?](https://unix.stackexchange.com/questions/252625/how-can-i-use-fdisk-to-create-a-ntfs-partition-on-dev-sdx)
+
+
 
