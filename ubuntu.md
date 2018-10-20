@@ -54,7 +54,6 @@ shell> apt-get update
 
 ```sh
 shell> vim /etc/hosts
-127.0.0.1 localhost
 127.0.1.1 wp-web1
 shell> vim /etc/hostname
 wp-web1
