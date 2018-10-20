@@ -46,7 +46,6 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted uni
 shell> apt-get update
 ```
 
-
 ## 快速创建虚拟机
 
 使用 virtual box 复制出 N 份虚拟机，复制时要勾选重置所有网络设置。
@@ -99,5 +98,13 @@ shell> mount /dev/sdx1 /mnt/myNtfsDevice
 
 - [How can I use fdisk to create a ntfs partition on /dev/sdx?](https://unix.stackexchange.com/questions/252625/how-can-i-use-fdisk-to-create-a-ntfs-partition-on-dev-sdx)
 
+## 笔记本问题
 
+解决笔记本风扇狂转、无法正常关机的问题
+
+```sh
+shell> vim /etc/modprobe.d/blacklist.conf
+blacklist nouveau
+shell> reboot
+```
 
