@@ -74,15 +74,15 @@ shell> sudo docker create \
 shell> mkdir -p /srv/gitlab/config
 shell> mkdir -p /srv/gitlab/logs
 shell> mkdir -p /srv/gitlab/data
-docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /etc && tar xvf /backup/gitlab-volume-etc-20181010.tar --strip 1"
-docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/log && tar xvf /backup/gitlab-volume-log-20181010.tar --strip 2"
-docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/opt && tar xvf /backup/gitlab-volume-opt-20181010.tar --strip 2"
+shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /etc && tar xvf /backup/gitlab-volume-etc-20181010.tar --strip 1"
+shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/log && tar xvf /backup/gitlab-volume-log-20181010.tar --strip 2"
+shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/opt && tar xvf /backup/gitlab-volume-opt-20181010.tar --strip 2"
 ```
 
 启动容器
 
 ```sh
-docker start gitlab
+shell> docker start gitlab
 ```
 
 
