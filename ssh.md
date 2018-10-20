@@ -1,10 +1,24 @@
-生成密钥
+安装
+
+```sh
+shell> apt-get install openssh-server
+```
+
+允许 root 用户登陆
+
+```sh
+shell> vim /etc/ssh/sshd_config
+PermitRootLogin yes
+shell> service sshd restart
+```
+
+本机生成密钥
 
 ```sh
 shell> ssh-keygen
 ```
 
-免密登录远程服务器
+本机免密登录远程服务器
 
 ```sh
 a@A:~> cat .ssh/id_rsa.pub
