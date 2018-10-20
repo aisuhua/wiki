@@ -89,7 +89,6 @@ root@rabbit2:> rabbitmqctl stop_app
 root@rabbit2:> rabbitmqctl join_cluster rabbit@rabbit1
 root@rabbit2:> rabbitmqctl start_app
 root@rabbit2:> rabbitmqctl cluster_status
-
 root@rabbit3:> rabbitmqctl stop_app
 root@rabbit3:> rabbitmqctl join_cluster rabbit@rabbit1
 root@rabbit3:> rabbitmqctl start_app
