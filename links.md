@@ -7,7 +7,6 @@
 - [Windows 7 Loader](http://winactivators.com/)
 - [为何运行到一定阶段速度就开始变的越来越慢](https://bbs.csdn.net/topics/310043850)
 
-
 ## PHP
 
 - [php-fpm的status可以查看汇总信息和详细信息](https://www.cnblogs.com/tinywan/p/6848269.html)
@@ -15,7 +14,6 @@
 - [PHP Sandbox](http://sandbox.onlinephpfunctions.com/)
 - [PCNTL函数族--PHP多进程编程](https://blog.csdn.net/fafa211/article/details/5550558)
 - [Best way to run a background task?](https://www.reddit.com/r/PHP/comments/3n5d0f/best_way_to_run_a_background_task/)
-
 
 ## Linux
 
@@ -36,3 +34,10 @@
 - [Library error: a socket error occurred](https://github.com/pdezwart/php-amqp/issues/305)
 - [[PHP7] [1.7.0alpha] Consumer timeout exceed](https://github.com/pdezwart/php-amqp/issues/305)
 - [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html)
+
+## ElasticSearch
+
+## Tribe node
+
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-tribe.html
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html
