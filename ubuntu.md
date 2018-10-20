@@ -50,6 +50,18 @@ shell> apt-get update
 
 ## 网络设置
 
+修改主机名
+
+```sh
+shell> vim /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 wp-web1
+shell> vim /etc/hostname
+wp-web1
+```
+
+- [ubuntu永久修改主机名](https://blog.csdn.net/ruglcc/article/details/7802077)
+
 配置静态 IP
 
 ```sh
