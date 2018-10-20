@@ -1,5 +1,12 @@
 ## 服务器状态
 
+查看公网 IP
+
+```sh 
+shell> curl curl cip.cc
+shell> curl ip.cn
+```
+
 查看网速
 
 ```
