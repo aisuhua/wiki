@@ -82,7 +82,7 @@ iface enp0s1 inet dhcp
 
 auto enp0s2
 iface enp0s2 inet static
-address 192.168.31.201
+address 192.168.31.200
 netmask 255.255.255.0
 gateway 192.168.31.1
 wpa-ssid WIFI-NAME
