@@ -79,22 +79,22 @@ wpa-psk WIFI-PASSWORD
 dns-nameservers 223.5.5.5 223.6.6.6
 ```
 
-开启无线网卡
+重启网络
 
 ```sh
-shell> ifconfig enp0s2 down
+shell> service networking restart
 ```
 
-关闭无线网卡
+开启无线网络
 
 ```sh
 shell> ifconfig enp0s2 up
 ```
 
-重启网络
+关闭无线网络
 
 ```sh
-shell> service networking restart
+shell> ifconfig enp0s2 down
 ```
 
 ## 快速创建虚拟机
