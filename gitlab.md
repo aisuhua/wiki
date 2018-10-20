@@ -14,15 +14,20 @@ shell> sudo docker run --detach \
     gitlab/gitlab-ce:8.17.8-ce.0
 ```
 
-为了避免冲突，物理机器 SSH 端口修改为 25680
+为了避免冲突，物理机器 ssh 端口修改为 25680
 
 ```sh
 shell> vim /etc/ssh/sshd_config
 # What ports, IPs and protocols we listen for
 Port 25680
+```
 
+重启 ssh 服务
+
+```sh
 shell> service ssh restart
 ```
+
 
 ## 全量备份
 
