@@ -46,6 +46,8 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted uni
 shell> apt-get update
 ```
 
+- [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
+
 ## 快速创建虚拟机
 
 使用 virtual box 复制出 N 份虚拟机，复制时要勾选重置所有网络设置。
