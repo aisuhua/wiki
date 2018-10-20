@@ -53,8 +53,14 @@ shell> ssh -T git@github.com
 shell> ssh -T git@gitlab.com
 ```
 
+- [git 配置多个SSH-Key](https://blog.csdn.net/dqchouyang/article/details/54898910)
+
 使用私钥重新生成公钥
 
 ```sh
 shell> ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 ```
+
+参考文献
+
+- [ssh-keygen 中文手册](http://www.jinbuguo.com/openssh/ssh-keygen.html)
