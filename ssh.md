@@ -21,6 +21,7 @@ b@B:~> chmod 600 ~/.ssh/authorized_keys
 
 ```sh
 shell> ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "youremail@example.com"
+
 shell> vim ~/.ssh/config
 # github
 Host github.com
