@@ -157,7 +157,7 @@ root@rabbit2:> rabbitmqctl clear_policy ha-two
 
 控制台显示效果，队列创建示例 [amqp_ha_consumer.php](https://github.com/aisuhua/rabbit/blob/master/demo01/amqp_ha_consumer.php)
 
-![](https://github.com/aisuhua/rabbit/raw/master/demo01/amqp_ha_consumer.php)
+![](https://github.com/aisuhua/rabbit/raw/master/demo01/amqp_ha_consumer.png)
 
 参考文献
 
