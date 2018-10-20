@@ -41,7 +41,7 @@ shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /b
 加载镜像
 
 ```sh
-shell> docker load -i gitlab-example-container-20181020.tar 
+shell> docker load -i gitlab-container-20181020.tar 
 ```
 
 创建容器
