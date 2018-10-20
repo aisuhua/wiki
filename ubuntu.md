@@ -28,6 +28,12 @@ shell> top
 Press key 1
 ```
 
+查看当前运行级别
+
+```sh
+shell> runlevel
+```
+
 ## 国内源
 
 使用中科大镜像
