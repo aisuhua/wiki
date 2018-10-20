@@ -48,6 +48,55 @@ shell> apt-get update
 
 - [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
 
+## 网络设置
+
+配置静态 IP
+
+```sh
+shell> vim /etc/network/interfaces
+auto enp0s3
+iface enp0s3 inet static
+address 192.168.31.201
+netmask 255.255.255.0
+gateway 192.168.31.1
+dns-nameservers 223.5.5.5 223.6.6.6
+```
+
+多网卡（有线和无线）
+
+```sh
+shell> vim /etc/network/interfaces
+auto enp0s1
+iface enp0s1 inet dhcp
+
+auto enp0s2
+iface enp0s2 inet static
+address 192.168.31.201
+netmask 255.255.255.0
+gateway 192.168.31.1
+wpa-ssid WIFI-NAME
+wpa-psk WIFI-PASSWORD
+dns-nameservers 223.5.5.5 223.6.6.6
+```
+
+开启无线网卡
+
+```sh
+shell> ifconfig enp0s2 down
+```
+
+关闭无线网卡
+
+```sh
+shell> ifconfig enp0s2 up
+```
+
+重启网络
+
+```sh
+shell> service networking restart
+```
+
 ## 快速创建虚拟机
 
 使用 virtual box 复制出 N 份虚拟机，复制时要勾选重置所有网络设置。
