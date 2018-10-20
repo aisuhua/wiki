@@ -4,17 +4,17 @@ install
 shell> apt-get install rsync
 ```
 
-setting
+开启 rsync 服务 
 
 ```sh
 shell> vim /etc/default/rsync
 RSYNC_ENABLE=true
 ```
 
-/etc/rsyncd.conf 
+添加配置
 
 ```sh
-shell> cat /etc/rsyncd.conf 
+shell> vim /etc/rsyncd.conf 
 uid=root
 gid=root
 max connections=100
@@ -31,10 +31,10 @@ hosts deny = *
 path = /www/web
 ```
 
-启动
+重启服务
 
 ```sh
-shell> service rsync start
+shell> service rsync restart
 ```
 
 同步本地文件
