@@ -30,13 +30,23 @@ shell> service ssh restart
 shell> docker stop gitlab
 shell> docker commit gitlab local/gitlab-container-20181020
 shell> docker save local/gitlab-container-20181020 > /root/gitlab-container-20181020.tar
-
 shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-etc-20181020.tar /etc/gitlab
 shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-log-20181020.tar /var/log/gitlab
 shell> docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu tar cvf /backup/gitlab-volume-opt-20181020.tar /var/opt/gitlab
 ```
 
 ## 恢复
+
+用于恢复的文件列表
+
+```sh
+shelll> tree
+.
+├── gitlab-container-20181010.tar
+├── gitlab-volume-etc-20181010.tar
+├── gitlab-volume-log-20181010.tar
+└── gitlab-volume-opt-20181010.tar
+```
 
 加载镜像
 
@@ -48,7 +58,7 @@ shell> docker load -i gitlab-container-20181020.tar
 
 ```sh
 shell> sudo docker create \
-    --hostname gitlab.aisuhua.com \
+    --hostname gitlab.example.com \
     --publish 443:443 --publish 80:80 --publish 22:22 \
     --name gitlab \
     --restart always \
@@ -57,4 +67,22 @@ shell> sudo docker create \
     --volume /srv/gitlab/data:/var/opt/gitlab \
     local/gitlab-container-20181020
 ```
+
+恢复数据
+
+```sh
+shell> mkdir -p /srv/gitlab/config
+shell> mkdir -p /srv/gitlab/logs
+shell> mkdir -p /srv/gitlab/data
+docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /etc && tar xvf /backup/gitlab-volume-etc-20181020.tar --strip 1"
+docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/log && tar xvf /backup/gitlab-volume-log-20181020.tar --strip 2"
+docker run --rm --volumes-from gitlab -v $(pwd):/backup ubuntu bash -c "cd /var/opt && tar xvf /backup/gitlab-volume-opt-20181020.tar --strip 2"
+```
+
+启动容器
+
+```sh
+docker start gitlab
+```
+
 
