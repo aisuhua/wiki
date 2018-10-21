@@ -10,6 +10,8 @@ shell> ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
 shell> ln -s /opt/puppetlabs/bin/puppetserver /usr/bin/puppetserver
 ```
 
+- [Puppet Server: Installing From Packages](https://puppet.com/docs/puppetserver/5.3/install_from_packages.html)
+
 安装 puppet agent
 
 ```sh
@@ -21,3 +23,5 @@ shell> apt-get install puppet-agent
 shell> /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 shell> ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
 ```
+
+- [Installing Puppet agent: Linux](https://puppet.com/docs/puppet/5.5/install_linux.html)
