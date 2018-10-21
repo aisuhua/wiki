@@ -53,6 +53,15 @@ a@puppetmaster:~> puppet cert sign puppetnode1.aisuhua.net
 a@puppetnode1:~> puppet agent --test --server puppetmaster.aisuhua.net
 ```
 
+查看 master 节点的配置信息
+
+```sh
+a@puppetnode1:~> puppet config print modulepath --section master
+a@puppetnode1:~> puppet config print default_manifest --section master
+```
+
+- [Creating environments](https://puppet.com/docs/puppet/5.5/environments_creating.html)
+
 ### 添加配置
 
 设置默认 master 和 environment
