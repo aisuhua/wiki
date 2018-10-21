@@ -3,7 +3,7 @@
 ```sh
 shell> wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
 shell> dpkg -i puppet5-release-xenial.deb
-shell> sudo apt update
+shell> apt-get update
 shell> apt-get install puppetserver
 shell> service puppetserver start
 shell> ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
