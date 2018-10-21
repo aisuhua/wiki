@@ -8,6 +8,15 @@ puppetnode1.aisuhua.net
 puppetnode2.aisuhua.net
 ```
 
+puppet 版本 
+
+```sh
+shell> puppetserver --version 
+puppetserver version: 5.3.5
+shell> puppet --version
+5.5.6
+```
+
 ## puppet master
 
 安装 puppet master
