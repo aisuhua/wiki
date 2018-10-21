@@ -42,7 +42,7 @@ shell> ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
 向 master 申请签名
 
 ```sh
-root@puppetnode1:# puppet agent --test --server puppetmaster.aisuhua.net
+root@puppetnode1:~# puppet agent --test --server puppetmaster.aisuhua.net
 root@puppetmaster:~# puppet cert list
 root@puppetmaster:~# puppet cert sign puppetnode1.aisuhua.net
 ```
@@ -50,7 +50,7 @@ root@puppetmaster:~# puppet cert sign puppetnode1.aisuhua.net
 拉取并应用最新的 catalogs
 
 ```sh
-root@puppetnode1:# puppet agent --test --server puppetmaster.aisuhua.net
+root@puppetnode1:~# puppet agent --test --server puppetmaster.aisuhua.net
 ```
 
 ### 添加配置
@@ -58,17 +58,17 @@ root@puppetnode1:# puppet agent --test --server puppetmaster.aisuhua.net
 设置默认 master 以及环境
 
 ```sh
-root@puppetnode1:# vim /etc/puppetlabs/puppet/puppet.conf
+root@puppetnode1:~# vim /etc/puppetlabs/puppet/puppet.conf
 [agent]
 server=puppetmaster.aisuhua.net
 environment=production
-root@puppetnode1:# service puppet restart
+root@puppetnode1:~# service puppet restart
 ```
 
 使用默认配置拉取并应用最新的 catalogs
 
 ```sh
-puppet agent --test
+root@puppetnode1:~# puppet agent --test
 ```
 
 
