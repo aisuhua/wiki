@@ -55,7 +55,7 @@ root@puppetnode1:~# puppet agent --test --server puppetmaster.aisuhua.net
 
 ### 添加配置
 
-设置默认 master 以及环境
+设置默认 master 和 environment
 
 ```sh
 root@puppetnode1:~# vim /etc/puppetlabs/puppet/puppet.conf
