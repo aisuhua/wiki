@@ -19,3 +19,4 @@
 19. [virtualbox](virtualbox)
 20. [gitlab](gitlab)
 21. [vim](vim)
+22. [puppet](puppet)
