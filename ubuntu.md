@@ -66,10 +66,10 @@ shell> apt-get update
 修改主机名
 
 ```sh
-shell> vim /etc/hosts
-127.0.1.1 wp-web1
-shell> vim /etc/hostname
+shell> hostname wp-web1.192.168.1.2.local.aisuhua.net
+shell> hostname -s
 wp-web1
+shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts && hostname -f
 ```
 
 - [ubuntu永久修改主机名](https://blog.csdn.net/ruglcc/article/details/7802077)
