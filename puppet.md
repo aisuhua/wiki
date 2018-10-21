@@ -24,6 +24,17 @@ shell> ln -s /opt/puppetlabs/bin/puppetserver /usr/bin/puppetserver
 
 - [Puppet Server: Installing From Packages](https://puppet.com/docs/puppetserver/5.3/install_from_packages.html)
 
+添加测试脚本
+
+```sh
+shell> vim /etc/puppetlabs/code/environments/production/manifests/site.pp 
+node default {
+    file { '/tmp/suhua.txt':
+        content => 'suhua is a good boy.'
+    }
+}
+```
+
 ## puppet agent
 
 安装 puppet agent
