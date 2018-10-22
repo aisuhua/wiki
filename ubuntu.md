@@ -161,6 +161,30 @@ dns-nameservers 223.5.5.5 223.6.6.6
 
 做完上面步骤后，重启即可。
 
+## 用户管理
+
+添加用户
+
+```sh
+shell> groupadd lala
+shell> useradd -g lala -G sudo -s /bin/bash -d /home/lala -m lala
+shell> passwd lala
+```
+
+- [How to add new user in Linux](https://www.simplified.guide/linux/add-new-user)
+
+删除用户
+
+```sh
+shell> userdel -r lala
+```
+
+查看用户所属组
+
+```sh
+shell> groups lala
+```
+
 ## 分区
 
 制作 ntfs 类型的分区
