@@ -166,9 +166,9 @@ dns-nameservers 223.5.5.5 223.6.6.6
 添加用户
 
 ```sh
-shell> groupadd lala
-shell> useradd -g lala -G sudo -s /bin/bash -d /home/lala -m lala
-shell> passwd lala
+shell> groupadd suhua
+shell> useradd -g suhua -G sudo -s /bin/bash -d /home/suhua -m suhua
+shell> passwd suhua
 ```
 
 - [How to add new user in Linux](https://www.simplified.guide/linux/add-new-user)
@@ -176,14 +176,31 @@ shell> passwd lala
 删除用户
 
 ```sh
-shell> userdel -r lala
+shell> userdel -r suhua
 ```
 
 查看用户所属组
 
 ```sh
-shell> groups lala
+shell> groups suhua
 ```
+
+## 权限
+
+添加 sudo 权限，方法 1
+
+```sh
+shell> vim /etc/sudoers
+suhua ALL=(ALL:ALL) ALL
+```
+
+添加 sudo 权限，方法 2
+
+```sh
+shell> usermod -a -G sudo suhua
+```
+
+- [How do I grant sudo privileges to an existing user? ](https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user)
 
 ## 分区
 
