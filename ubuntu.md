@@ -202,6 +202,15 @@ shell> usermod -a -G sudo suhua
 
 - [How do I grant sudo privileges to an existing user? ](https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user)
 
+使用 sudo 时不用输入密码
+
+```sh
+shell> vim /etc/sudoers
+suhua ALL=(ALL) NOPASSWD:ALL
+```
+
+- [Sudoers file, enable NOPASSWD for user, all commands](https://askubuntu.com/questions/334318/sudoers-file-enable-nopasswd-for-user-all-commands)
+
 ## 分区
 
 制作 ntfs 类型的分区
