@@ -202,7 +202,7 @@ shell> usermod -a -G sudo suhua
 
 - [How do I grant sudo privileges to an existing user? ](https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user)
 
-使用 sudo 时不用输入密码
+使用 sudo 执行命令时不用输入密码
 
 ```sh
 shell> vim /etc/sudoers
