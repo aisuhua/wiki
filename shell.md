@@ -4,6 +4,8 @@
 shell> find ./  -printf "%f\n"
 ```
 
+- [How to output only file names (with spaces) in ls -Al?](https://unix.stackexchange.com/questions/70614/how-to-output-only-file-names-with-spaces-in-ls-al)
+
 快速生成大文件
 
 ```sh
