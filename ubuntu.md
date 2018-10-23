@@ -227,6 +227,10 @@ shell> /usr/sbin/ntpdate ntp7.aliyun.com
 
 - [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
 
+## 对命令进行版本切换
+
+update-alternatives（待补充）
+
 ## 分区
 
 制作 ntfs 类型的分区
