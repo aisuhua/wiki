@@ -21,7 +21,7 @@ shell> vim index.php
 <?php
 
 phpinfo();
-shell> php -S localhost:8000
+shell> php -S 0.0.0.0:8000
 ```
 
 - [Built-in web server](http://docs.php.net/manual/da/features.commandline.webserver.php)
