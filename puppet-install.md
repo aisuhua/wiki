@@ -51,7 +51,18 @@ root@puppetnode1:~> puppet --version
 root@puppetnode1:~> /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 ```
 
-## 获取证书
+## 签发证书
+
+### 自动签发
+
+server 添加 autosign.conf 配置
+
+```sh
+root@puppetmaster:~> vim /etc/puppetlabs/puppet/autosign.conf
+*.aisuhua.net
+```
+
+### 手工签发
 
 agent 首次请求 server
 
@@ -87,7 +98,7 @@ root@puppetnode1:~> puppet agent --test --server puppetmaster.aisuhua.net
 
 ## 添加默认配置
 
-配置 agent 请求的默认服务器和环境 
+修改 agent 请求的默认服务器和环境 
 
 ```sh
 root@puppetnode1:~> vim /etc/puppetlabs/puppet/puppet.conf
