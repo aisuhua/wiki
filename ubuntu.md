@@ -211,6 +211,20 @@ suhua ALL=(ALL) NOPASSWD:ALL
 
 - [Sudoers file, enable NOPASSWD for user, all commands](https://askubuntu.com/questions/334318/sudoers-file-enable-nopasswd-for-user-all-commands)
 
+## 同步时间
+
+安装 ntpdate
+
+```sh
+shell> apt-get install ntpdate
+```
+
+校正时间
+
+```sh
+/usr/sbin/ntpdate ntp7.aliyun.com
+```
+
 ## 分区
 
 制作 ntfs 类型的分区
