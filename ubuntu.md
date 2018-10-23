@@ -222,7 +222,7 @@ shell> apt-get install ntpdate
 校正时间
 
 ```sh
-/usr/sbin/ntpdate ntp7.aliyun.com
+shell> /usr/sbin/ntpdate ntp7.aliyun.com
 ```
 
 ## 分区
