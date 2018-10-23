@@ -8,3 +8,5 @@ shell> add-apt-repository ppa:ondrej/php
 shell> apt-get update
 shell> apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm php-pear php7.2-xml
 ```
+
+- [ubuntu 使用apt-get install 安装php5.6--php7](https://www.cnblogs.com/phpzhou/p/6288762.html)
