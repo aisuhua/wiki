@@ -26,6 +26,8 @@ root@puppetmaster:~> puppet --version
 root@puppetmaster:~> service puppetserver start
 ```
 
+- [Puppet Server: Installing From Packages](https://puppet.com/docs/puppetserver/5.3/install_from_packages.html)
+
 ## puppet agent
 
 安装
@@ -50,6 +52,8 @@ root@puppetnode1:~> puppet --version
 ```sh
 root@puppetnode1:~> /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 ```
+
+- [Installing Puppet agent: Linux](https://puppet.com/docs/puppet/5.5/install_linux.html)
 
 ## 签发证书
 
