@@ -1,15 +1,95 @@
 ## 安装
 
-安装 PHP 7.2
+简易安装
 
 ```sh
 shell> apt-get install python-software-properties
 shell> add-apt-repository ppa:ondrej/php
 shell> apt-get update
-shell> apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm php-pear php7.2-xml
+shell> apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm
+```
+
+完整安装
+
+```sh
+shell> apt-get install python-software-properties
+shell> add-apt-repository ppa:ondrej/php
+shell> apt-get update
+shell> apt-get install -y \
+php7.2-common \
+php7.2-dev \
+php7.2-cli \
+php7.2-fpm \
+php-pear \ 
+php7.2-xml \
+php7.2-curl \
+php7.2-gd \
+php7.2-zip \
+php7.2-dba \
+php7.2-mysql \
+php7.2-soap \
+php7.2-mbstring \
+php7.2-bcmath \
+php-imagick \
+php-msgpack \
+php-igbinary \
+php-mongodb \
+php-memcache \
+php-memcached \
+php-redis \
+php-amqp
+```
+
+查看当前默认使用的 PHP 版本
+
+```sh
+shell> php -v
+shell> update-alternatives --display php
+```
+
+切换到所需版本
+
+```sh
+shell> update-alternatives --set php /usr/bin/php7.2
+shell> update-alternatives --set php-config /usr/bin/php-config7.2
+shell> update-alternatives --set phpize /usr/bin/phpize7.2
 ```
 
 - [ubuntu 使用apt-get install 安装php5.6--php7](https://www.cnblogs.com/phpzhou/p/6288762.html)
+
+### 安装其他扩展
+
+安装 yar
+
+```sh
+shell> apt-get install curl libcurl4-gnutls-dev
+shell> pecl install yar
+shell> vim /etc/php/7.2/mods-available/yar.ini
+extension=yar.so
+shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/cli/conf.d/20-yar.ini
+shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.ini
+shell> service php7.2-fpm reload
+```
+
+- [laruence/yar](https://github.com/laruence/yar)
+- [configure: error: Please reinstall the libcurl distribution](https://github.com/laruence/yar/issues/111)
+
+安装 couchbase
+
+```sh
+shell> wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
+shell> dpkg -i couchbase-release-1.0-4-amd64.deb
+shell> apt-get update
+shell> apt-get install libcouchbase-dev build-essential php-dev zlib1g-dev
+shell> sudo pecl install couchbase
+shell> vim /etc/php/7.2/mods-available/couchbase.ini
+extension=couchbase.so
+shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
+shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
+shell> service php7.2-fpm reload
+```
+
+- [Install and Start Using the PHP SDK with Couchbase Server](https://docs.couchbase.com/php-sdk/2.6/start-using-sdk.html)
 
 ## 内置服务器
 
