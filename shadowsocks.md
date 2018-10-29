@@ -68,7 +68,7 @@ shell> curl ip.cn
 
 - [Polipo](https://www.irif.fr/~jch/software/polipo/)
 
-## 参考
+## 参考文献
 
 - [fq-book](https://github.com/loremwalker/fq-book)
 - [WebSiteUseful](https://github.com/loremwalker/WebSiteUseful)
