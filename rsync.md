@@ -1,4 +1,4 @@
-install
+安装
 
 ```sh
 shell> apt-get install rsync
