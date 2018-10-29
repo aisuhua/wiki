@@ -108,22 +108,21 @@ service php7.2-fpm reload
 
 查看扩展所在目录
 
-```sh
-shell> php -i | grep extension_dir
-extension_dir => /usr/lib/php/20170718
+```
+php -i | grep extension_dir
 ```
 
 ## 内置服务器
 
 基本使用
 
-```sh
-shell> cd ~/public_html
-shell> vim index.php
+```
+cd ~/public_html
+tee index.php <<-'EOF'
 <?php
-
 phpinfo();
-shell> php -S 0.0.0.0:8000
+EOF
+php -S 0.0.0.0:8000
 ```
 
 - [Built-in web server](http://docs.php.net/manual/da/features.commandline.webserver.php)
