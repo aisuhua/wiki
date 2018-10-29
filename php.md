@@ -105,6 +105,15 @@ shell> service php7.2-fpm reload
 
 - [Install and Start Using the PHP SDK with Couchbase Server](https://docs.couchbase.com/php-sdk/2.6/start-using-sdk.html)
 
+## 管理
+
+查看扩展所在目录
+
+```sh
+shell> php -i | grep extension_dir
+extension_dir => /usr/lib/php/20170718
+```
+
 ## 内置服务器
 
 基本使用
