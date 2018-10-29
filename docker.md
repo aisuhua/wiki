@@ -3,7 +3,7 @@
 安装
 
 ```sh
-shell> apt-get install apt-transport-https ca-certificates curl software-properties-common
+shell> apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 shell> curl -f sSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg| sudo apt-key add -
 shell> add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 shell> apt-get -y update
