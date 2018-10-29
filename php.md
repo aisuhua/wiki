@@ -27,6 +27,7 @@ php7.2-curl \
 php7.2-mbstring \
 php7.2-bcmath \
 php7.2-gd \
+php7.2-bz2 \
 php7.2-zip \
 php7.2-dba \
 php7.2-mysql \
@@ -45,8 +46,8 @@ php-amqp
 查看当前默认使用的 PHP 版本
 
 ```sh
-shell> php -v
-shell> update-alternatives --display php
+php -v
+update-alternatives --display php
 ```
 
 将命令切换到所需版本
