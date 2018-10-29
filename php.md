@@ -9,6 +9,8 @@ shell> apt-get update
 shell> apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm
 ```
 
+- [ubuntu 使用apt-get install 安装php5.6--php7](https://www.cnblogs.com/phpzhou/p/6288762.html)
+
 完整安装
 
 ```sh
@@ -40,6 +42,8 @@ php-redis \
 php-amqp
 ```
 
+
+
 查看当前默认使用的 PHP 版本
 
 ```sh
@@ -55,7 +59,7 @@ shell> update-alternatives --set php-config /usr/bin/php-config7.2
 shell> update-alternatives --set phpize /usr/bin/phpize7.2
 ```
 
-- [ubuntu 使用apt-get install 安装php5.6--php7](https://www.cnblogs.com/phpzhou/p/6288762.html)
+- [使用update-alternatives命令进行版本的切换](https://blog.csdn.net/JasonDing1354/article/details/50470109)
 
 ### 安装其他扩展
 
