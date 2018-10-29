@@ -26,7 +26,6 @@ ppp debug = no
 pppoptfile = /etc/ppp/peers/options.l2tpd.client.demo
 require pap = no
 autodial = yes
-
 shell> /etc/ppp/peers/options.l2tpd.client.demo
 noipdefault
 ipcp-accept-local
@@ -46,7 +45,6 @@ name MYNAME
 password MYPASSWORD
 logfile /var/log/l2tpd.client.demo.log
 ipparam route:10.10.0.0/16,10.11.0.0/16,10.21.0.0/16,10.22.0.0/16,10.220.0.0/16,192.168.1.0/24
-
 shell> vim /etc/ppp/ip-up.d/01-ipparam.sh
 #!/bin/sh
   
