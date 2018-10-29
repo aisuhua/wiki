@@ -3,10 +3,10 @@
 简易安装
 
 ```sh
-shell> apt-get install python-software-properties
-shell> add-apt-repository ppa:ondrej/php
-shell> apt-get update
-shell> apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm
+apt-get install python-software-properties
+add-apt-repository ppa:ondrej/php
+apt-get update
+apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm
 ```
 
 - [ubuntu 使用apt-get install 安装php5.6--php7](https://www.cnblogs.com/phpzhou/p/6288762.html)
@@ -14,10 +14,10 @@ shell> apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm
 完整安装
 
 ```sh
-shell> apt-get install python-software-properties
-shell> add-apt-repository ppa:ondrej/php
-shell> apt-get update
-shell> apt-get install -y \
+apt-get install python-software-properties
+add-apt-repository ppa:ondrej/php
+apt-get update
+apt-get install -y \
 php7.2-common \
 php7.2-dev \
 php7.2-cli \
@@ -41,8 +41,6 @@ php-memcached \
 php-redis \
 php-amqp
 ```
-
-
 
 查看当前默认使用的 PHP 版本
 
