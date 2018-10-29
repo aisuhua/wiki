@@ -67,8 +67,9 @@ update-alternatives --set phpize /usr/bin/phpize7.2
 #### Gearman
 
 ```sh
-shell> add-apt-repository ppa:ondrej/pkg-gearman
-shell> apt-get install php-gearman
+add-apt-repository ppa:ondrej/pkg-gearman
+apt-get update
+apt-get install php-gearman
 ```
 
 - [libgearman8 dependency for php-gearman has no installable candidate](https://github.com/oerdnj/deb.sury.org/issues/711)
@@ -95,7 +96,7 @@ shell> wget http://packages.couchbase.com/releases/couchbase-release/couchbase-r
 shell> dpkg -i couchbase-release-1.0-4-amd64.deb
 shell> apt-get update
 shell> apt-get install libcouchbase-dev build-essential php-dev zlib1g-dev
-shell> sudo pecl install couchbase
+shell> pecl install couchbase
 shell> vim /etc/php/7.2/mods-available/couchbase.ini
 extension=couchbase.so
 shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
