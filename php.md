@@ -48,14 +48,16 @@ php-amqp
 ```sh
 php -v
 update-alternatives --display php
+update-alternatives --display php-config
+update-alternatives --display phpize
 ```
 
 将命令切换到所需版本
 
 ```sh
-shell> update-alternatives --set php /usr/bin/php7.2
-shell> update-alternatives --set php-config /usr/bin/php-config7.2
-shell> update-alternatives --set phpize /usr/bin/phpize7.2
+update-alternatives --set php /usr/bin/php7.2
+update-alternatives --set php-config /usr/bin/php-config7.2
+update-alternatives --set phpize /usr/bin/phpize7.2
 ```
 
 - [使用update-alternatives命令进行版本的切换](https://blog.csdn.net/JasonDing1354/article/details/50470109)
