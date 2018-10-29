@@ -1,4 +1,4 @@
-## shadowsocks-qt5
+## Shadowsocks-Qt5
 
 安装
 
