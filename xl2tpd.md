@@ -42,8 +42,8 @@ defaultroute
 usepeerdns
 debug
 connect-delay 5000
-name myname
-password mypassword
+name MYNAME
+password MYPASSWORD
 logfile /var/log/l2tpd.client.demo.log
 ipparam route:10.10.0.0/16,10.11.0.0/16,10.21.0.0/16,10.22.0.0/16,10.220.0.0/16,192.168.1.0/24
 
