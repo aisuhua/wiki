@@ -7,7 +7,7 @@ shell> apt-get install xl2tpd
 添加配置
 
 ```sh
-shell> /etc/xl2tpd/xl2tpd.conf
+shell> vim /etc/xl2tpd/xl2tpd.conf
 [global]
 access control = no
 auth file = /etc/ppp/chap-secrets
@@ -26,7 +26,7 @@ ppp debug = no
 pppoptfile = /etc/ppp/peers/options.l2tpd.client.demo
 require pap = no
 autodial = yes
-shell> /etc/ppp/peers/options.l2tpd.client.demo
+shell> vim /etc/ppp/peers/options.l2tpd.client.demo
 noipdefault
 ipcp-accept-local
 ipcp-accept-remote
