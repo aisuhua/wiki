@@ -25,6 +25,8 @@ shell> systemctl daemon-reload
 shell> systemctl restart docker
 ```
 
+- [容器镜像服务](https://cr.console.aliyun.com/)
+
 创建并运行容器
 
 ```sh
