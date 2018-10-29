@@ -77,13 +77,12 @@ apt-get install php-gearman
 #### Yar
 
 ```sh
-shell> apt-get install curl libcurl4-gnutls-dev
-shell> pecl install yar
-shell> vim /etc/php/7.2/mods-available/yar.ini
-extension=yar.so
-shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/cli/conf.d/20-yar.ini
-shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.ini
-shell> service php7.2-fpm reload
+apt-get install curl libcurl4-gnutls-dev
+pecl install yar
+echo 'extension=yar.so' > /etc/php/7.2/mods-available/yar.ini
+ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/cli/conf.d/20-yar.ini
+ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.ini
+service php7.2-fpm reload
 ```
 
 - [laruence/yar](https://github.com/laruence/yar)
@@ -92,18 +91,16 @@ shell> service php7.2-fpm reload
 #### Couchbase
 
 ```sh
-shell> wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
-shell> dpkg -i couchbase-release-1.0-4-amd64.deb
-shell> apt-get update
-shell> apt-get install libcouchbase-dev build-essential php-dev zlib1g-dev
-shell> pecl install couchbase
-shell> vim /etc/php/7.2/mods-available/couchbase.ini
-extension=couchbase.so
-shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
-shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
-shell> service php7.2-fpm reload
+wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
+dpkg -i couchbase-release-1.0-4-amd64.deb
+apt-get update
+apt-get install libcouchbase-dev build-essential php-dev zlib1g-dev
+pecl install couchbase
+echo 'extension=couchbase.so' > /etc/php/7.2/mods-available/couchbase.ini
+ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
+ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
+service php7.2-fpm reload
 ```
-
 
 - [Install and Start Using the PHP SDK with Couchbase Server](https://docs.couchbase.com/php-sdk/2.6/start-using-sdk.html)
 
