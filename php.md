@@ -52,7 +52,7 @@ shell> update-alternatives --display php-config
 shell> update-alternatives --display phpize
 ```
 
-将命令切换到所需版本
+设置默认版本
 
 ```sh
 shell> update-alternatives --set php /usr/bin/php7.2
