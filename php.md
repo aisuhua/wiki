@@ -2,7 +2,7 @@
 
 简易安装
 
-```
+```sh
 shell> apt-get install python-software-properties
 shell> add-apt-repository ppa:ondrej/php
 shell> apt-get update
