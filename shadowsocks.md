@@ -19,6 +19,7 @@ shell> apt-get install shadowsocks-qt5
 GFWList URL(Github): https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
 - [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)
+- [gfwlist](https://github.com/gfwlist/gfwlist)
 
 ## Polipo
 
@@ -41,7 +42,13 @@ objectHighMark = 16384
 serverMaxSlots = 64
 serverSlots = 16
 serverSlots1 = 32
-shell> /etc/init.d/polipo restart
+shell> service polipo restart
+```
+
+测试代理是否正常
+
+```sh
+shell> curl http://127.0.0.1:8123/
 ```
 
 为终端配置 http 代理
