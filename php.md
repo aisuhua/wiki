@@ -47,7 +47,7 @@ shell> php -v
 shell> update-alternatives --display php
 ```
 
-切换到所需版本
+将命令切换到所需版本
 
 ```sh
 shell> update-alternatives --set php /usr/bin/php7.2
@@ -59,7 +59,16 @@ shell> update-alternatives --set phpize /usr/bin/phpize7.2
 
 ### 安装其他扩展
 
-安装 yar
+#### Gearman
+
+```sh
+shell> add-apt-repository ppa:ondrej/pkg-gearman
+shell> apt-get install php-gearman
+```
+
+- [libgearman8 dependency for php-gearman has no installable candidate](https://github.com/oerdnj/deb.sury.org/issues/711)
+
+#### Yar
 
 ```sh
 shell> apt-get install curl libcurl4-gnutls-dev
@@ -74,7 +83,7 @@ shell> service php7.2-fpm reload
 - [laruence/yar](https://github.com/laruence/yar)
 - [configure: error: Please reinstall the libcurl distribution](https://github.com/laruence/yar/issues/111)
 
-安装 couchbase
+#### Couchbase
 
 ```sh
 shell> wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
@@ -88,6 +97,7 @@ shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/2
 shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
 shell> service php7.2-fpm reload
 ```
+
 
 - [Install and Start Using the PHP SDK with Couchbase Server](https://docs.couchbase.com/php-sdk/2.6/start-using-sdk.html)
 
