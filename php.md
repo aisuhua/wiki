@@ -76,7 +76,7 @@ apt-get install php-gearman
 
 #### Yar
 
-```
+```sh
 apt-get install curl libcurl4-gnutls-dev
 pecl install yar
 echo 'extension=yar.so' > /etc/php/7.2/mods-available/yar.ini
@@ -90,7 +90,7 @@ service php7.2-fpm reload
 
 #### Couchbase
 
-```
+```sh
 wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
 dpkg -i couchbase-release-1.0-4-amd64.deb
 apt-get update
@@ -108,7 +108,7 @@ service php7.2-fpm reload
 
 查看扩展所在目录
 
-```
+```sh
 php -i | grep extension_dir
 ```
 
@@ -116,7 +116,7 @@ php -i | grep extension_dir
 
 基本使用
 
-```
+```sh
 cd ~/public_html
 tee index.php <<-'EOF'
 <?php
