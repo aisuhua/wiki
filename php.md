@@ -82,7 +82,6 @@ pecl install yar
 echo 'extension=yar.so' > /etc/php/7.2/mods-available/yar.ini
 ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/cli/conf.d/20-yar.ini
 ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.ini
-service php7.2-fpm reload
 ```
 
 - [laruence/yar](https://github.com/laruence/yar)
@@ -99,12 +98,17 @@ pecl install couchbase
 echo 'extension=couchbase.so' > /etc/php/7.2/mods-available/couchbase.ini
 ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
 ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
-service php7.2-fpm reload
 ```
 
 - [Install and Start Using the PHP SDK with Couchbase Server](https://docs.couchbase.com/php-sdk/2.6/start-using-sdk.html)
 
 ## 管理
+
+php-fpm 重新加载配置文件
+
+```
+service php7.2-fpm reload
+```
 
 查看扩展所在目录
 
