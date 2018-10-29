@@ -21,7 +21,7 @@ GFWList URL
 
 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
-- [gfwlist](https://github.com/gfwlist/gfwlist)
+- [GFWList](https://github.com/gfwlist/gfwlist)
 
 ## Polipo
 
