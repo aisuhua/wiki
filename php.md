@@ -2,7 +2,7 @@
 
 简易安装
 
-```sh
+```
 apt-get install python-software-properties
 add-apt-repository ppa:ondrej/php
 apt-get update
@@ -13,7 +13,7 @@ apt-get install -y php7.2-common php7.2-dev php7.2-cli php7.2-fpm
 
 完整安装
 
-```sh
+```
 apt-get install python-software-properties
 add-apt-repository ppa:ondrej/php
 apt-get update
@@ -45,7 +45,7 @@ php-amqp
 
 查看当前默认使用的 PHP 版本
 
-```sh
+```
 php -v
 update-alternatives --display php
 update-alternatives --display php-config
@@ -54,7 +54,7 @@ update-alternatives --display phpize
 
 将命令切换到所需版本
 
-```sh
+```
 update-alternatives --set php /usr/bin/php7.2
 update-alternatives --set php-config /usr/bin/php-config7.2
 update-alternatives --set phpize /usr/bin/phpize7.2
@@ -66,7 +66,7 @@ update-alternatives --set phpize /usr/bin/phpize7.2
 
 #### Gearman
 
-```sh
+```
 add-apt-repository ppa:ondrej/pkg-gearman
 apt-get update
 apt-get install php-gearman
@@ -76,7 +76,7 @@ apt-get install php-gearman
 
 #### Yar
 
-```sh
+```
 apt-get install curl libcurl4-gnutls-dev
 pecl install yar
 echo 'extension=yar.so' > /etc/php/7.2/mods-available/yar.ini
@@ -90,7 +90,7 @@ service php7.2-fpm reload
 
 #### Couchbase
 
-```sh
+```
 wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
 dpkg -i couchbase-release-1.0-4-amd64.deb
 apt-get update
@@ -108,7 +108,7 @@ service php7.2-fpm reload
 
 查看扩展所在目录
 
-```sh
+```
 php -i | grep extension_dir
 ```
 
@@ -116,7 +116,7 @@ php -i | grep extension_dir
 
 基本使用
 
-```sh
+```
 cd ~/public_html
 tee index.php <<-'EOF'
 <?php
