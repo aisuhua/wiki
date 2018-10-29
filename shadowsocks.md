@@ -15,10 +15,12 @@ shell> apt-get install shadowsocks-qt5
 安装
 
 - [Chrome Web Store](https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif)
-
-GFWList URL(Github): https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
-
 - [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)
+
+GFWList URL
+
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+
 - [gfwlist](https://github.com/gfwlist/gfwlist)
 
 ## Polipo
