@@ -101,6 +101,13 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted uni
 ## Not recommended
 # deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu xenial-security main restricted
+# deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted
+deb http://security.ubuntu.com/ubuntu xenial-security universe
+# deb-src http://security.ubuntu.com/ubuntu xenial-security universe
+deb http://security.ubuntu.com/ubuntu xenial-security multiverse
+# deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
 shell> apt-get update
 ```
 
