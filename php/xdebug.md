@@ -9,7 +9,7 @@ phpstorm
 xdebug.ini 
 
 ```shell
-shell> cat /etc/php/7.2/mods-available/xdebug.ini 
+shell> vim /etc/php/7.2/mods-available/xdebug.ini 
 zend_extension=xdebug.so
 xdebug.remote_enable=1
 xdebug.remote_host=192.168.1.100
@@ -19,8 +19,8 @@ xdebug.remote_port=9001
 debug
 
 ```shell
-shell> curl http://www.example.com?XDEBUG_SESSION_START=session_name
-shell> curl -H 'Cookie: XDEBUG_SESSION=session_name' http://www.example.com
+shell> curl http://www.example.com?XDEBUG_SESSION_START=PHPSTORM
+shell> curl -H 'Cookie: XDEBUG_SESSION=PHPSTORM' http://www.example.com
 ```
 
 - [Xdebug & Zend Debugger bookmarklets generator for PhpStorm](https://www.jetbrains.com/phpstorm/marklets/)
