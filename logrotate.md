@@ -13,7 +13,6 @@ shell> vim /etc/logrotate.d/log-file
     delaycompress
     notifempty
     create 664 www-data www-data
-    sharedscripts
 }
 ```
 
