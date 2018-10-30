@@ -31,6 +31,6 @@ shell> curl -H 'Cookie: XDEBUG_SESSION=PHPSTORM' http://www.example.com
 
 ![how it work?](https://xdebug.org/images/docs/dbgp-setup.gif)
 
-
+- [Remote Debugging](https://xdebug.org/docs/remote)
 
 
