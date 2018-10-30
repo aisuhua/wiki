@@ -3,7 +3,7 @@
 PHP 业务日志 
 
 ```sh
-shell> tee /etc/logrotate.d/log-file <<-'EOF'
+shell> vim /etc/logrotate.d/log-file
 /var/log/log-file {
     hourly
     rotate 2
@@ -14,7 +14,6 @@ shell> tee /etc/logrotate.d/log-file <<-'EOF'
     notifempty
     create 664 www-data www-data
 }
-EOF
 ```
 
 - [Linux日志文件总管——logrotate](https://linux.cn/article-4126-1.html)
@@ -22,7 +21,7 @@ EOF
 PHP-FPM 日志
 
 ```sh
-shell> tee /etc/logrotate.d/php7.2-fpm <<-'EOF'
+shell> vim /etc/logrotate.d/php7.2-fpm
 /var/log/php7.2-fpm.log {
     weekly
     rotate 12
@@ -34,7 +33,6 @@ shell> tee /etc/logrotate.d/php7.2-fpm <<-'EOF'
         /usr/lib/php/php7.2-fpm-reopenlogs
     endscript
 }
-EOF
 ```
 
 - [[php7.0-fpm] wrong log path in logrotate config](https://github.com/oerdnj/deb.sury.org/issues/221)
