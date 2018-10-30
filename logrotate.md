@@ -3,7 +3,7 @@
 轮转 PHP 业务日志 
 
 ```sh
-shell> vim 
+shell> vim /etc/logrotate.d/log-file
 /var/log/log-file {
     hourly
     maxsize 500M
