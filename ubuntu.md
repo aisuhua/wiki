@@ -10,6 +10,8 @@ shell> vim /etc/security/limits.d/nofile.conf
 * - nofile 65535
 ```
 
+- [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
+
 ## 服务器状态
 
 查看公网 IP
