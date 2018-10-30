@@ -42,7 +42,7 @@ loopback_users.guest = false
 
 ## 管理
 
-启动
+启动服务
 
 ```sh
 shell> service rabbitmq-server start
