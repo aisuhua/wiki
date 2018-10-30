@@ -64,6 +64,12 @@ shell> update-alternatives --set phpize /usr/bin/phpize7.2
 
 ### 安装其他扩展
 
+#### Xdebug
+
+```sh
+shell> apt-get install php-xdebug
+```
+
 #### Gearman
 
 ```sh
