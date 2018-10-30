@@ -12,8 +12,6 @@ shell> apt-get install nginx
 
 - [nginx: Linux packages](http://nginx.org/en/linux_packages.html)
 
-## 管理
-
 启动
 
 ```sh
