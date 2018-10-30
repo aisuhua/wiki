@@ -10,6 +10,37 @@ shell> vim /etc/security/limits.d/nofile.conf
 * - nofile 65535
 ```
 
+优化内核参数
+
+```sh
+shell> /etc/sysctl.conf
+net.ipv4.tcp_fin_timeout=30
+net.ipv4.tcp_keepalive_time=1200
+net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_tw_recycle=1
+net.core.netdev_max_backlog=262144
+net.core.somaxconn=65535
+net.ipv4.tcp_max_orphans=262144
+net.ipv4.tcp_max_syn_backlog=262144
+net.ipv4.tcp_synack_retries=2
+net.ipv4.tcp_syn_retries=2
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_wmem=4096 65536 524288
+net.core.wmem_max=1048576
+net.core.wmem_default=1048576
+net.core.rmem_max=16777216
+net.core.rmem_default=16777216
+net.ipv4.ip_local_port_range=1024 65535
+net.netfilter.nf_conntrack_max=655350
+net.netfilter.nf_conntrack_tcp_timeout_established=300
+net.ipv6.conf.all.disable_ipv6=1
+net.ipv6.conf.default.disable_ipv6=1
+net.ipv6.conf.lo.disable_ipv6=1
+vm.swappiness=1
+fs.file-max=655350
+```
+
 - [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
 
 ## 服务器状态
