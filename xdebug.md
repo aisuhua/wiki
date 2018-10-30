@@ -25,6 +25,8 @@ shell> curl -H 'Cookie: XDEBUG_SESSION=session_name' http://www.example.com
 https://www.jetbrains.com/phpstorm/marklets/
 ```
 
+- [Xdebug & Zend Debugger bookmarklets generator for PhpStorm](https://www.jetbrains.com/phpstorm/marklets/)
+
 how it work?
 
 ![how it work?](https://xdebug.org/images/docs/dbgp-setup.gif)
