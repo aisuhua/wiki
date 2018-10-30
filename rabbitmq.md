@@ -1,6 +1,6 @@
 ## 安装
 
-安装 erlang 和 rabbitmq
+安装
 
 ```sh
 shell> wget -O - 'https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc' | sudo apt-key add -
