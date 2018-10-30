@@ -100,13 +100,6 @@ root@rabbit3:> rabbitmqctl cluster_status
 
 - [Clustering Guide](https://www.rabbitmq.com/clustering.html)
 
-安装 management UI
-
-```sh
-root@rabbit2:> rabbitmq-plugins enable rabbitmq_management
-root@rabbit3:> rabbitmq-plugins enable rabbitmq_management
-```
-
 ## 配置镜像队列
 
 添加 Policy 即可，只要队列名称与策略匹配上即会应用镜像，可在任一节点上执行添加操作。
