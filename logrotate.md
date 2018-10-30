@@ -3,7 +3,7 @@
 PHP 业务日志 
 
 ```sh
-shell> vim /etc/logrotate.d/log-file
+shell> tee /etc/logrotate.d/log-file <<-'EOF'
 /var/log/log-file {
     hourly
     rotate 2
@@ -14,6 +14,7 @@ shell> vim /etc/logrotate.d/log-file
     notifempty
     create 664 www-data www-data
 }
+EOF
 ```
 
 - [Linux日志文件总管——logrotate](https://linux.cn/article-4126-1.html)
