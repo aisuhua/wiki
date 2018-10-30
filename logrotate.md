@@ -22,7 +22,7 @@ EOF
 PHP-FPM 日志
 
 ```sh
-shell> vim /etc/logrotate.d/php7.2-fpm
+shell> tee /etc/logrotate.d/php7.2-fpm <<-'EOF'
 /var/log/php7.2-fpm.log {
     weekly
     rotate 12
@@ -34,6 +34,7 @@ shell> vim /etc/logrotate.d/php7.2-fpm
         /usr/lib/php/php7.2-fpm-reopenlogs
     endscript
 }
+EOF
 ```
 
 - [[php7.0-fpm] wrong log path in logrotate config](https://github.com/oerdnj/deb.sury.org/issues/221)
