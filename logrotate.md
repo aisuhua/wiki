@@ -37,7 +37,7 @@ shell> vim /etc/logrotate.d/php7.2-fpm
 
 - [[php7.0-fpm] wrong log path in logrotate config](https://github.com/oerdnj/deb.sury.org/issues/221)
 
-Nginx 访问日志
+Nginx 日志
 
 ```sh
 shell> vim /etc/logrotate.d/nginx
