@@ -46,18 +46,18 @@ php-amqp
 查看当前默认使用的 PHP 版本
 
 ```sh
-shell> php -v
-shell> update-alternatives --display php
-shell> update-alternatives --display php-config
-shell> update-alternatives --display phpize
+php -v
+update-alternatives --display php
+update-alternatives --display php-config
+update-alternatives --display phpize
 ```
 
 设置默认版本
 
 ```sh
-shell> update-alternatives --set php /usr/bin/php7.2
-shell> update-alternatives --set php-config /usr/bin/php-config7.2
-shell> update-alternatives --set phpize /usr/bin/phpize7.2
+update-alternatives --set php /usr/bin/php7.2
+update-alternatives --set php-config /usr/bin/php-config7.2
+update-alternatives --set phpize /usr/bin/phpize7.2
 ```
 
 - [使用update-alternatives命令进行版本的切换](https://blog.csdn.net/JasonDing1354/article/details/50470109)
@@ -67,15 +67,15 @@ shell> update-alternatives --set phpize /usr/bin/phpize7.2
 #### Xdebug
 
 ```sh
-shell> apt-get install php-xdebug
+apt-get install php-xdebug
 ```
 
 #### Gearman
 
 ```sh
-shell> add-apt-repository ppa:ondrej/pkg-gearman
-shell> apt-get update
-shell> apt-get install php-gearman
+add-apt-repository ppa:ondrej/pkg-gearman
+apt-get update
+apt-get install php-gearman
 ```
 
 - [libgearman8 dependency for php-gearman has no installable candidate](https://github.com/oerdnj/deb.sury.org/issues/711)
@@ -83,11 +83,11 @@ shell> apt-get install php-gearman
 #### Yar
 
 ```sh
-shell> apt-get install curl libcurl4-gnutls-dev
-shell> pecl install yar
-shell> echo 'extension=yar.so' > /etc/php/7.2/mods-available/yar.ini
-shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/cli/conf.d/20-yar.ini
-shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.ini
+apt-get install curl libcurl4-gnutls-dev
+pecl install yar
+echo 'extension=yar.so' > /etc/php/7.2/mods-available/yar.ini
+ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/cli/conf.d/20-yar.ini
+ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.ini
 ```
 
 - [laruence/yar](https://github.com/laruence/yar)
@@ -96,14 +96,14 @@ shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.
 #### Couchbase
 
 ```sh
-shell> wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
-shell> dpkg -i couchbase-release-1.0-4-amd64.deb
-shell> apt-get update
-shell> apt-get install libcouchbase-dev build-essential php7.2-dev zlib1g-dev
-shell> pecl install couchbase
-shell> echo 'extension=couchbase.so' > /etc/php/7.2/mods-available/couchbase.ini
-shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
-shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
+wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
+dpkg -i couchbase-release-1.0-4-amd64.deb
+apt-get update
+apt-get install libcouchbase-dev build-essential php7.2-dev zlib1g-dev
+pecl install couchbase
+echo 'extension=couchbase.so' > /etc/php/7.2/mods-available/couchbase.ini
+ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
+ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
 ```
 
 - [Install and Start Using the PHP SDK with Couchbase Server](https://docs.couchbase.com/php-sdk/2.6/start-using-sdk.html)
@@ -113,13 +113,13 @@ shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/2
 php-fpm 重新加载配置文件
 
 ```sh
-shell> service php7.2-fpm reload
+service php7.2-fpm reload
 ```
 
 查看扩展所在目录
 
 ```sh
-shell> php -i | grep extension_dir
+php -i | grep extension_dir
 ```
 
 ## 内置服务器
@@ -127,12 +127,12 @@ shell> php -i | grep extension_dir
 基本使用
 
 ```sh
-shell> cd ~/public_html
-shell> tee index.php <<-'EOF'
+cd ~/public_html
+tee index.php <<-'EOF'
 <?php
 phpinfo();
 EOF
-shell> php -S 0.0.0.0:8000
+php -S 0.0.0.0:8000
 ```
 
 - [Built-in web server](http://docs.php.net/manual/da/features.commandline.webserver.php)
