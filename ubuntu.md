@@ -1,3 +1,15 @@
+## 初始化
+
+修改默认最大文件打开数
+
+```sh
+shell> vim /etc/systemd/system.conf
+[Manager]
+DefaultLimitNOFILE=65535
+shell> vim /etc/security/limits.d/nofile.conf
+* - nofile 65535
+```
+
 ## 服务器状态
 
 查看公网 IP
