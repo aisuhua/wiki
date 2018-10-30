@@ -5,8 +5,8 @@ PHP 业务日志
 ```sh
 shell> vim /etc/logrotate.d/log-file
 /var/log/log-file {
-    rotate 3
     hourly
+    rotate 3
     maxsize 512M
     missingok
     compress
@@ -24,8 +24,8 @@ PHP-FPM 日志
 ```sh
 shell> vim /etc/logrotate.d/php7.2-fpm
 /var/log/php7.2-fpm.log {
-    rotate 12
     weekly
+    rotate 12
     missingok
     notifempty
     compress
@@ -38,6 +38,24 @@ shell> vim /etc/logrotate.d/php7.2-fpm
 
 - [[php7.0-fpm] wrong log path in logrotate config](https://github.com/oerdnj/deb.sury.org/issues/221)
 
+Nginx 访问日志
+
+```sh
+shell> vim /etc/logrotate.d/nginx
+/var/log/nginx/*.log {
+    hourly
+    rotate 1
+    maxsize 512M
+    missingok
+    compress
+    delaycompress
+    notifempty
+    create 664 www-data www-data
+    postrotate
+        /etc/init.d/nginx reload
+    endscript
+}
+```
 
 ## 参考文献
 
