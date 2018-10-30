@@ -128,9 +128,10 @@ shell> php -i | grep extension_dir
 
 ```sh
 shell> cd ~/public_html
-shell> vim index.php
+shell> tee index.php <<-'EOF'
 <?php
 phpinfo();
+EOF
 shell> php -S 0.0.0.0:8000
 ```
 
