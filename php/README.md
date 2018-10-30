@@ -85,8 +85,7 @@ shell> apt-get install php-gearman
 ```sh
 shell> apt-get install curl libcurl4-gnutls-dev
 shell> pecl install yar
-shell> vim /etc/php/7.2/mods-available/yar.ini
-extension=yar.so
+shell> echo 'extension=yar.so' > /etc/php/7.2/mods-available/yar.ini
 shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/cli/conf.d/20-yar.ini
 shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.ini
 ```
@@ -102,8 +101,7 @@ shell> dpkg -i couchbase-release-1.0-4-amd64.deb
 shell> apt-get update
 shell> apt-get install libcouchbase-dev build-essential php7.2-dev zlib1g-dev
 shell> pecl install couchbase
-shell> vim /etc/php/7.2/mods-available/couchbase.ini
-extension=couchbase.so
+shell> echo 'extension=couchbase.so' > /etc/php/7.2/mods-available/couchbase.ini
 shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/cli/conf.d/25-couchbase.ini
 shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/25-couchbase.ini
 ```
