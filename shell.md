@@ -56,7 +56,7 @@ shell> ps -ef | grep demo.php | grep -v grep | awk '{print $2}' | xargs kill -9
 shell> netstat -anp | grep :4730
 ```
 
-查看进程运行情况
+查找正在运行的进程
 
 ```sh
 shell> ps -ef | grep php
