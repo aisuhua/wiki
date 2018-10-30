@@ -12,8 +12,16 @@ shell> apt-get install nginx
 
 - [nginx: Linux packages](http://nginx.org/en/linux_packages.html)
 
+## 管理
+
 启动
 
 ```sh
 shell> service nginx start
+```
+
+重新加载配置文件
+
+```sh
+shell> nginx -s reload
 ```
