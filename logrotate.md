@@ -5,9 +5,9 @@ PHP 业务日志
 ```sh
 shell> vim /etc/logrotate.d/log-file
 /var/log/log-file {
+    rotate 3
     hourly
     maxsize 500M
-    rotate 3
     missingok
     compress
     delaycompress
