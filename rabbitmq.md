@@ -153,8 +153,6 @@ root@rabbit2:> rabbitmqctl clear_policy ha-two
 
 ![](https://github.com/aisuhua/rabbit/raw/master/demo01/amqp_ha_consumer.png)
 
-参考文献
-
 - [Highly Available (Mirrored) Queues](https://www.rabbitmq.com/ha.html#mirroring-arguments)
 - [Breaking things with RabbitMQ 3.0](http://www.rabbitmq.com/blog/2012/11/19/breaking-things-with-rabbitmq-3-0/)
 
