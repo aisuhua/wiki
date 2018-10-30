@@ -98,6 +98,13 @@ shell> vim /etc/logrotate.d/rsyslog
 }
 ```
 
+## 其他
+
+查看使用帮助
+
+```sh
+shell> man logrotate
+```
 
 ## 参考文献
 
