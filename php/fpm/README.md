@@ -5,6 +5,7 @@
 ## php.ini
 
 ```ini
+[PHP]
 upload_max_filesize = 30M
 post_max_size = 30M
 ```
@@ -12,6 +13,7 @@ post_max_size = 30M
 ## www.conf
 
 ```ini
+[www]
 listen = 127.0.0.1:9000
 pm = static
 pm.max_children = 200
