@@ -30,6 +30,14 @@ shell> sha1sum test | tr a-z A-Z
 shell> echo 'A5F5E9413C558753025495DAF6A0A7B47E55402B' | tr A-Z a-z
 ```
 
+删除文件名带 `-` 的文件
+
+```sh
+shell> rm ./-A_NNMHDB3MW3eB
+```
+
+## 进程
+
 后台执行进程
 
 ```sh
@@ -40,16 +48,6 @@ shell> nohup /usr/bin/php demo.php > /tmp/demo.log 2>&1 &
 
 ```sh
 shell> ps -ef | grep demo.php | grep -v grep | awk '{print $2}' | xargs kill -9
-```
-
-bash 快捷键
-
-```sh
-ctrl+a: 光标移到行首
-ctrl+e: 光标移到行尾
-ctrl+l: 清屏，相当于clear
-ctrl+u: 清除光标前至行首间的所有内容
-ctrl+shift+t: 打开 Tab 新标签
 ```
 
 查看特定端口所属进程
@@ -65,11 +63,7 @@ shell> ps -ef | grep php
 shell> ps -aux | grep php
 ```
 
-删除文件名带 `-` 的文件
-
-```sh
-shell> rm ./-A_NNMHDB3MW3eB
-```
+## grep
 
 查找包含任意一个关键字的行
 
@@ -97,3 +91,12 @@ shell> grep -vFf test1.csv test2.csv
 shell> grep -Ff test1.csv test2.csv
 ```
 
+## 快捷键
+
+```sh
+ctrl+a: 光标移到行首
+ctrl+e: 光标移到行尾
+ctrl+l: 清屏，相当于clear
+ctrl+u: 清除光标前至行首间的所有内容
+ctrl+shift+t: 打开 Tab 新标签
+```
