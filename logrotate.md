@@ -6,7 +6,7 @@ PHP 业务日志
 shell> vim /etc/logrotate.d/log-file
 /var/log/log-file {
     hourly
-    rotate 3
+    rotate 2
     maxsize 512M
     missingok
     compress
