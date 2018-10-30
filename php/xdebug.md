@@ -1,6 +1,6 @@
-## 启用
+## 如何使用
 
-对 PHPSTORM 进行配置 
+对 phpstorm 进行配置 
 
 - Add CLI Interpreter. `File > Settings > Languages & Frameworks > PHP`
 - Set Xdebug Port (eg. 9001). `... > PHP > Debug > Xdebug`
