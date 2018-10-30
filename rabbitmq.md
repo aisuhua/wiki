@@ -60,7 +60,7 @@ shell> rabbitmqctl status
 shell> rabbitmqctl environment
 ```
 
-## 创建集群
+## 组建集群
 
 修改 hosts 
 
