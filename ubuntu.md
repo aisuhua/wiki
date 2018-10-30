@@ -10,6 +10,8 @@ shell> vim /etc/security/limits.d/nofile.conf
 * - nofile 65535
 ```
 
+- [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
+
 优化内核参数
 
 ```sh
@@ -40,8 +42,6 @@ net.ipv6.conf.lo.disable_ipv6=1
 vm.swappiness=1
 fs.file-max=655350
 ```
-
-- [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
 
 ## 服务器状态
 
