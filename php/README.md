@@ -100,7 +100,7 @@ shell> ln -s /etc/php/7.2/mods-available/yar.ini /etc/php/7.2/fpm/conf.d/20-yar.
 shell> wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-4-amd64.deb
 shell> dpkg -i couchbase-release-1.0-4-amd64.deb
 shell> apt-get update
-shell> apt-get install libcouchbase-dev build-essential php-dev zlib1g-dev
+shell> apt-get install libcouchbase-dev build-essential php7.2-dev zlib1g-dev
 shell> pecl install couchbase
 shell> vim /etc/php/7.2/mods-available/couchbase.ini
 extension=couchbase.so
