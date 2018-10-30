@@ -57,8 +57,51 @@ shell> vim /etc/logrotate.d/nginx
 }
 ```
 
+Linux 系统日志
+
+```sh
+shell> vim /etc/logrotate.d/rsyslog
+/var/log/syslog {
+    rotate 7
+    daily
+    missingok
+    notifempty
+    delaycompress
+    compress
+    postrotate
+        invoke-rc.d rsyslog rotate > /dev/null
+    endscript
+}
+
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/daemon.log
+/var/log/kern.log
+/var/log/auth.log
+/var/log/user.log
+/var/log/lpr.log
+/var/log/cron.log
+/var/log/debug
+/var/log/messages {
+    rotate 4
+    weekly
+    missingok
+    notifempty
+    compress
+    delaycompress
+    sharedscripts
+    postrotate
+        invoke-rc.d rsyslog rotate > /dev/null
+    endscript
+}
+```
+
+
 ## 参考文献
 
 - [logrotate/logrotate](https://github.com/logrotate/logrotate)
 - [配置 logrotate 的终极指导](https://linux.cn/article-8227-1.html)
 - [运维中的日志切割操作梳理（Logrotate/python/shell脚本实现）](https://www.cnblogs.com/kevingrace/p/6307298.html)
+- [Hourly rotation of files using logrotate? [closed]](https://stackoverflow.com/questions/25485047/hourly-rotation-of-files-using-logrotate/25485313)
