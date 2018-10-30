@@ -1,3 +1,22 @@
+## 配置示例
+
+轮转 PHP 业务日志 
+
+```sh
+shell> vim 
+/var/log/log-file {
+    hourly
+    maxsize 500M
+    rotate 3
+    missingok
+    compress
+    delaycompress
+    notifempty
+    create 664 www-data www-data
+    sharedscripts
+}
+```
+
 ## 参考文献
 
 - [logrotate/logrotate](https://github.com/logrotate/logrotate)
