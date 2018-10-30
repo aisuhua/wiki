@@ -12,7 +12,7 @@ shell> vim /etc/security/limits.d/nofile.conf
 
 - [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
 
-优化内核参数
+优化内核参数（仅供参考）
 
 ```sh
 shell> /etc/sysctl.conf
@@ -42,6 +42,8 @@ net.ipv6.conf.lo.disable_ipv6=1
 vm.swappiness=1
 fs.file-max=655350
 ```
+
+- [Linux 实例常用内核网络参数介绍与常见问题处理](https://help.aliyun.com/knowledge_detail/41334.html)
 
 ## 服务器状态
 
