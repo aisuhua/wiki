@@ -50,7 +50,7 @@ shell> vim /etc/logrotate.d/nginx
     compress
     delaycompress
     notifempty
-    create 664 www-data www-data
+    create 644 www-data www-data
     postrotate
         /etc/init.d/nginx reload
     endscript
