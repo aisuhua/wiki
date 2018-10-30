@@ -7,7 +7,7 @@ shell> vim /etc/logrotate.d/log-file
 /var/log/log-file {
     rotate 3
     hourly
-    maxsize 500M
+    maxsize 512M
     missingok
     compress
     delaycompress
