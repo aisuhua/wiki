@@ -27,6 +27,33 @@ shell> systemctl restart docker
 
 - [容器镜像服务](https://cr.console.aliyun.com/)
 
+
+
+## 管理
+
+### docker 
+
+启动
+
+```sh
+shell> systemctl start docker
+```
+
+停止
+
+```sh
+shell> systemctl stop docker
+```
+
+查看容器状态
+
+```sh
+shell> docker ps
+shell> docker ps -a
+```
+
+### container
+
 创建并运行容器
 
 ```sh
@@ -55,27 +82,6 @@ shell> docker stop my_container
 
 ```sh
 shell> docker rm my_container
-```
-
-## 管理
-
-启动
-
-```sh
-shell> systemctl start docker
-```
-
-停止
-
-```sh
-shell> systemctl stop docker
-```
-
-查看容器状态
-
-```sh
-shell> docker ps
-shell> docker ps -a
 ```
 
 复制文件到未运行的容器
