@@ -120,6 +120,8 @@ agent 拉取并应用最新的 catalogs
 root@puppetnode1:~> puppet agent --test --server puppetmaster.aisuhua.net
 ```
 
+- [Essential configuration](https://puppet.com/docs/puppet/5.5/quick_start_essential_config.html)
+
 ## 添加默认配置
 
 修改 agent 请求的默认服务器和环境 
