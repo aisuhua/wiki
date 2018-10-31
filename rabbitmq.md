@@ -28,7 +28,7 @@ shell> mv rabbitmq.conf.example rabbitmq.conf
 shell> rabbitmq-plugins enable rabbitmq_management
 ```
 
-允许 guest 帐号远程登录访问
+允许 guest 帐号从其他服务器登录
 
 ```sh
 shell> vim /etc/rabbitmq/rabbitmq.conf
