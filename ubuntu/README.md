@@ -85,7 +85,7 @@ apt-get update
 安装 ntpdate
 
 ```sh
-shell> apt-get install ntpdate
+apt-get install ntpdate
 ```
 
 校正时间
@@ -102,10 +102,10 @@ shell> apt-get install ntpdate
 修改默认最大文件打开数
 
 ```
-shell> vim /etc/systemd/system.conf
+vim /etc/systemd/system.conf
 [Manager]
 DefaultLimitNOFILE=65535
-shell> vim /etc/security/limits.d/nofile.conf
+vim /etc/security/limits.d/nofile.conf
 * - nofile 65535
 ```
 
@@ -113,7 +113,7 @@ shell> vim /etc/security/limits.d/nofile.conf
 
 优化内核参数（仅供参考）
 
-```sh
+```
 vim /etc/sysctl.conf
 net.ipv4.tcp_tw_reuse=1
 net.ipv4.tcp_tw_recycle=1
