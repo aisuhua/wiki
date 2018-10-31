@@ -13,6 +13,8 @@ hostname wp-web1.192.168.1.2.local.aisuhua.net
 echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts
 ```
 
+- [ubuntu永久修改主机名](https://blog.csdn.net/ruglcc/article/details/7802077)
+
 配置静态 IP
 
 ```
@@ -43,6 +45,57 @@ PermitRootLogin yes
 ```sh
 reboot
 ```
+
+## 国内源
+
+使用中科大镜像
+
+```sh
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+vim /etc/apt/sources.list
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+
+## Not recommended
+# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu xenial-security main restricted
+# deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted
+deb http://security.ubuntu.com/ubuntu xenial-security universe
+# deb-src http://security.ubuntu.com/ubuntu xenial-security universe
+deb http://security.ubuntu.com/ubuntu xenial-security multiverse
+# deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
+apt-get update
+```
+
+- [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
+
+## 校正时间
+
+安装 ntpdate
+
+```sh
+shell> apt-get install ntpdate
+```
+
+校正时间
+
+```sh
+/usr/sbin/ntpdate ntp7.aliyun.com
+```
+
+- [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
+
 
 ## 系统优化
 
@@ -127,54 +180,7 @@ Press key 1
 shell> runlevel
 ```
 
-## 国内源
-
-使用中科大镜像
-
-```sh
-shell> cp /etc/apt/sources.list /etc/apt/sources.list.bak
-shell> vim /etc/apt/sources.list
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-
-## Not recommended
-# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-
-deb http://security.ubuntu.com/ubuntu xenial-security main restricted
-# deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted
-deb http://security.ubuntu.com/ubuntu xenial-security universe
-# deb-src http://security.ubuntu.com/ubuntu xenial-security universe
-deb http://security.ubuntu.com/ubuntu xenial-security multiverse
-# deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
-shell> apt-get update
-```
-
-- [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
-
 ## 网络设置
-
-修改主机名
-
-```sh
-shell> hostname wp-web1.192.168.1.2.local.aisuhua.net
-shell> hostname -s
-wp-web1
-shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts && hostname -f
-```
-
-- [ubuntu永久修改主机名](https://blog.csdn.net/ruglcc/article/details/7802077)
-
-
 
 多网卡（有线和无线）
 
