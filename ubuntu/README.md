@@ -108,6 +108,7 @@ shell> /usr/sbin/ntpdate ntp7.aliyun.com
 
 - [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
 - [时间设置：设置Linux实例时区和NTP服务](https://help.aliyun.com/document_detail/92803.html)
+- [使用 ntpd 來替換 ntpdate 以完成校時的工作](https://szlin.me/2016/07/19/%E4%BD%BF%E7%94%A8-ntpd-%E4%BE%86%E6%9B%BF%E6%8F%9B-ntpdate-%E4%BB%A5%E5%AE%8C%E6%88%90%E6%A0%A1%E6%99%82%E7%9A%84%E5%B7%A5%E4%BD%9C/)
 
 ## 用户管理
 
