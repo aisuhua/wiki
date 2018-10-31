@@ -1,4 +1,4 @@
-# see https://mirrors.ustc.edu.cn/repogen/
+# see details in https://mirrors.ustc.edu.cn/repogen/
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 
