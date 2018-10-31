@@ -43,6 +43,8 @@ php-redis \
 php-amqp
 ```
 
+- [ppa:ondrej/php](https://launchpad.net/~ondrej/+archive/ubuntu/php?field.series_filter=xenial)
+
 查看当前默认使用的 PHP 版本
 
 ```sh
