@@ -17,7 +17,7 @@ echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> 
 
 配置静态 IP
 
-```
+```sh
 shell> vim /etc/network/interfaces
 auto enp0s3
 iface enp0s3 inet static
@@ -29,7 +29,7 @@ dns-nameservers 223.5.5.5 223.6.6.6
 
 安装 ssh
 
-```
+```sh
 apt-get install openssh-server
 ```
 
