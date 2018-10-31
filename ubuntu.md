@@ -1,5 +1,51 @@
 ## 初始化
 
+修改 root 密码
+
+```
+sudo passwd root
+```
+
+修改主机名
+
+```
+hostname wp-web1.192.168.1.2.local.aisuhua.net
+echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts && hostname -f
+```
+
+配置静态 IP
+
+```
+vim /etc/network/interfaces
+auto enp0s3
+iface enp0s3 inet static
+address 192.168.1.2
+netmask 255.255.255.0
+gateway 192.168.1.1
+dns-nameservers 223.5.5.5 223.6.6.6
+```
+
+安装 ssh
+
+```
+apt-get install openssh-server
+```
+
+允许 root 用户使用 ssh 登录
+
+```
+vim /etc/ssh/sshd_config
+PermitRootLogin yes
+```
+
+重启系统
+
+```sh
+reboot
+```
+
+## 系统优化
+
 修改默认最大文件打开数
 
 ```sh
@@ -128,17 +174,7 @@ shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -
 
 - [ubuntu永久修改主机名](https://blog.csdn.net/ruglcc/article/details/7802077)
 
-配置静态 IP
 
-```sh
-shell> vim /etc/network/interfaces
-auto enp0s3
-iface enp0s3 inet static
-address 192.168.31.201
-netmask 255.255.255.0
-gateway 192.168.31.1
-dns-nameservers 223.5.5.5 223.6.6.6
-```
 
 多网卡（有线和无线）
 
