@@ -142,3 +142,11 @@ root@puppetnode1:~> service puppet restart
 ```sh
 root@puppetnode1:~> puppet agent --test
 ```
+
+## 基本操作
+
+查看某项服务是否启动
+
+```sh
+shell> puppet resource service ntpd
+```
