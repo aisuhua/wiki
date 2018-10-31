@@ -1,11 +1,5 @@
 ## 初始化
 
-修改 root 密码
-
-```sh
-shell> sudo passwd root
-```
-
 修改主机名
 
 ```sh
@@ -136,6 +130,12 @@ shell> userdel -r suhua
 
 ```sh
 shell> groups suhua
+```
+
+修改 root 密码
+
+```sh
+shell> sudo passwd root
 ```
 
 ## 权限
