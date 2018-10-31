@@ -99,6 +99,12 @@ shell> vim /etc/logrotate.d/rsyslog
 
 ## 其他
 
+手动运行 logrotate
+
+```sh
+shell> logrotate /etc/logrotate.conf 
+```
+
 查看使用帮助
 
 ```sh
