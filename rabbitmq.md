@@ -28,16 +28,17 @@ shell> mv rabbitmq.conf.example rabbitmq.conf
 shell> rabbitmq-plugins enable rabbitmq_management
 ```
 
-访问控制台 
-
-http://localhost:15672
-
 允许 guest 帐号远程登录访问
 
 ```sh
 shell> vim /etc/rabbitmq/rabbitmq.conf
 loopback_users.guest = false
+shell> service rabbitmq-server restart
 ```
+
+访问控制台 
+
+http://localhost:15672
 
 ## 管理
 
