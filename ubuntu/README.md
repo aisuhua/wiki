@@ -121,6 +121,56 @@ shell> /usr/sbin/ntpdate ntp7.aliyun.com
 
 - [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
 
+## 用户管理
+
+添加用户
+
+```sh
+shell> groupadd suhua
+shell> useradd -g suhua -G sudo -s /bin/bash -d /home/suhua -m suhua
+shell> passwd suhua
+```
+
+- [How to add new user in Linux](https://www.simplified.guide/linux/add-new-user)
+
+删除用户
+
+```sh
+shell> userdel -r suhua
+```
+
+查看用户所属组
+
+```sh
+shell> groups suhua
+```
+
+## 权限
+
+添加 sudo 权限，方法 1
+
+```sh
+shell> vim /etc/sudoers
+suhua ALL=(ALL:ALL) ALL
+```
+
+添加 sudo 权限，方法 2
+
+```sh
+shell> usermod -a -G sudo suhua
+```
+
+- [How do I grant sudo privileges to an existing user? ](https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user)
+
+使用 sudo 执行命令时不用输入密码
+
+```sh
+shell> vim /etc/sudoers
+suhua ALL=(ALL) NOPASSWD:ALL
+```
+
+- [Sudoers file, enable NOPASSWD for user, all commands](https://askubuntu.com/questions/334318/sudoers-file-enable-nopasswd-for-user-all-commands)
+
 ## 服务器状态
 
 查看公网 IP
@@ -193,96 +243,6 @@ shell> ifconfig enp0s2 up
 ```sh
 shell> ifconfig enp0s2 down
 ```
-
-## 快速创建虚拟机
-
-使用 virtual box 复制出 N 份虚拟机，复制时要勾选重置所有网络设置。
-
-设置主机名
-
-```sh
-shell> vim /etc/hostname
-rabbit1
-shell> vim /etc/hosts
-127.0.1.1 rabbit1
-```
-
-设置静态 IP
-
-```sh
-shell> vim /etc/network/interfaces
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
-
-source /etc/network/interfaces.d/*
-
-# The loopback network interface
-auto lo
-iface lo inet loopback
-
-# The primary network interface
-# auto enp0s3
-# iface enp0s3 inet dhcp
-
-auto enp0s3
-iface enp0s3 inet static
-address 192.168.31.201
-netmask 255.255.255.0
-gateway 192.168.31.1
-dns-nameservers 223.5.5.5 223.6.6.6
-```
-
-做完上面步骤后，重启即可。
-
-## 用户管理
-
-添加用户
-
-```sh
-shell> groupadd suhua
-shell> useradd -g suhua -G sudo -s /bin/bash -d /home/suhua -m suhua
-shell> passwd suhua
-```
-
-- [How to add new user in Linux](https://www.simplified.guide/linux/add-new-user)
-
-删除用户
-
-```sh
-shell> userdel -r suhua
-```
-
-查看用户所属组
-
-```sh
-shell> groups suhua
-```
-
-## 权限
-
-添加 sudo 权限，方法 1
-
-```sh
-shell> vim /etc/sudoers
-suhua ALL=(ALL:ALL) ALL
-```
-
-添加 sudo 权限，方法 2
-
-```sh
-shell> usermod -a -G sudo suhua
-```
-
-- [How do I grant sudo privileges to an existing user? ](https://askubuntu.com/questions/168280/how-do-i-grant-sudo-privileges-to-an-existing-user)
-
-使用 sudo 执行命令时不用输入密码
-
-```sh
-shell> vim /etc/sudoers
-suhua ALL=(ALL) NOPASSWD:ALL
-```
-
-- [Sudoers file, enable NOPASSWD for user, all commands](https://askubuntu.com/questions/334318/sudoers-file-enable-nopasswd-for-user-all-commands)
 
 ## 对命令进行版本切换
 
