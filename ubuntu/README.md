@@ -105,8 +105,11 @@ apt-get install ntpdate
 vim /etc/systemd/system.conf
 [Manager]
 DefaultLimitNOFILE=65535
-vim /etc/security/limits.d/nofile.conf
-* - nofile 65535
+vim /etc/security/limits.conf
+root soft nofile 65535
+root hard nofile 65535
+* soft nofile 65535
+* hard nofile 65535
 ```
 
 - [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
