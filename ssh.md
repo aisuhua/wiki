@@ -1,3 +1,5 @@
+## ssh
+
 安装
 
 ```sh
@@ -64,3 +66,46 @@ shell> ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 参考文献
 
 - [ssh-keygen 中文手册](http://www.jinbuguo.com/openssh/ssh-keygen.html)
+
+## pssh
+
+安装
+
+```sh
+shell> wget https://github.com/lilydjwg/pssh/archive/v2.3.1.tar.gz
+shell> tar -zxvf v2.3.1.tar.gz
+shell> cd pssh-2.3.1/
+shell> python setup.py install
+```
+
+对远程服务器执行命令，前提是当前用户能免密登录远程服务器，而且 suhua 用户有权限执行该命令
+
+```sh
+shell> pssh -H suhua@192.168.1.100:22 -i 'sudo service php7.2-fpm restart'
+```
+
+以上的简化版本
+
+```sh
+suhua@ubuntu~> pssh -H 192.168.1.100 -i 'sudo service php7.2-fpm restart'
+```
+
+在多台服务器上执行命令
+
+```sh
+shell> pssh -H suhua@192.168.1.100:22 -H suhua@192.168.1.101:25680 -i 'sudo service php7.2-fpm restart'
+```
+
+将主机写到文件中，语法为 用户名@主机ip:端口
+
+```sh
+shell> vim hosts
+192.168.1.100:22
+192.168.1.101:25680
+suhua@ubuntu~> pssh -h hosts -i "sudo service php7.2-fpm start"
+```
+
+
+
+
+
