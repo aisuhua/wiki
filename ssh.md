@@ -105,5 +105,4 @@ suhua@ubuntu~> pssh -h hosts -i "sudo service php7.2-fpm start"
 ```
 
 - [pssh](https://github.com/lilydjwg/pssh)
-- [pdsh](https://github.com/chaos/pdsh)
 - [批量管理工具-pdsh|pssh](https://blog.opskumu.com/pdsh-pssh.html)
