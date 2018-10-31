@@ -106,7 +106,7 @@ root@rabbit3:> rabbitmqctl cluster_status
 以 `two.` 开头的队列配置一个镜像
 
 ```sh
-root@rabbit2:> rabbitmqctl set_policy ha-two ".*" \
+root@rabbit2:> rabbitmqctl set_policy ha-two "^two\." \
 '{"ha-mode":"exactly","ha-params":2,"ha-sync-mode":"automatic"}'
 ```
 
@@ -137,7 +137,7 @@ root@rabbit2:> rabbitmqctl list_policies
 Listing policies for vhost "/" ...
 /       ha-all  ^ha\.   all     {"ha-mode":"all"}       0
 /       ha-two  ^two\.  all     {"ha-mode":"exactly","ha-params":2,"ha-sync-mode":"automatic"}  0
-/       ha-nodes        ^nodes\.        all     {"ha-mode":"nodes","ha-params":["rabbit@rabbit1","rabbit@rabbit2"]}     0
+/       ha-nodes   ^nodes\.  all   {"ha-mode":"nodes","ha-params":["rabbit@rabbit1","rabbit@rabbit2"]}  0
 ```
 
 删除指定策略
