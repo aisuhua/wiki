@@ -18,7 +18,7 @@ echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> 
 配置静态 IP
 
 ```
-vim /etc/network/interfaces
+shell> vim /etc/network/interfaces
 auto enp0s3
 iface enp0s3 inet static
 address 192.168.1.2
@@ -36,7 +36,7 @@ apt-get install openssh-server
 允许 root 用户使用 ssh 登录
 
 ```
-vim /etc/ssh/sshd_config
+shell> vim /etc/ssh/sshd_config
 PermitRootLogin yes
 ```
 
@@ -51,8 +51,8 @@ reboot
 使用中科大镜像
 
 ```sh
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
-vim /etc/apt/sources.list
+shell> cp /etc/apt/sources.list /etc/apt/sources.list.bak
+shell> vim /etc/apt/sources.list
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 
@@ -75,7 +75,7 @@ deb http://security.ubuntu.com/ubuntu xenial-security universe
 # deb-src http://security.ubuntu.com/ubuntu xenial-security universe
 deb http://security.ubuntu.com/ubuntu xenial-security multiverse
 # deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
-apt-get update
+shell> apt-get update
 ```
 
 - [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
@@ -102,10 +102,10 @@ apt-get install ntpdate
 修改默认最大文件打开数
 
 ```
-vim /etc/systemd/system.conf
+shell> vim /etc/systemd/system.conf
 [Manager]
 DefaultLimitNOFILE=65535
-vim /etc/security/limits.conf
+shell> vim /etc/security/limits.conf
 root soft nofile 65535
 root hard nofile 65535
 * soft nofile 65535
@@ -113,11 +113,12 @@ root hard nofile 65535
 ```
 
 - [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
+- [Cannot Increase open file limit past 4096 (Ubuntu)](https://superuser.com/questions/1200539/cannot-increase-open-file-limit-past-4096-ubuntu)
 
 优化内核参数（仅供参考）
 
 ```
-vim /etc/sysctl.conf
+shell> vim /etc/sysctl.conf
 net.ipv4.tcp_tw_reuse=1
 net.ipv4.tcp_tw_recycle=1
 net.core.somaxconn=1024
@@ -130,7 +131,7 @@ net.ipv6.conf.lo.disable_ipv6=1
 vm.swappiness=0
 fs.file-max=655350
 ```
-
+- [How do ulimit -n and /proc/sys/fs/file-max differ?](https://serverfault.com/questions/122679/how-do-ulimit-n-and-proc-sys-fs-file-max-differ)
 - [Linux 实例常用内核网络参数介绍与常见问题处理](https://help.aliyun.com/knowledge_detail/41334.html)
 
 ## 服务器状态
