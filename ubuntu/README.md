@@ -3,14 +3,14 @@
 修改 root 密码
 
 ```sh
-sudo passwd root
+shell> sudo passwd root
 ```
 
 修改主机名
 
 ```sh
-hostname wp-web1.192.168.1.2.local.aisuhua.net
-echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts
+shell> hostname wp-web1.192.168.1.2.local.aisuhua.net
+shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts
 ```
 
 - [ubuntu永久修改主机名](https://blog.csdn.net/ruglcc/article/details/7802077)
@@ -30,7 +30,7 @@ dns-nameservers 223.5.5.5 223.6.6.6
 安装 ssh
 
 ```sh
-apt-get install openssh-server
+shell> apt-get install openssh-server
 ```
 
 允许 root 用户使用 ssh 登录
@@ -39,63 +39,6 @@ apt-get install openssh-server
 shell> vim /etc/ssh/sshd_config
 PermitRootLogin yes
 ```
-
-重启系统
-
-```sh
-reboot
-```
-
-## 国内源
-
-使用中科大镜像
-
-```sh
-shell> cp /etc/apt/sources.list /etc/apt/sources.list.bak
-shell> vim /etc/apt/sources.list
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-
-## Not recommended
-# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-
-deb http://security.ubuntu.com/ubuntu xenial-security main restricted
-# deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted
-deb http://security.ubuntu.com/ubuntu xenial-security universe
-# deb-src http://security.ubuntu.com/ubuntu xenial-security universe
-deb http://security.ubuntu.com/ubuntu xenial-security multiverse
-# deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
-shell> apt-get update
-```
-
-- [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
-
-## 校正时间
-
-安装 ntpdate
-
-```sh
-apt-get install ntpdate
-```
-
-校正时间
-
-```sh
-/usr/sbin/ntpdate ntp7.aliyun.com
-```
-
-- [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
-
 
 ## 系统优化
 
@@ -133,6 +76,57 @@ fs.file-max=655350
 ```
 - [How do ulimit -n and /proc/sys/fs/file-max differ?](https://serverfault.com/questions/122679/how-do-ulimit-n-and-proc-sys-fs-file-max-differ)
 - [Linux 实例常用内核网络参数介绍与常见问题处理](https://help.aliyun.com/knowledge_detail/41334.html)
+
+## 国内源
+
+使用中科大镜像
+
+```sh
+shell> cp /etc/apt/sources.list /etc/apt/sources.list.bak
+shell> vim /etc/apt/sources.list
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+
+## Not recommended
+# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu xenial-security main restricted
+# deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted
+deb http://security.ubuntu.com/ubuntu xenial-security universe
+# deb-src http://security.ubuntu.com/ubuntu xenial-security universe
+deb http://security.ubuntu.com/ubuntu xenial-security multiverse
+# deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
+shell> apt-get update
+```
+
+- [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
+
+
+## 校正时间
+
+安装 ntpdate
+
+```sh
+shell> apt-get install ntpdate
+```
+
+校正时间
+
+```sh
+shell> /usr/sbin/ntpdate ntp7.aliyun.com
+```
+
+- [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
 
 ## 服务器状态
 
