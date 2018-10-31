@@ -101,7 +101,7 @@ shell> apt-get install ntpdate
 
 修改默认最大文件打开数
 
-```sh
+```
 shell> vim /etc/systemd/system.conf
 [Manager]
 DefaultLimitNOFILE=65535
@@ -114,7 +114,7 @@ shell> vim /etc/security/limits.d/nofile.conf
 优化内核参数（仅供参考）
 
 ```sh
-shell> /etc/sysctl.conf
+vim /etc/sysctl.conf
 net.ipv4.tcp_fin_timeout=30
 net.ipv4.tcp_keepalive_time=1200
 net.ipv4.tcp_tw_reuse=1
@@ -306,22 +306,6 @@ suhua ALL=(ALL) NOPASSWD:ALL
 ```
 
 - [Sudoers file, enable NOPASSWD for user, all commands](https://askubuntu.com/questions/334318/sudoers-file-enable-nopasswd-for-user-all-commands)
-
-## 同步时间
-
-安装 ntpdate
-
-```sh
-shell> apt-get install ntpdate
-```
-
-校正时间
-
-```sh
-shell> /usr/sbin/ntpdate ntp7.aliyun.com
-```
-
-- [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
 
 ## 对命令进行版本切换
 
