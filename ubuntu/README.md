@@ -42,7 +42,7 @@ PermitRootLogin yes
 
 ## 系统优化
 
-修改默认最大文件打开数
+修改最大文件打开数量
 
 ```sh
 shell> vim /etc/systemd/system.conf
