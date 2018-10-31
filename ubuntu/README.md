@@ -2,13 +2,13 @@
 
 修改 root 密码
 
-```
+```sh
 sudo passwd root
 ```
 
 修改主机名
 
-```
+```sh
 hostname wp-web1.192.168.1.2.local.aisuhua.net
 echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts
 ```
@@ -35,7 +35,7 @@ apt-get install openssh-server
 
 允许 root 用户使用 ssh 登录
 
-```
+```sh
 shell> vim /etc/ssh/sshd_config
 PermitRootLogin yes
 ```
@@ -101,7 +101,7 @@ apt-get install ntpdate
 
 修改默认最大文件打开数
 
-```
+```sh
 shell> vim /etc/systemd/system.conf
 [Manager]
 DefaultLimitNOFILE=65535
@@ -117,7 +117,7 @@ root hard nofile 65535
 
 优化内核参数（仅供参考）
 
-```
+```sh
 shell> vim /etc/sysctl.conf
 net.ipv4.tcp_tw_reuse=1
 net.ipv4.tcp_tw_recycle=1
@@ -145,7 +145,7 @@ shell> curl ip.cn
 
 查看网速
 
-```
+```sh
 shell> apt-get install ifstat 
 shell> wget  http://gael.roualland.free.fr/ifstat/ifstat-1.1.tar.gz
 shell> tar -zxvf ifstat-1.1.tar.gz
