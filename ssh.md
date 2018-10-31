@@ -80,19 +80,19 @@ shell> python setup.py install
 对远程服务器执行命令，前提是当前用户能免密登录远程服务器，而且 suhua 用户有权限执行该命令
 
 ```sh
-shell> pssh -H suhua@192.168.1.100:22 -i '/etc/init.d/php7.2-fpm restart'
+shell> pssh -H suhua@192.168.1.100:22 -i 'sudo /etc/init.d/php7.2-fpm restart'
 ```
 
 以上的简化版本
 
 ```sh
-suhua@ubuntu~> pssh -H 192.168.1.100 -i '/etc/init.d/php7.2-fpm restart'
+suhua@ubuntu~> pssh -H 192.168.1.100 -i 'sudo /etc/init.d/php7.2-fpm restart'
 ```
 
 在多台服务器上执行命令
 
 ```sh
-suhua@ubuntu~> pssh -H 192.168.1.100 -H 192.168.1.101:25680 -i '/etc/init.d/php7.2-fpm restart'
+suhua@ubuntu~> pssh -H 192.168.1.100 -H 192.168.1.101:25680 -i 'sudo /etc/init.d/php7.2-fpm restart'
 ```
 
 将主机写到文件中，语法为 `用户名@主机ip:端口`
@@ -101,7 +101,7 @@ suhua@ubuntu~> pssh -H 192.168.1.100 -H 192.168.1.101:25680 -i '/etc/init.d/php7
 shell> vim hosts
 192.168.1.100:22
 192.168.1.101:25680
-suhua@ubuntu~> pssh -h hosts -i "/etc/init.d/php7.2-fpm restart"
+suhua@ubuntu~> pssh -h hosts -i "sudo /etc/init.d/php7.2-fpm restart"
 ```
 
 - [pssh](https://github.com/lilydjwg/pssh)
