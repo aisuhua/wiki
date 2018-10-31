@@ -104,6 +104,7 @@ shell> vim hosts
 suhua@ubuntu~> pssh -h hosts -i "sudo service php7.2-fpm start"
 ```
 
+- [lilydjwg/pssh](https://github.com/lilydjwg/pssh)
 - [批量管理工具-pdsh|pssh](https://blog.opskumu.com/pdsh-pssh.html)
 
 
