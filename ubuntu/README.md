@@ -42,7 +42,7 @@ PermitRootLogin yes
 
 ## 系统优化
 
-优化内核参数（仅供参考）
+优化系统内核参数
 
 ```sh
 shell> vim /etc/sysctl.conf
@@ -61,7 +61,7 @@ fs.file-max = 655350
 - [How do ulimit -n and /proc/sys/fs/file-max differ?](https://serverfault.com/questions/122679/how-do-ulimit-n-and-proc-sys-fs-file-max-differ)
 - [Linux 实例常用内核网络参数介绍与常见问题处理](https://help.aliyun.com/knowledge_detail/41334.html)
 
-修改最大文件打开数量
+增加文件描述符限制
 
 ```sh
 shell> vim /etc/systemd/system.conf
@@ -112,7 +112,7 @@ shell> apt-get update
 - [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
 
 
-## 校正时间
+## 同步时间
 
 安装 ntpdate
 
@@ -120,7 +120,7 @@ shell> apt-get update
 shell> apt-get install ntpdate
 ```
 
-校正时间
+同步时间
 
 ```sh
 shell> /usr/sbin/ntpdate ntp7.aliyun.com
