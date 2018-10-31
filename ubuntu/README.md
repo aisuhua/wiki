@@ -42,7 +42,7 @@ PermitRootLogin yes
 
 ## 系统优化
 
-优化系统内核参数
+优化内核参数
 
 ```sh
 shell> vim /etc/sysctl.conf
