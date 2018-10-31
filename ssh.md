@@ -93,7 +93,7 @@ suhua@ubuntu~> pssh -H 192.168.1.100 -i 'sudo service php7.2-fpm restart'
 在多台服务器上执行命令
 
 ```sh
-shell> pssh -H suhua@192.168.1.100:22 -H suhua@192.168.1.101:25680 -i 'sudo service php7.2-fpm restart'
+suhua@ubuntu~> pssh -H 192.168.1.100 -H 192.168.1.101:25680 -i 'sudo service php7.2-fpm restart'
 ```
 
 将主机写到文件中，语法为 用户名@主机ip:端口
