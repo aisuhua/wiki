@@ -42,22 +42,6 @@ PermitRootLogin yes
 
 ## 系统优化
 
-修改最大文件打开数量
-
-```sh
-shell> vim /etc/systemd/system.conf
-[Manager]
-DefaultLimitNOFILE=65535
-shell> vim /etc/security/limits.conf
-root soft nofile 65535
-root hard nofile 65535
-* soft nofile 65535
-* hard nofile 65535
-```
-
-- [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
-- [Cannot Increase open file limit past 4096 (Ubuntu)](https://superuser.com/questions/1200539/cannot-increase-open-file-limit-past-4096-ubuntu)
-
 优化内核参数（仅供参考）
 
 ```sh
@@ -76,6 +60,22 @@ fs.file-max=655350
 ```
 - [How do ulimit -n and /proc/sys/fs/file-max differ?](https://serverfault.com/questions/122679/how-do-ulimit-n-and-proc-sys-fs-file-max-differ)
 - [Linux 实例常用内核网络参数介绍与常见问题处理](https://help.aliyun.com/knowledge_detail/41334.html)
+
+修改最大文件打开数量
+
+```sh
+shell> vim /etc/systemd/system.conf
+[Manager]
+DefaultLimitNOFILE=65535
+shell> vim /etc/security/limits.conf
+root soft nofile 65535
+root hard nofile 65535
+* soft nofile 65535
+* hard nofile 65535
+```
+
+- [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
+- [Cannot Increase open file limit past 4096 (Ubuntu)](https://superuser.com/questions/1200539/cannot-increase-open-file-limit-past-4096-ubuntu)
 
 ## 国内源
 
