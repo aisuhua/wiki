@@ -4,8 +4,7 @@
 
 ```sh
 shell> wget -O - 'https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc' | sudo apt-key add -
-shell> vim /etc/apt/sources.list.d/bintray.rabbitmq.list
-deb https://dl.bintray.com/rabbitmq/debian xenial main erlang
+shell> echo 'deb https://dl.bintray.com/rabbitmq/debian xenial main erlang' > /etc/apt/sources.list.d/bintray.rabbitmq.list
 shell> apt-get update
 shell> apt-get install erlang-nox
 shell> apt-get install rabbitmq-server
