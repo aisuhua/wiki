@@ -27,21 +27,6 @@ gateway 192.168.1.1
 dns-nameservers 223.5.5.5 223.6.6.6
 ```
 
-安装 ssh
-
-```sh
-shell> apt-get install openssh-server
-```
-
-允许 root 用户使用 ssh 登录
-
-```sh
-shell> vim /etc/ssh/sshd_config
-PermitRootLogin yes
-```
-
-## 系统优化
-
 优化内核参数
 
 ```sh
@@ -77,8 +62,6 @@ root hard nofile 65535
 - [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
 - [Cannot Increase open file limit past 4096 (Ubuntu)](https://superuser.com/questions/1200539/cannot-increase-open-file-limit-past-4096-ubuntu)
 
-## 国内源
-
 使用中科大镜像
 
 ```sh
@@ -111,8 +94,18 @@ shell> apt-get update
 
 - [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
 
+安装 ssh
 
-## 同步时间
+```sh
+shell> apt-get install openssh-server
+```
+
+允许 root 用户使用 ssh 登录
+
+```sh
+shell> vim /etc/ssh/sshd_config
+PermitRootLogin yes
+```
 
 安装 ntpdate
 
