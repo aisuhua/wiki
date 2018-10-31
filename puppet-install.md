@@ -85,7 +85,7 @@ root@puppetmaster:~> puppet cert sign puppetnode1.aisuhua.net
 
 ### stand-alone 模式
 
-在 client 端添加测试脚本
+agent 添加测试脚本
 
 ```sh
 shell> vim /tmp/site.pp
@@ -103,7 +103,7 @@ shell> puppet apply /tmp/site.pp
 
 ### agent-master 模式
 
-在 server 端添加测试脚本
+server 添加测试脚本
 
 ```sh
 root@puppetmaster:~> vim /etc/puppetlabs/code/environments/production/manifests/site.pp 
@@ -114,7 +114,7 @@ node default {
 }
 ```
 
-client 拉取并应用最新的 catalogs
+agent 拉取并应用最新的 catalogs
 
 ```sh
 root@puppetnode1:~> puppet agent --test --server puppetmaster.aisuhua.net
@@ -122,7 +122,7 @@ root@puppetnode1:~> puppet agent --test --server puppetmaster.aisuhua.net
 
 ## 添加默认配置
 
-修改 client 请求的默认服务器和环境 
+修改 agent 请求的默认服务器和环境 
 
 ```sh
 root@puppetnode1:~> vim /etc/puppetlabs/puppet/puppet.conf
