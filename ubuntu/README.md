@@ -146,7 +146,7 @@ shell> sudo passwd root
 
 ```sh
 shell> vim /etc/sudoers
-suhua ALL=(ALL:ALL) ALL
+suhua ALL=(ALL) ALL
 ```
 
 添加 sudo 权限，方法 2
@@ -161,10 +161,11 @@ shell> usermod -a -G sudo suhua
 
 ```sh
 shell> vim /etc/sudoers
-suhua ALL=(ALL) NOPASSWD:ALL
+suhua ALL=(ALL) NOPASSWD: ALL
 ```
 
 - [Sudoers file, enable NOPASSWD for user, all commands](https://askubuntu.com/questions/334318/sudoers-file-enable-nopasswd-for-user-all-commands)
+- [sudoers的深入剖析与用户权限控制](https://segmentfault.com/a/1190000007394449)
 
 ## 服务器状态
 
