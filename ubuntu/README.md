@@ -265,3 +265,6 @@ blacklist nouveau
 shell> reboot
 ```
 
+## 参考文献
+
+- [Official Ubuntu Documentation](https://help.ubuntu.com/)
