@@ -10,7 +10,7 @@ sudo passwd root
 
 ```
 hostname wp-web1.192.168.1.2.local.aisuhua.net
-echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts && hostname -f
+echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts
 ```
 
 配置静态 IP
