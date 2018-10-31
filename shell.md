@@ -9,25 +9,34 @@ shell> find ./  -printf "%f\n"
 快速生成大文件
 
 ```sh
-sell> dd if=/dev/zero of=test bs=1M count=1000
-记录了1000+0 的读入
-记录了1000+0 的写出
-1048576000 bytes (1.0 GB, 1000 MiB) copied, 0.401372 s, 2.6 GB/s
+sell> dd if=/dev/zero of=/tmp/my_file bs=1M count=1000
+```
+
+快速生成每次都不一样的大文件
+
+```sh
+shell> head -c 10M < /dev/urandom > /tmp/my_file
 ```
 
 小写转换成大写
 
 ```sh
 shell> sha1sum test | tr a-z A-Z
-A5F5E9413C558753025495DAF6A0A7B47E55402B  TEST
 ```
 
 大写转换成小写
 
 ```sh
 shell> echo 'A5F5E9413C558753025495DAF6A0A7B47E55402B' | tr A-Z a-z
-a5f5e9413c558753025495daf6a0a7b47e55402b
 ```
+
+删除文件名带 `-` 的文件
+
+```sh
+shell> rm ./-A_NNMHDB3MW3eB
+```
+
+## 进程
 
 后台执行进程
 
@@ -41,34 +50,20 @@ shell> nohup /usr/bin/php demo.php > /tmp/demo.log 2>&1 &
 shell> ps -ef | grep demo.php | grep -v grep | awk '{print $2}' | xargs kill -9
 ```
 
-bash 快捷键
-
-```sh
-ctrl+a: 光标移到行首
-ctrl+e: 光标移到行尾
-ctrl+l: 清屏，相当于clear
-ctrl+u: 清除光标前至行首间的所有内容
-ctrl+shift+t: 打开 Tab 新标签
-```
-
 查看特定端口所属进程
 
 ```sh
 shell> netstat -anp | grep :4730
 ```
 
-查看进程运行情况
+查找正在运行的进程
 
 ```sh
 shell> ps -ef | grep php
 shell> ps -aux | grep php
 ```
 
-删除文件名带 `-` 的文件
-
-```sh
-shell> rm ./-A_NNMHDB3MW3eB
-```
+## grep
 
 查找包含任意一个关键字的行
 
@@ -96,3 +91,12 @@ shell> grep -vFf test1.csv test2.csv
 shell> grep -Ff test1.csv test2.csv
 ```
 
+## 快捷键
+
+```sh
+ctrl+a: 光标移到行首
+ctrl+e: 光标移到行尾
+ctrl+l: 清屏，相当于clear
+ctrl+u: 清除光标前至行首间的所有内容
+ctrl+shift+t: 打开 Tab 新标签
+```

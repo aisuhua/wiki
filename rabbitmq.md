@@ -1,3 +1,5 @@
+## 安装
+
 安装
 
 ```sh
@@ -10,12 +12,6 @@ shell> apt-get install rabbitmq-server
 ```
 
 - [Installing on Debian and Ubuntu](https://www.rabbitmq.com/install-debian.html)
-
-查看是否启动
-
-```sh
-shell> service rabbitmq-server status
-```
 
 创建配置文件
 
@@ -31,18 +27,25 @@ shell> mv rabbitmq.conf.example rabbitmq.conf
 
 ```sh
 shell> rabbitmq-plugins enable rabbitmq_management
-
 ```
 
-访问控制台 http://localhost:15672
+访问控制台 
+
+http://localhost:15672
 
 允许 guest 帐号远程登录访问
 
 ```sh
 shell> vim /etc/rabbitmq/rabbitmq.conf
-## Uncomment the following line if you want to allow access to the
-## guest user from anywhere on the network.
 loopback_users.guest = false
+```
+
+## 管理
+
+启动服务
+
+```sh
+shell> service rabbitmq-server start
 ```
 
 查看运行状态，比如版本信息
@@ -51,13 +54,13 @@ loopback_users.guest = false
 shell> rabbitmqctl status
 ```
 
-查看正在运行的实例配置信息
+查看配置信息
 
 ```sh
 shell> rabbitmqctl environment
 ```
 
-## 创建集群
+## 组建集群
 
 修改 hosts 
 
@@ -94,15 +97,6 @@ root@rabbit3:> rabbitmqctl join_cluster rabbit@rabbit1
 root@rabbit3:> rabbitmqctl start_app
 root@rabbit3:> rabbitmqctl cluster_status
 ```
-
-安装 management UI
-
-```sh
-root@rabbit2:> rabbitmq-plugins enable rabbitmq_management
-root@rabbit3:> rabbitmq-plugins enable rabbitmq_management
-```
-
-参考文献
 
 - [Clustering Guide](https://www.rabbitmq.com/clustering.html)
 
@@ -158,8 +152,6 @@ root@rabbit2:> rabbitmqctl clear_policy ha-two
 控制台显示效果，队列创建示例 [amqp_ha_consumer.php](https://github.com/aisuhua/rabbit/blob/master/demo01/amqp_ha_consumer.php)
 
 ![](https://github.com/aisuhua/rabbit/raw/master/demo01/amqp_ha_consumer.png)
-
-参考文献
 
 - [Highly Available (Mirrored) Queues](https://www.rabbitmq.com/ha.html#mirroring-arguments)
 - [Breaking things with RabbitMQ 3.0](http://www.rabbitmq.com/blog/2012/11/19/breaking-things-with-rabbitmq-3-0/)

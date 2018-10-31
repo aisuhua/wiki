@@ -1,6 +1,6 @@
-## 启用
+## 如何使用
 
-对 PHPSTORM 进行配置 
+对 phpstorm 进行配置 
 
 - Add CLI Interpreter. `File > Settings > Languages & Frameworks > PHP`
 - Set Xdebug Port (eg. 9001). `... > PHP > Debug > Xdebug`
@@ -10,8 +10,8 @@
 
 修改 xdebug.ini 
 
-```shell
-shell> vim /etc/php/7.2/mods-available/xdebug.ini 
+```sh
+vim /etc/php/7.2/mods-available/xdebug.ini 
 zend_extension=xdebug.so
 xdebug.remote_enable=1
 xdebug.remote_host=192.168.1.100
@@ -20,9 +20,9 @@ xdebug.remote_port=9001
 
 开始 debug
 
-```shell
-shell> curl http://www.example.com?XDEBUG_SESSION_START=PHPSTORM
-shell> curl -H 'Cookie: XDEBUG_SESSION=PHPSTORM' http://www.example.com
+```sh
+curl http://www.example.com?XDEBUG_SESSION_START=PHPSTORM
+curl -H 'Cookie: XDEBUG_SESSION=PHPSTORM' http://www.example.com
 ```
 
 - [Xdebug & Zend Debugger bookmarklets generator for PhpStorm](https://www.jetbrains.com/phpstorm/marklets/)
