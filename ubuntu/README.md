@@ -46,17 +46,17 @@ PermitRootLogin yes
 
 ```sh
 shell> vim /etc/sysctl.conf
-net.ipv4.tcp_tw_reuse=1
-net.ipv4.tcp_tw_recycle=1
-net.core.somaxconn=1024
-net.ipv4.tcp_max_syn_backlog=1024
-net.ipv4.tcp_synack_retries=2
-net.ipv4.ip_local_port_range=1024 65535
-net.ipv6.conf.all.disable_ipv6=1
-net.ipv6.conf.default.disable_ipv6=1
-net.ipv6.conf.lo.disable_ipv6=1
-vm.swappiness=0
-fs.file-max=655350
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+net.core.somaxconn = 1024
+net.ipv4.tcp_max_syn_backlog = 1024
+net.ipv4.tcp_synack_retries = 2
+net.ipv4.ip_local_port_range = 1024 65535
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+vm.swappiness = 0
+fs.file-max = 655350
 ```
 - [How do ulimit -n and /proc/sys/fs/file-max differ?](https://serverfault.com/questions/122679/how-do-ulimit-n-and-proc-sys-fs-file-max-differ)
 - [Linux 实例常用内核网络参数介绍与常见问题处理](https://help.aliyun.com/knowledge_detail/41334.html)
