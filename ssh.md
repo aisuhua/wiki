@@ -24,7 +24,6 @@ shell> ssh-keygen
 
 ```sh
 a@A:~> cat .ssh/id_rsa.pub
-
 b@B:~> mdir ~/.ssh
 b@B:~> chmod 700 ~/.ssh
 b@B:~> vim ~/.ssh/authorized_keys
@@ -105,6 +104,7 @@ shell> vim hosts
 suhua@ubuntu~> pssh -h hosts -i "sudo service php7.2-fpm start"
 ```
 
+- [批量管理工具-pdsh|pssh](https://blog.opskumu.com/pdsh-pssh.html)
 
 
 
