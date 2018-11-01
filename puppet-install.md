@@ -153,6 +153,9 @@ shell> puppet resource service ntpd
 shell> puppet module install saz-sudo
 ```
 
+- [Installing and managing modules from the command line](https://puppet.com/docs/puppet/5.5/modules_installing.html)
+
+
 查看配置信息
 
 ```sh
