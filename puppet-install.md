@@ -141,9 +141,10 @@ root@puppetnode1:~> puppet agent --test
 
 ## 定时更新
 
-修改定时更新的时间间隔
+方法1：puppet agent 自带定时更新
 
 ```sh
+root@puppetnode1:~> systemctl enable puppet
 root@puppetnode1:~> vim /etc/puppetlabs/puppet/puppet.conf
 [agent]
 runinterval = 1800
@@ -151,7 +152,7 @@ runinterval = 1800
 
 - [Run Puppet agent as a service](https://puppet.com/docs/puppet/5.5/services_agent_unix.html#task-6309)
 
-使用 cron 定时更新
+方法2：使用 cron 定时启动 puppet agent 进行更新
 
 ```sh
 root@puppetnode1:~> systemctl disable puppet
