@@ -152,3 +152,7 @@ shell> puppet resource service ntpd
 ```sh
 shell> puppet module install saz-sudo
 ```
+
+## 参考文献
+
+- [Overview of Puppet's architecture](https://puppet.com/docs/puppet/5.5/architecture.html)
