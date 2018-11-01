@@ -156,7 +156,7 @@ shell> puppet module install saz-sudo
 查看配置信息
 
 ```sh
-puppet config print environmentpath basemodulepath modulepath manifest environment_timeout --section master
+shell> puppet config print environmentpath basemodulepath modulepath manifest environment_timeout --section master
 ```
 
 ## 参考文献
