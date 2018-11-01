@@ -141,6 +141,12 @@ root@puppetnode1:~> puppet agent --test
 
 ## 基本操作
 
+验证语法是否正确
+
+```sh
+shell> puppet parser validate site.pp
+```
+
 查看资源的状态
 
 ```sh
@@ -168,3 +174,4 @@ shell> puppet config print environmentpath basemodulepath modulepath manifest --
 ## 参考文献
 
 - [Overview of Puppet's architecture](https://puppet.com/docs/puppet/5.5/architecture.html)
+- [Puppet commands](https://puppet.com/docs/puppet/5.5/services_commands.html)
