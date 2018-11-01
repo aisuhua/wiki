@@ -141,7 +141,7 @@ root@puppetnode1:~> puppet agent --test
 
 ## 基本操作
 
-查看某项服务是否启动
+查看资源的状态
 
 ```sh
 shell> puppet resource service ntpd
