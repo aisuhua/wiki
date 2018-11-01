@@ -153,6 +153,12 @@ shell> puppet resource service ntpd
 shell> puppet module install saz-sudo
 ```
 
+查看配置信息
+
+```sh
+puppet config print environmentpath basemodulepath modulepath manifest environment_timeout --section master
+```
+
 ## 参考文献
 
 - [Overview of Puppet's architecture](https://puppet.com/docs/puppet/5.5/architecture.html)
