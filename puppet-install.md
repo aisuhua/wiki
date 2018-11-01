@@ -88,10 +88,11 @@ root@puppetmaster:~> puppet cert sign puppetnode1.aisuhua.net
 agent 添加测试脚本
 
 ```sh
-shell> vim /tmp/site.pp
+shell> tee /tmp/site.pp <<-'EOF'
 file { '/tmp/suhua.txt':
     content => 'suhua is a good boy.'
 }
+EOF
 ```
 
 应用本地文件
@@ -99,7 +100,6 @@ file { '/tmp/suhua.txt':
 ```sh
 shell> puppet apply /tmp/site.pp
 ```
-
 
 ### agent-master 模式
 
