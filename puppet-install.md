@@ -146,3 +146,9 @@ root@puppetnode1:~> puppet agent --test
 ```sh
 shell> puppet resource service ntpd
 ```
+
+安装外部模块
+
+```sh
+shell> puppet module install saz-sudo
+```
