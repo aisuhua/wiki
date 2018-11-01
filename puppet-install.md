@@ -198,3 +198,4 @@ shell> puppet config print environmentpath basemodulepath modulepath manifest --
 - [Overview of Puppet's architecture](https://puppet.com/docs/puppet/5.5/architecture.html)
 - [Puppet commands](https://puppet.com/docs/puppet/5.5/services_commands.html)
 - [Language: Basics](https://puppet.com/docs/puppet/5.5/lang_summary.html)
+- [The Puppet language style guide](https://puppet.com/docs/puppet/5.5/style_guide.html)
