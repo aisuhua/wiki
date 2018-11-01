@@ -159,7 +159,7 @@ shell> puppet module install saz-sudo
 shell> puppet config print environmentpath basemodulepath modulepath manifest --section master
 ```
 
-- [Creating environments](https://puppet.com/docs/puppet/5.5/environments_creating.html)
+- [Configuration: Checking values of settings](https://puppet.com/docs/puppet/5.5/config_print.html)
 
 
 ## 参考文献
