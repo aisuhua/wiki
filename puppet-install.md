@@ -133,12 +133,6 @@ server=puppetmaster.aisuhua.net
 environment=production
 ```
 
-重启 puppet agent，让配置生效
-
-```sh
-root@puppetnode1:~> service puppet restart
-```
-
 测试配置是否生效
 
 ```sh
