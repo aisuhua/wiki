@@ -50,7 +50,7 @@ root@puppetnode1:~> puppet --version
 启动
 
 ```sh
-root@puppetnode1:~> /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
+root@puppetnode1:~> puppet resource service puppet ensure=running enable=true
 ```
 
 - [Installing Puppet agent: Linux](https://puppet.com/docs/puppet/5.5/install_linux.html)
