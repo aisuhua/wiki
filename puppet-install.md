@@ -154,7 +154,8 @@ runinterval = 1800
 使用 cron 定时更新
 
 ```sh
-shell> puppet resource cron puppet-agent ensure=present user=root minute=30 command='/opt/puppetlabs/bin/puppet agent --onetime --no-daemonize --splay --splaylimit 60'
+root@puppetnode1:~> systemctl disable puppet
+root@puppetnode1:~> puppet resource cron puppet-agent ensure=present user=root minute=30 command='/opt/puppetlabs/bin/puppet agent --onetime --no-daemonize --splay --splaylimit 60'
 ```
 
 - [Run Puppet agent as a cron job](https://puppet.com/docs/puppet/5.5/services_agent_unix.html#task-6309)
