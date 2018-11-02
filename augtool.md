@@ -6,7 +6,7 @@
 shell> apt-get install augeas-tools
 ```
 
-查看 lenses 文件
+查看支持解析的配置格式
 
 ```sh
 shell> ls /usr/share/augeas/lenses/dist/
