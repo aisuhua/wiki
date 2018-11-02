@@ -6,23 +6,31 @@
 shell> apt-get install  augeas-tools
 ```
 
-lenses
+查看 lenses 文件
 
 ```sh
-shell> ls ls /usr/share/augeas/lenses/dist/
+shell> ls /usr/share/augeas/lenses/dist/
 ```
 
--[Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
+- [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
 
 ## 使用
 
-查看配置文件的解析结果
+查看解析结果
 
 ```sh
 shell> augtool ls /files/etc/hosts 
 ```
 
-交互模式下查看 /etc/hosts 的解析结果
+进入交互模式
+
+```sh
+shell> augtool
+```
+
+### /etc/hosts 
+
+配置文件内容
 
 ```sh
 shell> cat /etc/hosts
@@ -34,7 +42,12 @@ shell> cat /etc/hosts
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 127.0.0.1 wp-web1.192.168.1.2.local.aisuhua.net wp-web1
-shell> augtool
+```
+
+逐步解析配置文件
+
+```sh
+
 augtool> ls /files/etc/hosts
 1/ = (none)
 2/ = (none)
@@ -54,7 +67,9 @@ augtool> print /files/etc/hosts/6
 /files/etc/hosts/6/alias = "wp-web1"
 ```
 
-交互模式下查看 /etc/sudoers 的解析结果
+### /etc/sudoers
+
+配置文件内容
 
 ```sh
 shell> cat /etc/sudoers
@@ -88,6 +103,11 @@ root	ALL=(ALL:ALL) ALL
 # See sudoers(5) for more information on "#include" directives:
 
 suhua	ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
+逐步解析配置文件
+
+```sh
 augtool> ls /files/etc/sudoers
 #comment[1] = This file MUST be edited with the 'visudo' command as root.
 #comment[2] = Please consider adding local content in /etc/sudoers.d/ instead of
