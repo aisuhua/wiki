@@ -203,3 +203,4 @@ shell> puppet config print environmentpath basemodulepath modulepath manifest --
 - [Puppet常识梳理](https://www.cnblogs.com/kevingrace/p/5740984.html)
 - [Puppet Vs Ansible](https://www.devopsgroup.com/2018/01/10/puppet-vs-ansible/)
 - [Ops 的轉職之路 - Puppet 從入門就放棄](https://github.com/shazi7804/ops-puppet-30-days)
+- [Puppet Management GUI Comparison](https://www.olindata.com/en/blog/2014/01/puppet-management-gui-comparison)
