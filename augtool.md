@@ -3,7 +3,7 @@
 安装
 
 ```sh
-shell> apt-get install  augeas-tools
+shell> apt-get install augeas-tools
 ```
 
 查看 lenses 文件
@@ -12,7 +12,7 @@ shell> apt-get install  augeas-tools
 shell> ls /usr/share/augeas/lenses/dist/
 ```
 
-- [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
+- [augeas](https://github.com/hercules-team/augeas)
 
 ## 使用
 
@@ -47,7 +47,6 @@ ff02::2 ip6-allrouters
 逐步解析配置文件
 
 ```sh
-
 augtool> ls /files/etc/hosts
 1/ = (none)
 2/ = (none)
@@ -139,3 +138,5 @@ runas_user = ALL
 runas_group = ALL
 tag = NOPASSWD
 ```
+
+- [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
