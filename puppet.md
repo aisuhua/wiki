@@ -201,3 +201,5 @@ shell> puppet config print environmentpath basemodulepath modulepath manifest --
 - [The Puppet language style guide](https://puppet.com/docs/puppet/5.5/style_guide.html)
 - [Core types cheat sheet](https://puppet.com/docs/puppet/5.5/cheatsheet_core_types.html)
 - [Puppet常识梳理](https://www.cnblogs.com/kevingrace/p/5740984.html)
+- [Puppet Vs Ansible](https://www.devopsgroup.com/2018/01/10/puppet-vs-ansible/)
+- [Ops 的轉職之路 - Puppet 從入門就放棄](https://github.com/shazi7804/ops-puppet-30-days)
