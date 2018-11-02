@@ -6,6 +6,14 @@
 shell> apt-get install  augeas-tools
 ```
 
+lenses
+
+```sh
+shell> ls ls /usr/share/augeas/lenses/dist/
+```
+
+-[Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
+
 ## 使用
 
 查看配置文件的解析结果
