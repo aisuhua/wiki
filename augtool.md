@@ -102,6 +102,8 @@ root	ALL=(ALL:ALL) ALL
 # See sudoers(5) for more information on "#include" directives:
 
 suhua	ALL=(ALL:ALL) NOPASSWD: ALL
+
+#includedir = /etc/sudoers.d
 ```
 
 逐步解析配置文件
