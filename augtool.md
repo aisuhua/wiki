@@ -438,3 +438,55 @@ augtool> get /files/etc/sysctl.conf/fs.file-max
 augtool> get /files/etc/sysctl.conf/vm.swappiness
 /files/etc/sysctl.conf/vm.swappiness = 0
 ```
+
+### /etc/security/limits.conf
+
+配置文件内容
+
+```sh
+shell> vim /etc/security/limits.conf
+..... more items...
+#ftp             -       chroot          /ftp
+#@student        -       maxlogins       4
+
+root soft nofile 65535
+root hard nofile 65535
+* soft nofile 65535
+* hard nofile 65535
+
+# End of file
+```
+
+逐步解析配置文件
+
+```sh
+augtool> ls /files/etc/security/limits.conf
+..... more items...
+#comment[45] = ftp             -       chroot          /ftp
+#comment[46] = @student        -       maxlogins       4
+domain[1]/ = root
+domain[2]/ = root
+domain[3]/ = *
+domain[4]/ = *
+#comment[47] = End of file
+augtool> ls /files/etc/security/limits.conf/domain[1]
+type = soft
+item = nofile
+value = 65535
+```
+
+添加配置项
+
+```sh
+augtool> set /files/etc/security/limits.conf/domain[last()+1] suhua
+augtool> set /files/etc/security/limits.conf/domain[last()]/type soft
+augtool> set /files/etc/security/limits.conf/domain[last()]/item nofile
+augtool> set /files/etc/security/limits.conf/domain[last()]/value 65535
+augtool> save
+Saved 1 file(s)
+augtool> print /files/etc/security/limits.conf/domain[last()]
+/files/etc/security/limits.conf/domain[5] = "suhua"
+/files/etc/security/limits.conf/domain[5]/type = "soft"
+/files/etc/security/limits.conf/domain[5]/item = "nofile"
+/files/etc/security/limits.conf/domain[5]/value = "65535"
+```
