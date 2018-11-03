@@ -8,6 +8,7 @@
   - [/etc/sysctl.conf](#etcsysctlconf)
   - [/etc/security/limits.conf](#etcsecuritylimitsconf)
   - [/etc/php/7.2/fpm/php.ini](#etcphp72fpmphpini)
+  - [/etc/php/7.2/fpm/pool.d/www.conf](#etcphp72fpmpooldwwwconf)
 - [参考文献](#参考文献)
 
 ## 安装
