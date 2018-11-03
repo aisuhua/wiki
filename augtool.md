@@ -88,6 +88,9 @@ ipaddr = 127.0.0.1
 canonical = wp-web1.192.168.1.2.local.aisuhua.net
 alias[1] = wp-web1
 alias[2] = wp-web1.192.168.1.2.local
+augtool> ls /files/etc/hosts/*[last()-1]
+ipaddr = ff02::2
+canonical = ip6-allrouters
 augtool> get /files/etc/hosts/*[last()]/ipaddr
 /files/etc/hosts/*[last()]/ipaddr = 127.0.0.1
 augtool> get /files/etc/hosts/*[last()]/alias[2]
