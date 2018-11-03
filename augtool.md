@@ -423,3 +423,18 @@ augtool> get /files/etc/ssh/sshd_config/Port
 augtool> get /files/etc/ssh/sshd_config/PermitRootLogin
 /files/etc/ssh/sshd_config/PermitRootLogin = yes
 ```
+
+### /etc/sysctl.conf
+
+添加配置项
+
+```sh
+augtool> set /files/etc/sysctl.conf fs.file-max 655350
+augtool> set /files/etc/sysctl.conf/vm.swappiness 0
+augtool> save
+Saved 1 file(s)
+augtool> get /files/etc/sysctl.conf/fs.file-max
+/files/etc/sysctl.conf/fs.file-max = 655350
+augtool> get /files/etc/sysctl.conf/vm.swappiness
+/files/etc/sysctl.conf/vm.swappiness = 0
+```
