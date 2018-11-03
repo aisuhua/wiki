@@ -11,10 +11,28 @@
 
 ## 安装
 
-安装
+卸载旧版本
 
 ```sh
-shell> apt-get install augeas-tools
+shell> apt-get purge augeas-tools augeas-lenses
+```
+
+安装新版本
+
+```sh
+shell> wget http://download.augeas.net/augeas-1.11.0.tar.gz
+shell> tar -zxvf augeas-1.11.0.tar.gz
+shell> cd augeas-1.11.0/
+shell> apt-get install libreadline-dev pkg-config libxml2-dev
+shell> ./configure
+shell> make
+shell> make install
+```
+
+查看版本
+
+```sh
+shell> augtool --version
 ```
 
 支持的配置格式
