@@ -118,6 +118,9 @@ shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/2
 shell> vim /etc/php/7.2/fpm/php.ini
 upload_max_filesize = 30M
 post_max_size = 30M
+shell> vim /etc/php/7.2/cli/php.ini
+upload_max_filesize = 30M
+post_max_size = 30M
 ```
 
 ## 管理
