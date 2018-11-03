@@ -175,9 +175,9 @@ shell> cat /etc/sudoers
 #
 # See the man page for details on how to write a sudoers file.
 #
-Defaults	env_reset
-Defaults	mail_badpass
-Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+Defaults        env_reset
+Defaults        mail_badpass
+Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 
 # Host alias specification
 
@@ -186,19 +186,20 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 # Cmnd alias specification
 
 # User privilege specification
-root	ALL=(ALL:ALL) ALL
+root    ALL=(ALL:ALL) ALL
 
 # Members of the admin group may gain root privileges
 %admin ALL=(ALL) ALL
 
 # Allow members of group sudo to execute any command
-%sudo	ALL=(ALL:ALL) ALL
+%sudo   ALL=(ALL:ALL) ALL
+
+# Add suhua
+suhua   ALL=(ALL:ALL) NOPASSWD: ALL
 
 # See sudoers(5) for more information on "#include" directives:
 
-suhua	ALL=(ALL:ALL) NOPASSWD: ALL
-
-#includedir = /etc/sudoers.d
+#includedir /etc/sudoers.d
 ```
 
 逐步解析配置文件
@@ -221,8 +222,9 @@ spec[1]/ = (none)
 spec[2]/ = (none)
 #comment[10] = Allow members of group sudo to execute any command
 spec[3]/ = (none)
-#comment[11] = See sudoers(5) for more information on "#include" directives:
+#comment[11] = Add suhua
 spec[4]/ = (none)
+#comment[12] = See sudoers(5) for more information on "#include" directives:
 #includedir = /etc/sudoers.d
 augtool> ls /files/etc/sudoers/spec[4]
 user = suhua
@@ -234,6 +236,15 @@ augtool> ls /files/etc/sudoers/spec[4]/host_group/command
 runas_user = ALL
 runas_group = ALL
 tag = NOPASSWD
+augtool> print /files/etc/sudoers/spec[4]
+/files/etc/sudoers/spec[4]
+/files/etc/sudoers/spec[4]/user = "suhua"
+/files/etc/sudoers/spec[4]/host_group
+/files/etc/sudoers/spec[4]/host_group/host = "ALL"
+/files/etc/sudoers/spec[4]/host_group/command = "ALL"
+/files/etc/sudoers/spec[4]/host_group/command/runas_user = "ALL"
+/files/etc/sudoers/spec[4]/host_group/command/runas_group = "ALL"
+/files/etc/sudoers/spec[4]/host_group/command/tag = "NOPASSWD"
 ```
 
 - [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
