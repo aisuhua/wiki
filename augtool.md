@@ -1,3 +1,10 @@
+# 目录
+
+- [安装](#安装)
+- [使用](#使用)
+  - [/etc/hosts](#/etc/hosts)
+  - [/etc/sudoers](#/etc/sudoers)
+
 ## 安装
 
 安装
