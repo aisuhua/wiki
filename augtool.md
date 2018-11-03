@@ -12,7 +12,7 @@ shell> apt-get install augeas-tools
 shell> ls /usr/share/augeas/lenses/dist/
 ```
 
-- [augeas](https://github.com/hercules-team/augeas)
+- [Download](http://augeas.net/download.html)
 
 ## 使用
 
