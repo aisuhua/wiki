@@ -340,13 +340,72 @@ augtool> print /files/etc/sudoers/spec[user = 'aisuhua']
 
 ### /etc/ssh/sshd_config
 
+配置文件内容
+
+```sh
+shell> cat /etc/ssh/sshd_config 
+# Package generated configuration file
+# See the sshd_config(5) manpage for details
+
+# What ports, IPs and protocols we listen for
+Port 22
+# Use these options to restrict which interfaces/protocols sshd will bind to
+#ListenAddress ::
+#ListenAddress 0.0.0.0
+Protocol 2
+..... more items...
+# Authentication:
+LoginGraceTime 120
+PermitRootLogin prohibit-password
+StrictModes yes
+..... more items...
+```
+
+逐步解析配置文件
+
+```sh
+augtool> ls /files/etc/ssh/sshd_config
+#comment[1] = Package generated configuration file
+#comment[2] = See the sshd_config(5) manpage for details
+#comment[3] = What ports, IPs and protocols we listen for
+Port = 22
+#comment[4] = Use these options to restrict which interfaces/protocols sshd will bind to
+#comment[5] = ListenAddress ::
+#comment[6] = ListenAddress 0.0.0.0
+Protocol = 2
+..... more items...
+#comment[11] = Authentication:
+LoginGraceTime = 120
+PermitRootLogin = prohibit-password
+StrictModes = yes
+RSAAuthentication = yes
+..... more items...
+augtool> print /files/etc/ssh/sshd_config
+/files/etc/ssh/sshd_config
+/files/etc/ssh/sshd_config/#comment[1] = "Package generated configuration file"
+/files/etc/ssh/sshd_config/#comment[2] = "See the sshd_config(5) manpage for details"
+/files/etc/ssh/sshd_config/#comment[3] = "What ports, IPs and protocols we listen for"
+/files/etc/ssh/sshd_config/Port = "22"
+/files/etc/ssh/sshd_config/#comment[4] = "Use these options to restrict which interfaces/protocols sshd will bind to"
+/files/etc/ssh/sshd_config/#comment[5] = "ListenAddress ::"
+/files/etc/ssh/sshd_config/#comment[6] = "ListenAddress 0.0.0.0"
+/files/etc/ssh/sshd_config/Protocol = "2"
+..... more items...
+/files/etc/ssh/sshd_config/#comment[11] = "Authentication:"
+/files/etc/ssh/sshd_config/LoginGraceTime = "120"
+/files/etc/ssh/sshd_config/PermitRootLogin = "prohibit-password"
+/files/etc/ssh/sshd_config/StrictModes = "yes"
+/files/etc/ssh/sshd_config/RSAAuthentication = "yes"
+..... more items...
+```
+
 修改配置项
 
 ```sh
 augtool> get /files/etc/ssh/sshd_config/Port
 /files/etc/ssh/sshd_config/Port = 22
 augtool> get /files/etc/ssh/sshd_config/PermitRootLogin
-/files/etc/ssh/sshd_config/PermitRootLogin = no
+/files/etc/ssh/sshd_config/PermitRootLogin = prohibit-password
 augtool> set /files/etc/ssh/sshd_config/Port 25680
 augtool> set /files/etc/ssh/sshd_config/PermitRootLogin yes
 augtool> save
