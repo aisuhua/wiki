@@ -41,7 +41,7 @@ shell> cat /etc/hosts
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
-127.0.0.1 wp-web1.192.168.1.2.local.aisuhua.net wp-web1
+127.0.0.1 wp-web1.192.168.1.2.local.aisuhua.net wp-web1 wp-web1.192.168.1.2.local
 ```
 
 逐步解析配置文件
@@ -49,33 +49,63 @@ ff02::2 ip6-allrouters
 ```sh
 augtool> ls /files/etc/hosts
 1/ = (none)
-2/ = (none)
 #comment = The following lines are desirable for IPv6 capable hosts
+2/ = (none)
 3/ = (none)
 4/ = (none)
 5/ = (none)
-6/ = (none)
-augtool> ls /files/etc/hosts/6
+augtool> ls /files/etc/hosts/5
 ipaddr = 127.0.0.1
 canonical = wp-web1.192.168.1.2.local.aisuhua.net
-alias = wp-web1
-augtool> print /files/etc/hosts/6
-/files/etc/hosts/6
-/files/etc/hosts/6/ipaddr = "127.0.0.1"
-/files/etc/hosts/6/canonical = "wp-web1.192.168.1.2.local.aisuhua.net"
-/files/etc/hosts/6/alias = "wp-web1"  
+alias[1] = wp-web1
+alias[2] = wp-web1.192.168.1.2.local
+augtool> print /files/etc/hosts/5
+/files/etc/hosts/5
+/files/etc/hosts/5/ipaddr = "127.0.0.1"
+/files/etc/hosts/5/canonical = "wp-web1.192.168.1.2.local.aisuhua.net"
+/files/etc/hosts/5/alias[1] = "wp-web1"
+/files/etc/hosts/5/alias[2] = "wp-web1.192.168.1.2.local"
+```
+
+查看配置项
+
+```sh
+augtool> get /files/etc/hosts/5/ipaddr
+/files/etc/hosts/5/ipaddr = 127.0.0.1
+augtool> get /files/etc/hosts/5/alias[1]
+/files/etc/hosts/5/alias[1] = wp-web1
+augtool> get /files/etc/hosts/5/alias[2]
+/files/etc/hosts/5/alias[2] = wp-web1.192.168.1.2.local
+```
+
+方法的使用
+
+```sh
+augtool> ls /files/etc/hosts/*[last()]
+ipaddr = 127.0.0.1
+canonical = wp-web1.192.168.1.2.local.aisuhua.net
+alias[1] = wp-web1
+alias[2] = wp-web1.192.168.1.2.local
+augtool> get /files/etc/hosts/*[last()]/ipaddr
+/files/etc/hosts/*[last()]/ipaddr = 127.0.0.1
+augtool> get /files/etc/hosts/*[last()]/ipaddr
+/files/etc/hosts/*[last()]/ipaddr = 127.0.0.1
+augtool> get /files/etc/hosts/*[last()]/alias[2]
+/files/etc/hosts/*[last()]/alias[2] = wp-web1.192.168.1.2.local
+augtool> get /files/etc/hosts/*[last()]/alias[last()]
+/files/etc/hosts/*[last()]/alias[last()] = wp-web1.192.168.1.2.local
 ```
 
 添加配置项
 
-```
-augtool> set /files/etc/hosts/7/ipaddr 192.168.1.3
-augtool> set /files/etc/hosts/7/canonical www.aisuhua.com
-augtool> set /files/etc/hosts/7/alias[1] www.aisuhua.net
-augtool> set /files/etc/hosts/7/alias[2] www.aisuhua.cn
+```sh
+augtool> set /files/etc/hosts/6/ipaddr 192.168.1.3
+augtool> set /files/etc/hosts/6/canonical www.aisuhua.com
+augtool> set /files/etc/hosts/6/alias[1] www.aisuhua.net
+augtool> set /files/etc/hosts/6/alias[2] www.aisuhua.cn
 augtool> save
 Saved 1 file(s)
-augtool> ls /files/etc/hosts/7
+augtool> ls /files/etc/hosts/6
 ipaddr = 192.168.1.3
 canonical = www.aisuhua.com
 alias[1] = www.aisuhua.net
@@ -85,28 +115,28 @@ alias[2] = www.aisuhua.cn
 修改配置项
 
 ```sh
-augtool> get /files/etc/hosts/7/ipaddr
-/files/etc/hosts/7/ipaddr = 192.168.1.3
-augtool> set /files/etc/hosts/7/ipaddr 192.168.1.4
+augtool> get /files/etc/hosts/6/ipaddr
+/files/etc/hosts/6/ipaddr = 192.168.1.3
+augtool> set /files/etc/hosts/6/ipaddr 192.168.1.4
 augtool> save
 Saved 1 file(s)
-augtool> get /files/etc/hosts/7/ipaddr
-/files/etc/hosts/7/ipaddr = 192.168.1.4
+augtool> get /files/etc/hosts/6/ipaddr
+/files/etc/hosts/6/ipaddr = 192.168.1.4
 ```
 
 删除配置项
 
 ```sh
-augtool> ls /files/etc/hosts/7
+augtool> ls /files/etc/hosts/6
 ipaddr = 192.168.1.4
 canonical = www.aisuhua.com
 alias[1] = www.aisuhua.net
 alias[2] = www.aisuhua.cn
-augtool> rm /files/etc/hosts/7/alias[2]
-rm : /files/etc/hosts/7/alias[2] 1
+augtool> rm /files/etc/hosts/6/alias[2]
+rm : /files/etc/hosts/6/alias[2] 1
 augtool> save
 Saved 1 file(s)
-augtool> ls /files/etc/hosts/7
+augtool> ls /files/etc/hosts/6
 ipaddr = 192.168.1.4
 canonical = www.aisuhua.com
 alias = www.aisuhua.net
