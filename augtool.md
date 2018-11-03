@@ -63,7 +63,53 @@ augtool> print /files/etc/hosts/6
 /files/etc/hosts/6
 /files/etc/hosts/6/ipaddr = "127.0.0.1"
 /files/etc/hosts/6/canonical = "wp-web1.192.168.1.2.local.aisuhua.net"
-/files/etc/hosts/6/alias = "wp-web1"
+/files/etc/hosts/6/alias = "wp-web1"  
+```
+
+添加配置项
+
+```
+augtool> set /files/etc/hosts/7/ipaddr 192.168.1.3
+augtool> set /files/etc/hosts/7/canonical www.aisuhua.com
+augtool> set /files/etc/hosts/7/alias[1] www.aisuhua.net
+augtool> set /files/etc/hosts/7/alias[2] www.aisuhua.cn
+augtool> save
+Saved 1 file(s)
+augtool> ls /files/etc/hosts/7
+ipaddr = 192.168.1.3
+canonical = www.aisuhua.com
+alias[1] = www.aisuhua.net
+alias[2] = www.aisuhua.cn
+```
+
+修改配置项
+
+```sh
+augtool> get /files/etc/hosts/7/ipaddr
+/files/etc/hosts/7/ipaddr = 192.168.1.3
+augtool> set /files/etc/hosts/7/ipaddr 192.168.1.4
+augtool> save
+Saved 1 file(s)
+augtool> get /files/etc/hosts/7/ipaddr
+/files/etc/hosts/7/ipaddr = 192.168.1.4
+```
+
+删除配置项
+
+```sh
+augtool> ls /files/etc/hosts/7
+ipaddr = 192.168.1.4
+canonical = www.aisuhua.com
+alias[1] = www.aisuhua.net
+alias[2] = www.aisuhua.cn
+augtool> rm /files/etc/hosts/7/alias[2]
+rm : /files/etc/hosts/7/alias[2] 1
+augtool> save
+Saved 1 file(s)
+augtool> ls /files/etc/hosts/7
+ipaddr = 192.168.1.4
+canonical = www.aisuhua.com
+alias = www.aisuhua.net
 ```
 
 ### /etc/sudoers
