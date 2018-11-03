@@ -7,6 +7,7 @@
   - [/etc/ssh/sshd_config](#etcsshsshd_config)
   - [/etc/sysctl.conf](#etcsysctlconf)
   - [/etc/security/limits.conf](#etcsecuritylimitsconf)
+  - [/etc/php/7.2/fpm/php.ini](#etcphp72fpmphpini)
 - [参考文献](#参考文献)
 
 ## 安装
@@ -509,6 +510,48 @@ augtool> print /files/etc/security/limits.conf/domain[last()]
 /files/etc/security/limits.conf/domain[5]/type = "soft"
 /files/etc/security/limits.conf/domain[5]/item = "nofile"
 /files/etc/security/limits.conf/domain[5]/value = "65535"
+```
+
+## /etc/php/7.2/fpm/php.ini
+
+查看配置文件
+
+```sh
+shell> cat /etc/php/7.2/fpm/php.ini
+[PHP]
+..... more items...
+upload_max_filesize = 2M
+..... more items...
+post_max_size = 8M
+```
+
+逐步解析配置文件
+
+```sh
+augtool> ls /files/etc/php/7.2/fpm/php.ini
+PHP/ = (none)
+CLI\ Server/ = (none)
+Date/ = (none)
+..... more items...
+augtool> ls /files/etc/php/7.2/fpm/php.ini/PHP
+..... more items...
+/files/etc/php/7.2/fpm/php.ini/PHP/upload_max_filesize = "2M"
+..... more items...
+/files/etc/php/7.2/fpm/php.ini/PHP/post_max_size = "8M"
+..... more items...
+```
+
+修改配置项
+
+```sh
+augtool> set /files/etc/php/7.2/fpm/php.ini/PHP/upload_max_filesize 30M
+augtool> set /files/etc/php/7.2/fpm/php.ini/PHP/post_max_size 30M
+augtool> save
+Saved 1 file(s)
+augtool> get /files/etc/php/7.2/fpm/php.ini/PHP/upload_max_filesize
+/files/etc/php/7.2/fpm/php.ini/PHP/upload_max_filesize = 30M
+augtool> get /files/etc/php/7.2/fpm/php.ini/PHP/post_max_size
+/files/etc/php/7.2/fpm/php.ini/PHP/post_max_size = 30M
 ```
 
 ## 参考文献
