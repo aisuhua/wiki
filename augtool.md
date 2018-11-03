@@ -89,8 +89,6 @@ alias[1] = wp-web1
 alias[2] = wp-web1.192.168.1.2.local
 augtool> get /files/etc/hosts/*[last()]/ipaddr
 /files/etc/hosts/*[last()]/ipaddr = 127.0.0.1
-augtool> get /files/etc/hosts/*[last()]/ipaddr
-/files/etc/hosts/*[last()]/ipaddr = 127.0.0.1
 augtool> get /files/etc/hosts/*[last()]/alias[2]
 /files/etc/hosts/*[last()]/alias[2] = wp-web1.192.168.1.2.local
 augtool> get /files/etc/hosts/*[last()]/alias[last()]
