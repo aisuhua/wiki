@@ -103,6 +103,13 @@ ipaddr = 127.0.0.1
 canonical = wp-web1.192.168.1.2.local.aisuhua.net
 alias[1] = wp-web1
 alias[2] = wp-web1.192.168.1.2.local
+augtool> get /files/etc/hosts/*/alias[. = 'wp-web1'] # alias 为 wp-web1 的选项
+/files/etc/hosts/*/alias[. = 'wp-web1'] = wp-web1
+augtool> ls /files/etc/hosts/*[alias = 'wp-web1'] # alias 为 wp-web1 的条目
+ipaddr = 127.0.0.1
+canonical = wp-web1.192.168.1.2.local.aisuhua.net
+alias[1] = wp-web1
+alias[2] = wp-web1.192.168.1.2.local
 augtool> ls /files/etc/hosts/*[ipaddr = '127.0.0.1'] # IP 地址一致的条目
 ipaddr = 127.0.0.1
 canonical = localhost
@@ -115,6 +122,7 @@ ipaddr = 127.0.0.1
 canonical = wp-web1.192.168.1.2.local.aisuhua.net
 alias[1] = wp-web1
 alias[2] = wp-web1.192.168.1.2.local
+
 ```
 
 添加配置项
