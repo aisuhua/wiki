@@ -141,7 +141,7 @@ root@puppetnode1:~> puppet agent --test
 
 ## 定时更新
 
-方法1：puppet agent 自带定时更新
+方法1：puppet agent 自带定时更新（默认已开启，30 分钟更新一次）
 
 ```sh
 root@puppetnode1:~> systemctl enable puppet
