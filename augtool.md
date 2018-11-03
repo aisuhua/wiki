@@ -200,6 +200,8 @@ augtool> print /files/etc/hosts/01
 /files/etc/hosts/01/alias[2] = "www.example.cn"
 ```
 
+- [Adding nodes to the tree](https://github.com/hercules-team/augeas/wiki/Adding-nodes-to-the-tree)
+
 插入配置项（写法2）
 
 ```sh
