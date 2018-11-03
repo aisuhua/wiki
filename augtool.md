@@ -5,6 +5,8 @@
   - [/etc/hosts](#etchosts)
   - [/etc/sudoers](#etcsudoers)
   - [/etc/ssh/sshd_config](#etcsshsshd_config)
+  - [/etc/sysctl.conf](#etcsysctl.conf)
+  - [/etc/security/limits.conf](#etcsecuritylimits.conf)
 
 ## 安装
 
