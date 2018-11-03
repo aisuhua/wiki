@@ -316,6 +316,28 @@ augtool> print /files/etc/sudoers/spec[4]
 /files/etc/sudoers/spec[4]/host_group/command/tag = "NOPASSWD"
 ```
 
+添加配置项
+
+```sh
+augtool> set /files/etc/sudoers/spec[last()+1]/user aisuhua
+augtool> set /files/etc/sudoers/spec[user = 'aisuhua']/host_group/host ALL
+augtool> set /files/etc/sudoers/spec[user = 'aisuhua']/host_group/command ALL
+augtool> set /files/etc/sudoers/spec[user = 'aisuhua']/host_group/command/runas_user ALL
+augtool> set /files/etc/sudoers/spec[user = 'aisuhua']/host_group/command/runas_group ALL
+augtool> set /files/etc/sudoers/spec[user = 'aisuhua']/host_group/command/tag NOPASSWD
+augtool> save
+Saved 1 file(s)
+augtool> print /files/etc/sudoers/spec[user = 'aisuhua']
+/files/etc/sudoers/spec[5]
+/files/etc/sudoers/spec[5]/user = "aisuhua"
+/files/etc/sudoers/spec[5]/host_group
+/files/etc/sudoers/spec[5]/host_group/host = "ALL"
+/files/etc/sudoers/spec[5]/host_group/command = "ALL"
+/files/etc/sudoers/spec[5]/host_group/command/runas_user = "ALL"
+/files/etc/sudoers/spec[5]/host_group/command/runas_group = "ALL"
+/files/etc/sudoers/spec[5]/host_group/command/tag = "NOPASSWD"
+```
+
 ### /etc/ssh/sshd_config
 
 修改配置项
