@@ -80,7 +80,7 @@ augtool> get /files/etc/hosts/5/alias[2]
 /files/etc/hosts/5/alias[2] = wp-web1.192.168.1.2.local
 ```
 
-方法的使用
+表达式的使用
 
 ```sh
 augtool> ls /files/etc/hosts/*[last()]
@@ -94,6 +94,27 @@ augtool> get /files/etc/hosts/*[last()]/alias[2]
 /files/etc/hosts/*[last()]/alias[2] = wp-web1.192.168.1.2.local
 augtool> get /files/etc/hosts/*[last()]/alias[last()]
 /files/etc/hosts/*[last()]/alias[last()] = wp-web1.192.168.1.2.local
+augtool> ls /files/etc/hosts/*[alias] # 具有 alias 的条目
+ipaddr = ::1
+canonical = localhost
+alias[1] = ip6-localhost
+alias[2] = ip6-loopback
+ipaddr = 127.0.0.1
+canonical = wp-web1.192.168.1.2.local.aisuhua.net
+alias[1] = wp-web1
+alias[2] = wp-web1.192.168.1.2.local
+augtool> ls /files/etc/hosts/*[ipaddr = '127.0.0.1'] # IP 地址一致的条目
+ipaddr = 127.0.0.1
+canonical = localhost
+ipaddr = 127.0.0.1
+canonical = wp-web1.192.168.1.2.local.aisuhua.net
+alias[1] = wp-web1
+alias[2] = wp-web1.192.168.1.2.local
+augtool> ls /files/etc/hosts/*[ipaddr = '127.0.0.1'][alias] # IP 地址一致且有 alias 的条目
+ipaddr = 127.0.0.1
+canonical = wp-web1.192.168.1.2.local.aisuhua.net
+alias[1] = wp-web1
+alias[2] = wp-web1.192.168.1.2.local
 ```
 
 添加配置项
