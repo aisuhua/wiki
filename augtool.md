@@ -37,7 +37,6 @@ shell> augtool
 ```sh
 shell> cat /etc/hosts
 127.0.0.1	localhost
-127.0.1.1	ubuntu-server1
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
