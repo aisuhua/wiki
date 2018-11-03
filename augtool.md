@@ -185,25 +185,25 @@ alias[3] = www.aisuhua.cc
 插入配置项
 
 ```sh
-augtool> ins /files/etc/hosts after /files/etc/hosts/*[last()]
-augtool> set /files/etc/hosts/*[last()]/ipaddr 172.16.0.1
-augtool> set /files/etc/hosts/*[last()]/canonical www.example.com
-augtool> set /files/etc/hosts/*[last()]/alias[1] www.example.net
-augtool> set /files/etc/hosts/*[last()]/alias[2] www.example.cn
+augtool> ins 01 after /files/etc/hosts/*[last()]
+augtool> set /files/etc/hosts/01/ipaddr 172.16.0.1
+augtool> set /files/etc/hosts/01/canonical www.example.com
+augtool> set /files/etc/hosts/01/alias[1] www.example.net
+augtool> set /files/etc/hosts/01/alias[2] www.example.cn
 augtool> save
 Saved 1 file(s)
-augtool> print /files/etc/hosts/*[last()]
-/files/etc/hosts/7
-/files/etc/hosts/7/ipaddr = "172.16.0.1"
-/files/etc/hosts/7/canonical = "www.example.com"
-/files/etc/hosts/7/alias[1] = "www.example.net"
-/files/etc/hosts/7/alias[2] = "www.example.cn"
+augtool> print /files/etc/hosts/01
+/files/etc/hosts/01
+/files/etc/hosts/01/ipaddr = "172.16.0.1"
+/files/etc/hosts/01/canonical = "www.example.com"
+/files/etc/hosts/01/alias[1] = "www.example.net"
+/files/etc/hosts/01/alias[2] = "www.example.cn"
 ```
 
 插入配置项（写法2）
 
 ```sh
-augtool> ins /files/etc/hosts after /files/etc/hosts/*[last()]
+augtool> ins 01 after /files/etc/hosts/*[last()]
 augtool> set /files/etc/hosts/*[last()]/ipaddr 172.16.0.1
 augtool> set /files/etc/hosts/*[ipaddr = '172.16.0.1']/canonical www.example.com
 augtool> set /files/etc/hosts/*[ipaddr = '172.16.0.1']/alias[1] www.example.net
@@ -211,11 +211,11 @@ augtool> set /files/etc/hosts/*[ipaddr = '172.16.0.1']/alias[2] www.example.cc
 augtool> save
 Saved 1 file(s)
 augtool> print /files/etc/hosts/*[ipaddr = '172.16.0.1']
-/files/etc/hosts/7
-/files/etc/hosts/7/ipaddr = "172.16.0.1"
-/files/etc/hosts/7/canonical = "www.example.com"
-/files/etc/hosts/7/alias[1] = "www.example.net"
-/files/etc/hosts/7/alias[2] = "www.example.cc"
+/files/etc/hosts/01
+/files/etc/hosts/01/ipaddr = "172.16.0.1"
+/files/etc/hosts/01/canonical = "www.example.com"
+/files/etc/hosts/01/alias[1] = "www.example.net"
+/files/etc/hosts/01/alias[2] = "www.example.cn"
 ```
 
 修改配置项
