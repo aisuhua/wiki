@@ -140,6 +140,17 @@ ipaddr = 192.168.1.4
 canonical = www.aisuhua.com
 alias[1] = www.aisuhua.net
 alias[2] = www.aisuhua.cn
+alias[3] = www.aisuhua.cc
+augtool> rm /files/etc/hosts/6/alias[3]
+rm : /files/etc/hosts/6/alias[3] 1
+augtool> save
+Saved 1 file(s)
+augtool> ls /files/etc/hosts/6
+ipaddr = 192.168.1.4
+canonical = www.aisuhua.com
+alias = www.aisuhua.net
+alias[1] = www.aisuhua.net
+alias[2] = www.aisuhua.cn
 augtool> rm /files/etc/hosts/6/alias[2]
 rm : /files/etc/hosts/6/alias[2] 1
 augtool> save
