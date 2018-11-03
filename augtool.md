@@ -554,6 +554,58 @@ augtool> get /files/etc/php/7.2/fpm/php.ini/PHP/post_max_size
 /files/etc/php/7.2/fpm/php.ini/PHP/post_max_size = 30M
 ```
 
+### /etc/php/7.2/fpm/pool.d/www.conf
+
+查看配置文件
+
+```sh
+shell> cat /etc/php/7.2/fpm/pool.d/www.conf 
+; Start a new pool named 'www'.
+; the variable $pool can be used in any directive and will be replaced by the
+; pool name ('www' here)
+[www]
+..... more items...
+listen = /run/php/php7.2-fpm.sock
+..... more items...
+; Note: There is a real-time FPM status monitoring sample web page available
+;       It's available in: /usr/share/php/7.2/fpm/status.html
+;
+; Note: The value must start with a leading slash (/). The value can be
+;       anything, but it may not be a good idea to use the .php extension or it
+;       may conflict with a real PHP file.
+; Default Value: not set
+;pm.status_path = /status
+
+; The ping URI to call the monitoring page of FPM. If this value is not set, no
+; URI will be recognized as a ping page. This could be used to test from outside
+; that FPM is alive and responding, or to
+; - create a graph of FPM availability (rrd or such);
+; - remove a server from a group if it is not responding (load balancing);
+; - trigger alerts for the operating team (24/7).
+; Note: The value must start with a leading slash (/). The value can be
+;       anything, but it may not be a good idea to use the .php extension or it
+;       may conflict with a real PHP file.
+; Default Value: not set
+;ping.path = /ping
+..... more items...
+```
+
+逐步解析配置文件（已省略部分配置项)
+
+```sh
+augtool> ls /files/etc/php/7.2/fpm/pool.d/www.conf
+.anon/ = (none)
+www/ = (none)
+augtool> print /files/etc/php/7.2/fpm/pool.d/www.conf
+/files/etc/php/7.2/fpm/pool.d/www.conf/www/listen = "/run/php/php7.2-fpm.sock"
+/files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[204] = "pm.status_path = /status"
+/files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[215] = "ping.path = /ping"
+```
+
+修改配置项
+
+
+
 ## 参考文献
 
 - [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
