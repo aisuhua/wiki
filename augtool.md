@@ -492,3 +492,8 @@ augtool> print /files/etc/security/limits.conf/domain[last()]
 /files/etc/security/limits.conf/domain[5]/item = "nofile"
 /files/etc/security/limits.conf/domain[5]/value = "65535"
 ```
+
+## 参考文献
+
+- [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
+- [Path expressions](https://github.com/hercules-team/augeas/wiki/Path-expressions)
