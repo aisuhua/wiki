@@ -515,7 +515,7 @@ augtool> print /files/etc/security/limits.conf/domain[last()]
 /files/etc/security/limits.conf/domain[5]/value = "65535"
 ```
 
-## /etc/php/7.2/fpm/php.ini
+### /etc/php/7.2/fpm/php.ini
 
 查看配置文件
 
