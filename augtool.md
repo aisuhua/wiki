@@ -247,4 +247,23 @@ augtool> print /files/etc/sudoers/spec[4]
 /files/etc/sudoers/spec[4]/host_group/command/tag = "NOPASSWD"
 ```
 
+### /etc/ssh/sshd_config
+
+修改配置项
+
+```sh
+augtool> get /files/etc/ssh/sshd_config/Port
+/files/etc/ssh/sshd_config/Port = 22
+augtool> get /files/etc/ssh/sshd_config/PermitRootLogin
+/files/etc/ssh/sshd_config/PermitRootLogin = no
+augtool> set /files/etc/ssh/sshd_config/Port 25680
+augtool> set /files/etc/ssh/sshd_config/PermitRootLogin yes
+augtool> save
+Saved 1 file(s)
+augtool> get /files/etc/ssh/sshd_config/Port
+/files/etc/ssh/sshd_config/Port = 25680
+augtool> get /files/etc/ssh/sshd_config/PermitRootLogin
+/files/etc/ssh/sshd_config/PermitRootLogin = yes
+```
+
 - [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
