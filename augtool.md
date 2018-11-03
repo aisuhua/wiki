@@ -497,3 +497,4 @@ augtool> print /files/etc/security/limits.conf/domain[last()]
 
 - [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
 - [Path expressions](https://github.com/hercules-team/augeas/wiki/Path-expressions)
+- [php.aug: "set" to uncomment existing directives rather than adding new ones](https://github.com/hercules-team/augeas/issues/550)
