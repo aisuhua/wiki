@@ -7,6 +7,7 @@
   - [/etc/ssh/sshd_config](#etcsshsshd_config)
   - [/etc/sysctl.conf](#etcsysctlconf)
   - [/etc/security/limits.conf](#etcsecuritylimitsconf)
+- [参考文献](#参考文献)
 
 ## 安装
 
@@ -39,7 +40,6 @@ shell> augtool
 ```
 
 - [A quick tour](http://augeas.net/tour.html)
-- [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
 
 ### /etc/hosts 
 
