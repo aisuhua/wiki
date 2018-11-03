@@ -604,12 +604,29 @@ augtool> print /files/etc/php/7.2/fpm/pool.d/www.conf
 /files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[215] = "ping.path = /ping"
 ```
 
-修改配置项
+修改配置项（打开配置项的方法：首先在注释后插入配置项，然后删除注释）
 
+```sh
+augtool> set /files/etc/php/7.2/fpm/pool.d/www.conf/www/listen 127.0.0.1:9000
+augtool> save
+Saved 1 file(s)
+augtool> ins pm.status_path after /files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[. = 'pm.status_path = /status']
+augtool> set /files/etc/php/7.2/fpm/pool.d/www.conf/www/pm.status_path phpfpm_status
+augtool> rm /files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[. = 'pm.status_path = /status']
+augtool> save
+Saved 1 file(s)
+augtool> ins ping.path after /files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[. = 'ping.path = /ping']
+augtool> set /files/etc/php/7.2/fpm/pool.d/www.conf/www/ping.path phpfpm_ping
+augtool> rm /files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[. = 'ping.path = /ping']
+rm : /files/etc/php/7.2/fpm/pool.d/www.conf/www/#comment[. = 'ping.path = /ping'] 1
+augtool> save
+Saved 1 file(s)
+```
 
+- [php.aug: "set" to uncomment existing directives rather than adding new ones](https://github.com/hercules-team/augeas/issues/550)
 
 ## 参考文献
 
 - [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
 - [Path expressions](https://github.com/hercules-team/augeas/wiki/Path-expressions)
-- [php.aug: "set" to uncomment existing directives rather than adding new ones](https://github.com/hercules-team/augeas/issues/550)
+
