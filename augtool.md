@@ -449,10 +449,6 @@ augtool> get /files/etc/ssh/sshd_config/PermitRootLogin
 /files/etc/ssh/sshd_config/PermitRootLogin = yes
 ```
 
-### /etc/systemd/system.conf
-
-官方缺少 lenses
-
 ### /etc/sysctl.conf
 
 添加配置项
@@ -467,6 +463,12 @@ augtool> get /files/etc/sysctl.conf/fs.file-max
 augtool> get /files/etc/sysctl.conf/vm.swappiness
 /files/etc/sysctl.conf/vm.swappiness = 0
 ```
+
+### /etc/systemd/system.conf
+
+缺少 lenses
+
+- [Allow Augeas Systemd.aug lenses to manage *.conf files](https://github.com/hercules-team/augeas/issues/299)
 
 ### /etc/security/limits.conf
 
