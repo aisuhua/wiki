@@ -6,6 +6,7 @@
   - [/etc/sudoers](#etcsudoers)
   - [/etc/ssh/sshd_config](#etcsshsshd_config)
   - [/etc/sysctl.conf](#etcsysctlconf)
+  - [/etc/systemd/system.conf](#etcsystemdsystemconf)
   - [/etc/security/limits.conf](#etcsecuritylimitsconf)
   - [/etc/php/7.2/fpm/php.ini](#etcphp72fpmphpini)
   - [/etc/php/7.2/fpm/pool.d/www.conf](#etcphp72fpmpooldwwwconf)
@@ -447,6 +448,10 @@ augtool> get /files/etc/ssh/sshd_config/Port
 augtool> get /files/etc/ssh/sshd_config/PermitRootLogin
 /files/etc/ssh/sshd_config/PermitRootLogin = yes
 ```
+
+### /etc/systemd/system.conf
+
+官方缺少 lenses
 
 ### /etc/sysctl.conf
 
