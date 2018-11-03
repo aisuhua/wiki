@@ -28,6 +28,8 @@ shell> augtool ls /files/etc/hosts
 shell> augtool
 ```
 
+- [A quick tour](http://augeas.net/tour.html)
+
 ### /etc/hosts 
 
 配置文件内容
