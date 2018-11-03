@@ -35,7 +35,7 @@ shell> make install
 shell> augtool --version
 ```
 
-支持的配置格式
+查看支持的配置格式
 
 ```sh
 shell> ls /usr/share/augeas/lenses/dist/
