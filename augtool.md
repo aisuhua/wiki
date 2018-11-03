@@ -29,6 +29,7 @@ shell> augtool
 ```
 
 - [A quick tour](http://augeas.net/tour.html)
+- [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
 
 ### /etc/hosts 
 
@@ -265,5 +266,3 @@ augtool> get /files/etc/ssh/sshd_config/Port
 augtool> get /files/etc/ssh/sshd_config/PermitRootLogin
 /files/etc/ssh/sshd_config/PermitRootLogin = yes
 ```
-
-- [Resource tips and examples: Augeas](https://puppet.com/docs/puppet/5.5/resources_augeas.html)
