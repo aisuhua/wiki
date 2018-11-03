@@ -3,7 +3,7 @@
 - [安装](#安装)
 - [使用](#使用)
   - [/etc/hosts](#etchosts)
-  - [/etc/sudoers](#/etcsudoers)
+  - [/etc/sudoers](#etcsudoers)
   - [/etc/ssh/sshd_config](#etcsshsshd_config)
 
 ## 安装
