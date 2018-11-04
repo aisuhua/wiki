@@ -21,6 +21,66 @@ gateway 192.168.1.1
 dns-nameservers 223.5.5.5 223.6.6.6
 ```
 
+使用中科大镜像
+
+```sh
+shell> cp /etc/apt/sources.list /etc/apt/sources.list.bak
+shell> vim /etc/apt/sources.list
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+
+## Not recommended
+# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+shell> apt-get update
+```
+
+- [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
+
+更新系统
+
+```sh
+shell> apt-get upgrade
+```
+
+安装 ssh
+
+```sh
+shell> apt-get install openssh-server
+```
+
+允许 root 用户使用 ssh 登录
+
+```sh
+shell> vim /etc/ssh/sshd_config
+PermitRootLogin yes
+```
+
+安装 ntpdate
+
+```sh
+shell> apt-get install ntpdate
+```
+
+同步时间
+
+```sh
+shell> /usr/sbin/ntpdate ntp7.aliyun.com
+```
+
+- [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
+- [时间设置：设置Linux实例时区和NTP服务](https://help.aliyun.com/document_detail/92803.html)
+- [使用 ntpd 來替換 ntpdate 以完成校時的工作](https://szlin.me/2016/07/19/%E4%BD%BF%E7%94%A8-ntpd-%E4%BE%86%E6%9B%BF%E6%8F%9B-ntpdate-%E4%BB%A5%E5%AE%8C%E6%88%90%E6%A0%A1%E6%99%82%E7%9A%84%E5%B7%A5%E4%BD%9C/)
+
 优化内核参数
 
 ```sh
@@ -55,60 +115,6 @@ root hard nofile 65535
 
 - [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
 - [Cannot Increase open file limit past 4096 (Ubuntu)](https://superuser.com/questions/1200539/cannot-increase-open-file-limit-past-4096-ubuntu)
-
-使用中科大镜像
-
-```sh
-shell> cp /etc/apt/sources.list /etc/apt/sources.list.bak
-shell> vim /etc/apt/sources.list
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-
-## Not recommended
-# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-shell> apt-get update
-```
-
-- [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
-
-安装 ssh
-
-```sh
-shell> apt-get install openssh-server
-```
-
-允许 root 用户使用 ssh 登录
-
-```sh
-shell> vim /etc/ssh/sshd_config
-PermitRootLogin yes
-```
-
-安装 ntpdate
-
-```sh
-shell> apt-get install ntpdate
-```
-
-同步时间
-
-```sh
-shell> /usr/sbin/ntpdate ntp7.aliyun.com
-```
-
-- [时间配置：NTP服务器与其他基础服务](https://help.aliyun.com/document_detail/92704.html)
-- [时间设置：设置Linux实例时区和NTP服务](https://help.aliyun.com/document_detail/92803.html)
-- [使用 ntpd 來替換 ntpdate 以完成校時的工作](https://szlin.me/2016/07/19/%E4%BD%BF%E7%94%A8-ntpd-%E4%BE%86%E6%9B%BF%E6%8F%9B-ntpdate-%E4%BB%A5%E5%AE%8C%E6%88%90%E6%A0%A1%E6%99%82%E7%9A%84%E5%B7%A5%E4%BD%9C/)
 
 ## 用户管理
 
