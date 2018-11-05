@@ -10,7 +10,7 @@
   - [/etc/security/limits.conf](#etcsecuritylimitsconf)
   - [/etc/php/7.2/fpm/php.ini](#etcphp72fpmphpini)
   - [/etc/php/7.2/fpm/pool.d/www.conf](#etcphp72fpmpooldwwwconf)
-- [配合 Puppet 使用的例子](#配合Puppet使用的例子)
+- [Puppet](#Puppet)
 - [参考文献](#参考文献)
 
 ## 安装
@@ -634,7 +634,7 @@ Saved 1 file(s)
 
 - [php.aug: "set" to uncomment existing directives rather than adding new ones](https://github.com/hercules-team/augeas/issues/550)
 
-## 配合 Puppet 使用的例子
+## Puppet
 
  [请参考](https://github.com/aisuhua/puppet-draft2/blob/7a4cf2c9b344eb724560f000e8598950506ae700/modules/base/manifests/init.pp)
 
