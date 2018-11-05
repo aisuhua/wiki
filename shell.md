@@ -36,6 +36,14 @@ shell> echo 'A5F5E9413C558753025495DAF6A0A7B47E55402B' | tr A-Z a-z
 shell> rm ./-A_NNMHDB3MW3eB
 ```
 
+tree 查看所有文件及权限
+
+```sh
+shell> tree -aup
+```
+
+- [View permission / owner of full directory tree](https://unix.stackexchange.com/questions/82361/view-permission-owner-of-full-directory-tree)
+
 ## 进程
 
 后台执行进程
