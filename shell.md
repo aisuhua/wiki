@@ -44,6 +44,15 @@ shell> tree -aup
 
 - [View permission / owner of full directory tree](https://unix.stackexchange.com/questions/82361/view-permission-owner-of-full-directory-tree)
 
+## dpkg
+
+查看安装的所有软件
+
+```sh
+shell> dpkg -l
+shell> dpkg -l | grep ftp
+```
+
 ## 进程
 
 后台执行进程
