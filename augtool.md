@@ -636,7 +636,7 @@ Saved 1 file(s)
 
 ## Puppet
 
- [请参考](https://github.com/aisuhua/puppet-draft2/blob/7a4cf2c9b344eb724560f000e8598950506ae700/modules/base/manifests/init.pp)
+ [请参考](https://github.com/aisuhua/puppet-draft2/blob/b1f91c3cac0d216a98e550f9fe510b8216badc5a/modules/base/manifests/demo01.pp)
 
 ## 参考文献
 
