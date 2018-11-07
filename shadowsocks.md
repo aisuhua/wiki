@@ -29,6 +29,11 @@ https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
 ```sh
 shell> apt-get install polipo
+```
+
+修改配置
+
+```sh
 shell> vim /etc/polipo/config
 logSyslog = true
 logFile = /var/log/polipo/polipo.log
