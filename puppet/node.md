@@ -74,7 +74,7 @@ root@puppetnode1:~> puppet agent --test
 
 有两种方法：
 
-- 启动 puppet agent 后默认 30 分钟更新一次；
+- 启动 puppet agent，默认它会 30 分钟更新一次；
 - 使用 cron 进行定时更新；
 
 ### puppet agent
