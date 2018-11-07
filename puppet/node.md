@@ -35,8 +35,6 @@ root@puppetnode1:~> puppet resource service puppet ensure=running enable=true
 root@puppetnode1:~> puppet agent --test --environment production --server puppetmaster.aisuhua.net
 ```
 
-- [Essential configuration](https://puppet.com/docs/puppet/5.5/quick_start_essential_config.html)
-
 ### stand-alone
 
 本地添加测试脚本
