@@ -62,6 +62,13 @@ shell> ssh -T git@gitlab.com
 shell> ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 ```
 
+避免 Are you sure you want to continue connecting (yes/no)
+
+```sh
+shell> vim /etc/ssh/ssh_config
+StrictHostKeyChecking no
+```
+
 参考文献
 
 - [ssh-keygen 中文手册](http://www.jinbuguo.com/openssh/ssh-keygen.html)
