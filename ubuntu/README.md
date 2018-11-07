@@ -63,6 +63,7 @@ shell> apt-get install openssh-server
 ```sh
 shell> vim /etc/ssh/sshd_config
 PermitRootLogin yes
+shell> service ssh restart
 ```
 
 安装 ntpdate
