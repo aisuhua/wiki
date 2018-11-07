@@ -68,7 +68,7 @@ shell> puppet parser validate site.pp
 查看资源的状态
 
 ```sh
-shell> puppet resource service ntpd
+shell> puppet resource service ssh
 ```
 
 安装外部模块
