@@ -84,6 +84,7 @@ root@puppetnode1:~> systemctl enable puppet
 root@puppetnode1:~> vim /etc/puppetlabs/puppet/puppet.conf
 [agent]
 runinterval = 1800
+root@puppetnode1:~> service puppet restart
 ```
 
 - [Run Puppet agent as a service](https://puppet.com/docs/puppet/5.5/services_agent_unix.html#task-6309)
