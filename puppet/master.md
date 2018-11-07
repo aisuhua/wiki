@@ -51,8 +51,8 @@ root@puppetmaster:~> puppet cert sign puppetnode1.aisuhua.net
 ```sh
 root@puppetmaster:~> vim /etc/puppetlabs/code/environments/production/manifests/site.pp 
 node default {
-    file { '/tmp/suhua.txt':
-        content => 'suhua is a good boy.'
+    file { '/tmp/hello.txt':
+        content => 'Hello, World!'
     }
 }
 ```
