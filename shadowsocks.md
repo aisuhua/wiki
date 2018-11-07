@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 shell> apt-get install polipo
 ```
 
-修改配置
+配置
 
 ```sh
 shell> vim /etc/polipo/config
