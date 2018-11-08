@@ -1,3 +1,5 @@
+## 安装
+
 安装
 
 ```sh
@@ -7,7 +9,7 @@ shell> apt-get install nginx
 ```
 
 - [NGINX PPA](https://launchpad.net/~nginx/+archive/ubuntu/stable)
-- [Install](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
+
 
 启动
 
@@ -20,3 +22,8 @@ shell> service nginx start
 ```sh
 shell> nginx -s reload
 ```
+
+## 参考文献
+
+- [Install](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
+- [如何正确配置 Nginx 和 PHP](http://blog.jobbole.com/50121/)
