@@ -35,7 +35,7 @@ shell> supervisorctl update
 查看进程状态
 
 ```sh
-root@puppetnode2:/var/log/supervisor# supervisorctl status
+shell> supervisorctl status
 ```
 
 启动进程
