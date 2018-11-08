@@ -1,16 +1,13 @@
 安装
 
 ```sh
-shell> wget http://nginx.org/keys/nginx_signing.key
-shell> sudo apt-key add nginx_signing.key
-shell> vim /etc/apt/sources.list.d/nginx.list
-deb http://nginx.org/packages/ubuntu/ xenial nginx
-deb-src http://nginx.org/packages/ubuntu/ xenial nginx
+shell> sudo add-apt-repository ppa:nginx/stable
 shell> apt-get update
 shell> apt-get install nginx
 ```
 
-- [nginx: Linux packages](http://nginx.org/en/linux_packages.html)
+- [NGINX PPA](https://launchpad.net/~nginx/+archive/ubuntu/stable)
+- [Install](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
 
 启动
 
