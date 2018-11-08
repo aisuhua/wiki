@@ -26,4 +26,5 @@ shell> nginx -s reload
 ## 参考文献
 
 - [Install](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
+- [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
 - [如何正确配置 Nginx 和 PHP](http://blog.jobbole.com/50121/)
