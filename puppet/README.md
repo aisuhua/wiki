@@ -206,3 +206,4 @@ shell> puppet config print environmentpath basemodulepath modulepath manifest --
 - [Puppet Management GUI Comparison](https://www.olindata.com/en/blog/2014/01/puppet-management-gui-comparison)
 - [Puppet error messages and solutions](https://thisdataguy.com/2015/08/13/puppet-error-messages-and-solutions/)
 - [best ways to define "workgroups/roles" with puppet](https://www.reddit.com/r/Puppet/comments/4m1ny6/best_ways_to_define_workgroupsroles_with_puppet/)
+- [Puppet architecture for multiple environments of multiple applications](https://stackoverflow.com/questions/37070456/puppet-architecture-for-multiple-environments-of-multiple-applications)
