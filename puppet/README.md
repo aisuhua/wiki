@@ -205,3 +205,4 @@ shell> puppet config print environmentpath basemodulepath modulepath manifest --
 - [Ops 的轉職之路 - Puppet 從入門就放棄](https://github.com/shazi7804/ops-puppet-30-days)
 - [Puppet Management GUI Comparison](https://www.olindata.com/en/blog/2014/01/puppet-management-gui-comparison)
 - [Puppet error messages and solutions](https://thisdataguy.com/2015/08/13/puppet-error-messages-and-solutions/)
+- [best ways to define "workgroups/roles" with puppet](https://www.reddit.com/r/Puppet/comments/4m1ny6/best_ways_to_define_workgroupsroles_with_puppet/)
