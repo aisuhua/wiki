@@ -255,7 +255,32 @@ shell> ifconfig enp0s2 down
 
 ## 添加虚拟IP
 
-https://askubuntu.com/questions/547289/how-can-i-from-cli-assign-multiple-ip-addresses-to-one-interface
+临时添加、删除虚拟IP（重启后无效）
+
+```sh
+shell> ip address add 192.168.1.169/24 dev enp0s3
+shell> ip address del 192.168.1.169/24 dev enp0s3
+```
+
+编辑配置文件
+
+```sh
+shell> vim /etc/network/interfaces
+# The primary network interface
+auto enp0s3
+iface enp0s3 inet dhcp
+
+iface enp0s3 inet static
+address 192.168.1.169/24
+```
+
+查看虚拟IP
+
+```sh
+shell> ip address
+```
+
+- [How can I (from CLI) assign multiple IP addresses to one interface?](https://askubuntu.com/questions/547289/how-can-i-from-cli-assign-multiple-ip-addresses-to-one-interface)
 
 ## 对命令进行版本切换
 
