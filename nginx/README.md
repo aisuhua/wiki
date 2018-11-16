@@ -17,10 +17,18 @@ shell> apt-get install nginx
 shell> service nginx start
 ```
 
+## 操作
+
 重新加载配置文件
 
 ```sh
 shell> nginx -s reload
+```
+
+查看编辑参数
+
+```sh
+shell> nginx -V
 ```
 
 ## 参考文献
@@ -28,3 +36,5 @@ shell> nginx -s reload
 - [Install](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
 - [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
 - [如何正确配置 Nginx 和 PHP](http://blog.jobbole.com/50121/)
+- [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/#filter)
+- [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
