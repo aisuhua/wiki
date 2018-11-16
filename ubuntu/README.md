@@ -253,6 +253,10 @@ shell> ifconfig enp0s2 up
 shell> ifconfig enp0s2 down
 ```
 
+## 添加虚拟IP
+
+https://askubuntu.com/questions/547289/how-can-i-from-cli-assign-multiple-ip-addresses-to-one-interface
+
 ## 对命令进行版本切换
 
 update-alternatives（待补充）
