@@ -40,3 +40,4 @@ shell> nginx -V
 - [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
 - [nginx负载均衡的5种策略](https://segmentfault.com/a/1190000014483200)
 - [Nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)
+- [nginx负载均衡](https://thief.one/2017/08/22/1/)
