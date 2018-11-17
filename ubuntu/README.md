@@ -298,6 +298,25 @@ shell> mount /dev/sdx1 /mnt/myNtfsDevice
 
 - [How can I use fdisk to create a ntfs partition on /dev/sdx?](https://unix.stackexchange.com/questions/252625/how-can-i-use-fdisk-to-create-a-ntfs-partition-on-dev-sdx)
 
+添加 swap 分区
+
+```sh
+shell> swapon -s
+shell> fallocate -l 10G /swapfile
+shell> chmod 600 /www/swapfile
+shell> mkswap /www/swapfile
+shell> swapon /www/swapfile
+```
+
+将 swap 分区写入 fstab 文件
+
+```sh
+shell> vim /etc/fstab
+/www/swapfile none swap defaults 0 0
+```
+
+- [Swap (简体中文)](https://wiki.archlinux.org/index.php/Swap_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+
 ## 笔记本问题
 
 解决笔记本风扇狂转、无法正常关机的问题
