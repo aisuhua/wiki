@@ -94,7 +94,7 @@ vrrp_instance VI_1 {
 }
 ```
 
-LB1 和 LB2 分别重启服务
+重启服务
 
 ```sh
 shell> service keepalived restart
