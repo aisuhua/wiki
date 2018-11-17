@@ -12,9 +12,9 @@ shell> apt-get install haproxy
 shell> vim /etc/haproxy/haproxy.cfg
 frontend public
     bind *:80
-    default_backend app
+    default_backend wp-web
 
-backend app
+backend wp-web
     balance roundrobin
     server wp-web1 192.168.31.201:80 check
     server wp-web2 192.168.31.202:80 check
