@@ -56,6 +56,24 @@ vrrp_instance VI_1 {
 shell> service keepalived restart
 ```
 
+## 操作
+
+抓取 VRRP 包
+
+```sh
+shell> tcpdump vrrp
+```
+
+> 为减少网络带宽消耗，只有主控路由器才可以周期性地发送 VRRP 通告报文。
+> 若备份路由器在连续三个通告间隔内收不到 VRRP 或收到优先级为 0 的通告则启动新一轮的 VRRP 选举
+> 摘抄自《Linux 集群和自动化运维》
+
+查看系统日志
+
+```sh
+shell> tail -f /var/log/syslog 
+```
+
 ## 参考文献
 
 - [How can I (from CLI) assign multiple IP addresses to one interface?](https://askubuntu.com/questions/547289/how-can-i-from-cli-assign-multiple-ip-addresses-to-one-interface)
