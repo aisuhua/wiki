@@ -53,5 +53,5 @@ shell> service haproxy restart
 ## 参考文献
 
 - [HAProxy Documentation](https://cbonte.github.io/haproxy-dconv/)
-- [大规模Linux集群架构和最佳实践](https://read.douban.com/ebook/39297083/)
+- [《大规模Linux集群架构和最佳实践》](https://read.douban.com/ebook/39297083/)
 
