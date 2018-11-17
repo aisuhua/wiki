@@ -125,3 +125,4 @@ shell> tail -f /var/log/syslog
 - [keepalived + nginx 初步实现高可用](https://klionsec.github.io/2017/12/23/keepalived-nginx/)
 - [Keepalived+Nginx实现双主高可用负载均衡](http://blog.51cto.com/zhangpenglinux/1782759)
 - [告别LVS：使用keepalived+nginx实现负载均衡代理多个https](http://www.ha97.com/899.html)
+- [《Linux集群和自动化运维》脚本源码](https://github.com/yuhongchun/automation)
