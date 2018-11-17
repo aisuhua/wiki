@@ -6,10 +6,10 @@
 shell> apt-get install keepalived
 ```
 
-添加配置
+LB1 添加配置
 
 ```sh
-shell> vim /etc/keepalived/keepalived.conf
+root@lb1:~> vim /etc/keepalived/keepalived.conf
 ! Configuration File for keepalived
 global_defs {
     notification_email {
@@ -50,7 +50,51 @@ vrrp_instance VI_1 {
 }
 ```
 
-重启服务
+LB2 添加配置
+
+```sh
+root@lb2:~> vim /etc/keepalived/keepalived.conf
+! Configuration File for keepalived
+global_defs {
+    notification_email {
+        zhouxiao@example.com
+        itsection@example.com
+    }
+    notification_email_from itsection@example.com
+    smtp_server mail.example.com
+    smtp_connect_timeout 30
+    router_id LVS_lb2
+}
+
+vrrp_script chk_nginx {
+    script "killall -0 nginx"
+    interval 2
+    weight -5
+    fall 3
+    rise 2
+}
+
+vrrp_instance VI_1 {
+    state BACKUP
+    interface enp0s3
+    mcast_src_ip 192.168.31.221
+    virtual_router_id 51
+    priority 100
+    advert_int 2
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+       192.168.31.20
+    }
+    track_script {
+       chk_nginx
+    }
+}
+```
+
+LB1 和 LB2 分别重启服务
 
 ```sh
 shell> service keepalived restart
