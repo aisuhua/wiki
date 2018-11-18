@@ -56,4 +56,7 @@ shell> service haproxy restart
 
 - [HAProxy Documentation](https://cbonte.github.io/haproxy-dconv/)
 - [《大规模Linux集群架构和最佳实践》](https://read.douban.com/ebook/39297083/)
+- [LOAD BALANCER ADMINISTRATION](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/load_balancer_administration/index)
+- [Chapter 16 Load Balancing and High Availability Configuration](https://docs.oracle.com/cd/E37670_01/E41138/html/ol6-loadbal.html)
+- [keepalived+haproxy双主高可用负载均衡](http://blog.51cto.com/nmshuishui/1405486)
 
