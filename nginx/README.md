@@ -42,8 +42,8 @@ server {
     listen 80;
     listen [::]:80;
     
-    server_name _;
-    root /var/www/html;
+    server_name foo.aisuhua.com;
+    root /www/web/foo;
 
     location / {
         try_files $uri $uri/ =404;
