@@ -17,7 +17,7 @@ shell> apt-get install nginx
 shell> service nginx start
 ```
 
-## 配置示例
+## 站点配置
 
 静态站点
 
@@ -85,6 +85,37 @@ server {
 }
 ```
 
+## 负载均衡
+
+服务器规划
+
+|---|---|---|
+| 服务器名称 | IP | 用途 |
+| Nginx Master | 192.168.31.220 | 提供负载均衡 |
+| Web1 服务器 | 192.168.31.201 | 提供 Web 服务 |
+| Web1 服务器 | 192.168.31.202 | 提供 Web 服务 |
+
+负载均衡配置
+
+```conf
+http {
+    upstream foo {
+        ip_hash
+        server 192.168.31.201:80;
+        server 192.168.31.202:80;
+    }
+
+    server {
+        listen 80;
+        server_name foo.aisuhua.com;
+
+        location / {
+            include /etc/nginx/proxy_params;
+            proxy_pass http://foo;
+        }
+    }
+}
+```
 
 ## 操作
 
