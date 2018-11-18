@@ -17,6 +17,45 @@ shell> apt-get install nginx
 shell> service nginx start
 ```
 
+## 配置示例
+
+静态站点
+
+```conf
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    
+    server_name _;
+    root /var/www/html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
+PHP 站点
+
+```conf
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    
+    server_name _;
+    root /var/www/html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+}
+```
+
 ## 操作
 
 重新加载配置文件
