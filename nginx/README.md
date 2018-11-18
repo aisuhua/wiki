@@ -129,11 +129,12 @@ http {
 | Web1 服务器  | 192.168.31.201 | 提供 Web 服务   |
 | Web2 服务器  | 192.168.31.202 | 提供 Web 服务   |
 
-两台 Nginx 服务器上先安装好 keepalived。
+前提条件：两台 Nginx 负载均衡服务器能正常提供服务和安装了 Keepalived。
 
-Nginx Master 的 keepalived 配置如下：
+Nginx Master 配置如下：
 
-```
+```sh
+shell> vim /etc/keepalived/keepalived.conf 
 ! Configuration File for keepalived
 global_defs {
     notification_email {
@@ -177,6 +178,7 @@ vrrp_instance VI_1 {
 Nginx Backup 的 keepalived 配置如下：
 
 ```keepalived
+shell> vim /etc/keepalived/keepalived.conf 
 ! Configuration File for keepalived
 global_defs {
     notification_email {
