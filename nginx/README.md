@@ -117,6 +117,106 @@ http {
 }
 ```
 
+## 负载均衡高可用 Nginx + Keepalived
+
+服务器规划
+
+| 服务器名称   | IP             | 用途            |
+| ------------ | -------------- | --------------- |
+| Nginx Master | 192.168.31.220 | 提供负载均衡    |
+| Nginx Backup | 192.168.31.221 | 提供负载均衡    |
+| LVS-DR-VIP   | 192.168.31.20  | 网盘的 VIP 地址 |
+| Web1 服务器  | 192.168.31.201 | 提供 Web 服务   |
+| Web2 服务器  | 192.168.31.202 | 提供 Web 服务   |
+
+两台 Nginx 服务器上先安装好 keepalived。
+
+Nginx Master 的 keepalived 配置如下：
+
+```
+! Configuration File for keepalived
+global_defs {
+    notification_email {
+        zhouxiao@example.com
+        itsection@example.com
+    }
+    notification_email_from itsection@example.com
+    smtp_server mail.example.com
+    smtp_connect_timeout 30
+    router_id LVS_lb1
+}
+
+vrrp_script chk_nginx {
+    script "killall -0 nginx"
+    interval 2
+    weight -5
+    fall 3
+    rise 2
+}
+
+vrrp_instance VI_1 {
+    state MASTER
+    interface enp0s3
+    mcast_src_ip 192.168.31.220
+    virtual_router_id 51
+    priority 101
+    advert_int 2
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+       192.168.31.20
+    }
+    track_script {
+       chk_nginx
+    }
+}
+```
+
+Nginx Backup 的 keepalived 配置如下：
+
+```keepalived
+! Configuration File for keepalived
+global_defs {
+    notification_email {
+        zhouxiao@example.com
+        itsection@example.com
+    }
+    notification_email_from itsection@example.com
+    smtp_server mail.example.com
+    smtp_connect_timeout 30
+    router_id LVS_lb2
+}
+
+vrrp_script chk_nginx {
+    script "killall -0 nginx"
+    interval 2
+    weight -5
+    fall 3
+    rise 2
+}
+
+vrrp_instance VI_1 {
+    state BACKUP
+    interface enp0s3
+    mcast_src_ip 192.168.31.221
+    virtual_router_id 51
+    priority 100
+    advert_int 2
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+       192.168.31.20
+    }
+    track_script {
+       chk_nginx
+    }
+}
+```
+
 ## 操作
 
 重新加载配置文件
