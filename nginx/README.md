@@ -238,6 +238,7 @@ vrrp_instance VI_1 {
 > 第二台机器也是第一台的备机，生成的两个 VIP 地址分别对应我们的站点 http://foo.aisuhua.com，
 > 这样大家在公网上都可以通过 DNS 轮询来访问得到该网站。
 > 任何一台 Nginx 机器如果发生硬件损坏，Keepalived 会自动将它的 VIP 地址切换到另一台，而不影响客户端访问。
+> 摘抄自[《Linux集群和自动化运维》](https://www.amazon.cn/dp/B01KGTDEW0)
 
 Nginx Master1 配置
 
