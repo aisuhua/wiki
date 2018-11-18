@@ -56,6 +56,36 @@ server {
 }
 ```
 
+错误页面处理
+
+```conf
+server {
+    listen 80;
+    listen [::]:80;
+    
+    server_name foo.aisuhua.com;
+    root /www/web/foo;
+    
+    error_page 404 /404.html;
+    error_page 500 502 503 504 /50x.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+    
+    # 在 /www/web/foo 目录下放置 404.html 和 50x.html 页面
+    location ~ /(404|50x)\.html {
+        internal;
+    }
+}
+```
+
+
 ## 操作
 
 重新加载配置文件
