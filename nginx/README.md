@@ -177,7 +177,7 @@ vrrp_instance VI_1 {
 
 Nginx Backup 配置
 
-```keepalived
+```sh
 shell> vim /etc/keepalived/keepalived.conf 
 ! Configuration File for keepalived
 global_defs {
@@ -241,7 +241,7 @@ vrrp_instance VI_1 {
 
 Nginx Master1 配置
 
-```keepalived
+```sh
 shell> vim /etc/keepalived/keepalived.conf 
 ! Configuration File for keepalived
 global_defs {
@@ -304,7 +304,7 @@ vrrp_instance VI_2 {
 
 Nginx Master 2 配置
 
-```keepalived
+```sh
 shell> vim /etc/keepalived/keepalived.conf 
 ! Configuration File for keepalived
 global_defs {
