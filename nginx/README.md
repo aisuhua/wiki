@@ -100,7 +100,7 @@ server {
 ```nginx
 http {
     upstream foo {
-        ip_hash
+        ip_hash;
         server 192.168.31.201:80;
         server 192.168.31.202:80;
     }
