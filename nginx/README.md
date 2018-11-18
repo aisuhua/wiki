@@ -225,10 +225,10 @@ vrrp_instance VI_1 {
 
 | 服务器名称   | IP             | 用途            |
 | ------------ | -------------- | --------------- |
-| Nginx Master 1 | 192.168.31.220 | 提供负载均衡    |
+| Nginx-Master-1 | 192.168.31.220 | 提供负载均衡    |
 | Nginx Master 2 | 192.168.31.221 | 提供负载均衡    |
-| VIP 1   | 192.168.31.20  | 集群 VIP 地址一 |
-| VIP 2   | 192.168.31.30  | 集群 VIP 地址二 |
+| VIP-1   | 192.168.31.20  | 集群 VIP 地址一 |
+| VIP-2   | 192.168.31.30  | 集群 VIP 地址二 |
 | Web1 服务器  | 192.168.31.201 | 提供 Web 服务   |
 | Web2 服务器  | 192.168.31.202 | 提供 Web 服务   |
 
@@ -302,7 +302,7 @@ vrrp_instance VI_2 {
 }
 ```
 
-Nginx Master 2 配置
+Nginx Master2 配置
 
 ```sh
 shell> vim /etc/keepalived/keepalived.conf 
