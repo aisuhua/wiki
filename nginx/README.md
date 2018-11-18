@@ -21,7 +21,7 @@ shell> service nginx start
 
 静态站点
 
-```conf
+```nginx
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -37,7 +37,7 @@ server {
 
 PHP 站点
 
-```conf
+```nginx
 server {
     listen 80;
     listen [::]:80;
@@ -58,7 +58,7 @@ server {
 
 错误页面处理
 
-```conf
+```nginx
 server {
     listen 80;
     listen [::]:80;
@@ -97,7 +97,7 @@ server {
 
 基本配置
 
-```conf
+```nginx
 http {
     upstream foo {
         ip_hash
