@@ -131,7 +131,7 @@ http {
 
 前提条件：两台 Nginx 负载均衡服务器能正常提供服务和安装了 Keepalived。
 
-Nginx Master 配置如下：
+Nginx Master 配置
 
 ```sh
 shell> vim /etc/keepalived/keepalived.conf 
@@ -175,7 +175,7 @@ vrrp_instance VI_1 {
 }
 ```
 
-Nginx Backup 的 keepalived 配置如下：
+Nginx Backup 配置
 
 ```keepalived
 shell> vim /etc/keepalived/keepalived.conf 
