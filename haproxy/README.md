@@ -69,3 +69,4 @@ shell> service haproxy restart
 - [keepalived+haproxy双主高可用负载均衡](http://blog.51cto.com/nmshuishui/1405486)
 - [haproxy配置详解](http://blog.51cto.com/leejia/1421882)
 - [daemonza/haproxy.cfg](https://gist.github.com/daemonza/1984806)
+- [How to Host Multiple Web Sites with Nginx and HAProxy Using LXD on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-host-multiple-web-sites-with-nginx-and-haproxy-using-lxd-on-ubuntu-16-04)
