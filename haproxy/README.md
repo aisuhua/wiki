@@ -52,6 +52,14 @@ listen stats
 shell> service haproxy restart
 ```
 
+## HTTPS
+
+- [Using SSL Certificates with HAProxy](https://serversforhackers.com/c/using-ssl-certificates-with-haproxy)
+- [How To Implement SSL Termination With HAProxy on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04)
+
+
+
+
 ## 参考文献
 
 - [HAProxy Documentation](https://cbonte.github.io/haproxy-dconv/)
@@ -59,4 +67,5 @@ shell> service haproxy restart
 - [LOAD BALANCER ADMINISTRATION](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/load_balancer_administration/index)
 - [Chapter 16 Load Balancing and High Availability Configuration](https://docs.oracle.com/cd/E37670_01/E41138/html/ol6-loadbal.html)
 - [keepalived+haproxy双主高可用负载均衡](http://blog.51cto.com/nmshuishui/1405486)
-
+- [haproxy配置详解](http://blog.51cto.com/leejia/1421882)
+- [daemonza/haproxy.cfg](https://gist.github.com/daemonza/1984806)
