@@ -120,6 +120,7 @@ http {
 负载均衡策略
 
 - [Using nginx as HTTP load balancer](http://nginx.org/en/docs/http/load_balancing.html)
+- [Module ngx_http_upstream_module](http://nginx.org/en/docs/http/ngx_http_upstream_module.html)
 
 ## 负载均衡高可用 Nginx + Keepalived
 
