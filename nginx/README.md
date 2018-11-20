@@ -117,6 +117,10 @@ http {
 }
 ```
 
+负载均衡策略
+
+- [Using nginx as HTTP load balancer](http://nginx.org/en/docs/http/load_balancing.html)
+
 ## 负载均衡高可用 Nginx + Keepalived
 
 服务器规划
