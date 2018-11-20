@@ -389,7 +389,6 @@ shell> nginx -V
 
 ## 参考文献
 
-- [Install](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
 - [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
 - [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/#filter)
 - [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
