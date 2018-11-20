@@ -85,6 +85,8 @@ server {
 }
 ```
 
+- [如何正确配置 Nginx 和 PHP](http://blog.jobbole.com/50121/)
+
 ## 负载均衡
 
 服务器规划
@@ -389,9 +391,6 @@ shell> nginx -V
 
 - [Install](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
 - [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
-- [如何正确配置 Nginx 和 PHP](http://blog.jobbole.com/50121/)
-- [Using nginx as HTTP load balancer](http://nginx.org/en/docs/http/load_balancing.html)
-- [Module ngx_http_upstream_module](http://nginx.org/en/docs/http/ngx_http_upstream_module.html)
 - [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/#filter)
 - [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
 - [nginx负载均衡的5种策略](https://segmentfault.com/a/1190000014483200)
