@@ -1,3 +1,13 @@
+# 目录
+
+- [安装](安装)
+- [配置示例](配置示例)
+- [负载均衡](负载均衡)
+- [负载均衡高可用 Nginx + Keepalived](负载均衡高可用Nginx+Keepalived)
+- [主主负载均衡高可用 Nginx + Keepalived](主主负载均衡高可用Nginx+Keepalived)
+- [基本操作](基本操作)
+- [参考文献](参考文献)
+
 ## 安装
 
 安装
@@ -123,6 +133,7 @@ http {
 
 - [Using nginx as HTTP load balancer](http://nginx.org/en/docs/http/load_balancing.html)
 - [Module ngx_http_upstream_module](http://nginx.org/en/docs/http/ngx_http_upstream_module.html)
+- [Nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)
 
 ## 负载均衡高可用 Nginx + Keepalived
 
@@ -373,7 +384,7 @@ vrrp_instance VI_2 {
 }
 ```
 
-## 操作
+## 基本操作
 
 重新加载配置文件
 
@@ -392,6 +403,3 @@ shell> nginx -V
 - [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
 - [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/#filter)
 - [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
-- [nginx负载均衡的5种策略](https://segmentfault.com/a/1190000014483200)
-- [Nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)
-- [nginx负载均衡](https://thief.one/2017/08/22/1/)
