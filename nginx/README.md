@@ -17,7 +17,7 @@ shell> apt-get install nginx
 shell> service nginx start
 ```
 
-## 站点配置
+## 配置示例
 
 静态站点
 
