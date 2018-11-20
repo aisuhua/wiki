@@ -3,8 +3,8 @@
 - [安装](#安装)
 - [配置示例](#配置示例)
 - [负载均衡](#负载均衡)
-- [负载均衡高可用 Nginx + Keepalived](#负载均衡高可用Nginx+Keepalived)
-- [主主负载均衡高可用 Nginx + Keepalived](#主主负载均衡高可用Nginx+Keepalived)
+- [主备负载均衡高可用 Nginx + Keepalived](#主备负载均衡高可用-Nginx--Keepalived)
+- [主主负载均衡高可用 Nginx + Keepalived](#主主负载均衡高可用-Nginx--Keepalived)
 - [基本操作](#基本操作)
 - [参考文献](#参考文献)
 
