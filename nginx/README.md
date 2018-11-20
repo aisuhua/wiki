@@ -135,7 +135,7 @@ http {
 - [Module ngx_http_upstream_module](http://nginx.org/en/docs/http/ngx_http_upstream_module.html)
 - [Nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)
 
-## 负载均衡高可用 Nginx + Keepalived
+## 主备负载均衡高可用 Nginx + Keepalived
 
 服务器规划
 
