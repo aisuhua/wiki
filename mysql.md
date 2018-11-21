@@ -70,14 +70,14 @@ mysql> GRANT SELECT, INSERT, UPDATE, DELETE ON `dbname`.* TO 'username'@'172.16.
 
 授予更多权限
 
-```sh
+```sql
 mysql> GRANT CREATE ON `dbname`.* TO 'username'@'172.16.%'
 mysql> GRANT SELECT ON `dbname2`.* TO 'username'@'172.16.%'
 ```
 
 查看用户权限
 
-```sh
+```sql
 mysql> show grants for 'username'@'172.16.%';
 +-------------------------------------------------------------------------------------+
 | Grants for username@172.16.%                                                        |
