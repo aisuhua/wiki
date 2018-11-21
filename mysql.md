@@ -90,7 +90,7 @@ mysql> GRANT SELECT ON `dbname2`.* TO 'username'@'172.16.%'
 查看用户权限
 
 ```sql
-mysql> show grants for 'username'@'172.16.%';
+mysql> SHOW GRANTS FOR 'username'@'172.16.%';
 ```
 
 收回权限
