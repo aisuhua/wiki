@@ -1,3 +1,5 @@
+## 安装
+
 安装
 
 ```sh
@@ -36,6 +38,8 @@ path = /www/web
 ```sh
 shell> service rsync restart
 ```
+
+## 使用示例
 
 同步本地文件
 
