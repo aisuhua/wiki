@@ -32,3 +32,17 @@ shell> ifstat
 ```
 
 - [Ifstat](http://gael.roualland.free.fr/ifstat/)
+
+## ps
+
+查看进程状态
+
+```sh
+shell> ps -aux
+```
+
+查看进程状态，带有父子进程
+
+```sh
+shell> ps -ef
+```
