@@ -91,13 +91,6 @@ mysql> GRANT SELECT ON `dbname2`.* TO 'username'@'172.16.%'
 
 ```sql
 mysql> show grants for 'username'@'172.16.%';
-+-------------------------------------------------------------------------------------+
-| Grants for username@172.16.%                                                        |
-+-------------------------------------------------------------------------------------+
-| GRANT USAGE ON *.* TO 'username'@'172.16.%'                                         |
-| GRANT SELECT, INSERT, UPDATE, DELETE, CREATE ON `dbname`.* TO 'username'@'172.16.%' |
-| GRANT SELECT ON `dbname2`.* TO 'username'@'172.16.%'                                |
-+-------------------------------------------------------------------------------------+
 ```
 
 收回权限
