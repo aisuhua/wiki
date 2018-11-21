@@ -1,3 +1,12 @@
+## hostname
+
+修改主机名
+
+```sh
+shell> hostname wp-web1.192.168.1.2.local.aisuhua.net
+shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts
+```
+
 ## ip address
 
 查看 IP
