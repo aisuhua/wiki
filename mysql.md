@@ -58,6 +58,8 @@ default-character-set = utf8mb4
 mysql> CREATE USER 'username'@'172.16.%' IDENTIFIED BY 'password'
 ```
 
+- [13.7.1.3 CREATE USER Syntax](https://dev.mysql.com/doc/refman/5.7/en/create-user.html)
+
 对用户授权
 
 ```sql
