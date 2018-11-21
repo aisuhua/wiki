@@ -11,3 +11,24 @@ shell> netstat -anp | grep :80
 ```sh
 shell> netstat -autlp
 ```
+
+## ifstat
+
+安装
+
+```sh
+shell> apt-get install ifstat 
+shell> wget  http://gael.roualland.free.fr/ifstat/ifstat-1.1.tar.gz
+shell> tar -zxvf ifstat-1.1.tar.gz
+shell> cd ifstat-1.1/
+shell> ./configure
+shell> make && make install
+```
+
+查看实时网速
+
+```sh
+shell> ifstat
+```
+
+- [Ifstat](http://gael.roualland.free.fr/ifstat/)
