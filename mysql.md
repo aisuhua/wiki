@@ -18,7 +18,7 @@ shell> mysql --version
 shell> service mysql start
 ```
 
-## 配置
+## 修改配置
 
 允许所有来源的请求
 
