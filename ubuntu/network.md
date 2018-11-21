@@ -6,7 +6,7 @@
 shell> netstat -anp | grep :80
 ```
 
-查看正在监听的 sockets 接口信息
+查看活动中的网络情况
 
 ```sh
 shell> netstat -autlp
