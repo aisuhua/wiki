@@ -40,7 +40,7 @@ collation-server = utf8mb4_unicode_ci
 
 - [10.5 Configuring Application Character Set and Collation](https://dev.mysql.com/doc/refman/5.7/en/charset-applications.html)
 
-修改客户端连接的默认字符集为 utf8mb4
+修改客户端连接字符集为 utf8mb4
 
 ```sh
 shell> vim /etc/mysql/conf.d/mysql.cnf
