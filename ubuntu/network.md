@@ -6,13 +6,13 @@
 shell> ip address
 ```
 
-添加 IP 地址（临时）
+临时添加IP地址
 
 ```sh
 shell> ip address add 192.168.31.206/24 dev enp0s3
 ```
 
-添加 IP 地址（永久）
+将IP地址写入配置文件
 
 ```sh
 shell> vim /etc/network/interfaces
@@ -23,7 +23,7 @@ iface enp0s3 inet static
 address 192.168.31.206/24
 ```
 
-删除 IP 地址
+删除IP地址
 
 ```sh
 shell> ip address del 192.168.31.206/24 dev enp0s3
