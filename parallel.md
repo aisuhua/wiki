@@ -14,11 +14,18 @@ shell> man parallel_tutorial
 
 ## 基本使用
 
+添加 PHP 脚本
+
 ```sh
 shell> vim /tmp/curl.php
 <?php
 sleep(3);
 echo 1, PHP_EOL;
+```
+
+添加并发执行脚本
+
+```sh
 shell> vim /tmp/mycurl.sh
 mycurl() {
     START=$(date +%s)
@@ -30,6 +37,11 @@ mycurl() {
 
 export -f mycurl
 seq 10 | parallel -j0 mycurl
+```
+
+并发执行
+
+```sh
 shell> bash /tmp/mycurl.sh
 ```
 
