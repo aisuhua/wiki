@@ -39,9 +39,11 @@ export -f mycurl
 seq 10 | parallel -j0 mycurl
 ```
 
-并发执行
+10个并发执行该 PHP 脚本
 
 ```sh
 shell> bash /tmp/mycurl.sh
 ```
+
+- [Running thousands of curl background processes in parallel in bash script](https://unix.stackexchange.com/questions/101632/running-thousands-of-curl-background-processes-in-parallel-in-bash-script)
 
