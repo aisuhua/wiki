@@ -88,6 +88,14 @@ mysql> show grants for 'username'@'172.16.%';
 +-------------------------------------------------------------------------------------+
 ```
 
+收回权限
+
+```sql
+mysql> REVOKE CREATE ON dbname.* FROM 'username'@'172.16.%';
+```
+
+- [13.7.1.6 REVOKE Syntax](https://dev.mysql.com/doc/refman/5.7/en/revoke.html)
+
 ## 技巧
 
 避免插入主键或唯一健重复的记录（会提示警告而非致命错误）
