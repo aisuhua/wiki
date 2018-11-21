@@ -8,6 +8,9 @@ shell> apt-get install mysql-server
 
 查看版本号
 
+```sh
+shell> mysql --version
+```
 
 启动
 
