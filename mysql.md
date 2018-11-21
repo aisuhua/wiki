@@ -50,6 +50,18 @@ default-character-set = utf8mb4
 
 - [10.4 Connection Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-connection.html)
 
+查看当前字符集
+
+```sql
+mysql> show variables like "character%";
+```
+
+查看当前校对集
+
+```sql
+mysql> show variables like "collation%";
+```
+
 ## 添加用户及授权
 
 添加用户
