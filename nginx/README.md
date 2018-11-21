@@ -3,7 +3,7 @@
 - [安装](#安装)
 - [配置示例](#配置示例)
 - [负载均衡](#负载均衡)
-- [主备负载均衡高可用 Nginx + Keepalived](#主备负载均衡高可用-Nginx--Keepalived)
+- [负载均衡高可用 Nginx + Keepalived](#负载均衡高可用-Nginx--Keepalived)
 - [主主负载均衡高可用 Nginx + Keepalived](#主主负载均衡高可用-Nginx--Keepalived)
 - [基本操作](#基本操作)
 - [参考文献](#参考文献)
@@ -135,7 +135,7 @@ http {
 - [Module ngx_http_upstream_module](http://nginx.org/en/docs/http/ngx_http_upstream_module.html)
 - [Nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)
 
-## 主备负载均衡高可用 Nginx + Keepalived
+## 负载均衡高可用 Nginx + Keepalived
 
 服务器规划
 
@@ -384,6 +384,50 @@ vrrp_instance VI_2 {
 }
 ```
 
+## TCP 负载均衡示例
+
+服务器规划
+
+| 服务器名称   | IP             | 用途            |
+| ------------ | -------------- | --------------- |
+| Nginx-Master | 192.168.1.168 | 提供负载均衡    |
+| DB1 服务器  | 192.168.1.40 | 提供 MySQL 服务   |
+| DB2 服务器  | 192.168.1.41 | 提供 MySQL 服务   |
+
+负载均衡配置示例
+
+```nginx
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+    use epoll;
+    worker_connections 65535;
+    # multi_accept on;
+}
+
+stream {
+    upstream mysql_backend {
+        # hash $remote_addr consistent;
+        server 192.168.1.40:3306;
+        server 192.168.1.41:3306;
+        # ...
+    }
+
+    server {
+        listen 3306;
+        proxy_pass mysql_backend;
+    }
+    # ...
+}
+```
+
+- [Module ngx_stream_core_module](http://nginx.org/en/docs/stream/ngx_stream_core_module.html)
+- [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/)
+- [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
+
 ## 基本操作
 
 重新加载配置文件
@@ -401,5 +445,4 @@ shell> nginx -V
 ## 参考文献
 
 - [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
-- [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/#filter)
-- [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
+
