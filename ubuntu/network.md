@@ -1,6 +1,6 @@
 ## ip address
 
-查看 IP 信息
+查看 IP
 
 ```sh
 shell> ip address
