@@ -16,8 +16,8 @@ shell> man parallel_tutorial
 
 添加 PHP 脚本
 
-```sh
-shell> vim /tmp/curl.php
+```php
+# /tmp/curl.php
 <?php
 sleep(3);
 echo 1, PHP_EOL;
@@ -26,7 +26,7 @@ echo 1, PHP_EOL;
 添加并发执行脚本
 
 ```sh
-shell> vim /tmp/mycurl.sh
+# /tmp/mycurl.sh
 mycurl() {
     START=$(date +%s)
     /usr/bin/php /tmp/curl.php
