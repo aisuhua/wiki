@@ -29,7 +29,7 @@ bind-address = 0.0.0.0
 
 - [Bind address and MySQL server](https://stackoverflow.com/questions/3552680/bind-address-and-mysql-server)
 
-修改 M字符集为 utf8mb4
+修改 MySQL 字符集为 utf8mb4
 
 ```sh
 shell> vim /etc/mysql/mysql.conf.d/mysqld.cnf
