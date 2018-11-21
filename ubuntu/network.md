@@ -45,3 +45,20 @@ shell> service networking restart
 ```
 
 - [How can I (from CLI) assign multiple IP addresses to one interface?](https://askubuntu.com/questions/547289/how-can-i-from-cli-assign-multiple-ip-addresses-to-one-interface)
+
+## nslookup
+
+查看域名的 DNS 信息
+
+```sh
+shell> nslookup www.baidu.com   
+```
+
+## dig
+
+查看 DNS 相关的更多信息
+
+```sh
+shell> dig www.baidu.com
+```
+
