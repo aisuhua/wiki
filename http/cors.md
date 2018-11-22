@@ -140,6 +140,13 @@ Content-Encoding: gzip
 suhua
 ```
 
+服务器响应跨域请求时，必须带上表示允许本次跨域的 HTTP 报头。
+
+```http
+Access-Control-Allow-Origin: http://demo.aisuhua.com
+Access-Control-Allow-Credentials: true
+```
+
 ## 参考文献
 
 - [HTTP访问控制（CORS）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
