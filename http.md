@@ -1,12 +1,12 @@
 ## HTTP Basic authentication
 
-URL 上带帐号密码
+URL
 
 ```sh
 shell> curl https://username:password@www.example.com
 ```
 
-或 Authorization 带上签名
+Authorization
 
 ```sh
 shell> curl -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t' https://www.example.com
