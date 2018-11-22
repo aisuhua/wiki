@@ -6,7 +6,15 @@
 shell> apt-get install keepalived
 ```
 
-LB1 添加配置
+服务器规划
+
+| 服务器名称   | IP             | 用途          |
+| ------------ | -------------- | ------------- |
+| Nginx Master | 192.168.31.220 | 提供负载均衡  |
+| Nginx Backup  | 192.168.31.221 | 提供负载均衡 |
+| VIP  | 192.168.31.20 | 虚拟IP地址 |
+
+Nginx Master
 
 ```sh
 root@lb1:~> vim /etc/keepalived/keepalived.conf
@@ -50,7 +58,7 @@ vrrp_instance VI_1 {
 }
 ```
 
-LB2 添加配置
+Nginx Backup
 
 ```sh
 root@lb2:~> vim /etc/keepalived/keepalived.conf
