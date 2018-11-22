@@ -46,6 +46,49 @@ listen wp-db
 shell> service haproxy restart
 ```
 
+## 更多示例
+
+虚拟主机、自定义 HTTP header
+
+```sh
+shell> vim /etc/haproxy/haproxy.cfg
+frontend http-in
+    bind *:80
+    mode http
+
+    # 自定义 HTTP header
+    option forwardfor
+    http-request set-header X-Forwarded-Port %[dst_port]
+    http-request set-header X-Forwarded-Proto https if { ssl_fc }
+    http-request set-header X-Real-IP %[src]
+    http-response set-header X-LB-Name lb1
+
+    # foo.aisuhua.com
+    acl is_foo_aisuhua_com hdr_end(host) -i foo.aisuhua.com
+    use_backend foo-aisuhua-com if is_foo_aisuhua_com
+
+    # demo_aisuhua_com
+    acl is_demo_aisuhua_com hdr_end(host) -i demo.aisuhua.com
+    use_backend demo-aisuhua-com if is_demo_aisuhua_com
+
+    default_backend wp-web
+
+backend foo-aisuhua-com
+    balance roundrobin
+    server server1 192.168.1.200:80 check
+    server server2 192.168.1.201:80 check
+
+backend demo-aisuhua-com
+    balance source
+    server server1 192.168.1.210:80 check
+    server server1 192.168.1.211:80 check
+
+backend wp-web
+    balance roundrobin
+    server wp-web1 192.168.1.100:80 check
+    server wp-web2 192.168.1.102:80 check
+```
+
 ## 参考文献
 
 - [HAProxy Documentation](https://cbonte.github.io/haproxy-dconv/)
