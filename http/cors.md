@@ -152,7 +152,7 @@ Content-Encoding: gzip
 suhua
 ```
 
-服务器响应跨域请求时，必须带上表示允许本次跨域的 HTTP 报头。
+服务器响应跨域请求时，须带上表示允许本次跨域的 HTTP 报头。
 
 ```http
 Access-Control-Allow-Origin: http://demo.aisuhua.com
