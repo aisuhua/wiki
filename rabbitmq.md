@@ -33,6 +33,11 @@ shell> rabbitmq-plugins enable rabbitmq_management
 ```sh
 shell> vim /etc/rabbitmq/rabbitmq.conf
 loopback_users.guest = false
+```
+
+重启服务
+
+```sh
 shell> service rabbitmq-server restart
 ```
 
