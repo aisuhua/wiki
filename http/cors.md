@@ -84,7 +84,7 @@ X-LB-Name: HN1_lb1
 
 ### 解析
 
-浏览器通过添加 `Origin` 报头，告知服务器本次是跨域请求。
+浏览器请求时通过添加 `Origin` 报头，告知服务器本次是跨域请求。
 
 ```http
 Origin: http://demo.aisuhua.com
