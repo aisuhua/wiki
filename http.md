@@ -53,7 +53,7 @@ Response
 
 Request
 
-```http
+```sh
 curl 'http://foo.aisuhua.com/nginx_cors_server.php' \
 -X OPTIONS \
 -H 'Access-Control-Request-Method: POST' \
