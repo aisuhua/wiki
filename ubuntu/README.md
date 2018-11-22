@@ -180,28 +180,6 @@ suhua ALL=(ALL) NOPASSWD: ALL
 shell> sudo -l -U suhua
 ```
 
-## 服务器状态
-
-查看公网 IP
-
-```sh 
-shell> curl curl cip.cc
-shell> curl ip.cn
-```
-
-查看多核 CPU 的使用情况
-
-```sh
-shell> top
-Press key 1
-```
-
-查看当前运行级别
-
-```sh
-shell> runlevel
-```
-
 ## 对命令进行版本切换
 
 update-alternatives（待补充）
