@@ -53,7 +53,7 @@ http://localhost:15672
 shell> service rabbitmq-server start
 ```
 
-查看运行状态，比如版本信息
+查看运行状态，比如：版本信息
 
 ```sh
 shell> rabbitmqctl status
