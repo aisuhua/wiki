@@ -246,3 +246,5 @@ vrrp_instance VI_2 {
     }
 }
 ```
+
+- [Keepalived+Nginx实现双主高可用负载均衡](http://blog.51cto.com/zhangpenglinux/1782759)
