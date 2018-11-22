@@ -149,6 +149,8 @@ Access-Control-Allow-Credentials: true
 
 ## 在 Nginx 中实现
 
+添加 cors.conf 文件
+
 ```nginx
 set $cors '';
 set $access_origin '';
@@ -190,6 +192,23 @@ add_header 'Access-Control-Allow-Credentials' "$access_credentials";
 add_header 'Access-Control-Allow-Methods' "$access_methods";
 add_header 'Access-Control-Max-Age' "$access_age";
 add_header 'Access-Control-Allow-Headers' "$access_headers";
+```
+
+cors.conf 使用示例
+
+```nginx
+server {
+    listen 80;
+    server_name demo.aisuhua.com;
+    
+    include /etc/nginx/snippets/cors.conf;
+    
+    root /www/web/demo;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
 ```
 
 ## 参考文献
