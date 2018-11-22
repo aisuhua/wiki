@@ -58,7 +58,7 @@ shell> ip address
 添加虚拟 IP
 
 ```sh
-shell> ip address add 192.168.31.206/24 dev enp0s3
+shell> ip address add 192.168.1.3/24 dev enp0s3
 ```
 
 将 IP 地址写入配置文件
@@ -69,13 +69,13 @@ auto enp0s3
 iface enp0s3 inet dhcp
 
 iface enp0s3 inet static
-address 192.168.31.206/24
+address 192.168.1.3/24
 ```
 
 删除虚拟 IP
 
 ```sh
-shell> ip address del 192.168.31.206/24 dev enp0s3
+shell> ip address del 192.168.1.3/24 dev enp0s3
 ```
 
 重启网络
