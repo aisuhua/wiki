@@ -21,7 +21,7 @@ shell> curl -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t' https://www.exampl
 HTML
 
 ```html
-# demo.aisuhua.com
+// demo.aisuhua.com
 <html>
 <body>
 <script>
