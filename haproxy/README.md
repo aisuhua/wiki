@@ -56,7 +56,7 @@ frontend http-in
     bind *:80
     mode http
 
-    # 自定义 HTTP header
+    # HTTP header
     option forwardfor
     http-request set-header X-Forwarded-Port %[dst_port]
     http-request set-header X-Forwarded-Proto https if { ssl_fc }
