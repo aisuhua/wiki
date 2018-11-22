@@ -1,14 +1,3 @@
-# 目录
-
-- [安装](#安装)
-- [配置示例](#配置示例)
-- [负载均衡](#负载均衡)
-- [负载均衡高可用 Nginx + Keepalived](#负载均衡高可用-Nginx--Keepalived)
-- [主主负载均衡高可用 Nginx + Keepalived](#主主负载均衡高可用-Nginx--Keepalived)
-- [TCP 负载均衡示例](#TCP-负载均衡示例)
-- [基本操作](#基本操作)
-- [参考文献](#参考文献)
-
 ## 安装
 
 安装
@@ -132,11 +121,8 @@ http {
 }
 ```
 
-负载均衡策略
-
 - [Using nginx as HTTP load balancer](http://nginx.org/en/docs/http/load_balancing.html)
 - [Module ngx_http_upstream_module](http://nginx.org/en/docs/http/ngx_http_upstream_module.html)
-- [Nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)
 
 ### TCP
 
@@ -180,7 +166,6 @@ stream {
 
 - [Module ngx_stream_core_module](http://nginx.org/en/docs/stream/ngx_stream_core_module.html)
 - [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/)
-- [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
 
 ## 基本操作
 
@@ -199,4 +184,5 @@ shell> nginx -V
 ## 参考文献
 
 - [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
-
+- [Nginx负载均衡配置](https://blog.csdn.net/xyang81/article/details/51702900)
+- [TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
