@@ -18,7 +18,7 @@ shell> curl -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t' https://www.exampl
 
 # Cross-Origin Resource Sharing (CORS)
 
-HTML
+`curl http://demo.aisuhua.com/nginx_cors_client.html`
 
 ```html
 // demo.aisuhua.com
@@ -42,7 +42,7 @@ HTML
 </html>
 ```
 
-OPTIONS 请求
+OPTIONS
 
 ```http
 # Request
@@ -62,7 +62,7 @@ Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 ```
 
-POST 请求
+POST
 
 ```http
 # foo.aisuhua.com
