@@ -89,12 +89,10 @@ backend wp-web
     server wp-web2 192.168.1.101:80 check
 ```
 
+- [HAproxy virtual site load balancing](https://gist.github.com/daemonza/1984806)
+
 ## 参考文献
 
 - [HAProxy Documentation](https://cbonte.github.io/haproxy-dconv/)
-- [keepalived+haproxy双主高可用负载均衡](http://blog.51cto.com/nmshuishui/1405486)
 - [haproxy配置详解](http://blog.51cto.com/leejia/1421882)
-- [daemonza/haproxy.cfg](https://gist.github.com/daemonza/1984806)
-- [How to Host Multiple Web Sites with Nginx and HAProxy Using LXD on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-host-multiple-web-sites-with-nginx-and-haproxy-using-lxd-on-ubuntu-16-04)
 - [Using SSL Certificates with HAProxy](https://serversforhackers.com/c/using-ssl-certificates-with-haproxy)
-- [How To Implement SSL Termination With HAProxy on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04)
