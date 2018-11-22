@@ -7,9 +7,9 @@ shell> hostname wp-web1.192.168.1.2.local.aisuhua.net
 shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -s`" >> /etc/hosts
 ```
 
-## 静态 IP
+## 配置静态 IP
 
-配置静态 IP
+静态 IP
 
 ```sh
 shell> vim /etc/network/interfaces
@@ -35,19 +35,19 @@ wpa-psk WIFI-PASSWORD
 dns-nameservers 223.5.5.5 223.6.6.6
 ```
 
-开启无线网卡
+开启无线网络
 
 ```sh
 shell> ifconfig enp0s2 up
 ```
 
-关闭无线网卡
+关闭无线网络
 
 ```sh
 shell> ifconfig enp0s2 down
 ```
 
-## ip address
+## 添加虚拟 IP
 
 查看当前 IP
 
@@ -55,7 +55,7 @@ shell> ifconfig enp0s2 down
 shell> ip address
 ```
 
-临时添加 IP 地址
+临时添加虚拟 IP 地址
 
 ```sh
 shell> ip address add 192.168.31.206/24 dev enp0s3
@@ -72,7 +72,7 @@ iface enp0s3 inet static
 address 192.168.31.206/24
 ```
 
-删除 IP 地址
+删除虚拟 IP 地址
 
 ```sh
 shell> ip address del 192.168.31.206/24 dev enp0s3
