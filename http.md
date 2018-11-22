@@ -73,4 +73,29 @@ Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 ```
 
+### POST
+
+Request
+
+```sh
+curl 'http://foo.aisuhua.com/nginx_cors_server.php' 
+-X POST 
+-H 'Origin: http://demo.aisuhua.com' 
+-H 'Content-Type: application/xml' 
+-H 'Referer: http://demo.aisuhua.com/nginx_cors_client.html'
+Cookie:___rl__test__cookies=1542245476890
+
+(empty body)
+```
+
+Response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Access-Control-Allow-Origin: http://demo.aisuhua.com
+Access-Control-Allow-Credentials: true
+
+suhua
+```
 
