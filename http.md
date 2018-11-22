@@ -18,11 +18,11 @@ shell> curl -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t' https://www.exampl
 
 ## Cross-Origin Resource Sharing (CORS)
 
-### step 1
+### step 1: CURL
 
 Request
 
-```http
+```sh
 curl 'http://demo.aisuhua.com/nginx_cors_client.html'
 ```
 
@@ -49,32 +49,28 @@ Response
 </html>
 ```
 
-OPTIONS
+### step 2: OPTIONS
+
+Request
 
 ```http
-# Request
-OPTIONS /nginx_cors_server.php HTTP/1.1
-Host: foo.aisuhua.com
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: content-type
-Origin: http://demo.aisuhua.com
-Referer: http://demo.aisuhua.com/nginx_cors_client.html
+curl 'http://foo.aisuhua.com/nginx_cors_server.php' \
+-X OPTIONS \
+-H 'Access-Control-Request-Method: POST' \
+-H 'Access-Control-Request-Headers: content-type' \
+-H 'Origin: http://demo.aisuhua.com' \
+-H 'Referer: http://demo.aisuhua.com/nginx_cors_client.html' 
+```
 
-# Response
+Response
+
+```http
 HTTP/1.1 204 No Content
 Access-Control-Allow-Origin: http://demo.aisuhua.com
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
 Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
-```
-
-POST
-
-```http
-# foo.aisuhua.com
-Access-Control-Allow-Origin:http://demo.aisuhua.com
-Access-Control-Allow-Credentials:true
 ```
 
 
