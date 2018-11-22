@@ -3,7 +3,7 @@
 帐号密码写在地址栏
 
 ```http
-https://username:password@www.example.com
+curl https://username:password@www.example.com
 ```
 
 base64(username:password) 的结果放在 Authorization 报头
