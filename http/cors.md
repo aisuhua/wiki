@@ -36,13 +36,13 @@ Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
 </html>
 ```
 
-用户访问的是 demo.aisuhua.com 域名下的页面
+用户访问的是 demo.aisuhua.com 域名下的页面。
 
 ```http
 http://demo.aisuhua.com/nginx_cors_client.html
 ```
 
-该页面通过 Ajax 调用了 foo.aisuhua.com 域名下的接口，从而产生了跨域请求。
+该页面通过 Ajax 调用了 foo.aisuhua.com 域名下的接口，因此产生了跨域请求。
 
 ```js
 xhr.open('post', 'http://foo.aisuhua.com/nginx_cors_server.php', true);
