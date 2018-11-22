@@ -1,5 +1,7 @@
 # Cross-Origin Resource Sharing (CORS)
 
+跨域资源共享
+
 ## 用户打开网页
 
 ```
