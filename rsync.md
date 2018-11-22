@@ -53,4 +53,11 @@ shell> rsync -avz /data /backup
 shell> rsync -avz --exclude="*.log" --delete --progress test 192.168.1.2::www
 ```
 
+将文件的权限和时间一起同步过去
+
+```sh
+shell> rsync -vzrtopg --progress test 192.168.1.2::www
+```
+
+
 - [rsync命令](http://man.linuxde.net/rsync)
