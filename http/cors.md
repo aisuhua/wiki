@@ -1,6 +1,6 @@
 ## Cross-Origin Resource Sharing (CORS)
 
-用户打开网页
+### 用户打开网页
 
 ```
 GET /nginx_cors_client.html HTTP/1.1
@@ -34,7 +34,7 @@ Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
 </html>
 ```
 
-浏览器发起 OPTIONS 预检 
+### 浏览器发起 OPTIONS 预检 
 
 
 ```
@@ -68,7 +68,7 @@ X-LB-Name: HN1_lb1
 
 针对「非安全」的跨域请求，浏览器会首先自动发起 OPTIONS 预检。
 
-浏览器正式发起 POST 请求
+### 浏览器正式发起 POST 请求
 
 ```
 POST /nginx_cors_server.php HTTP/1.1
@@ -101,7 +101,5 @@ Content-Encoding: gzip
 
 suhua
 ```
-
-截图解释
 
 ![图片alt](img/cors_example.png '图片title')
