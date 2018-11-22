@@ -66,7 +66,43 @@ Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 X-LB-Name: HN1_lb1
 ```
 
-针对「非安全」的跨域请求，浏览器会首先自动发起 OPTIONS 预检。
+针对「非安全」的跨域请求，浏览器会首先发起 OPTIONS 预检。
+
+#### 解析
+
+浏览器通过添加 `Origin` 报头，告知服务端本次是跨域请求。
+
+```http
+Origin: http://demo.aisuhua.com
+```
+
+服务端回应浏览器接受本次跨域请求
+
+```http
+Access-Control-Allow-Origin: http://demo.aisuhua.com
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age: 86400
+Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
+```
+
+其中，服务端告知浏览器可以将此 OPTIONS 请求结果缓存 1 天
+
+```http
+Access-Control-Max-Age: 86400
+```
+
+并且允许浏览器携带 Cookie 进行请求
+
+```http
+Access-Control-Allow-Credentials: true
+```
+
+需要注意的是：当上面为 true 时，`Access-Control-Allow-Origin` 必须是具体的域名而不能是通配符 `*`
+
+```http
+Access-Control-Allow-Origin: http://demo.aisuhua.com
+```
 
 ### 浏览器正式发起 POST 请求
 
