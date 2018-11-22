@@ -48,6 +48,12 @@ http://demo.aisuhua.com/nginx_cors_client.html
 xhr.open('post', 'http://foo.aisuhua.com/nginx_cors_server.php', true);
 ```
 
+其中，Ajax 进行跨域请求时可以携带 Cookie 信息。
+
+```js
+xhr.withCredentials = true;
+```
+
 ## 浏览器发起 OPTIONS 预检 
 
 
