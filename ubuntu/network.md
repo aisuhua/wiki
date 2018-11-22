@@ -9,7 +9,7 @@ shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -
 
 ## 配置静态 IP
 
-静态 IP
+配置静态 IP
 
 ```sh
 shell> vim /etc/network/interfaces
@@ -21,7 +21,7 @@ gateway 192.168.1.1
 dns-nameservers 223.5.5.5 223.6.6.6
 ```
 
-无线网卡
+无线网卡配置方法
 
 ```sh
 shell> vim /etc/network/interfaces
