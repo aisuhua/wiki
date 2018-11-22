@@ -78,12 +78,12 @@ Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 Request
 
 ```sh
-curl 'http://foo.aisuhua.com/nginx_cors_server.php' 
--X POST 
--H 'Origin: http://demo.aisuhua.com' 
--H 'Content-Type: application/xml' 
--H 'Referer: http://demo.aisuhua.com/nginx_cors_client.html'
-Cookie:___rl__test__cookies=1542245476890
+curl 'http://foo.aisuhua.com/nginx_cors_server.php' \
+-X POST \
+-H 'Origin: http://demo.aisuhua.com' \
+-H 'Content-Type: application/xml' \
+-H 'Referer: http://demo.aisuhua.com/nginx_cors_client.html' \
+-H 'Cookie: ___rl__test__cookies=1542245476890'
 
 (empty body)
 ```
