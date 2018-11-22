@@ -6,44 +6,38 @@
 shell> apt-get install haproxy
 ```
 
-添加配置（格式1）
+添加配置
 
 ```sh
 shell> vim /etc/haproxy/haproxy.cfg
-frontend public
-    bind *:80
-    option forwardfor
-    default_backend wp-web
-
-backend wp-web
-    balance roundrobin
-    server wp-web1 192.168.31.201:80 check
-    server wp-web2 192.168.31.202:80 check
-```
-
-添加配置（格式2）
-
-```sh
-shell> vim /etc/haproxy/haproxy.cfg
-listen wp_web
-     bind *:80
-     mode http
-     option forwardfor
-     balance roundrobin
-     server wp-web1 192.168.31.201:80 check
-     server wp-web2 192.168.31.202:80 check
-```
-
-添加监控页面配置
-
-```sh
-shell> vim /etc/haproxy/haproxy.cfg
+# Monitor
 listen stats
     bind *:8100
     mode http
     stats uri /stats
     stats auth admin:admin
     stats refresh 5s
+
+# HTTP
+frontend http-in
+    bind *:80
+    mode http
+    option forwardfor
+    default_backend wp-web
+
+backend wp-web
+    balance roundrobin
+    server wp-web1 192.168.1.143:80 check
+    server wp-web2 192.168.1.100:80 check
+
+# TCP
+listen wp-db
+    bind *:3306
+    mode tcp
+    option tcplog
+    balance roundrobin
+    server wp-db1 192.168.1.40:3306 check
+    server wp-db2 192.168.1.41:3306 check
 ```
 
 重启服务
@@ -51,14 +45,6 @@ listen stats
 ```sh
 shell> service haproxy restart
 ```
-
-## HTTPS
-
-- [Using SSL Certificates with HAProxy](https://serversforhackers.com/c/using-ssl-certificates-with-haproxy)
-- [How To Implement SSL Termination With HAProxy on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04)
-
-
-
 
 ## 参考文献
 
@@ -70,3 +56,5 @@ shell> service haproxy restart
 - [haproxy配置详解](http://blog.51cto.com/leejia/1421882)
 - [daemonza/haproxy.cfg](https://gist.github.com/daemonza/1984806)
 - [How to Host Multiple Web Sites with Nginx and HAProxy Using LXD on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-host-multiple-web-sites-with-nginx-and-haproxy-using-lxd-on-ubuntu-16-04)
+- [Using SSL Certificates with HAProxy](https://serversforhackers.com/c/using-ssl-certificates-with-haproxy)
+- [How To Implement SSL Termination With HAProxy on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04)
