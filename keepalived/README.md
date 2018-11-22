@@ -13,7 +13,7 @@ root@lb1:~> vim /etc/keepalived/keepalived.conf
 ! Configuration File for keepalived
 global_defs {
     notification_email {
-        zhouxiao@example.com
+        aisuhua@example.com
         itsection@example.com
     }
     notification_email_from itsection@example.com
@@ -57,7 +57,7 @@ root@lb2:~> vim /etc/keepalived/keepalived.conf
 ! Configuration File for keepalived
 global_defs {
     notification_email {
-        zhouxiao@example.com
+        aisuhua@example.com
         itsection@example.com
     }
     notification_email_from itsection@example.com
