@@ -83,4 +83,4 @@ suhua
 
 ## 截图解释
 
-![图片alt](img/cors_example.png ''图片title'')
+![图片alt](img/cors_example.png '图片title')
