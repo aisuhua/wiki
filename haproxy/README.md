@@ -46,7 +46,7 @@ listen wp-db
 shell> service haproxy restart
 ```
 
-## 更多示例
+## 配置示例
 
 虚拟主机、自定义 HTTP header
 
