@@ -41,3 +41,24 @@ HTML
 </body>
 </html>
 ```
+
+OPTIONS
+
+```http
+# foo.aisuhua.com
+Access-Control-Allow-Origin:http://demo.aisuhua.com
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Headers:Origin, Content-Type, X-Requested-With
+Access-Control-Allow-Methods:GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age:86400
+```
+
+POST
+
+```http
+# foo.aisuhua.com
+Access-Control-Allow-Origin:http://demo.aisuhua.com
+Access-Control-Allow-Credentials:true
+```
+
+
