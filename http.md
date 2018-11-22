@@ -18,7 +18,7 @@ shell> curl -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t' https://www.exampl
 
 ## Cross-Origin Resource Sharing (CORS)
 
-### step 1: CURL
+### GET
 
 Request
 
@@ -49,7 +49,7 @@ Response
 </html>
 ```
 
-### step 2: OPTIONS
+### OPTIONS
 
 Request
 
