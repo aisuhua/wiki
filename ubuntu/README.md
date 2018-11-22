@@ -120,7 +120,30 @@ root hard nofile 65535
 
 ## 对命令进行版本切换
 
-update-alternatives（待补充）
+查看当前默认使用的 PHP 版本
+
+```sh
+shell> php -v
+shell> update-alternatives --display php
+shell> update-alternatives --display php-config
+shell> update-alternatives --display phpize
+```
+
+设置默认版本
+
+```sh
+shell> update-alternatives --set php /usr/bin/php7.2
+shell> update-alternatives --set php-config /usr/bin/php-config7.2
+shell> update-alternatives --set phpize /usr/bin/phpize7.2
+```
+
+交互式设置默认版本
+
+```sh
+shell> update-alternatives --config php
+```
+
+- [update-alternatives命令详解](http://coolnull.com/3339.html)
 
 ## 分区
 
