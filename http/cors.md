@@ -86,7 +86,7 @@ Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 X-LB-Name: HN1_lb1
 ```
 
-针对「非安全」的跨域请求，浏览器会首先发起 OPTIONS 预检，该行为是浏览器根据 CORS 机制自动执行的。
+针对「非安全」的跨域请求，浏览器会首先发起 OPTIONS 预检，预检行为是浏览器根据 CORS 机制自动执行的。
 
 ### 解析
 
