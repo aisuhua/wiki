@@ -102,6 +102,5 @@ Content-Encoding: gzip
 suhua
 ```
 
-### 请求过程截图
-
-![图片alt](img/cors_example.png '图片title')
+- [HTTP访问控制（CORS）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [前端常见跨域解决方案（全）](https://segmentfault.com/a/1190000011145364)
