@@ -55,7 +55,7 @@ shell> ifconfig enp0s2 down
 shell> ip address
 ```
 
-临时添加虚拟 IP 地址
+添加虚拟 IP
 
 ```sh
 shell> ip address add 192.168.31.206/24 dev enp0s3
@@ -72,7 +72,7 @@ iface enp0s3 inet static
 address 192.168.31.206/24
 ```
 
-删除虚拟 IP 地址
+删除虚拟 IP
 
 ```sh
 shell> ip address del 192.168.31.206/24 dev enp0s3
