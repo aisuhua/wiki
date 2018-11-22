@@ -27,8 +27,8 @@ frontend http-in
 
 backend wp-web
     balance roundrobin
-    server wp-web1 192.168.1.143:80 check
-    server wp-web2 192.168.1.100:80 check
+    server wp-web1 192.168.1.100:80 check
+    server wp-web2 192.168.1.101:80 check
 
 # TCP
 listen wp-db
