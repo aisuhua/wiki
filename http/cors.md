@@ -9,7 +9,7 @@ Connection: keep-alive
 Pragma: no-cache
 Cache-Control: no-cache
 Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Accept-Encoding: gzip, deflate, sdch
 Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
@@ -45,7 +45,7 @@ Pragma: no-cache
 Cache-Control: no-cache
 Access-Control-Request-Method: POST
 Origin: http://demo.aisuhua.com
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
 Access-Control-Request-Headers: content-type
 Accept: */*
 Referer: http://demo.aisuhua.com/nginx_cors_client.html
@@ -78,7 +78,7 @@ Content-Length: 0
 Pragma: no-cache
 Cache-Control: no-cache
 Origin: http://demo.aisuhua.com
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
 Content-Type: application/xml
 Accept: */*
 Referer: http://demo.aisuhua.com/nginx_cors_client.html
