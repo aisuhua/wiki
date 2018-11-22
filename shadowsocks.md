@@ -49,6 +49,11 @@ objectHighMark = 16384
 serverMaxSlots = 64
 serverSlots = 16
 serverSlots1 = 32
+```
+
+重启服务
+
+```sh
 shell> service polipo restart
 ```
 
