@@ -48,3 +48,9 @@ suhua ALL=(ALL) NOPASSWD: ALL
 
 - [Sudoers file, enable NOPASSWD for user, all commands](https://askubuntu.com/questions/334318/sudoers-file-enable-nopasswd-for-user-all-commands)
 - [sudoers的深入剖析与用户权限控制](https://segmentfault.com/a/1190000007394449)
+
+查看 sudo 权限
+
+```sh
+shell> sudo -l -U suhua
+```
