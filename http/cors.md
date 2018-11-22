@@ -1,6 +1,6 @@
 ## Cross-Origin Resource Sharing (CORS)
 
-打开网页
+用户打开网页
 
 ```
 GET /nginx_cors_client.html HTTP/1.1
