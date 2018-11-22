@@ -49,8 +49,8 @@ OPTIONS 请求
 OPTIONS /nginx_cors_server.php HTTP/1.1
 Host: foo.aisuhua.com
 Access-Control-Request-Method: POST
-Origin: http://demo.aisuhua.com
 Access-Control-Request-Headers: content-type
+Origin: http://demo.aisuhua.com
 Referer: http://demo.aisuhua.com/nginx_cors_client.html
 
 # Response
