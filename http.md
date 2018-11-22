@@ -42,18 +42,27 @@ HTML
 </html>
 ```
 
-OPTIONS
+OPTIONS 请求
 
 ```http
-# foo.aisuhua.com
-Access-Control-Allow-Origin:http://demo.aisuhua.com
-Access-Control-Allow-Credentials:true
-Access-Control-Allow-Headers:Origin, Content-Type, X-Requested-With
-Access-Control-Allow-Methods:GET, POST, PUT, DELETE, OPTIONS
-Access-Control-Max-Age:86400
+# Request
+OPTIONS /nginx_cors_server.php HTTP/1.1
+Host: foo.aisuhua.com
+Access-Control-Request-Method: POST
+Origin: http://demo.aisuhua.com
+Access-Control-Request-Headers: content-type
+Referer: http://demo.aisuhua.com/nginx_cors_client.html
+
+# Response
+HTTP/1.1 204 No Content
+Access-Control-Allow-Origin: http://demo.aisuhua.com
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age: 86400
+Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 ```
 
-POST
+POST 请求
 
 ```http
 # foo.aisuhua.com
