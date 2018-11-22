@@ -36,6 +36,8 @@ Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
 </html>
 ```
 
+用户访问的是 demo.aisuhua.com 域名下的页面，而该页面通过 Ajax 调用了 foo.aisuhua.com 域名下的接口，从而产生跨域请求。
+
 ## 浏览器发起 OPTIONS 预检 
 
 
