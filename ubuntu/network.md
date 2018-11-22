@@ -102,3 +102,12 @@ shell> nslookup www.baidu.com
 shell> dig www.baidu.com
 ```
 
+## 查看公网 IP
+
+[ifconfig.co](https://github.com/mpolden/echoip)
+
+```sh
+shell> curl ifconfig.io
+```
+
+
