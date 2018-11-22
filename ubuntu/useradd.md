@@ -22,12 +22,6 @@ shell> userdel -r suhua
 shell> groups suhua
 ```
 
-修改 root 密码
-
-```sh
-shell> sudo passwd root
-```
-
 ## 添加 sudo 权限
 
 修改配置文件
