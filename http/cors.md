@@ -102,4 +102,6 @@ Content-Encoding: gzip
 suhua
 ```
 
+### 请求过程截图
+
 ![图片alt](img/cors_example.png '图片title')
