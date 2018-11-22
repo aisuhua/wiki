@@ -16,12 +16,19 @@ shell> curl -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t' https://www.exampl
 
 - [[译]web权限验证方法说明](https://segmentfault.com/a/1190000004086946)
 
-# Cross-Origin Resource Sharing (CORS)
+## Cross-Origin Resource Sharing (CORS)
 
-`curl http://demo.aisuhua.com/nginx_cors_client.html`
+### step 1
+
+Request
+
+```http
+curl 'http://demo.aisuhua.com/nginx_cors_client.html'
+```
+
+Response
 
 ```html
-// demo.aisuhua.com
 <html>
 <body>
 <script>
