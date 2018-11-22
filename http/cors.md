@@ -1,6 +1,6 @@
 ## Cross-Origin Resource Sharing (CORS)
 
-### GET
+### 打开网页
 
 Request
 
@@ -31,7 +31,7 @@ Response
 </html>
 ```
 
-### OPTIONS
+### 浏览器发起 OPTIONS 预检 
 
 Request
 
@@ -55,7 +55,9 @@ Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 ```
 
-### POST
+针对「非安全」的跨域请求，浏览器会首先自动发起 OPTIONS 预检。
+
+### 浏览器正式发起 POST 请求
 
 Request
 
