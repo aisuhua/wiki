@@ -6,7 +6,7 @@
 curl https://username:password@www.example.com
 ```
 
-base64(username:password) 的结果放在 Authorization 报头
+或放在 Authorization 报头，生成方法 base64(username:password)
 
 ```http
 curl https://www.example.com -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t'
