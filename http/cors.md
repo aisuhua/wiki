@@ -1,6 +1,6 @@
-## Cross-Origin Resource Sharing (CORS)
+# Cross-Origin Resource Sharing (CORS)
 
-### 用户打开网页
+## 用户打开网页
 
 ```
 GET /nginx_cors_client.html HTTP/1.1
@@ -34,7 +34,7 @@ Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
 </html>
 ```
 
-### 浏览器发起 OPTIONS 预检 
+## 浏览器发起 OPTIONS 预检 
 
 
 ```
@@ -68,7 +68,7 @@ X-LB-Name: HN1_lb1
 
 针对「非安全」的跨域请求，浏览器会首先发起 OPTIONS 预检。
 
-#### 解析
+### 解析
 
 浏览器通过添加 `Origin` 报头，告知服务端本次是跨域请求。
 
@@ -104,7 +104,7 @@ Access-Control-Allow-Credentials: true
 Access-Control-Allow-Origin: http://demo.aisuhua.com
 ```
 
-### 浏览器正式发起 POST 请求
+## 浏览器正式发起 POST 请求
 
 ```
 POST /nginx_cors_server.php HTTP/1.1
