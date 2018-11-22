@@ -78,7 +78,7 @@ X-LB-Name: HN1_lb1
 Origin: http://demo.aisuhua.com
 ```
 
-服务端回应浏览器接受本次跨域请求
+服务端回应浏览器接受本次跨域请求。
 
 ```http
 Access-Control-Allow-Origin: http://demo.aisuhua.com
@@ -88,19 +88,19 @@ Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 ```
 
-其中，服务端告知浏览器可以将此 OPTIONS 请求结果缓存 1 天
+其中，服务端告知浏览器可以将此 OPTIONS 请求结果缓存 1 天。
 
 ```http
 Access-Control-Max-Age: 86400
 ```
 
-并且允许浏览器携带 Cookie 进行请求
+并且允许浏览器携带 Cookie 进行请求。
 
 ```http
 Access-Control-Allow-Credentials: true
 ```
 
-需要注意的是：当上面为 true 时，`Access-Control-Allow-Origin` 必须是具体的域名而不能是通配符 `*`
+需要注意的是：当上面为 true 时，`Access-Control-Allow-Origin` 必须是具体的域名而不能是通配符 `*`。
 
 ```http
 Access-Control-Allow-Origin: http://demo.aisuhua.com
