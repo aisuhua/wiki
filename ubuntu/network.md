@@ -110,4 +110,8 @@ shell> dig www.baidu.com
 shell> curl ifconfig.io
 ```
 
+[cip.cc](http://www.cip.cc/)
 
+```sh
+shell> curl cip.cc
+```
