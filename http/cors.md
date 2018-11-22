@@ -100,7 +100,7 @@ Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Origin, Content-Type, X-Requested-With
 ```
 
-其中，服务器告知浏览器可以将此 OPTIONS 请求结果缓存 1 天。
+其中，服务器告知浏览器可以将此 OPTIONS 请求结果缓存 1 天，从而避免了每次都发起 OPTIONS 请求。
 
 ```http
 Access-Control-Max-Age: 86400
