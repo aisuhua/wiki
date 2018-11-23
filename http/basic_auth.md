@@ -1,5 +1,7 @@
 # HTTP Basic authentication
 
+HTTP basic authentication is a simple challenge and response mechanism with which a server can request authentication information (a user ID and password) from a client. The client passes the authentication information to the server in an Authorization header. The authentication information is in base-64 encoding.
+
 ## 帐号密码的传输方式
 
 可写在地址栏。
@@ -121,3 +123,8 @@ Content-Encoding: gzip
 ```http
 Authorization: Basic c3VodWE6MTIzNDU2
 ```
+
+## 参考文献
+
+- [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
+- [HTTP basic authentication](https://www.ibm.com/support/knowledgecenter/en/SSGMCP_5.1.0/com.ibm.cics.ts.internet.doc/topics/dfhtl2a.html)
