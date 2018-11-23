@@ -36,7 +36,7 @@ drop function hello;
 ```sql
 create procedure simpleproc (out param1 int)
 begin
-select count(*) into param1 from t;
+  select count(*) into param1 from t;
 end
 ```
 
