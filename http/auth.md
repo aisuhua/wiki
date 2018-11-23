@@ -41,4 +41,57 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 ![Alt text](img/basic_auth.jpg?v=1)
 
 
+点击「取消」按钮。
 
+```
+GET /auth.php HTTP/1.1
+Host: demo.aisuhua.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Pragma: no-cache
+Cache-Control: no-cache
+
+HTTP/1.1 401 Unauthorized
+Server: nginx/1.14.1
+Date: Fri, 23 Nov 2018 01:18:59 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+WWW-Authenticate: Basic realm="My Realm"
+X-Powered-By: aisuhua
+X-Server-Name: HN1_wp-web1
+X-LB-Name: HN1_lb1
+```
+
+输入帐号密码后点击「确认」。
+
+```
+GET /auth.php HTTP/1.1
+Host: demo.aisuhua.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Pragma: no-cache
+Cache-Control: no-cache
+Authorization: Basic c3VodWE6MTIzNDU2
+
+HTTP/1.1 200 OK
+Server: nginx/1.14.1
+Date: Fri, 23 Nov 2018 01:20:46 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: aisuhua
+X-Server-Name: HN1_wp-web2
+X-LB-Name: HN1_lb1
+Content-Encoding: gzip
+
+<p>Hello suhua.</p><p>You entered 123456 as your password.</p>
+```
