@@ -21,7 +21,7 @@ alter table student drop index name, drop index age;
 show create table student\G
 ```
 
-给值有重复的列添加唯一索引会报错，可以使用以下方法找出存在值重复的行。
+给值有重复的列添加唯一索引会报错，可以使用以下方法找出重复的行。
 
 ```sql
 select unique_id,count(unique_id)
@@ -32,7 +32,7 @@ having count(unique_id) >1;
 
 - [#1062 - Duplicate entry '' for key 'unique_id' When Trying to add UNIQUE KEY (MySQL)](https://stackoverflow.com/questions/17823322/1062-duplicate-entry-for-key-unique-id-when-trying-to-add-unique-key-my)
 
-使用 `IGNORE` 参数可以实现在添加唯一索引的同时将值重复的记录删除只保留一行。
+使用 `IGNORE` 参数可以实现在添加唯一索引的同时将重复的记录删除只保留一行。
 
 ```sql
 alter ignore table mytable add unique index myindex (a, b, c, d);
