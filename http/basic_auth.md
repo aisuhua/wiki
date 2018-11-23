@@ -124,6 +124,8 @@ Content-Encoding: gzip
 Authorization: Basic c3VodWE6MTIzNDU2
 ```
 
+由于编码的帐号密码很容易被解码，因此应使用 HTTPS 协议才能保证安全。
+
 ## 参考文献
 
 - [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
