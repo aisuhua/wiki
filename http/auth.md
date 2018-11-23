@@ -1,6 +1,6 @@
 ## HTTP Basic authentication
 
-### 帐号密码传输方式
+## 帐号密码传输方式
 
 可写在地址栏。
 
@@ -18,9 +18,9 @@ curl https://www.example.com -H 'Authorization: Basic base64(username:password)'
 
 - [[译]web权限验证方法说明](https://segmentfault.com/a/1190000004086946)
 
-### 在 PHP 中实现
+## 在 PHP 中实现
 
-添加 auth.php 文件
+## 添加 auth.php 文件
 
 ```php
 if (!isset($_SERVER['PHP_AUTH_USER'])) {
@@ -36,12 +36,12 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 
 - [用 PHP 进行 HTTP 认证](http://php.net/manual/zh/features.http-auth.php)
 
-访问该页面。
+### 访问该页面。
 
 ![Alt text](img/basic_auth.jpg?v=1)
 
 
-点击「取消」按钮。
+### 点击「取消」按钮
 
 ```
 GET /auth.php HTTP/1.1
@@ -67,7 +67,7 @@ X-Server-Name: HN1_wp-web1
 X-LB-Name: HN1_lb1
 ```
 
-输入帐号密码后点击「确认」。
+### 输入帐号密码后点击「确认」
 
 ```
 GET /auth.php HTTP/1.1
