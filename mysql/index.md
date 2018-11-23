@@ -3,6 +3,6 @@
 添加索引
 
 ```sql
-mysql> alter table student add index name (`name`)
-mysql> alter table student add index name (`name`), add index age (`age`)
+alter table student add index name (`name`)
+alter table student add index name (`name`), add index age (`age`)
 ```
