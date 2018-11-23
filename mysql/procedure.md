@@ -52,6 +52,18 @@ CALL simpleproc(@a);
 SELECT @a;
 ```
 
+查看存储过程的定义
+
+```sql
+show create procedure simpleproc\G
+```
+
+删除存储过程
+
+```sql
+drop procedure simpleproc;
+```
+
 - [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](https://dev.mysql.com/doc/refman/5.7/en/create-procedure.html)
 
 ## 分布式 ID 的实现
