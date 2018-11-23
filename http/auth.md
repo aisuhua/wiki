@@ -8,10 +8,10 @@
 curl https://username:password@www.example.com
 ```
 
-或放在 Authorization 报头，生成方法是 `base64(username:password)`。
+或放在 Authorization 报头。
 
 ```http
-curl https://www.example.com -H 'Authorization: Basic ZWx2c33pYzoxMTUjM23Q29t'
+curl https://www.example.com -H 'Authorization: Basic base64(username:password)'
 ```
 
 这两种方式的帐号密码都是明文传输，所以并不安全。
