@@ -70,3 +70,7 @@ alter ignore table mytable add unique index myindex (a, b, c, d);
 但是，这种方式只在 MySQL 5.7.4 之前的版本有效。
 
 - [Removing duplicates with unique index](https://dev.mysql.com/doc/refman/5.7/en/alter-table.html)
+
+## 使用索引
+
+强制走索引
