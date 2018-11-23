@@ -57,38 +57,38 @@ shell> docker ps -a
 创建并运行容器
 
 ```sh
-shell> docker run --name my_container -v /www/web:/www/web -p 80:80 --dns 223.5.5.5 -i -t ubuntu /bin/bash
+shell> docker run --name demo -v /www/web:/www/web -p 80:80 --dns 223.5.5.5 -i -t ubuntu /bin/bash
 ```
 
 查看容器信息
 
 ```sh
-shell> docker inspect my_container
+shell> docker inspect demo
 ```
 
 进入容器
 
 ```sh
-shell> docker exec -i -t my_container /bin/bash
+shell> docker exec -i -t demo /bin/bash
 ```
 
 停止容器
 
 ```sh
-shell> docker stop my_container
+shell> docker stop demo
 ```
 
 删除容器
 
 ```sh
-shell> docker rm my_container
+shell> docker rm demo
 ```
 
 复制文件到未运行的容器
 
 ```sh
-shell> docker cp my_container:/etc/supervisor/conf.d/program.conf .
-shell> docker my_file my_container:/www/web
+shell> docker cp demo:/etc/supervisor/conf.d/program.conf .
+shell> docker cp my_file demo:/www/web
 ```
 
 - [How to edit files in stopped/not starting docker container](https://stackoverflow.com/questions/32750748/how-to-edit-files-in-stopped-not-starting-docker-container)

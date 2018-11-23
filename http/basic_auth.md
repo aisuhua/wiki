@@ -1,5 +1,7 @@
 # HTTP Basic authentication
 
+HTTP basic authentication is a simple challenge and response mechanism with which a server can request authentication information (a user ID and password) from a client. The client passes the authentication information to the server in an Authorization header. The authentication information is in base-64 encoding.
+
 ## 帐号密码的传输方式
 
 可写在地址栏。
@@ -81,7 +83,7 @@ WWW-Authenticate: Basic realm="My Realm"
 Text to send if user hits Cancel button
 ```
 
-其中，realm 表示该帐号密码应用在的资源，浏览器会根据资源存储对应帐号密码，realm 不同时即需要再次认证。
+其中，realm 表示该帐号密码应用在的资源，用户在弹窗中可以获知他正在为哪些资源授权。
 
 ```http
 WWW-Authenticate: Basic realm="My Realm"
@@ -121,3 +123,10 @@ Content-Encoding: gzip
 ```http
 Authorization: Basic c3VodWE6MTIzNDU2
 ```
+
+由于编码的帐号密码很容易被解码，因此应使用 HTTPS 协议来保障安全，防止密码泄漏。
+
+## 参考文献
+
+- [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
+- [HTTP basic authentication](https://www.ibm.com/support/knowledgecenter/en/SSGMCP_5.1.0/com.ibm.cics.ts.internet.doc/topics/dfhtl2a.html)
