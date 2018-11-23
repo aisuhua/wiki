@@ -7,7 +7,7 @@ select last_insert_id();
 将时间转换成时间戳
 
 ```sql
-select unique_timestamp('2018-10-20 17:36:20');
+select unix_timestamp('2018-10-20 17:36:20')
 ```
 
 将时间戳转换成时间
