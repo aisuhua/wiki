@@ -1,6 +1,6 @@
 ## HTTP Basic authentication
 
-## 帐号密码传输方式
+## 帐号密码的传输方式
 
 可写在地址栏。
 
