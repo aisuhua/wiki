@@ -86,7 +86,7 @@ create table sequence (
 insert into sequence (name, val) values (1, 1);
 ```
 
-由于是通过不停 `update` 同一个 `name` 的 `value` 实现值的递增，因此必须存在该记录。
+由于是通过不停 `update` 同一个 `name` 的 `val` 实现值的递增，因此一开始必须存在该记录。
 
 ### 添加获取分布式 ID 的函数
 
@@ -100,7 +100,7 @@ begin
 end
 ```
 
-`update` 语句是原子的，而 `last_insert_id()` 在不同连接之间相互不影响，应此可以通过该函数获取全局唯一的 ID。
+`update` 语句是原子的，而 `last_insert_id()` 在不同连接之间相互不影响，因此可以通过该函数获取全局唯一的 ID。
 
 ### 获取分布式 ID
 
