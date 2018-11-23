@@ -20,6 +20,8 @@ curl https://www.example.com -H 'Authorization: Basic base64(username:password)'
 
 ### 在 PHP 中实现
 
+添加 auth.php 文件
+
 ```php
 if (!isset($_SERVER['PHP_AUTH_USER'])) {
     header('WWW-Authenticate: Basic realm="My Realm"');
@@ -33,4 +35,8 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 ```
 
 - [用 PHP 进行 HTTP 认证](http://php.net/manual/zh/features.http-auth.php)
+
+访问 auto.php 页面
+
+
 
