@@ -4,7 +4,17 @@
 
 ```sql
 alter table student add index name (`name`);
+```
+
+添加唯一索引
+
+```sql
 alter table student add unique index uid (`uid`);
+```
+
+同时添加多个索引
+
+```sql
 alter table student add unique index uid (`uid`), add index name (`name`),add index age (`age`);
 ```
 
@@ -12,6 +22,11 @@ alter table student add unique index uid (`uid`), add index name (`name`),add in
 
 ```sql
 alter table student drop index uid;
+```
+
+同时删除多个索引
+
+```sql
 alter table student drop index name, drop index age;
 ```
 
