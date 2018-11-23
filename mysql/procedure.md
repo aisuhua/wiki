@@ -17,6 +17,12 @@ return concat('hello, ', s, '!');
 show create function sequence\G
 ```
 
+调用函数
+
+```sql
+select hello('World');
+```
+
 删除函数
 
 ```sql
