@@ -81,7 +81,7 @@ WWW-Authenticate: Basic realm="My Realm"
 Text to send if user hits Cancel button
 ```
 
-其中，realm 表示该帐号密码应用到的资源，浏览器会根据资源存储对应帐号密码，realm 不同时即需要再次认证。
+其中，realm 表示该帐号密码应用在的资源，浏览器会根据资源存储对应帐号密码，realm 不同时即需要再次认证。
 
 ```http
 WWW-Authenticate: Basic realm="My Realm"
