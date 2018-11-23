@@ -4,7 +4,7 @@
 
 ## 函数
 
-创建函数
+添加函数
 
 ```sql
 create function hello (s char(20)) returns char(50) 
@@ -31,7 +31,28 @@ drop function hello;
 
 ## 存储过程
 
+添加存储过程
 
+```sql
+create procedure simpleproc (out param1 int)
+begin
+select count(*) into param1 from t;
+end
+```
+
+调用存储过程
+
+```sql
+CALL simpleproc(@a);
+```
+
+获取返回值
+
+```sql
+SELECT @a;
+```
+
+- [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](https://dev.mysql.com/doc/refman/5.7/en/create-procedure.html)
 
 ## 分布式 ID 的实现
 
