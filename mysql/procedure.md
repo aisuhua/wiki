@@ -4,11 +4,17 @@
 
 ## 函数
 
-简单示例
+创建函数
 
 ```sql
 create function hello (s char(20)) returns char(50) 
 return concat('hello, ', s, '!');
+```
+
+查看函数定义
+
+```sql
+show create function sequence\G
 ```
 
 删除函数
