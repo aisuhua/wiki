@@ -21,7 +21,7 @@ alter table student drop index name, drop index age;
 show create table student\G
 ```
 
-给值有重复的列添加唯一索引会报错，可以使用以下方法找出值重复的行。
+给值有重复的列添加唯一索引会报错，可以使用以下方法找出存在值重复的行。
 
 ```sql
 select unique_id,count(unique_id)
