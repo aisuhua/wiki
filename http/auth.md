@@ -38,7 +38,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 
 访问该页面。
 
-![Alt text](img/basic_auth.jpg)
+![Alt text](img/basic_auth.jpg?v=1)
 
 
 
