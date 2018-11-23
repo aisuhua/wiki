@@ -24,10 +24,10 @@ show create table student\G
 给值有重复的列添加唯一索引会报错，可以使用以下方法找出值重复的行。
 
 ```sql
-SELECT unique_id,COUNT(unique_id)
-FROM yourtblname
-GROUP BY unique_id
-HAVING COUNT(unique_id) >1
+select unique_id,count(unique_id)
+from yourtblname
+group by unique_id
+having count(unique_id) >1;
 ```
 
 - [#1062 - Duplicate entry '' for key 'unique_id' When Trying to add UNIQUE KEY (MySQL)](https://stackoverflow.com/questions/17823322/1062-duplicate-entry-for-key-unique-id-when-trying-to-add-unique-key-my)
@@ -35,7 +35,7 @@ HAVING COUNT(unique_id) >1
 使用 `IGNORE` 参数可以实现在添加唯一索引的同时将值重复的记录删除只保留一行。
 
 ```sql
-ALTER IGNORE TABLE mytable ADD UNIQUE INDEX myindex (A, B, C, D);
+alter ignore table mytable add unique index myindex (a, b, c, d);
 ```
 
 但是，这种方式只在 MySQL 5.7.4 之前的版本有效。
