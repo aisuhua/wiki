@@ -44,14 +44,14 @@ insert into sequence (name, val) values (1, 1);
 ```sql
 create function sequence (n int) returns bigint
 begin
-    declare result  bigint unsigned;
+    declare result bigint unsigned;
     update sequence set val = last_insert_id(val+1) where name = n;
     set result = last_insert_id();
     return result;
 end
 ```
 
-`update` 语句是原子的，而 `last_insert_id()` 不同连接之间相互不影响，应此可以通过该函数获取全局唯一的 ID。
+`update` 语句是原子的，而 `last_insert_id()` 在不同连接之间相互不影响，应此可以通过该函数获取全局唯一的 ID。
 
 #### 获取分布式 ID
 
