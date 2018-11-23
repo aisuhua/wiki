@@ -36,7 +36,9 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 
 - [用 PHP 进行 HTTP 认证](http://php.net/manual/zh/features.http-auth.php)
 
-访问 auto.php 页面
+访问该页面。
+
+![Alt text](img/basic_auth.jpg)
 
 
 
