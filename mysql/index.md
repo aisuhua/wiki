@@ -15,7 +15,7 @@ alter table student add unique index uid (`uid`);
 同时添加多个索引
 
 ```sql
-alter table student add unique index uid (`uid`), add index name (`name`),add index age (`age`);
+alter table student add unique index uid (`uid`), add index name (`name`), add index age (`age`);
 ```
 
 删除索引
