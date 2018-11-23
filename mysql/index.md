@@ -3,6 +3,13 @@
 添加索引
 
 ```sql
-alter table student add index name (`name`);
-alter table student add index name (`name`), add index age (`age`);
+ALTER TABLE student ADD INDEX name (`name`);
+ALTER TABLE student UNIQUE INDEX uid (`uid`);
+ALTER TABLE student add UNIQUE INDEX uid (`uid`), ADD INDEX name (`name`),ADD INDEX age (`age`);
+```
+
+删除索引
+
+```sql
+alter table student drop index name
 ```
