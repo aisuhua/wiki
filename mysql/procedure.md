@@ -26,7 +26,7 @@ create table sequence (
   `name` tinyint(3) unsigned not null,
   `val` bigint(20) unsigned not null,
   primary key (`name`)
-);
+) engine = innodb;
 ```
 
 初始化计数表
