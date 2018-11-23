@@ -124,7 +124,7 @@ Content-Encoding: gzip
 Authorization: Basic c3VodWE6MTIzNDU2
 ```
 
-由于编码的帐号密码很容易被解码，因此应使用 HTTPS 协议才能保证安全。
+由于编码的帐号密码很容易被解码，因此应使用 HTTPS 协议来保障安全，防止密码泄漏。
 
 ## 参考文献
 
