@@ -38,6 +38,12 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 
 ![Alt text](img/basic_auth.jpg?v=1)
 
+服务端返回 `401` 状态码以及 `WWW-Authenticate` 报头，告知浏览器此页面需要认证信息。
+
+```http
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Basic realm="My Realm"
+```
 
 ### 点击「取消」按钮
 
@@ -63,6 +69,22 @@ WWW-Authenticate: Basic realm="My Realm"
 X-Powered-By: aisuhua
 X-Server-Name: HN1_wp-web1
 X-LB-Name: HN1_lb1
+
+Text to send if user hits Cancel button
+```
+
+当用户点击「取消」按钮后，浏览器会放弃认证，直接输出服务端的返回内容。
+
+```http
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Basic realm="My Realm"
+Text to send if user hits Cancel button
+```
+
+其中，realm 表示该帐号密码应用到的资源，浏览器会根据资源存储对应帐号密码，realm 不同时即需要再次认证。
+
+```http
+WWW-Authenticate: Basic realm="My Realm"
 ```
 
 ### 输入帐号密码后点击「确认」
