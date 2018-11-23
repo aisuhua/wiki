@@ -21,7 +21,7 @@ alter table student add index idx1 (`gid`, `group_id`, `area_id`);
 添加前缀索引
 
 ```sql
-alter table student add unique index ooid (`ooid(50)`);
+alter table student add index ooid (`ooid(50)`);
 ```
 
 同时添加多个索引
