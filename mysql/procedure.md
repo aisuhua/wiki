@@ -29,6 +29,8 @@ create table sequence (
 ) engine = innodb;
 ```
 
+`name` 用于标识业务，`val` 为递增 ID。
+
 初始化计数表
 
 ```sql
