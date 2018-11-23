@@ -38,7 +38,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 
 ![Alt text](img/basic_auth.jpg?v=1)
 
-服务端返回 `401` 状态码以及 `WWW-Authenticate` 报头，告知浏览器此页面需要认证信息。
+服务器返回 `401` 状态码以及 `WWW-Authenticate` 报头，告知浏览器此页面需要认证信息。
 
 ```http
 HTTP/1.1 401 Unauthorized
