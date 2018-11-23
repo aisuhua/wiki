@@ -2,7 +2,7 @@
 
 ### 帐号密码传输方式
 
-帐号密码可写在地址栏。
+可写在地址栏。
 
 ```http
 curl https://username:password@www.example.com
