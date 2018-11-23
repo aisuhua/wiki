@@ -116,7 +116,7 @@ Content-Encoding: gzip
 <p>Hello suhua.</p><p>You entered 123456 as your password.</p>
 ```
 
-用户输入帐号密码后，浏览器会使用 `base64` 对此进行编码，然后放在 `Authorization` 请求报头。
+用户输入帐号密码后，浏览器会使用 `base64` 对此进行编码，然后放在 `Authorization` 报头，之后的每次请求都会带认证信息。
 
 ```http
 Authorization: Basic c3VodWE6MTIzNDU2
