@@ -19,7 +19,7 @@ drop function hello;
 
 ### 分布式 ID 的实现
 
-创建 ID 递增计数表
+#### 创建 ID 递增计数表
 
 ```sql
 create table sequence (
