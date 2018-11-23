@@ -88,7 +88,7 @@ shell> docker rm demo
 
 ```sh
 shell> docker cp demo:/etc/supervisor/conf.d/program.conf .
-shell> docker my_file demo:/www/web
+shell> docker cp my_file demo:/www/web
 ```
 
 - [How to edit files in stopped/not starting docker container](https://stackoverflow.com/questions/32750748/how-to-edit-files-in-stopped-not-starting-docker-container)
