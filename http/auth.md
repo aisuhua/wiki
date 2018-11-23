@@ -1,4 +1,4 @@
-## HTTP Basic authentication
+# HTTP Basic authentication
 
 ## 帐号密码的传输方式
 
