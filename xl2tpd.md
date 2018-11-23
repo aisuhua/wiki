@@ -4,7 +4,7 @@
 shell> apt-get install xl2tpd
 ```
 
-添加配置
+/etc/xl2tpd/xl2tpd.conf
 
 ```sh
 shell> vim /etc/xl2tpd/xl2tpd.conf
@@ -26,6 +26,11 @@ ppp debug = no
 pppoptfile = /etc/ppp/peers/options.l2tpd.client.demo
 require pap = no
 autodial = yes
+```
+
+/etc/ppp/peers/options.l2tpd.client.demo
+
+```sh
 shell> vim /etc/ppp/peers/options.l2tpd.client.demo
 noipdefault
 ipcp-accept-local
@@ -45,6 +50,11 @@ name MYNAME
 password MYPASSWORD
 logfile /var/log/l2tpd.client.demo.log
 ipparam route:10.10.0.0/16,10.11.0.0/16,10.21.0.0/16,10.22.0.0/16,10.220.0.0/16,192.168.1.0/24
+```
+
+/etc/ppp/ip-up.d/01-ipparam.sh
+
+```sh
 shell> vim /etc/ppp/ip-up.d/01-ipparam.sh
 #!/bin/sh
   
@@ -75,7 +85,3 @@ fi
 ```sh
 shell> systemctl start xl2tpd
 ```
-
-
-
-
