@@ -68,7 +68,9 @@ drop procedure simpleproc;
 
 ## 示例
 
-- 分布式 ID 的实现
+### 分布式 ID 的实现
+
+- 创建 ID 递增计数表
 
 ```sql
 create table sequence (
