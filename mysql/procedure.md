@@ -123,10 +123,12 @@ begin
     set session sql_log_bin = off;
     set s = 0;
     create temporary table if not exists tb (id bigint) engine = myisam;
+    start transaction;
     while s < num do
         insert into tb select sequence(name);
         set s = s +1;
     end while;
+    commit;
     select * from tb;
     drop table tb;
     set session sql_log_bin = on;
