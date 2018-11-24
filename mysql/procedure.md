@@ -85,7 +85,7 @@ create table sequence (
 #### 初始化计数表
 
 ```sql
-insert into sequence (name, val) values (1, 1);
+insert into sequence (name, val) values (1, 0);
 ```
 
 由于是通过不停 `update` 同一个 `name` 的 `val` 实现值的递增，因此一开始必须存在该记录。
