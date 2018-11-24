@@ -112,7 +112,9 @@ select sequence(1);
 
 ## 批量获取分布式 ID
 
-### 添加批量生成分布式 ID 的存储过程
+该例子是上面例子的衍生。
+
+### 添加批量生成 ID 的存储过程
 
 ```sql
 create procedure `sequence_batch`(in name tinyint, in num int)
@@ -131,8 +133,12 @@ begin
 end
 ```
 
+根据需要的 ID 数量，将逐个生成的 ID 先存放在一个临时表，最后将它们 `SELECT` 出来作为返回结果。
+
 ### 批量获取分布式 ID
 
 ```sql
 call sequence_batch(1, 1000);
 ```
+
+单次获取的 ID 越多，该方法执行的时间就更久。
