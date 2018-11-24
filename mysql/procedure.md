@@ -110,3 +110,29 @@ select sequence(1);
 
 每次调用 `sequence(1)` 函数都可以获取一个全局唯一的 ID。
 
+## 批量获取分布式 ID
+
+### 添加批量生成分布式 ID 的存储过程
+
+```sql
+create procedure `sequence_batch`(in name tinyint, in num int)
+begin
+    declare s int;
+    set session sql_log_bin = off;
+    set s = 0;
+    create temporary table if not exists tb (id bigint) engine = myisam;
+    while s < num do
+        insert into tb select sequence(name);
+        set s = s +1;
+    end while;
+    select * from tb;
+    drop table tb;
+    set session sql_log_bin = on;
+end
+```
+
+### 批量获取分布式 ID
+
+```sql
+call sequence_batch(1, 1000);
+```
