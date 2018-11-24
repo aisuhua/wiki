@@ -70,8 +70,6 @@ drop procedure simpleproc;
 
 - 分布式 ID 的实现
 
-#### 创建 ID 递增计数表
-
 ```sql
 create table sequence (
   `name` tinyint(3) unsigned not null,
