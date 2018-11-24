@@ -114,7 +114,7 @@ select sequence(1);
 
 该例子是上面例子的衍生。
 
-### 添加批量生成 ID 的存储过程
+### 添加批量获取 ID 的存储过程
 
 ```sql
 create procedure `sequence_batch`(in name tinyint, in num int)
