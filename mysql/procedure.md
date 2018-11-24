@@ -66,9 +66,11 @@ drop procedure simpleproc;
 
 - [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](https://dev.mysql.com/doc/refman/5.7/en/create-procedure.html)
 
-## 分布式 ID 的实现
+## 示例
 
-### 创建 ID 递增计数表
+### 分布式 ID 的实现
+
+#### 创建 ID 递增计数表
 
 ```sql
 create table sequence (
@@ -80,7 +82,7 @@ create table sequence (
 
 `name` 用于标识业务，`val` 为递增 ID。
 
-### 初始化计数表
+#### 初始化计数表
 
 ```sql
 insert into sequence (name, val) values (1, 1);
@@ -88,7 +90,7 @@ insert into sequence (name, val) values (1, 1);
 
 由于是通过不停 `update` 同一个 `name` 的 `val` 实现值的递增，因此一开始必须存在该记录。
 
-### 添加获取分布式 ID 的函数
+#### 添加获取分布式 ID 的函数
 
 ```sql
 create function sequence (n tinyint) returns bigint
@@ -102,7 +104,7 @@ end
 
 `update` 语句是原子的，而 `last_insert_id()` 在不同连接之间相互不影响，因此可以通过该函数获取全局唯一的 ID。
 
-### 获取分布式 ID
+#### 获取分布式 ID
 
 ```sql
 select sequence(1);
