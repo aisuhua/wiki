@@ -7,8 +7,8 @@ ip.addr == 58.215.175.47
 查询特定域名的网络数据
 
 ```
-http.host == 115.com
-http.host contains 115.com
+http.host == aisuhua.com
+http.host contains aisuhua.com
 ```
 
 查询特定 TCP 端口号的数据包
