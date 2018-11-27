@@ -163,7 +163,7 @@ call sequence_batch(1, 1000);
 
 在表数据发生变化时自动触发执行某些语句，添加、删除、修改 3 个操作都支持使用触发器。
 
-### 插入后触发
+### 添加后触发
 
 ```sql
 create trigger neworder after insert on orders 
