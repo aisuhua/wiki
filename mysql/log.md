@@ -37,7 +37,7 @@ max_binlog_size   = 100M
 
 ## 错误日志
 
-打开查询日志
+打开查询日志，会记录用户执行的每一条 SQL 语句。
 
 ```nginx
 [mysqld]
@@ -50,6 +50,8 @@ general_log = 1
 ```shell
 shell> tail -f /var/log/mysql/mysql.log
 ```
+
+查询的日志量一般比较大，对服务器性能有所影响，所以一般在生产环境下不会开启。
 
 ## 慢查询日志
 
