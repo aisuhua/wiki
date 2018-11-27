@@ -34,7 +34,7 @@ FIELDS TERMINATED BY ' '
 
 ## 常见问题
 
-提示安全限制
+安全限制
 
 ```
 The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
@@ -47,7 +47,7 @@ The MySQL server is running with the --secure-file-priv option so it cannot exec
 secure_file_priv = ''
 ```
 
-提示权限不足
+权限不足
 
 ```
 ERROR 13 (HY000): Can't get stat of '/root/demo.txt' (Errcode: 13 - Permission denied)
