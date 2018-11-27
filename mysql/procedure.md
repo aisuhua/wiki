@@ -6,7 +6,7 @@
 
 1. Function 总是返回一个值，而 Procedure 可以返回多个值或没有返回值，但不能使用 `return` 关键字返回；
 2. Function 可以跟普通表达式或函数一样调用，而 Procedure 使用 `call` 关键字调用；
-3. Procedure 可以使用 `INT`, `OUT`, `INOUT` 等参数，而 Function 只有 `INT` 参数。
+3. Procedure 可以使用 `INT`, `OUT`, `INOUT` 参数类型，而 Function 只有 `INT` 参数。
 
 ## 函数
 
