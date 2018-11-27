@@ -14,7 +14,7 @@ help select;
 
 ## 查看服务器状态
 
-查看运行状态信息
+查看运行状态
 
 ```sql
 show status;
