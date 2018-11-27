@@ -156,3 +156,38 @@ call sequence_batch(1, 1000);
 - 在存储过程和函数中，可以使用游标对结果集进行遍历处理，以便对每行数据进行操作。
 - 有时，需要在检索出来的行中前进或后退一行或多行，这就是使用游标的原因。
 - 游标主要用于交互式的应用，其中用户滚动屏幕上的数据，并对数据进行浏览或作出变更。
+
+## 触发器
+
+在某个表发生更改时（执行 UPDATE, DELETE, INSERT）自动执行某些语句。
+
+### 插入后触发
+
+```sql
+create trigger neworder after insert on orders 
+for each row select NEW.order_num into @order_num
+```
+
+通过 `NEW.` 获取新插入的记录。
+
+### 更新后触发
+
+```sql
+create trigger updateorder before update on orders 
+for each row set NEW.order_state = upper(NEW.order_state);
+```
+
+可通过 `OLD` 和 `NEW` 获取更新前和更新后的记录。
+
+### 删除后触发
+
+```sql
+create trigger deleteorder before delete on orders 
+for each row
+begin
+    insert into archive_orders(order_num, order_date, cust_id)
+    values (OLD.order_num, OLD.order_date, OLD.cust_id);
+end
+```
+
+可通过 `OLD` 获取被删除的记录。
