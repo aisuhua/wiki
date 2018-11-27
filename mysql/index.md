@@ -1,5 +1,7 @@
 ## 索引管理
 
+### 添加索引
+
 添加索引
 
 ```sql
@@ -30,6 +32,8 @@ alter table student add index ooid (`ooid(50)`);
 alter table student add unique index uid (`uid`), add index name (`name`), add index age (`age`);
 ```
 
+### 删除索引
+
 删除索引
 
 ```sql
@@ -41,6 +45,8 @@ alter table student drop index uid;
 ```sql
 alter table student drop index name, drop index age;
 ```
+
+### 查看索引
 
 查看索引
 
@@ -54,8 +60,9 @@ show create table student\G
 show index from student
 ```
 
-
 - [13.1.8 ALTER TABLE Syntax](https://dev.mysql.com/doc/refman/5.7/en/alter-table.html)
+
+### 其他技巧
 
 给值有重复的列添加唯一索引会报错，可以使用以下方法找出重复的行。
 
