@@ -105,3 +105,15 @@ mysqldumpslow -s c /var/log/mysql/mysql-slow.log
 ```
 
 - [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
+
+## BINLOG 日志
+
+记录 binlog 日志
+
+```conf
+[mysqld]
+server-id = 1
+log_bin = /var/log/mysql/mysql-bin.log
+```
+
+- [The Binary Log](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html)
