@@ -76,7 +76,7 @@ log-queries-not-using-indexes
 
 记录执行时间超过 2 秒的语句，获取表锁定的时间不算执行时间。`log-queries-not-using-indexes` 表示要记录没有使用索引进行查询的慢查询语句。
 
-查看当前慢查询时长
+查看 long_query_time 的值
 
 ```sql
 
