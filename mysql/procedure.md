@@ -8,7 +8,7 @@
 2. Function 可以跟普通表达式或函数一样调用，而 Procedure 使用 `call` 关键字调用；
 3. Procedure 可以使用 `INT`, `OUT`, `INOUT` 参数类型，而 Function 只有 `INT` 参数。
 
-相关知识：游标、触发器
+本文也会简单介绍游标和触发器。
 
 ## 函数
 
