@@ -37,7 +37,7 @@ max_binlog_size   = 100M
 
 ## 查询日志
 
-打开查询日志，它记录了客户端执行的所有 SQL 语句。
+查询日志记录了客户端执行的所有 SQL 语句。
 
 ```conf
 [mysqld]
@@ -45,27 +45,20 @@ general_log_file = /var/log/mysql/mysql.log
 general_log = 1
 ```
 
-查看日志
-
-```shell
-shell> tail -f /var/log/mysql/mysql.log
-```
-
-查询的日志量一般比较大，对服务器性能有所影响，所以一般在生产环境下不会开启。
+查询的日志量一般比较大，对服务器性能有所影响，在生产环境下一般不会开启。
 
 ## 错误日志
 
-查看错误日志
+错误日志记录了 mysqld 在启动或停止以及在运行过程中发生的所有错误信息。
 
-```shell
-shell> more /var/log/mysql/error.log
+```conf
+[mysqld]
+log_error = /var/log/mysql/error.log
 ```
-
-它记录了 mysqld 在启动或停止以及在运行过程中发生的错误信息。
 
 ## 慢查询日志
 
-打开慢查询日志
+记录执行时间超过 2 秒的语句（注意：获取表锁定的时间不算执行时间）。
 
 ```conf
 [mysqld]
@@ -74,9 +67,14 @@ long_query_time = 2
 # log-queries-not-using-indexes
 ```
 
-记录执行时间超过 2 秒的语句，获取表锁定的时间不算执行时间。`log-queries-not-using-indexes` 默认不开启，表示要记录那些没使用索引的 SQL，这些语句的执行并不需要超过 2 秒。
+在上面的基础上，还可以记录所有没有使用索引的 SQL 语句。
 
-查看慢查询时间阀值
+```
+[mysqld]
+log-queries-not-using-indexes
+```
+
+慢查询时间阀值
 
 ```sql
  show variables like "long_query_time";
@@ -88,13 +86,13 @@ long_query_time = 2
 set global long_query_time = 5;
 ```
 
-分析慢查询日志
+分析日志
 
 ```sql
 mysqldumpslow /var/log/mysql/mysql-slow.log
 ```
 
-按慢查询语句的次数进行排序
+按慢查询语句的执行次数进行排序
 
 ```sql
 mysqldumpslow -s c /var/log/mysql/mysql-slow.log 
