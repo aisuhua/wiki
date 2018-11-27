@@ -88,5 +88,9 @@ long_query_time = 2
 set global long_query_time = 5;
 ```
 
+分析慢查询日志
 
+```sql
+mysqldumpslow /var/log/mysql/mysql-slow.log
+```
 
