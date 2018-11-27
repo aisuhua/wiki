@@ -1,6 +1,6 @@
 # LOAD DATA
 
-The LOAD DATA INFILE statement reads rows from a text file into a table at a very high speed.
+The LOAD DATA INFILE statement reads rows from a text file into a table at a very high speed. LOAD DATA INFILE is the complement of SELECT ... INTO OUTFILE. To write data from a table to a file, use SELECT ... INTO OUTFILE. To read the file back into a table, use LOAD DATA INFILE. 
 
 ## 基本使用
 
