@@ -20,9 +20,10 @@ my.conf 中与日志相关的默认配置选项：
 log_error = /var/log/mysql/error.log
 #
 # Here you can see queries with especially long duration
-#log_slow_queries       = /var/log/mysql/mysql-slow.log
+#slow_query_log = 1
+#slow_query_log_file = /var/log/mysql/mysql-slow.log
 #long_query_time = 2
-#log-queries-not-using-indexes
+#log_queries_not_using_indexes = 0
 #
 # The following can be used as easy to replay backup logs or for replication.
 # note: if you are setting up a replication slave, see README.Debian about
@@ -62,16 +63,16 @@ log_error = /var/log/mysql/error.log
 
 ```conf
 [mysqld]
-log_slow_queries = /var/log/mysql/mysql-slow.log
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql/mysql-slow.log
 long_query_time = 2
-# log-queries-not-using-indexes
 ```
 
 在上面的基础上，还可以记录所有没有使用索引的 SQL 语句。
 
 ```
 [mysqld]
-log-queries-not-using-indexes
+log_queries_not_using_indexes = 1
 ```
 
 慢查询时间阀值
