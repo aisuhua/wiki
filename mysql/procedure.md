@@ -179,7 +179,7 @@ create trigger updateorder before update on orders
 for each row set NEW.order_state = upper(NEW.order_state);
 ```
 
-当订单状态发生变化时将状态值强制转换成大写，其中 `OLD` 表示更新前的记录，`NEW` 表示更新后的记录。
+当订单状态发生变化时，将状态值转换成大写再更新回去，其中 `OLD` 表示更新前的记录，`NEW` 表示更新后的记录。
 
 ### 删除后触发
 
