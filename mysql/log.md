@@ -61,7 +61,7 @@ shell> tail -f /var/log/mysql/mysql.log
 shell> more /var/log/mysql/error.log
 ```
 
-它记录了 mysqld 在启动或停止以及在运行过程中发生严重错误的相关信息。
+它记录了 mysqld 在启动或停止以及在运行过程中发生的错误信息。
 
 ## 慢查询日志
 
