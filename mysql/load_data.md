@@ -42,11 +42,19 @@ FIELDS TERMINATED BY ' '
 The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
 ```
 
-修改 my.conf，添加 `secure_file_priv` 配置项。
+修改 `secure_file_priv` 配置项。
 
 ```conf
 [mysqld]
 secure_file_priv = ''
+# or set special path
+# secure_file_priv = '/root'
+```
+
+或者将文件移动到 `secure_file_priv` 的默认目录 `/var/lib/mysql-files`。
+
+```sh
+shell> move /root/demo.txt /var/lib/mysql-files
 ```
 
 权限不足
