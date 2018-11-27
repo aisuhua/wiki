@@ -35,11 +35,11 @@ max_binlog_size   = 100M
 #binlog_ignore_db       = include_database_name
 ```
 
-## 错误日志
+## 查询日志
 
 打开查询日志，它会记录用户执行的每一条 SQL 语句。
 
-```nginx
+```conf
 [mysqld]
 general_log_file = /var/log/mysql/mysql.log
 general_log = 1
@@ -53,6 +53,25 @@ shell> tail -f /var/log/mysql/mysql.log
 
 查询的日志量一般比较大，对服务器性能有所影响，所以一般在生产环境下不会开启。
 
+## 错误日志
+
+查看错误日志
+
+```shell
+shell> more /var/log/mysql/error.log
+```
+
+它记录了 mysqld 在启动或停止以及在运行过程中发生严重错误的相关信息。
+
 ## 慢查询日志
+
+打开慢查询日志
+
+```conf
+[mysqld]
+log_slow_queries = /var/log/mysql/mysql-slow.log
+long_query_time = 2
+log-queries-not-using-indexes
+```
 
 
