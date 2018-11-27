@@ -36,9 +36,10 @@ set sql_model = 'ANSI';
 ERROR 1406 (22001): Data too long for column 'name' at row 1 
 ```
 
-可以去掉该模式限制。
+可以去掉该模式限制，例如：
 
 ```sql
-set sql_model = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE';
+set sql_model = 'ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE';
 ```
 
+- [Server SQL Modes](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sql-mode-strict)
