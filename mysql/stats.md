@@ -26,10 +26,6 @@ show status
 show engines
 ```
 
-```sql
-show engines
-```
-
 查看错误信息
 
 ```sql
