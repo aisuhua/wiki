@@ -46,8 +46,14 @@ alter table student drop index name, drop index age;
 
 ```sql
 show create table student\G
+```
+
+查看索引（方法2）
+
+```sql
 show index from student
 ```
+
 
 - [13.1.8 ALTER TABLE Syntax](https://dev.mysql.com/doc/refman/5.7/en/alter-table.html)
 
