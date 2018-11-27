@@ -37,7 +37,7 @@ max_binlog_size   = 100M
 
 ## 查询日志
 
-打开查询日志，它会记录用户执行的每一条 SQL 语句。
+打开查询日志，它记录了客户端执行的所有 SQL 语句。
 
 ```conf
 [mysqld]
@@ -74,4 +74,10 @@ long_query_time = 2
 log-queries-not-using-indexes
 ```
 
+记录执行时间超过 2 秒的语句，获取表锁定的时间不算执行时间。`log-queries-not-using-indexes` 表示要记录没有使用索引进行查询的慢查询语句。
 
+查看当前慢查询时长
+
+```sql
+
+```
