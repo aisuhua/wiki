@@ -30,6 +30,14 @@ select @@sql_mode;
 set sql_model = 'ANSI';
 ```
 
+或者修改配置文件
+
+```conf
+# /etc/mysql/my.cnf
+[mysqld]
+sql_mode = TRADITIONAL
+```
+
 插入数据时出现字符串过长而报错与 `STRICT_TRANS_TABLES` 模式有关。
 
 ```
