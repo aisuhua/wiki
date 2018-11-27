@@ -94,3 +94,8 @@ set global long_query_time = 5;
 mysqldumpslow /var/log/mysql/mysql-slow.log
 ```
 
+按慢查询语句的次数进行排序
+
+```sql
+mysqldumpslow -s c /var/log/mysql/mysql-slow.log 
+```
