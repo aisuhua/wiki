@@ -26,10 +26,8 @@ show status
 show engines
 ```
 
-查看系统变量
-
 ```sql
-show variables like "character%"
+show engines
 ```
 
 查看错误信息
@@ -58,4 +56,14 @@ show character set
 show collation
 ```
 
+查看当前字符集
 
+```sql
+show variables like "character%"
+```
+
+查看当前校对集
+
+```sql
+show variables like "collation%"
+```
