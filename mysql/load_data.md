@@ -11,7 +11,7 @@ mp4 D58CD748576BC1F7A2CF5622B6E0EB3C7DCC78F5 3301072 c202 1B00OAH4CC1s9pBbq53Opo
 
 demo 表用于导入这些数据
 
-```sql
+```
 create table `demo` (
   `id` bigint(20) unsigned not null auto_increment comment '主键id',
   `file_type` varchar(128) not null default '' comment '文件类型',
