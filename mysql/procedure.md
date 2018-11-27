@@ -165,10 +165,10 @@ call sequence_batch(1, 1000);
 
 ```sql
 create trigger neworder after insert on orders 
-for each row select NEW.order_num into @order_num
+for each row select NEW.order_num into @order_num;
 ```
 
-通过 `NEW.` 获取新插入的记录。
+`NEW` 新插入的记录。
 
 ### 更新后触发
 
@@ -177,7 +177,7 @@ create trigger updateorder before update on orders
 for each row set NEW.order_state = upper(NEW.order_state);
 ```
 
-可通过 `OLD` 和 `NEW` 获取更新前和更新后的记录。
+`OLD` 更新前的记录，`NEW` 更新后的记录。
 
 ### 删除后触发
 
@@ -187,7 +187,7 @@ for each row
 begin
     insert into archive_orders(order_num, order_date, cust_id)
     values (OLD.order_num, OLD.order_date, OLD.cust_id);
-end
+end;
 ```
 
-可通过 `OLD` 获取被删除的记录。
+`OLD` 被删除的记录。
