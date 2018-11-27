@@ -2,7 +2,7 @@
 
 MySQL 主要有 4 种日志：错误日志、BINLOG 日志、查询日志和慢查询日志。
 
-my.conf 配置片段：
+my.conf 默认配置片段：
 
 ```nginx
 #
