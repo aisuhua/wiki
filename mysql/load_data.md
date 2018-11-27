@@ -32,6 +32,8 @@ FIELDS TERMINATED BY ' '
 (file_type, sha1, file_size, cluster, object_id);
 ```
 
+- [LOAD DATA INFILE Syntax](https://dev.mysql.com/doc/refman/5.7/en/load-data.html)
+
 ## 常见问题
 
 安全限制
