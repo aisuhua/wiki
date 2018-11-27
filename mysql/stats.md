@@ -32,7 +32,9 @@ show engines
 show errors
 ```
 
-查看表结构信息
+## 库和表的状态
+
+查看表结构
 
 ```sql
 show create table customers
