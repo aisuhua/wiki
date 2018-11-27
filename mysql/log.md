@@ -68,7 +68,7 @@ slow_query_log_file = /var/log/mysql/mysql-slow.log
 long_query_time = 2
 ```
 
-在上面的基础上，还可以记录所有没有使用索引的 SQL 语句。
+在前面的基础上，还可以记录所有没有使用到索引的 SQL 语句。
 
 ```
 [mysqld]
@@ -78,7 +78,7 @@ log_queries_not_using_indexes = 1
 慢查询时间阀值
 
 ```sql
- show variables like "long_query_time";
+show variables like "long_query_time";
 ```
 
 动态修改慢查询时间阀值
