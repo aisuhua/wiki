@@ -40,7 +40,7 @@ FIELDS TERMINATED BY ' '
 The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
 ```
 
-可修改 my.conf 文件。
+修改 my.conf，添加 `secure_file_priv` 配置项。
 
 ```conf
 [mysqld]
