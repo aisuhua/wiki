@@ -1,4 +1,4 @@
-# LOAD DATA INFILE
+# LOAD DATA
 
 ## 基本使用
 
