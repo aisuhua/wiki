@@ -98,3 +98,5 @@ mysqldumpslow /var/log/mysql/mysql-slow.log
 ```sql
 mysqldumpslow -s c /var/log/mysql/mysql-slow.log 
 ```
+
+- [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
