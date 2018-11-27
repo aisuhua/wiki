@@ -2,6 +2,12 @@
 
 两者都能实现将完成特定功能的多条 SQL 语句进行封装，以简单的方式供程序进行调用。
 
+两者区别：
+
+1. Function 总是返回一个值，而 Procedure 可以返回多个值或没有返回值，但不能使用 `return` 关键字返回；
+2. Function 可以跟普通表达式或函数一样调用，而 Procedure 使用 `call` 关键字调用；
+3. Procedure 可以使用 `INT`, `OUT`, `INOUT` 等参数，而 Function 只有 `INT` 参数。
+
 ## 函数
 
 添加函数
