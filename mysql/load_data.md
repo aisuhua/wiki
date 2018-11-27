@@ -47,7 +47,7 @@ The MySQL server is running with the --secure-file-priv option so it cannot exec
 secure_file_priv = ''
 ```
 
-或修改 `secure_file_priv` 的默认路径。
+或修改 `secure_file_priv` 的默认目录。
 
 ```conf
 [mysqld]
