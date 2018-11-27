@@ -89,13 +89,13 @@ set global long_query_time = 5;
 
 分析日志
 
-```sql
+```sh
 mysqldumpslow /var/log/mysql/mysql-slow.log
 ```
 
 按慢查询语句的执行次数进行排序
 
-```sql
+```sh
 mysqldumpslow -s c /var/log/mysql/mysql-slow.log 
 ```
 
