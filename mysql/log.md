@@ -5,6 +5,7 @@ MySQL 主要有 4 种日志：查询日志、错误日志、慢查询日志 和 
 my.conf 中与日志相关的默认配置选项：
 
 ```nginx
+[mysqld]
 #
 # * Logging and Replication
 #
@@ -39,6 +40,7 @@ max_binlog_size   = 100M
 打开查询日志
 
 ```nginx
+[mysqld]
 general_log_file = /var/log/mysql/mysql.log
 general_log = 1
 ```
