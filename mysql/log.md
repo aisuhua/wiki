@@ -74,15 +74,19 @@ long_query_time = 2
 # log-queries-not-using-indexes
 ```
 
-- 记录执行时间超过 2 秒的语句，获取表锁定的时间不算执行时间。
-- `log-queries-not-using-indexes` 表示要记录那些没使用索引的 SQL，执行时间不需要超过 2 秒，默认不开启。
+记录执行时间超过 2 秒的语句，获取表锁定的时间不算执行时间。`log-queries-not-using-indexes` 表示要记录那些没使用索引的 SQL，执行时间不需要超过 2 秒，默认不开启。
 
-查看慢查询时间的值
+查看慢查询时间阀值
 
 ```sql
  show variables like "long_query_time";
 ```
 
+动态修改慢查询时间阀值
+
+```sql
+set global long_query_time = 5;
+```
 
 
 
