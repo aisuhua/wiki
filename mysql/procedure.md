@@ -170,7 +170,7 @@ create trigger neworder after insert on orders
 for each row select NEW.order_num into @order_num;
 ```
 
-`NEW` 新添加的记录。
+每添加一条记录时，将它的订单号查询出来赋值给 `order_num` 变量，其中 `NEW` 表示新添加的记录。
 
 ### 更新后触发
 
@@ -179,7 +179,7 @@ create trigger updateorder before update on orders
 for each row set NEW.order_state = upper(NEW.order_state);
 ```
 
-`OLD` 更新前的记录，`NEW` 更新后的记录。
+当订单发生修改时，将状态值转换成大写，其中 `OLD` 表示更新前的记录，`NEW` 表示更新后的记录。
 
 ### 删除后触发
 
@@ -192,4 +192,4 @@ begin
 end;
 ```
 
-`OLD` 被删除的记录。
+将删除的记录写到 `archive_orders` 表进行备份，其中 `OLD` 表示被删除的一行记录。
