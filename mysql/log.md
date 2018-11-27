@@ -36,3 +36,19 @@ max_binlog_size   = 100M
 
 ## 错误日志
 
+打开查询日志
+
+```nginx
+general_log_file = /var/log/mysql/mysql.log
+general_log = 1
+```
+
+查看日志
+
+```shell
+shell> tail -f /var/log/mysql/mysql.log
+```
+
+## 慢查询日志
+
+
