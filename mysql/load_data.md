@@ -1,5 +1,7 @@
 # LOAD DATA
 
+The LOAD DATA INFILE statement reads rows from a text file into a table at a very high speed.
+
 ## 基本使用
 
 demo.txt
