@@ -20,14 +20,20 @@ help select
 show status
 ```
 
-查看表结构信息
+查看系统变量
 
 ```sql
-show create table customers
+show variables like "character%"
 ```
 
 查看错误信息
 
 ```sql
 show errors
+```
+
+查看表结构信息
+
+```sql
+show create table customers
 ```
