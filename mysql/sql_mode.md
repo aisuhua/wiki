@@ -24,7 +24,7 @@ This makes it easier to use MySQL in different environments and to use MySQL tog
 select @@sql_mode;
 ```
 
-修改 SQL 模式为非严格模式。
+修改为非严格模式。
 
 ```sql
 set sql_model = 'ANSI';
