@@ -20,6 +20,12 @@ help select
 show status
 ```
 
+查看所有引擎
+
+```sql
+show engines
+```
+
 查看系统变量
 
 ```sql
@@ -37,3 +43,19 @@ show errors
 ```sql
 show create table customers
 ```
+
+## 字符集
+
+查看所有字符集
+
+```sql
+show character set
+```
+
+查看所有校对集
+
+```sql
+show collation
+```
+
+
