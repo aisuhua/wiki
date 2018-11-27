@@ -170,7 +170,7 @@ create trigger neworder after insert on orders
 for each row select NEW.order_num into @order_num;
 ```
 
-`NEW` 新插入的记录。
+`NEW` 新添加的记录。
 
 ### 更新后触发
 
