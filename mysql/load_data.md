@@ -34,7 +34,7 @@ FIELDS TERMINATED BY ' '
 
 ## 常见问题
 
-安全限制
+### 安全限制
 
 ```
 The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
@@ -55,7 +55,15 @@ secure_file_priv = ''
 shell> move /root/demo.txt /var/lib/mysql-files
 ```
 
-权限不足
+- [How should I tackle --secure-file-priv in MySQL?](https://stackoverflow.com/questions/32737478/how-should-i-tackle-secure-file-priv-in-mysql)
+
+然后执行 `load data` 时要写完整路径。
+
+```sql
+load data infile '/var/lib/mysql-files/demo.txt' into ...
+```
+
+### 权限不足
 
 ```
 ERROR 13 (HY000): Can't get stat of '/root/demo.txt' (Errcode: 13 - Permission denied)
