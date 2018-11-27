@@ -108,7 +108,7 @@ mysqldumpslow -s c /var/log/mysql/mysql-slow.log
 
 ## BINLOG 日志
 
-记录 binlog 日志
+binlog 日志记录了所有 DDL 和 DML 语句，但是不包括数据查询语句，它描述了数据的变更过程。
 
 ```conf
 [mysqld]
