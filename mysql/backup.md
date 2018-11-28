@@ -104,7 +104,7 @@ fields terminated by ',' optionally enclosed by '"'
 lines terminated by '\n';
 ```
 
-导出数据时，MySQL 默认会自动对转义字符 `\`、引用分隔符 `"` 和字段分隔符 `,` 等特殊符号进行转义。
+导出数据时，MySQL 默认会自动对转义字符、引用分隔符和字段分隔符等特殊符号进行转义，所以无需担心分隔符会与数据冲突。
 
 ```text
 \a"b,c -> "\\a\"b,c"
