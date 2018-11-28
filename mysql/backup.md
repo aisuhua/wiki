@@ -14,7 +14,7 @@ mysqldump tutorial > tutorial.sql
 mysqldump -h localhost -u root -p tutorial > tutorial.sql
 ```
 
-导出多张表
+导出部分表
 
 ```sh
  mysqldump tutorial table1 table2 > tutorial.sql
@@ -51,7 +51,7 @@ mysqldump --databases db1 --databases db2 > backup.sql
 
 ### 其他
 
-只导出指定的表
+导出部分表
 
 ```sh
 mysqldump --databases tutorial --tables table1 --tables table2 > tutorial.sql
