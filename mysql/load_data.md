@@ -74,7 +74,7 @@ secure_file_priv = '/root'
 
 ### 权限不足
 
-如果禁用了 `secure_file_priv`，导入时依然可能会出现报错。
+如果禁用了 `secure_file_priv`，导入时依然可能提示权限不足。
 
 ```
 ERROR 13 (HY000): Can't get stat of '/root/demo.txt' (Errcode: 13 - Permission denied)
