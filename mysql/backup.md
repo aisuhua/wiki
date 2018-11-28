@@ -20,6 +20,18 @@ mysqldump -h localhost -u root -p tutorial > tutorial.sql
  mysqldump tutorial table1 table2 > tutorial.sql
 ```
 
+将数据和建表语句导出为不同文件
+
+```sh
+mysqldump tutorial -T /var/lib/mysql-files
+```
+
+demo.sql 只包含建表语句，demo.txt 只包含数据
+
+```sh
+demo.sql  demo.txt  test.sql  test.txt
+```
+
 ### 导出库
 
 导出单个库
@@ -94,6 +106,8 @@ LINES TERMINATED BY '\n' STARTING BY ''
 ```text
 a\tb\nc\d -> a\\tb\\nc\\d
 ```
+
+### 其他
 
 自定义分隔符
 
