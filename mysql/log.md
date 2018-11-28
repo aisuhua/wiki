@@ -53,6 +53,15 @@ general_log_file = /var/log/mysql/mysql.log
 
 查询的日志量一般比较大，对服务器性能有所影响，在生产环境下一般不会开启。
 
+日志格式
+
+```
+Time                 Id Command    Argument
+2018-11-28T01:53:14.456570Z         3 Connect   root@localhost on test using Socket
+2018-11-28T01:53:14.461687Z         3 Field List        demo 
+2018-11-28T01:55:10.131608Z         3 Query     select * from demo where id = 1
+```
+
 ## 错误日志
 
 错误日志记录了 mysqld 在启动或停止以及在运行过程中发生的所有错误信息。
