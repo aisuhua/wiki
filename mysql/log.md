@@ -53,7 +53,7 @@ general_log_file = /var/log/mysql/mysql.log
 
 查询的日志量一般比较大，对服务器性能有所影响，在生产环境下一般不会开启。
 
-### 日志格式
+日志格式
 
 ```log
 Time                          Id Command  Argument
@@ -71,7 +71,7 @@ Time                          Id Command  Argument
 log_error = /var/log/mysql/error.log
 ```
 
-### 日志格式
+日志格式
 
 ```log
 2018-11-28T01:53:01.946004Z 0 [Warning] Failed to set up SSL because of the following...
@@ -112,7 +112,7 @@ set global long_query_time = 5;
 - [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
 
 
-### 日志格式
+日志格式
 
 ```log
 # Time: 2018-11-28T02:15:49.606694Z
@@ -169,15 +169,13 @@ binlog_do_db = test
 binlog_ignore_db = tutorial
 ```
 
-### 删除日志
-
 删除所有日志，新日志编号从 000001 开始。
 
 ```sql
-reset master
+mysql> reset master
 ```
 
-### 日志格式
+日志格式
 
 ```log
 # at 527
