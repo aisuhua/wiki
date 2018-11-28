@@ -89,6 +89,12 @@ FIELDS TERMINATED BY '\t' ENCLOSED BY '' ESCAPED BY '\\'
 LINES TERMINATED BY '\n' STARTING BY ''
 ```
 
+导出时，MySQL 会自动对数据中与分隔符一样的字符进行转义，所以无需担心分隔符会与数据冲突。
+
+```text
+a\tb\nc\d -> a\\tb\\nc\\d
+```
+
 自定义分隔符
 
 ```sql
@@ -102,12 +108,6 @@ fields terminated by ',' enclosed by '"';
 select * from demo into outfile '/var/lib/mysql-files/outfile.csv' 
 fields terminated by ',' optionally enclosed by '"' 
 lines terminated by '\n';
-```
-
-导出时，MySQL 会自动对数据中与分隔符一样的字符进行转义，所以无需担心分隔符会与数据冲突。
-
-```text
-\a"b,c -> "\\a\"b,c"
 ```
 
 - [SELECT ... INTO Syntax](https://dev.mysql.com/doc/refman/5.7/en/select-into.html)
