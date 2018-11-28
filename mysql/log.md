@@ -47,8 +47,8 @@ max_binlog_size   = 100M
 
 ```conf
 [mysqld]
-general_log_file = /var/log/mysql/mysql.log
 general_log = 1
+general_log_file = /var/log/mysql/mysql.log
 ```
 
 查询的日志量一般比较大，对服务器性能有所影响，在生产环境下一般不会开启。
