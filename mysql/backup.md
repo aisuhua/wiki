@@ -97,6 +97,15 @@ mysqldump --databases tutorial --compact > tutorial.sql
 select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
 ```
 
+导出的内容格式
+
+```text
+shell> cat outfile.txt 
+1       google
+2       facebook
+3       suhua is a good boy.
+```
+
 默认的分隔符
 
 ```sql
