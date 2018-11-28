@@ -57,9 +57,10 @@ general_log_file = /var/log/mysql/mysql.log
 
 ```
 Time                 Id Command    Argument
-2018-11-28T01:53:14.456570Z         3 Connect   root@localhost on test using Socket
-2018-11-28T01:53:14.461687Z         3 Field List        demo 
-2018-11-28T01:55:10.131608Z         3 Query     select * from demo where id = 1
+2018-11-28T02:03:42.462719Z         4 Connect   root@localhost on  using Socket
+2018-11-28T02:03:48.716655Z         4 Init DB   test
+2018-11-28T02:03:48.723237Z         4 Field List        demo 
+2018-11-28T02:03:54.227087Z         4 Query     select * from demo where id = 1
 ```
 
 ## 错误日志
