@@ -211,7 +211,7 @@ mysqlbinlog mysql-bin.000001  --start-datetime='2018-11-28 14:14:23'
 查看两个时间之间的日志，含 `--start-datetime` 指定时间的日志，但是不包含 `--stop-datetime` 指定时间的日志。
 
 ```sh
-mysqlbinlog mysql-bin.000001  --start-datetime='2018-11-28 13:57:53' --stop-datetime='2018-11-28 14:14:23'
+mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 13:57:53' --stop-datetime='2018-11-28 14:14:23'
 ```
 
 - [Utility for Processing Binary Log Files](https://dev.mysql.com/doc/refman/5.7/en/mysqlbinlog.html)
