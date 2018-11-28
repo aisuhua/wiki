@@ -143,6 +143,43 @@ server-id = 1
 log_bin = /var/log/mysql/mysql-bin.log
 ```
 
+日志格式
+
+```log
+# at 527
+#181128 10:37:35 server id 1  end_log_pos 592 CRC32 0xa2915573  Anonymous_GTID  last_committed=1 sequence_number=2 rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 592
+#181128 10:37:35 server id 1  end_log_pos 664 CRC32 0xe9daa6cd  Query   thread_id=4     exec_time=0     error_code=0
+SET TIMESTAMP=1543372655/*!*/;
+BEGIN
+/*!*/;
+# at 664
+#181128 10:37:35 server id 1  end_log_pos 724 CRC32 0x57a9a396  Table_map: `test`.`demo` mapped to number 110
+# at 724
+#181128 10:37:35 server id 1  end_log_pos 869 CRC32 0x57411325  Delete_rows: table id 110 flags: STMT_END_F
+
+BINLOG '
+b//9WxMBAAAAPAAAANQCAAAAAG4AAAAAAAEABHRlc3QABGRlbW8ABggP/ggPDwgAAv6gUAD8AwCW
+o6lX
+b//9WyABAAAAkQAAAGUDAAAAAG4AAAAAAAEAAgAG/8AFAAAAAAAAAAMAbXAzKDNCMzFFN0QyNDc4
+MDg3OEU2NTJEREMyNzVCOUY0QjM5MjdBOTI1METXWFAAAAAAAARjMjAyKAA3RDY2MG9rMkFNUEVl
+bkRaaFNvUFhGX3ptUGNBT01mUHFlOVJNN2NHJRNBVw==
+'/*!*/;
+### DELETE FROM `test`.`demo`
+### WHERE
+###   @1=5 /* LONGINT meta=0 nullable=0 is_null=0 */
+###   @2='mp3' /* VARSTRING(512) meta=512 nullable=0 is_null=0 */
+###   @3='3B31E7D24780878E652DDC275B9F4B3927A9250D' /* STRING(160) meta=65184 nullable=0 is_null=0 */
+###   @4=5265623 /* LONGINT meta=0 nullable=0 is_null=0 */
+###   @5='c202' /* VARSTRING(80) meta=80 nullable=0 is_null=0 */
+###   @6='7D660ok2AMPEenDZhSoPXF_zmPcAOMfPqe9RM7cG' /* VARSTRING(1020) meta=1020 nullable=0 is_null=0 */
+# at 869
+#181128 10:37:35 server id 1  end_log_pos 900 CRC32 0xebd8c4ad  Xid = 35
+COMMIT/*!*/;
+```
+
 - [The Binary Log](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html)
 
 ## 参考文献
