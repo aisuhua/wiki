@@ -71,3 +71,5 @@ mysqldump --no-create-info --databases tutorial > tutorial.sql
 ```sh
 mysqldump --databases tutorial --compact > tutorial.sql
 ```
+
+- [mysqldump — A Database Backup Program](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html)
