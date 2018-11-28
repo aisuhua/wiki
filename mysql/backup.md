@@ -31,7 +31,7 @@ mysqldump --databases tutorial > tutorial.sql
 导出多个库
 
 ```sh
-mysqldump --databases tutorial --databases demo > backup.sql
+mysqldump --databases db1 --databases db2 > backup.sql
 ```
 
 ### 其他
