@@ -147,6 +147,27 @@ server-id = 1
 log_bin = /var/log/mysql/mysql-bin.log
 ```
 
+日志默认会保留 10 天
+
+```conf
+[mysqld]
+expire_logs_days = 10
+```
+
+只记录 `test` 数据库的日志
+
+```conf
+[mysqld]
+binlog_do_db = test
+```
+
+不记录 `tutorial` 数据库的日志
+
+```conf
+[mysqld]
+binlog_ignore_db = test
+```
+
 日志格式
 
 ```log
@@ -232,13 +253,6 @@ mysqlbinlog mysql-bin.000001 --start-position=515 --stop-position=799
 
 ```sql
 reset master
-```
-
-日志默认会保留 10 天。
-
-```conf
-[mysqld]
-expire_logs_days = 10
 ```
 
 ## 参考文献
