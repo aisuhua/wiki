@@ -119,6 +119,8 @@ show variables like "long_query_time";
 set global long_query_time = 5;
 ```
 
+### mysqldumpslow
+
 分析日志
 
 ```sh
@@ -202,16 +204,16 @@ mysqlbinlog mysql-bin.000001 -d test
 mysqlbinlog mysql-bin.000001 -d test -r 'file.txt'
 ```
 
-14:14:23（含）之后产生的日志。
+10:00:00（含）之后产生的日志。
 
 ```sh
-mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 14:14:23'
+mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 10:00:00'
 ```
 
-13:57:53 ～ 14:14:23（不含）之间产生的日志。
+10:00:00 ～ 14:00:00（不含）之间产生的日志。
 
 ```sh
-mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 13:57:53' --stop-datetime='2018-11-28 14:14:23'
+mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 10:00:00' --stop-datetime='2018-11-28 14:00:00'
 ```
 
 根据位置定位日志，比日期筛选更加精确。
