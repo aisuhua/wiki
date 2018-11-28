@@ -226,6 +226,21 @@ mysqlbinlog mysql-bin.000001 --start-position=515 --stop-position=799
 
 - [Utility for Processing Binary Log Files](https://dev.mysql.com/doc/refman/5.7/en/mysqlbinlog.html)
 
+### 删除日志
+
+删除所有日志，新日志编号从 000001 开始。
+
+```sql
+reset master
+```
+
+日志默认会保留 10 天。
+
+```conf
+[mysqld]
+expire_logs_days = 10
+```
+
 ## 参考文献
 
 - [MySQL Server Logs](https://dev.mysql.com/doc/refman/5.7/en/server-logs.html)
