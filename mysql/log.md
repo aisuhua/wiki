@@ -56,7 +56,7 @@ general_log_file = /var/log/mysql/mysql.log
 日志格式
 
 ```log
-Time    Id Command    Argument
+Time                          Id Command  Argument
 2018-11-28T02:03:42.462719Z   4 Connect   root@localhost on  using Socket
 2018-11-28T02:03:48.716655Z   4 Init DB   test
 2018-11-28T02:03:54.227087Z   4 Query     select * from demo where id = 1
@@ -74,7 +74,7 @@ log_error = /var/log/mysql/error.log
 日志格式
 
 ```log
-2018-11-28T01:53:01.946004Z 0 [Warning] Failed to set up SSL because of the following SSL library error...
+2018-11-28T01:53:01.946004Z 0 [Warning] Failed to set up SSL because of the following...
 2018-11-28T01:53:01.946043Z 0 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
 2018-11-28T01:53:02.506562Z 2 [Note] Access denied for user 'root'@'localhost' (using password: NO)
 ```
