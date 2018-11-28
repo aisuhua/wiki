@@ -31,7 +31,7 @@ create table `demo` (
 将 demo.txt 的数据导入到 demo 表
 
 ```sql
-load data local infile '/root/demo.txt' ignore into table demo 
+load data infile '/var/lib/mysql-files/demo.txt' ignore into table demo 
 FIELDS TERMINATED BY ' ' 
 (file_type, sha1, file_size, cluster, object_id);
 ```
@@ -74,11 +74,13 @@ secure_file_priv = '/root'
 
 ### 权限不足
 
+如果禁用了 `secure_file_priv`，导入时依然可能会出现报错。
+
 ```
 ERROR 13 (HY000): Can't get stat of '/root/demo.txt' (Errcode: 13 - Permission denied)
 ```
 
-使用 `local` 关键字。
+可使用 `local` 关键字解决该问题。
 
 ```sql
 load data local infile ...
