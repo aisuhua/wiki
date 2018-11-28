@@ -119,6 +119,8 @@ show variables like "long_query_time";
 set global long_query_time = 5;
 ```
 
+- [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
+
 ### mysqldumpslow
 
 分析日志
@@ -133,7 +135,7 @@ mysqldumpslow /var/log/mysql/mysql-slow.log
 mysqldumpslow -s c /var/log/mysql/mysql-slow.log 
 ```
 
-- [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
+- [mysqldumpslow — Summarize Slow Query Log Files](https://dev.mysql.com/doc/refman/5.7/en/mysqldumpslow.html)
 
 ## BINLOG 日志
 
