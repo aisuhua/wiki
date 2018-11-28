@@ -22,7 +22,7 @@ mysqldump -h localhost -u root -p tutorial > tutorial.sql
  mysqldump tutorial table1 table2 > tutorial.sql
 ```
 
-#### 其他
+### 其他
 
 将数据和建表语句导出为不同文件
 
@@ -51,7 +51,7 @@ mysqldump --databases tutorial > tutorial.sql
 mysqldump --databases db1 --databases db2 > backup.sql
 ```
 
-#### 其他
+### 其他
 
 导出部分表
 
