@@ -34,9 +34,15 @@ mysqldump --databases tutorial > tutorial.sql
 mysqldump --databases db1 --databases db2 > backup.sql
 ```
 
+只导出指定的表
+
+```sh
+mysqldump --databases tutorial --tables table1 --tables table2 > tutorial.sql
+```
+
 ### 其他
 
-若存在 utf8mb4 编码的数据，需要指定导出时的编码。
+若存在 utf8mb4 编码的数据，导出时需要指定编码。
 
 ```sh
 mysqldump --default-character-set=utf8mb4 --databases tutorial > backup.sql
@@ -47,3 +53,16 @@ mysqldump --default-character-set=utf8mb4 --databases tutorial > backup.sql
 ```sh
 mysqldump --no-data --databases tutorial > tutorial.sql
 ```
+
+不导出数据库创建语句
+
+```sh
+mysqldump --no-create-db --databases tutorial > tutorial.sql
+```
+
+不导出数据表创建语句
+
+```sh
+mysqldump --no-create-info --databases tutorial > tutorial.sql
+```
+
