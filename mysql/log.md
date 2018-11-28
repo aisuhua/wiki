@@ -144,3 +144,7 @@ log_bin = /var/log/mysql/mysql-bin.log
 ```
 
 - [The Binary Log](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html)
+
+## 参考文献
+
+- [MySQL Server Logs](https://dev.mysql.com/doc/refman/5.7/en/server-logs.html)
