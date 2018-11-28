@@ -89,7 +89,7 @@ mysqldump --databases tutorial --compact > tutorial.sql
 
 ## SELECT ... INTO
 
-将查询结果写到文件
+将查询结果导出到文件
 
 ```sql
 select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
