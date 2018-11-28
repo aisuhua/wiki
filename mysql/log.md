@@ -202,13 +202,13 @@ mysqlbinlog mysql-bin.000001 -d test
 mysqlbinlog mysql-bin.000001 -d test -r 'file.txt'
 ```
 
-在 14:14:23（含）之后产生的日志。
+14:14:23（含）之后产生的日志。
 
 ```sh
 mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 14:14:23'
 ```
 
-在 13:57:53 ～ 14:14:23（不含）之间产生的日志。
+13:57:53 ～ 14:14:23（不含）之间产生的日志。
 
 ```sh
 mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 13:57:53' --stop-datetime='2018-11-28 14:14:23'
