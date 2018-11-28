@@ -202,13 +202,13 @@ mysqlbinlog mysql-bin.000001 -d test
 mysqlbinlog mysql-bin.000001 -d test -r 'file.txt'
 ```
 
-查看时间在 2018-11-28 14:14:23 (含)之后的日志
+在 2018-11-28 14:14:23 (含)之后产生的日志。
 
 ```sh
-mysqlbinlog mysql-bin.000001  --start-datetime='2018-11-28 14:14:23'
+mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 14:14:23'
 ```
 
-查看两个时间之间的日志，含 `--start-datetime` 指定时间的日志，但是不包含 `--stop-datetime` 指定时间的日志。
+2018-11-28 13:57:53（含） ~ 2018-11-28 14:14:23（不包含）。
 
 ```sh
 mysqlbinlog mysql-bin.000001 --start-datetime='2018-11-28 13:57:53' --stop-datetime='2018-11-28 14:14:23'
