@@ -138,7 +138,7 @@ select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
 fields terminated by ',' enclosed by '"';
 ```
 
-以 CSV 格式导出
+以 CSV 格式导出数据
 
 ```sql
 select * from demo into outfile '/var/lib/mysql-files/outfile.csv' 
