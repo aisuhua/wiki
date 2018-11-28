@@ -45,7 +45,7 @@ mysqldump --databases tutorial --tables table1 --tables table2 > tutorial.sql
 若存在 utf8mb4 编码的数据，导出时需要指定编码。
 
 ```sh
-mysqldump --default-character-set=utf8mb4 --databases tutorial > backup.sql
+mysqldump --default-character-set=utf8mb4 --databases tutorial > tutorial.sql
 ```
 
 只导出 DDL 语句，不含数据
@@ -66,3 +66,8 @@ mysqldump --no-create-db --databases tutorial > tutorial.sql
 mysqldump --no-create-info --databases tutorial > tutorial.sql
 ```
 
+导出时不包含注释信息
+
+```sh
+mysqldump --databases tutorial --compact > tutorial.sql
+```
