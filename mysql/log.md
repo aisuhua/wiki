@@ -180,6 +180,10 @@ bkRaaFNvUFhGX3ptUGNBT01mUHFlOVJNN2NHJRNBVw==
 COMMIT/*!*/;
 ```
 
+- [The Binary Log](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html)
+
+### mysqlbinlog
+
 查看日志内容
 
 ```sh
@@ -195,10 +199,10 @@ mysqlbinlog mysql-bin.000001 -d test
 将日志内容输出到文件
 
 ```sh
-mysqlbinlog mysql-bin.000001 -vv -r 'file.txt'
+mysqlbinlog mysql-bin.000001 -d test -r 'file.txt'
 ```
 
-查看时间在 2018-11-28 14:14:23 之后的日志
+查看时间在 2018-11-28 14:14:23 (含)之后的日志
 
 ```sh
 mysqlbinlog mysql-bin.000001  --start-datetime='2018-11-28 14:14:23'
@@ -210,9 +214,7 @@ mysqlbinlog mysql-bin.000001  --start-datetime='2018-11-28 14:14:23'
 mysqlbinlog mysql-bin.000001  --start-datetime='2018-11-28 13:57:53' --stop-datetime='2018-11-28 14:14:23'
 ```
 
-
-
-- [The Binary Log](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html)
+- [Utility for Processing Binary Log Files](https://dev.mysql.com/doc/refman/5.7/en/mysqlbinlog.html)
 
 ## 参考文献
 
