@@ -89,6 +89,14 @@ mysqldump --no-create-info --databases tutorial > tutorial.sql
 mysqldump --databases tutorial --compact > tutorial.sql
 ```
 
+### 导出所有库
+
+导出所有数据库
+
+```sql
+mysqldump --all-databases > all.sql
+```
+
 - [mysqldump — A Database Backup Program](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html)
 
 ## SELECT ... INTO
