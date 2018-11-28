@@ -73,3 +73,41 @@ mysqldump --databases tutorial --compact > tutorial.sql
 ```
 
 - [mysqldump — A Database Backup Program](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html)
+
+## SELECT ... INTO
+
+将查询结果写到文件
+
+```sql
+select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
+```
+
+默认的分隔符
+
+```sql
+FIELDS TERMINATED BY '\t' ENCLOSED BY '' ESCAPED BY '\\'
+LINES TERMINATED BY '\n' STARTING BY ''
+```
+
+自定义分隔符
+
+```sql
+select * from demo into outfile '/var/lib/mysql-files/outfile.txt' 
+fields terminated by ',' enclosed by '"';
+```
+
+以 CSV 格式导出
+
+```sql
+select * from demo into outfile '/var/lib/mysql-files/outfile.csv' 
+fields terminated by ',' optionally enclosed by '"' 
+lines terminated by '\n';
+```
+
+导出数据时，MySQL 默认会自动对转义字符 `\`、引用分隔符 `"` 和字段分隔符 `,` 等特殊符号进行转义。
+
+```text
+\a"b,c -> "\\a\"b,c"
+```
+
+- [SELECT ... INTO Syntax](https://dev.mysql.com/doc/refman/5.7/en/select-into.html)
