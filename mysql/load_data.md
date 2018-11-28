@@ -80,7 +80,7 @@ secure_file_priv = '/root'
 ERROR 13 (HY000): Can't get stat of '/root/demo.txt' (Errcode: 13 - Permission denied)
 ```
 
-可使用 `local` 关键字解决该问题。
+此时，可使用 `local` 关键字。
 
 ```sql
 load data local infile ...
