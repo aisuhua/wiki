@@ -67,7 +67,7 @@ having count(unique_id) >1;
 
 - [#1062 - Duplicate entry '' for key 'unique_id' When Trying to add UNIQUE KEY (MySQL)](https://stackoverflow.com/questions/17823322/1062-duplicate-entry-for-key-unique-id-when-trying-to-add-unique-key-my)
 
-使用 `IGNORE` 参数可以实现在添加唯一索引的同时将重复的记录删除只保留一行。
+使用 `IGNORE` 参数可以实现在添加唯一索引的同时将重复的记录删除只保留一条。
 
 ```sql
 alter ignore table mytable add unique index myindex (a, b, c, d);
