@@ -180,6 +180,25 @@ bkRaaFNvUFhGX3ptUGNBT01mUHFlOVJNN2NHJRNBVw==
 COMMIT/*!*/;
 ```
 
+查看日志内容
+
+```sh
+mysqlbinlog mysql-bin.000001 -vv
+```
+
+只看 `test` 数据库的日志
+
+```sh
+mysqlbinlog mysql-bin.000001 -d test
+```
+
+将日志内容输出到文件
+
+```sh
+mysqlbinlog mysql-bin.000001 -vv -r 'file.txt'
+```
+
+
 - [The Binary Log](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html)
 
 ## 参考文献
