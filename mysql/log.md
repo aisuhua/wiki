@@ -147,7 +147,7 @@ log_bin = /var/log/mysql/mysql-bin.log
 
 ```log
 # at 527
-#181128 10:37:35 server id 1  end_log_pos 592 CRC32 0xa2915573  Anonymous_GTID  last_committed=1 sequence_number=2 rbr_only=yes
+#181128 10:37:35 server id 1  end_log_pos 592 CRC32 0xa2915573  Anonymous_GTID  last_committed=1        sequence_number=2       rbr_only=yes
 /*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
 SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
 # at 592
