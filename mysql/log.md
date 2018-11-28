@@ -109,9 +109,6 @@ show variables like "long_query_time";
 set global long_query_time = 5;
 ```
 
-- [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
-
-
 日志格式
 
 ```log
@@ -121,6 +118,8 @@ set global long_query_time = 5;
 SET timestamp=1543371349;
 select file_type, count(*) from demo group by file_type;
 ```
+
+- [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
 
 ### mysqldumpslow
 
