@@ -20,6 +20,8 @@ mysqldump -h localhost -u root -p tutorial > tutorial.sql
  mysqldump tutorial table1 table2 > tutorial.sql
 ```
 
+### 其他
+
 将数据和建表语句导出为不同文件
 
 ```sh
@@ -47,13 +49,13 @@ mysqldump --databases tutorial > tutorial.sql
 mysqldump --databases db1 --databases db2 > backup.sql
 ```
 
+### 其他
+
 只导出指定的表
 
 ```sh
 mysqldump --databases tutorial --tables table1 --tables table2 > tutorial.sql
 ```
-
-### 其他
 
 若存在 utf8mb4 编码的数据，导出时需要指定编码。
 
