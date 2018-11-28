@@ -1,6 +1,8 @@
 ## mysqldump
 
-备份单个库的所有表
+### 导出表
+
+导出所有表
 
 ```sh
 mysqldump tutorial > tutorial.sql
@@ -12,23 +14,27 @@ mysqldump tutorial > tutorial.sql
 mysqldump -h localhost -u root -p tutorial > tutorial.sql
 ```
 
-备份指定表
+导出多张表
 
 ```sh
-mysqldump tutorial > tutorial.sql
+ mysqldump tutorial table1 table2 > tutorial.sql
 ```
 
-备份单个库
+### 导出库
+
+导出单个库
 
 ```sh
 mysqldump --databases tutorial > tutorial.sql
 ```
 
-备份多个库
+导出多个库
 
 ```sh
 mysqldump --databases tutorial --databases demo > backup.sql
 ```
+
+### 其他
 
 若存在 utf8mb4 编码的数据，需要指定导出时的编码。
 
