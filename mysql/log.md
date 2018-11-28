@@ -166,7 +166,7 @@ binlog_do_db = test
 
 ```conf
 [mysqld]
-binlog_ignore_db = test
+binlog_ignore_db = tutorial
 ```
 
 ### 删除日志
