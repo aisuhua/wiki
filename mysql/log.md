@@ -55,8 +55,8 @@ general_log_file = /var/log/mysql/mysql.log
 
 日志格式
 
-```
-Time                 Id Command    Argument
+```log
+Time                                Id Command    Argument
 2018-11-28T02:03:42.462719Z         4 Connect   root@localhost on  using Socket
 2018-11-28T02:03:48.716655Z         4 Init DB   test
 2018-11-28T02:03:48.723237Z         4 Field List        demo 
@@ -70,6 +70,14 @@ Time                 Id Command    Argument
 ```conf
 [mysqld]
 log_error = /var/log/mysql/error.log
+```
+
+日志格式
+
+```log
+2018-11-28T01:53:01.946043Z 0 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+2018-11-28T01:53:01.946094Z 0 [Note] Server socket created on IP: '0.0.0.0'.
+2018-11-28T01:53:02.506562Z 2 [Note] Access denied for user 'root'@'localhost' (using password: NO)
 ```
 
 ## 慢查询日志
