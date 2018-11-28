@@ -44,21 +44,7 @@ FIELDS TERMINATED BY ' '
 The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
 ```
 
-禁用 `secure_file_priv`。
-
-```conf
-[mysqld]
-secure_file_priv = ''
-```
-
-或修改 `secure_file_priv` 的默认目录。
-
-```conf
-[mysqld]
-secure_file_priv = '/root'
-```
-
-或将文件移动到 `secure_file_priv` 的默认目录 `/var/lib/mysql-files`。
+将文件移动到 `secure_file_priv` 的默认目录。
 
 ```sh
 shell> move /root/demo.txt /var/lib/mysql-files
@@ -70,6 +56,20 @@ shell> move /root/demo.txt /var/lib/mysql-files
 
 ```sql
 load data infile '/var/lib/mysql-files/demo.txt' into ...
+```
+
+或禁用 `secure_file_priv`。
+
+```conf
+[mysqld]
+secure_file_priv = ''
+```
+
+或修改 `secure_file_priv` 的默认目录。
+
+```conf
+[mysqld]
+secure_file_priv = '/root'
 ```
 
 ### 权限不足
