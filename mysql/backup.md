@@ -99,7 +99,7 @@ select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
 
 导出的内容格式
 
-```text
+```sh
 shell> cat outfile.txt 
 1       google
 2       facebook
