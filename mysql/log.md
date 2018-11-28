@@ -53,7 +53,7 @@ general_log_file = /var/log/mysql/mysql.log
 
 查询的日志量一般比较大，对服务器性能有所影响，在生产环境下一般不会开启。
 
-日志格式
+### 日志格式
 
 ```log
 Time                          Id Command  Argument
@@ -71,7 +71,7 @@ Time                          Id Command  Argument
 log_error = /var/log/mysql/error.log
 ```
 
-日志格式
+### 日志格式
 
 ```log
 2018-11-28T01:53:01.946004Z 0 [Warning] Failed to set up SSL because of the following...
@@ -97,16 +97,6 @@ long_query_time = 2
 log_queries_not_using_indexes = 1
 ```
 
-日志格式
-
-```log
-# Time: 2018-11-28T02:15:49.606694Z
-# User@Host: root[root] @ localhost []  Id:     4
-# Query_time: 4.523855  Lock_time: 0.000395 Rows_sent: 5916  Rows_examined: 4011832
-SET timestamp=1543371349;
-select file_type, count(*) from demo group by file_type;
-```
-
 查看慢查询时间阀值
 
 ```sql
@@ -120,6 +110,17 @@ set global long_query_time = 5;
 ```
 
 - [The Slow Query Log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)
+
+
+### 日志格式
+
+```log
+# Time: 2018-11-28T02:15:49.606694Z
+# User@Host: root[root] @ localhost []  Id:     4
+# Query_time: 4.523855  Lock_time: 0.000395 Rows_sent: 5916  Rows_examined: 4011832
+SET timestamp=1543371349;
+select file_type, count(*) from demo group by file_type;
+```
 
 ### mysqldumpslow
 
@@ -168,7 +169,15 @@ binlog_do_db = test
 binlog_ignore_db = test
 ```
 
-日志格式
+### 删除日志
+
+删除所有日志，新日志编号从 000001 开始。
+
+```sql
+reset master
+```
+
+### 日志格式
 
 ```log
 # at 527
@@ -246,14 +255,6 @@ mysqlbinlog mysql-bin.000001 --start-position=515 --stop-position=799
 ```
 
 - [Utility for Processing Binary Log Files](https://dev.mysql.com/doc/refman/5.7/en/mysqlbinlog.html)
-
-### 删除日志
-
-删除所有日志，新日志编号从 000001 开始。
-
-```sql
-reset master
-```
 
 ## 参考文献
 
