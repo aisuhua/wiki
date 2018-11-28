@@ -97,7 +97,17 @@ long_query_time = 2
 log_queries_not_using_indexes = 1
 ```
 
-慢查询时间阀值
+日志格式
+
+```log
+# Time: 2018-11-28T02:15:49.606694Z
+# User@Host: root[root] @ localhost []  Id:     4
+# Query_time: 4.523855  Lock_time: 0.000395 Rows_sent: 5916  Rows_examined: 4011832
+SET timestamp=1543371349;
+select file_type, count(*) from demo group by file_type;
+```
+
+查看慢查询时间阀值
 
 ```sql
 show variables like "long_query_time";
@@ -107,16 +117,6 @@ show variables like "long_query_time";
 
 ```sql
 set global long_query_time = 5;
-```
-
-日志格式
-
-```log
-# Time: 2018-11-28T02:15:49.606694Z
-# User@Host: root[root] @ localhost []  Id:     4
-# Query_time: 4.523855  Lock_time: 0.000395 Rows_sent: 5916  Rows_examined: 4011832
-SET timestamp=1543371349;
-select file_type, count(*) from demo group by file_type;
 ```
 
 分析日志
