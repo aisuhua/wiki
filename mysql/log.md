@@ -97,7 +97,7 @@ long_query_time = 2
 log_queries_not_using_indexes = 1
 ```
 
-查看慢查询时间阀值
+慢查询时间阀值
 
 ```sql
 show variables like "long_query_time";
