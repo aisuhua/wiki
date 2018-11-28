@@ -29,6 +29,7 @@ mysqldump tutorial -T /var/lib/mysql-files
 demo.sql 只包含建表语句，demo.txt 只包含数据
 
 ```sh
+shell> ls /var/lib/mysql-files
 demo.sql  demo.txt  test.sql  test.txt
 ```
 
