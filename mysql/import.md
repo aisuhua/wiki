@@ -33,3 +33,30 @@ fields terminated by ',' enclosed by '"';
 load data infile '/var/lib/mysql-files/demo.txt' into table demo 
 fields terminated by ',' enclosed by '"';
 ```
+
+## mysqlimport
+
+导出表数据
+
+```sql
+mysqldump tutorial -T /var/lib/mysql-files
+```
+
+导出后的文件
+
+```txt
+shell> ls /var/lib/mysql-files
+demo.sql  demo.txt  test.sql  test.txt
+```
+
+先手工创建用于导入数据的表
+
+```sql
+create table demo (id int, name varchar(50))
+```
+
+导入数据到该表，demo.txt 的文件名 `demo` 即默认为表名。
+
+```sh
+ mysqlimport -h localhost -u root -p tutorial /var/lib/mysql-files/demo.txt 
+```
