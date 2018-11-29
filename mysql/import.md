@@ -44,7 +44,7 @@ fields terminated by ',' enclosed by '"';
 
 导出表数据
 
-```sql
+```
 mysqldump tutorial -T /var/lib/mysql-files
 ```
 
