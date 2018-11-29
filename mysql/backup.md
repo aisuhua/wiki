@@ -2,9 +2,9 @@
 
 mysqldump 工具用于备份数据库以及在不同的数据库之间进行数据迁移。
 
-### 导出表
+### 备份表
 
-导出所有表
+备份所有表
 
 ```sh
 mysqldump tutorial > tutorial.sql
@@ -16,7 +16,7 @@ mysqldump tutorial > tutorial.sql
 mysqldump -h localhost -u root -p tutorial > tutorial.sql
 ```
 
-导出部分表
+备份部分表
 
 ```sh
  mysqldump tutorial table1 table2 > tutorial.sql
@@ -37,15 +37,15 @@ shell> ls /var/lib/mysql-files
 demo.sql  demo.txt  test.sql  test.txt
 ```
 
-### 导出库
+### 备份库
 
-导出单个库
+备份单个库
 
 ```sh
 mysqldump --databases tutorial > tutorial.sql
 ```
 
-导出多个库
+备份多个库
 
 ```sh
 mysqldump --databases db1 --databases db2 > backup.sql
@@ -53,45 +53,45 @@ mysqldump --databases db1 --databases db2 > backup.sql
 
 ### 其他
 
-导出部分表
+备份部分表
 
 ```sh
 mysqldump --databases tutorial --tables table1 --tables table2 > tutorial.sql
 ```
 
-若存在 utf8mb4 编码的数据，导出时需要指定编码。
+若存在 utf8mb4 编码的数据，备份时需要指定编码。
 
 ```sh
 mysqldump --default-character-set=utf8mb4 --databases tutorial > tutorial.sql
 ```
 
-只导出 DDL 语句，不含数据
+只备份 DDL 语句，不含数据
 
 ```sh
 mysqldump --no-data --databases tutorial > tutorial.sql
 ```
 
-不导出数据库创建语句
+不备份数据库创建语句
 
 ```sh
 mysqldump --no-create-db --databases tutorial > tutorial.sql
 ```
 
-不导出数据表创建语句
+不备份数据表创建语句
 
 ```sh
 mysqldump --no-create-info --databases tutorial > tutorial.sql
 ```
 
-导出时不包含注释信息
+备份时不包含注释信息
 
 ```sh
 mysqldump --databases tutorial --compact > tutorial.sql
 ```
 
-### 导出所有库
+### 备份所有库
 
-导出所有数据库
+备份所有数据库
 
 ```sql
 mysqldump --all-databases > all.sql
