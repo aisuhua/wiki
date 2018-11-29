@@ -53,7 +53,7 @@ mysqldump --databases db1 --databases db2 > backup.sql
 
 ### 其他
 
-备份部分表
+备份数据库中的部分表
 
 ```sh
 mysqldump --databases tutorial --tables table1 --tables table2 > tutorial.sql
