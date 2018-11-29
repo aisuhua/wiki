@@ -7,7 +7,7 @@
 将查询结果导出到文件
 
 ```sql
-select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
+select * from demo into outfile '/var/lib/mysql-files/demo.txt'
 ```
 
 ### 其他
@@ -43,14 +43,14 @@ a\tb\nc\d -> a\\tb\\nc\\d
 自定义分隔符
 
 ```sql
-select * from demo into outfile '/var/lib/mysql-files/outfile.txt' 
+select * from demo into outfile '/var/lib/mysql-files/demo.txt' 
 fields terminated by ',' enclosed by '"';
 ```
 
 以 CSV 格式导出数据
 
 ```sql
-select * from demo into outfile '/var/lib/mysql-files/outfile.csv' 
+select * from demo into outfile '/var/lib/mysql-files/demo.csv' 
 fields terminated by ',' optionally enclosed by '"' 
 lines terminated by '\n';
 ```
