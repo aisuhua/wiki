@@ -8,7 +8,7 @@ select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
 
 ### 其他
 
-导出的内容格式
+导出的内容
 
 ```sh
 shell> cat outfile.txt 
@@ -46,3 +46,27 @@ lines terminated by '\n';
 ```
 
 - [SELECT ... INTO Syntax](https://dev.mysql.com/doc/refman/5.7/en/select-into.html)
+
+## mysqldump
+
+将数据和建表语句导出为不同文件
+
+```sh
+mysqldump tutorial -T /var/lib/mysql-files
+```
+
+demo.sql 只包含建表语句，demo.txt 只包含数据
+
+```sh
+shell> ls /var/lib/mysql-files
+demo.sql  demo.txt  test.sql  test.txt
+```
+
+导出的内容跟 `SELECT ... INTO` 的完全一样。
+
+```sh
+shell> cat demo.txt 
+1       google
+2       facebook
+3       suhua is a good boy.
+```
