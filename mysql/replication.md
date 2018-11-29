@@ -76,7 +76,7 @@ mysqladmin shutdown
 tar xf /tmp/mysql.tar -C /var/lib/
 ```
 
-删除 auto.cnf 文件，防止 server UUIDs 冲突。
+删除 auto.cnf 文件，防止 server UUIDs 冲突，MySQL 启动时会自动生成新的 auto.conf。
 
 ```sh
 rm /var/lib/mysql/auto.cnf
