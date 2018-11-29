@@ -6,6 +6,8 @@
 select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
 ```
 
+### 说明
+
 导出的内容格式
 
 ```sh
