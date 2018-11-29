@@ -205,3 +205,5 @@ end;
 ```
 
 将删除后的记录备份到 `archive_orders` 表，其中 `OLD` 表示被删除的记录。
+
+- [Trigger Syntax and Examples](https://dev.mysql.com/doc/refman/5.7/en/trigger-syntax.html)
