@@ -140,6 +140,16 @@ show processlist;
 show slave status\G
 ```
 
+### 其他
+
+若 `CHANGE MASTER TO` 相关参数填错了，可以进行重置。
+
+```sql
+RESET SLAVE
+```
+
+- [how to undo CHANGE MASTER TO](https://stackoverflow.com/questions/31319461/how-to-undo-change-master-to)
+
 ## 参考文献
 
 - [Configuring Replication](https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html)
