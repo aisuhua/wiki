@@ -92,7 +92,7 @@ tar xf /tmp/mysql.tar -C /var/lib/
 rm /var/lib/mysql/auto.cnf
 ```
 
-- [故障案例：主从同步报错FATAL ERROR: THE SLAVE I/O THREAD STOPS BECAUSE MASTER AND SLAVE HAVE EQUAL MYSQL SERVER](http://zhangbin.junxilinux.com/?p=793)
+- [故障案例](http://zhangbin.junxilinux.com/?p=793)
 
 启动服务
 
