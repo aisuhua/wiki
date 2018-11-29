@@ -3,7 +3,7 @@
 ### 导出表数据
 
 ```sql
-select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
+select * from demo into outfile '/var/lib/mysql-files/demo.txt'
 ```
 
 ### 导入表数据
@@ -17,7 +17,7 @@ create table demo (id int, name varchar(50))
 将数据导入该表
 
 ```sql
-load data infile '/var/lib/mysql-files/outfile.txt' into table demo
+load data infile '/var/lib/mysql-files/demo.txt' into table demo
 ```
 
 
