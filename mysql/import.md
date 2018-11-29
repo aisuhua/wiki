@@ -16,7 +16,7 @@ select * from demo into outfile '/var/lib/mysql-files/demo.txt'
 create table demo (id int, name varchar(50))
 ```
 
-将数据导入该表
+导入数据到该表
 
 ```sql
 load data infile '/var/lib/mysql-files/demo.txt' into table demo
