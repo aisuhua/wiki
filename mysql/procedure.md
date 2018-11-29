@@ -15,7 +15,7 @@
 添加函数
 
 ```sql
-create function hello (s char(20)) returns char(50) 
+create function hello (s char(20)) returns char(50) DETERMINISTIC
 return concat('hello, ', s, '!');
 ```
 
