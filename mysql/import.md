@@ -1,3 +1,7 @@
+# 导入表数据
+
+`LOAD DATA INFILE` 和 `mysqlimport` 都可用于导入表数据，两者可以互换。`mysqlimport` 是调用 LOAD 语句实现的一个客户端工具。
+
 ## LOAD DATA INFILE
 
 导出表数据
