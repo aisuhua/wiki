@@ -1,6 +1,6 @@
 # 导入表数据
 
-`LOAD DATA INFILE` 和 `mysqlimport` 都可用于导入表数据，两者可以互换。`mysqlimport` 是调用 LOAD 语句实现的一个客户端工具。
+`LOAD DATA INFILE` 和 `mysqlimport` 都可用于导入表数据，两者可以互换。`mysqlimport` 是调用 `LOAD DATA INFILE` 语句实现的一个客户端工具。
 
 ## LOAD DATA INFILE
 
@@ -38,6 +38,8 @@ load data infile '/var/lib/mysql-files/demo.txt' into table demo
 fields terminated by ',' enclosed by '"';
 ```
 
+- [LOAD DATA INFILE Syntax](https://dev.mysql.com/doc/refman/5.7/en/load-data.html)
+
 ## mysqlimport
 
 导出表数据
@@ -64,3 +66,5 @@ create table demo (id int, name varchar(50))
 ```sh
  mysqlimport -h localhost -u root -p tutorial /var/lib/mysql-files/demo.txt 
 ```
+
+- [mysqlimport — A Data Import Program](https://dev.mysql.com/doc/refman/5.7/en/mysqlimport.html)
