@@ -1,12 +1,10 @@
 ## LOAD DATA INFILE
 
-### 导出表数据
+导出表数据
 
 ```sql
 select * from demo into outfile '/var/lib/mysql-files/demo.txt'
 ```
-
-### 导入表数据
 
 先手工创建用于导入数据的表
 
