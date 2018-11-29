@@ -47,8 +47,8 @@ mysqladmin shutdown
 复制数据文件，假设数据存放在 `/var/lib/mysql` 目录。
 
 ```sh
-shell> cd /var/lib
-shell> tar cf /tmp/mysql.tar ./mysql
+cd /var/lib
+tar cf /tmp/mysql.tar ./mysql
 ```
 
 启动服务
