@@ -37,6 +37,12 @@ select hello('World');
 drop function hello;
 ```
 
+查看所有函数
+
+```sql
+show function status where db = 'test'\G
+```
+
 ## 存储过程
 
 添加存储过程
@@ -70,6 +76,12 @@ show create procedure simpleproc\G
 
 ```sql
 drop procedure simpleproc;
+```
+
+查看所有存储过程
+
+```sql
+show procedure status where db = 'test'\G
 ```
 
 - [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](https://dev.mysql.com/doc/refman/5.7/en/create-procedure.html)
