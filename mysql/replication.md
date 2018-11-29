@@ -66,7 +66,7 @@ tar cf /tmp/mysql.tar ./mysql
 service mysql start
 ```
 
-将数据文件复杂到 slave 服务器。
+将数据文件复制到 slave 服务器。
 
 ```sh
 scp /tmp/mysql.tar root@192.168.1.41:/tmp
