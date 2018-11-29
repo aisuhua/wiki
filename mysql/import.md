@@ -20,7 +20,7 @@ load data infile '/var/lib/mysql-files/demo.txt' into table demo
 
 ### 其他
 
-导出表数据时自定义分隔符。
+自定义导出表数据的分隔符。
 
 ```sql
 select * from demo into outfile '/var/lib/mysql-files/demo.txt' 
