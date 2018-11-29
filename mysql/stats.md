@@ -26,16 +26,20 @@ show status
 show processlist
 ```
 
-查看所有引擎
 
-```sql
-show engines
-```
 
 查看错误信息
 
 ```sql
 show errors
+```
+
+## 存储引擎
+
+查看所有引擎
+
+```sql
+show engines
 ```
 
 ## 库和表的状态
