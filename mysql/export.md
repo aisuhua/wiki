@@ -49,20 +49,20 @@ lines terminated by '\n';
 
 ## mysqldump
 
-将数据和建表语句导出为不同文件
+将数据和建表语句导出为不同文件。
 
 ```sh
 mysqldump tutorial -T /var/lib/mysql-files
 ```
 
-demo.sql 只包含建表语句，demo.txt 只包含数据
+demo.sql 为建表语句，demo.txt 只包含数据。
 
 ```sh
 shell> ls /var/lib/mysql-files
 demo.sql  demo.txt  test.sql  test.txt
 ```
 
-导出的内容跟 `SELECT ... INTO` 的完全一样。
+demo.txt 的内容跟 `SELECT ... INTO` 导出的内容完全一样。
 
 ```sh
 shell> cat demo.txt 
@@ -70,3 +70,5 @@ shell> cat demo.txt
 2       facebook
 3       suhua is a good boy.
 ```
+
+注意：`-T` 参数只适用于导出表，导出数据库时不能使用。
