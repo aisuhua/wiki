@@ -50,7 +50,7 @@ mysqldump tutorial -T /var/lib/mysql-files
 
 导出后的文件
 
-```txt
+```
 shell> ls /var/lib/mysql-files
 demo.sql  demo.txt  test.sql  test.txt
 ```
