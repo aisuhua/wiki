@@ -23,8 +23,6 @@ log-bin = /var/log/mysql/mysql-bin.log
 service mysql restart
 ```
 
-### 创建复制帐号
-
 创建用于复制的帐号
 
 ```sql
