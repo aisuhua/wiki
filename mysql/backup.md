@@ -24,13 +24,13 @@ mysqldump -h localhost -u root -p tutorial > tutorial.sql
 
 ### 其他
 
-将数据和建表语句导出为不同文件
+将数据和建表语句备份为不同文件。
 
 ```sh
 mysqldump tutorial -T /var/lib/mysql-files
 ```
 
-demo.sql 只包含建表语句，demo.txt 只包含数据
+demo.sql 为建表语句，demo.txt 只包含数据。
 
 ```sh
 shell> ls /var/lib/mysql-files
