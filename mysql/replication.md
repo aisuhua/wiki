@@ -9,8 +9,6 @@
 
 ## master
 
-### 设置 server id 和 开启 binglog 日志
-
 设置 server id 和 开启 binlog 日志
 
 ```cnf
@@ -34,8 +32,6 @@ CREATE USER 'repl'@'192.168.1.%' IDENTIFIED BY '123456';
 GRANT REPLICATION SLAVE ON *.* TO 'repl'@'192.168.1.%';
 ```
 
-### 查看当前 binlog 文件名和偏移量
-
 设定为读锁定模式，此时主库不能进行修改操作。
 
 ```sql
@@ -52,8 +48,6 @@ mysql> SHOW MASTER STATUS;
 | mysql-bin.000002 |      154 |              |                  |                   |
 +------------------+----------+--------------+------------------+-------------------+
 ```
-
-### 复制数据文件
 
 停止服务
 
