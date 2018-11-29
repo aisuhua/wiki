@@ -143,4 +143,4 @@ show slave status\G
 ## 参考文献
 
 - [Configuring Replication](https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html)
-- [故障案例：主从同步报错FATAL ERROR: THE SLAVE I/O THREAD STOPS BECAUSE MASTER AND SLAVE HAVE EQUAL MYSQL SERVER](http://zhangbin.junxilinux.com/?p=793)
+- [故障案例：主从同步报错FATAL ERROR: THE SLAVE I/O ...](http://zhangbin.junxilinux.com/?p=793)
