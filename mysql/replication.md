@@ -102,7 +102,7 @@ service mysql start
 
 ```cnf
 [mysqld]
-server-id = 1
+server-id = 2
 ```
 
 重启服务
