@@ -40,4 +40,4 @@ mysqldump --databases tutorial > tutorial.sql
 mysql -h localhost -u root -p < tutorial.sql
 ```
 
-备份和恢复多个库的步骤是一样的。
+恢复多个库的步骤是一样的。
