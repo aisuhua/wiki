@@ -12,6 +12,12 @@ select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
 
 ### 其他
 
+若存在 utf8mb4 编码的数据，要先指定当前连接的字符编码。
+
+```sql
+set names utf8mb4
+```
+
 导出的内容
 
 ```sh
