@@ -26,7 +26,7 @@ service mysql restart
 创建用于复制的帐号
 
 ```sql
-CREATE USER 'repl'@'192.168.1.%' IDENTIFIED BY 'password';
+CREATE USER 'repl'@'192.168.1.%' IDENTIFIED BY '123456';
 GRANT REPLICATION SLAVE ON *.* TO 'repl'@'192.168.1.%';
 ```
 
