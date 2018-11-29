@@ -20,6 +20,12 @@ help select
 show status
 ```
 
+查看所有活动进程
+
+```sql
+show processlist
+```
+
 查看所有引擎
 
 ```sql
