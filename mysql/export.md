@@ -6,7 +6,7 @@
 select * from demo into outfile '/var/lib/mysql-files/outfile.txt'
 ```
 
-### 说明
+### 其他
 
 导出的内容格式
 
@@ -29,8 +29,6 @@ LINES TERMINATED BY '\n' STARTING BY ''
 ```text
 a\tb\nc\d -> a\\tb\\nc\\d
 ```
-
-### 其他
 
 自定义分隔符
 
