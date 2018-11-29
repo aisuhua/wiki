@@ -70,7 +70,7 @@ scp /tmp/mysql.tar root@192.168.1.41:/tmp
 mysqladmin shutdown
 ```
 
-将主库数据文件解压。
+将数据文件解压到数据目录。
 
 ```sh
 tar xf /tmp/mysql.tar -C /var/lib/
