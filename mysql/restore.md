@@ -6,7 +6,7 @@
 mysqldump tutorial > tutorial.sql
 ```
 
-创建数据库
+手工创建准备恢复的数据库
 
 ```sql
 create database tutorial
