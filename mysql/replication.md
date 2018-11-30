@@ -1,8 +1,4 @@
-# 复制
-
-Binary Log File Position Based Replication
-
-## 例子
+# 复制 Binary Log File Position Based Replication
 
 主从服务器规划
 
