@@ -17,8 +17,7 @@ log_slave_updates = 1
 
 When the read_only system variable is enabled, the server permits no client updates except from users who have the SUPER privilege. This variable is disabled by default.
 
-将从库修改为只读，此后只有拥有 SUPER 权限的用户才能在从库上执行更新操作。
-
+将从库修改为只读，此后普通用户将无法在从库上执行更新操作，但拥有 SUPER 权限的用户可以。
 ```cnf
 [mysqld]
 read_only = 1
