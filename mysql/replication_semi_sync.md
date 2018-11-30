@@ -102,7 +102,7 @@ START SLAVE IO_THREAD;
 
 ```cnf
 [mysqld]
-rpl_semi_sync_slave_enabled=1
+rpl_semi_sync_slave_enabled = 1
 ```
 
 查看系统变量
