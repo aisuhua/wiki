@@ -1,5 +1,9 @@
 # 复制
 
+Binary Log File Position Based Replication
+
+## 例子
+
 主从服务器规划
 
 | 服务器名称   | IP             | 用途          |
