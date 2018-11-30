@@ -66,7 +66,7 @@ tar cf /tmp/mysql.tar ./mysql
 service mysql start
 ```
 
-将数据文件复制到 slave 服务器。
+将备份文件复制到 slave 服务器。
 
 ```sh
 scp /tmp/mysql.tar root@192.168.1.41:/tmp
@@ -80,7 +80,7 @@ scp /tmp/mysql.tar root@192.168.1.41:/tmp
 mysqladmin shutdown
 ```
 
-将数据文件解压到数据目录。
+将备份文件解压到数据目录。
 
 ```sh
 tar xf /tmp/mysql.tar -C /var/lib/
