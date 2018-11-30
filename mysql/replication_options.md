@@ -30,4 +30,4 @@ read_only = 1
 set global read_only = 1
 ```
 
-- [read_only](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_read_only)
+- [sysvar_read_only](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_read_only)
