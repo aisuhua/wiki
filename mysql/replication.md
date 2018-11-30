@@ -152,5 +152,5 @@ RESET SLAVE
 
 ## 参考文献
 
-- [Configuring Replication](https://dev.mysql.com/doc/refman/5.7/en/replication-configuration.html)
+- [Setting Up Binary Log File Position Based Replication](https://dev.mysql.com/doc/refman/5.7/en/replication-howto.html)
 - [故障案例：主从同步报错FATAL ERROR: THE SLAVE I/O ...](http://zhangbin.junxilinux.com/?p=793)
