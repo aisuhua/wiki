@@ -9,7 +9,7 @@ MySQL 的复制是异步的，主库和从库之间的数据存在一定的延�
 
 ![Alt text](img/repl_async_process.jpg)
 
-而半同步复制时，为了保证主库上的每一个 Binlog 事务都能够可靠地复制到从库上，主库在每次事务提交成功并写入Binlog 后，并不马上反馈给客户端，
+而半同步复制时，为了保证主库上的每一个 Binlog 事务都能够可靠地复制到从库上，主库在每次事务提交成功后，并不马上反馈给客户端，
 而是等待其中一个从库也接收到 Binlog 事务并成功写入中继日志 Relay Log 后，主库才返回操作成功给客户端。
 
 ![Alt text](img/repl_semi_sync_process.jpg)
