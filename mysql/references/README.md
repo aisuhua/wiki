@@ -1,7 +1,7 @@
 ## Books
 
 - [MySQL必知必会](https://book.douban.com/subject/3354490/)
-- [深入浅出MySQL：数据库开发、优化与管理维护（第2版）(https://read.douban.com/ebook/13017567/)
+- [深入浅出MySQL：数据库开发、优化与管理维护（第2版）](https://read.douban.com/ebook/13017567/)
 
 ## References
 
