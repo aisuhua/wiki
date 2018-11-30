@@ -1,6 +1,6 @@
 ## log-slave-updates
 
-开启从库上的 Binlog 日志，从库默认不会记录从主库同步过来的操作的 Binlog 日志。
+开启从库上的 Binlog 日志，从库默认不会记录从主库同步过来的 Binlog 日志。
 
 ```cnf
 [mysqld]
