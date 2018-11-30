@@ -7,7 +7,7 @@
 | DB Master | 192.168.1.40 | 主数据库  |
 | DB Slave  | 192.168.1.41 | 从数据库 |
 
-## master
+## Master
 
 设置 server id 和 开启 binlog 日志
 
@@ -72,7 +72,7 @@ service mysql start
 scp /tmp/mysql.tar root@192.168.1.41:/tmp
 ```
 
-## slave
+## Slave
 
 停止服务
 
