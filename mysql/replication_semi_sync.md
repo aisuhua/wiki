@@ -62,7 +62,7 @@ rpl_semi_sync_master_enabled = 1
 查看系统变量
 
 ```sql
-mysql> show variables like "rpl%";
+show variables like "rpl%";
 ```
 
 查看运行状态
