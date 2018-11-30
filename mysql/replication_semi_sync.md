@@ -2,6 +2,18 @@
 
 ## Master
 
+查看插件所在目录
+
+```sql
+show variables like "plugin%"
+```
+
+查看 semisync 插件是否存在
+
+```
+ls /usr/lib/mysql/plugin/
+```
+
 安装 semisync_master 插件
 
 ```sql
