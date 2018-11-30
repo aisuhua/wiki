@@ -30,7 +30,7 @@ CREATE USER 'repl'@'192.168.1.%' IDENTIFIED BY '123456';
 GRANT REPLICATION SLAVE ON *.* TO 'repl'@'192.168.1.%';
 ```
 
-设定为读锁定模式，此时主库不能进行修改操作。
+设定为读锁定模式，此时主库不能进行任何修改操作。
 
 ```sql
 FLUSH TABLES WITH READ LOCK
