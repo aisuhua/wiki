@@ -42,7 +42,7 @@ mysql> select * from demo;
 5 rows in set (0.00 sec)
 ```
 
-将从库的 id 为 6 的记录修改成与主库一致
+将 id 为 6 的记录修改成与主库一致
 
 ```sql
 update demo set name = lala where id = 6;
