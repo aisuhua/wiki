@@ -14,7 +14,7 @@ INSTALL PLUGIN rpl_semi_sync_master SONAME 'semisync_master.so';
 SHOW PLUGINS
 ```
 
-启用半同步复制功能
+启用半同步复制
 
 ```sql
 SET GLOBAL rpl_semi_sync_master_enabled = 1
@@ -53,7 +53,7 @@ INSTALL PLUGIN rpl_semi_sync_slave SONAME 'semisync_slave.so';
 SHOW PLUGINS
 ```
 
-启用半同步复制功能
+启用半同步复制
 
 ```sql
 SET GLOBAL rpl_semi_sync_slave_enabled = 1
