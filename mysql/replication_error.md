@@ -1,7 +1,7 @@
 
-## Q1
+##  复制出错
 
-该问题一般是由于主库与从库数据不一致造成的。
+主库与从库数据不一致
 
 ```
 Could not execute Delete_rows event on table tutorial.demo; 
@@ -9,7 +9,7 @@ Can't find record in 'demo', Error_code: 1032; handler error HA_ERR_END_OF_FILE;
 the event's master log mysql-bin.000007, end_log_pos 2782
 ```
 
-主库 Binlog 日志位置在 `2782` 的内容
+查看主库 Binlog 日志
 
 ```sh
 shell> mysqlbinlog mysql-bin.000007 --stop-position=2782 -v | tail -30
