@@ -67,3 +67,6 @@ rm /var/lib/mysql/relay-log.info
 
 - [Switching Masters During Failover](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-switch.html)
 
+## 数据库备份
+
+- [Using Replication for Backups](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-backups.html)
