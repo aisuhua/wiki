@@ -27,7 +27,7 @@ slave_parallel_workers
 
 ## 主从切换
 
-确保所有从库都已执行完 Relay Log 中的内容。
+确保所有从库都已执行完 Relay Log 中的内容，此时所有 Slaves 都是一致的。
 
 ```sql
 STOP SLAVE IO_THREAD;
