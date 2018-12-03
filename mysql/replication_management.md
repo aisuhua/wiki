@@ -29,6 +29,12 @@ slave_parallel_workers
 
 ![Alt text](https://dev.mysql.com/doc/refman/5.7/en/images/redundancy-before.png)
 
+假设由于机器故障，主库宕机了，先需要选择一台从库切换成为主库。
+
+```
+Slave1 -> Master
+```
+
 确保所有从库开启了 binlog 日志，并且没有开启 `log-slave-updates`。
 
 ```cnf
