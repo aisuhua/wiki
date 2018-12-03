@@ -27,6 +27,15 @@ slave_parallel_workers
 
 ## 主从切换
 
+确保所有从库开启了 binlog 日志，并且没有开启 `log-slave-updates`。
+
+```cnf
+[mysqld]
+server-id = 2
+log_bin = /var/log/mysql/mysql-bin.log
+log_slave_updates = 0
+```
+
 确保所有从库都已执行完 Relay Log 中的内容，此时所有 Slaves 都是一致的。
 
 ```sql
@@ -39,15 +48,6 @@ SHOW PROCESSLIST;
 ```sql
 STOP SLAVE;
 RESET MASTER;
-```
-
-Slave1 需要确保已开启了 binlog，并且没有开启 `log-slave-updates`。
-
-```cnf
-[mysqld]
-server-id = 2
-log_bin = /var/log/mysql/mysql-bin.log
-log_slave_updates = 0
 ```
 
 将 Slave2 的主库切换为 Slave1。
