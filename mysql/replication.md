@@ -60,7 +60,7 @@ cd /var/lib
 tar cf /tmp/mysql.tar ./mysql
 ```
 
-启动服务
+启动服务，让主库恢复运行。
 
 ```sh
 service mysql start
