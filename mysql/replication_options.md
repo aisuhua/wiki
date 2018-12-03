@@ -52,3 +52,14 @@ replicate-do-table = tutorial.repl1
 ```
 
 - [Replication Slave Options and Variables](https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html)
+
+## slave-skip-errors
+
+自动跳过复制时的错误，可指定需跳过的错误码。
+
+```sql
+[mysqld]
+slave_skip_errors = all
+```
+
+- [option_mysqld_slave-skip-errors](https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html#option_mysqld_slave-skip-errors)
