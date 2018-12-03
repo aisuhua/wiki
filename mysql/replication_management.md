@@ -23,3 +23,4 @@ slave_parallel_workers
 ```
 
 - [sysvar_slave_parallel_type](https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html#sysvar_slave_parallel_type)
+- [Mysql 5.7 主从复制的多线程复制配置方式](https://www.jianshu.com/p/a1ff89122266)
