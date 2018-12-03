@@ -4,7 +4,7 @@
 
 ## 查看复制状态
 
-从库落后于主库的时长
+从库落后主库的时长
 
 ```sql
 mysql> show slave status\G
