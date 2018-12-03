@@ -30,7 +30,7 @@ IfoAXCABAAAALQAAAN4KAAAAAGwAAAAAAAEAAgAC//wGAAAABGxhbGHPAXyt
 ###   @2='lala'
 ```
 
-从库 demo 表中 id 为 6 的行中的 `name` 列数据与主库不一致。
+从库的记录与主库不一致。
 
 ```sql
 mysql> select * from demo;
