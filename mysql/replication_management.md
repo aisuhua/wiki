@@ -27,6 +27,8 @@ slave_parallel_workers
 
 ## 主从切换
 
+![Alt text](https://dev.mysql.com/doc/refman/5.7/en/images/redundancy-before.png)
+
 确保所有从库开启了 binlog 日志，并且没有开启 `log-slave-updates`。
 
 ```cnf
@@ -55,7 +57,7 @@ RESET MASTER;
 ```sql
 STOP SLAVE;
 CHANGE MASTER TO MASTER_HOST = '192.168.1.41';
-START SLAVE ;
+START SLAVE;
 ```
 
 删除 Slave1 的 master.info 和 relay-log.info 文件，否则下次重启还是会按照从库启动。
