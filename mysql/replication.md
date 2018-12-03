@@ -150,6 +150,12 @@ RESET SLAVE
 
 - [how to undo CHANGE MASTER TO](https://stackoverflow.com/questions/31319461/how-to-undo-change-master-to)
 
+停止从库复制行为
+
+```sql
+STOP SLAVE;
+```
+
 ## 参考文献
 
 - [Setting Up Binary Log File Position Based Replication](https://dev.mysql.com/doc/refman/5.7/en/replication-howto.html)
