@@ -31,3 +31,24 @@ set global read_only = 1
 ```
 
 - [sysvar_read_only](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_read_only)
+
+## 指定复制的数据库或表
+
+相关选项
+
+```options
+replicate-do-db
+replicate-ignore-db
+replicate-do-table
+replicate-ignore-table
+replicate-wild-do-table
+```
+
+只复制指定的表
+
+```cnf
+[mysqld]
+replicate-do-table = tutorial.repl1
+```
+
+- [Replication Slave Options and Variables](https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html)
