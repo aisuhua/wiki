@@ -10,3 +10,5 @@
 mysql> show slave status\G
 Seconds_Behind_Master: 0
 ```
+
+- [MySql Replication - slave lagging behind master](https://stackoverflow.com/questions/8547827/mysql-replication-slave-lagging-behind-master)
