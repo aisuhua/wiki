@@ -30,24 +30,18 @@ slave_parallel_workers
 确保所有从库都已执行完 Relay Log 中的内容。
 
 ```sql
-mysql> stop slave IO_THREAD;
-mysql> show processlist;
-+----+-------------+-----------+----------+---------+------+--------------------------------------------------------+------------------+
-| Id | User        | Host      | db       | Command | Time | State                                                  | Info             |
-+----+-------------+-----------+----------+---------+------+--------------------------------------------------------+------------------+
-|  1 | system user |           | NULL     | Connect |  704 | Slave has read all relay log; waiting for more updates | NULL             |
-+----+-------------+-----------+----------+---------+------+--------------------------------------------------------+------------------+
-1 rows in set (0.00 sec)
+STOP SLAVE IO_THREAD;
+SHOW PROCESSLIST;
 ```
 
-将 DB1 重置为主数据库
+将 Slave1 重置为主数据库
 
 ```sql
-stop slave;
-reset master;
+STOP SLAVE;
+RESET MASTER;
 ```
 
-DB1 需要确保已开启了 binlog，并且没有开启 `log-slave-updates`。
+Slave1 需要确保已开启了 binlog，并且没有开启 `log-slave-updates`。
 
 ```cnf
 [mysqld]
@@ -56,20 +50,20 @@ log_bin = /var/log/mysql/mysql-bin.log
 log_slave_updates = 0
 ```
 
-将 DB2 的主库切换为 DB1。
+将 Slave2 的主库切换为 Slave1。
 
 ```sql
-stop slave;
-change master to master_host = '192.168.1.41';
-start slave;
+STOP SLAVE;
+CHANGE MASTER TO MASTER_HOST = '192.168.1.41';
+START SLAVE ;
 ```
 
-删除 DB1 的 master.info 和 relay-log.info 文件，否则下次重启还是会按照从库启动。
+删除 Slave1 的 master.info 和 relay-log.info 文件，否则下次重启还是会按照从库启动。
 
 ```sh
 rm /var/lib/mysql/master.info 
 rm /var/lib/mysql/relay-log.info
 ```
 
-
+- [Switching Masters During Failover](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-switch.html)
 
