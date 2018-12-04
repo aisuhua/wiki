@@ -160,3 +160,4 @@ STOP SLAVE;
 
 - [Setting Up Binary Log File Position Based Replication](https://dev.mysql.com/doc/refman/5.7/en/replication-howto.html)
 - [故障案例：主从同步报错FATAL ERROR: THE SLAVE I/O ...](http://zhangbin.junxilinux.com/?p=793)
+- [MySQL双主一致性架构优化](https://www.cnblogs.com/luckcs/articles/7105206.html)
