@@ -2,7 +2,7 @@
 
 ## 实现过程
 
-sequence 记录了最新的递增 ID，该 ID 用于分布式 ID 最后 10 位的序列号。
+sequence 记录了最新的递增 ID，该 ID 用于计算分布式 ID 的最后 10 位序列号。
 
 ```sql
 create table sequence (
