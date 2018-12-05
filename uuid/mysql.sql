@@ -34,7 +34,7 @@ begin
     set result = result | (seq_id % 1024);
 
     return result;
-end
+end //
 
 create procedure `next_ids`(in seq_name varchar(64), in num int)
 begin
@@ -50,10 +50,10 @@ begin
 
     select * from tb;
     drop table tb;
-end
+end //
 
 delimiter ;
 
 insert into sequence values ('global', 0);
 select next_id('global');
-call next_ids('global', 3);
+call next_ids('global', 1000);
