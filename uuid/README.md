@@ -88,15 +88,15 @@ end
 新增一个序列 sequence。
 
 ```sql
-insert into sequence values ('global', 0);
+insert into sequence values ('default', 0);
 ```
 
 获取一个分布式 ID。
 
 ```sql
-mysql> select next_id('global');
+mysql> select next_id('default');
 +---------------------+
-| next_id('global')   |
+| next_id('default')  |
 +---------------------+
 |     535127205610497 |
 +---------------------+
@@ -106,7 +106,7 @@ mysql> select next_id('global');
 获取多个分布式 ID。
 
 ```sql
-mysql> call next_ids('global', 3);
+mysql> call next_ids('default', 3);
 +-----------------+
 | id              |
 +-----------------+
