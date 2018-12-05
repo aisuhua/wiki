@@ -85,7 +85,7 @@ end
 
 ## 初始化
 
-新增一个序列 sequence。
+新增 default sequence。
 
 ```sql
 insert into sequence values ('default', 0);
