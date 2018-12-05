@@ -12,7 +12,7 @@ Instagram unique ID 的组成:
 
 ### sequence
 
-sequence 记录了最新的递增 ID，该 ID 用于计算分布式 ID 的最后 10 位序列号。
+记录了最新的 ID，用于计算分布式 ID 的最后 10 位序列号。
 
 ```sql
 create table sequence (
@@ -24,7 +24,7 @@ create table sequence (
 
 ### nextval
 
-`nextval` 更新 `sequence` 表并返回最新的值。
+更新 `sequence` 表并返回最新的值。
 
 ```sql
 create function nextval (sequence_name varchar(64)) returns bigint
@@ -38,7 +38,7 @@ end
 
 ### next_id
 
-`next_id` 函数用于生成分布式 ID。
+生成分布式 ID
 
 ```sql
 create function `next_id`(seq_name varchar(64)) returns bigint
@@ -72,7 +72,7 @@ end
 
 ### next_ids
 
-`next_ids` 存储过程用于批量生成分布式 ID。
+批量生成分布式 ID
 
 ```sql
 create procedure `next_ids`(in seq_name varchar(64), in num int)
