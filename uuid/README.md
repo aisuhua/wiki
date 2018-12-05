@@ -171,3 +171,5 @@ echo date('Y-m-d H:i:s', substr($cur_millis + 1543939200000, 0, -3)), PHP_EOL;
 - [分布式ID生成器](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651960245&idx=1&sn=5cef3d8ca6a3e6e94f61e0edaf985d11&chksm=bd2d06698a5a8f7fc89056af619b9b7e79b158bceb91bdeb776475bc686721e36fb925904a67&scene=21#wechat_redirect)
 - [分布式系统中唯一 ID 的生成方法 ](http://einverne.github.io/post/2017/11/distributed-system-generate-unique-id.html)
 - [How many years of millisecond timestamps can be represented by 41 bits?](https://stackoverflow.com/questions/29109807/how-many-years-of-millisecond-timestamps-can-be-represented-by-41-bits)
+- [Leaf——美团点评分布式ID生成系统](https://tech.meituan.com/MT_Leaf.html)
+- [分布式架构系统生成全局唯一序列号的一个思路](https://mp.weixin.qq.com/s/F7WTNeC3OUr76sZARtqRjw)
