@@ -1,4 +1,3 @@
-
 create table sequence (
   `name` varchar(64) not null,
   `value` bigint unsigned not null,
@@ -54,6 +53,6 @@ end //
 
 delimiter ;
 
-insert into sequence values ('global', 0);
-select next_id('global');
-call next_ids('global', 1000);
+insert into sequence values ('default', 0);
+select next_id('default');
+call next_ids('default', 1000);
