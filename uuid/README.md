@@ -1,4 +1,4 @@
-使用 MySQL 来生成分布式的 ID。
+参考 Instagram，使用 MySQL 来生成分布式的 ID。
 
 ## 实现过程
 
