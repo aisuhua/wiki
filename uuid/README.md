@@ -1,4 +1,4 @@
-# Sharding ids in MySQL
+# Sharding & ids using MySQL
 
 参考 [Instagram](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c)，使用 MySQL 来生成分布式的 ID。
 
