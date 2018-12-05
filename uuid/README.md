@@ -91,6 +91,8 @@ end
 insert into sequence values ('default', 0);
 ```
 
+## 使用
+
 获取一个分布式 ID。
 
 ```sql
