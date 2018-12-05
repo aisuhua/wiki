@@ -68,3 +68,91 @@ begin
     drop table tb;
 end
 ```
+
+## 初始化
+
+先新增一个序列名称
+
+```sql
+insert into sequence values ('global', 0);
+```
+
+获取一个分布式 ID。
+
+```sql
+mysql> select next_id('global');
++---------------------+
+| next_id('global')   |
++---------------------+
+|     535127205610497 |
++---------------------+
+1 row in set (0.00 sec)
+```
+
+获取多个分布式 ID。
+
+```sql
+mysql> call next_ids('global', 3);
++-----------------+
+| id              |
++-----------------+
+| 535675904459778 |
+| 535675904459779 |
+| 535675912848388 |
++-----------------+
+3 rows in set (0.01 sec)
+```
+
+## 其他
+
+对分布式的 ID 进行拆分和分析。
+
+```php
+<?php
+
+date_default_timezone_set("PRC");
+
+$id = '535127205610497';
+$str = base_convert($id, 10, 2);
+echo $str, '(', strlen($str), ')', PHP_EOL;
+
+$cur_millis = substr($str, 0, -23);
+$shard_id = substr($str, -23, -10);
+$seq_id = substr($str, -10);
+
+echo $cur_millis, '(', strlen($cur_millis), ')', PHP_EOL;
+echo $shard_id, '(', strlen($shard_id), ')', PHP_EOL;
+echo $seq_id, '(', strlen($seq_id), ')', PHP_EOL;
+
+$cur_millis = base_convert($cur_millis, 2, 10);
+$shard_id = base_convert($shard_id, 2, 10);
+$seq_id = base_convert($seq_id, 2, 10);
+
+echo $cur_millis, PHP_EOL;
+echo $shard_id, PHP_EOL;
+echo $seq_id, PHP_EOL;
+
+echo date('Y-m-d H:i:s', substr($cur_millis + 1543939200000, 0, -3)), PHP_EOL;
+```
+
+上面输出结果如下：
+
+```
+1111001101011001000000011000000000000010000000001(49)
+11110011010110010000000110(26)
+0000000000001(13)
+0000000001(10)
+63792134
+1
+1
+2018-12-05 17:43:12
+```
+
+## 参考文献
+
+- [Sharding & IDs at Instagram](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c)
+- [A BETTER ID GENERATOR FOR POSTGRESQL](https://rob.conery.io/2014/05/28/a-better-id-generator-for-postgresql/)
+- [Ticket Servers: Distributed Unique Primary Keys on the Cheap](http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/)
+- [PostgreSQL - 序列（Sequence）](https://n3xtchen.github.io/n3xtchen/postgresql/2015/04/10/postgresql-sequence)
+- [分布式ID生成器](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651960245&idx=1&sn=5cef3d8ca6a3e6e94f61e0edaf985d11&chksm=bd2d06698a5a8f7fc89056af619b9b7e79b158bceb91bdeb776475bc686721e36fb925904a67&scene=21#wechat_redirect)
+
