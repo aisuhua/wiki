@@ -10,6 +10,8 @@ Instagram unique ID 的组成:
 
 ## 实现过程
 
+### sequence
+
 sequence 记录了最新的递增 ID，该 ID 用于计算分布式 ID 的最后 10 位序列号。
 
 ```sql
@@ -19,6 +21,8 @@ create table sequence (
   primary key (`name`)
 ) engine=innodb;
 ```
+
+### nextval
 
 `nextval` 更新 `sequence` 表并返回最新的值。
 
@@ -31,6 +35,8 @@ begin
     return result;
 end
 ```
+
+### next_id
 
 `next_id` 函数用于生成分布式 ID。
 
@@ -63,6 +69,8 @@ end
 - 64 位的分布式 ID 还有更多的组合方式，可以参考文献「分布式ID生成器」。
 - 41 位用于记录毫秒数，能够使用大概 69 年。
 - our_epoch 起始时间可以自定义，一般为系统上线的时间。
+
+### next_ids
 
 `next_ids` 存储过程用于批量生成分布式 ID。
 
