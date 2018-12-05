@@ -1,5 +1,11 @@
 参考 Instagram，使用 MySQL 来生成分布式的 ID。
 
+Instagram unique ID 的组成:
+
+- 41 bits 表示 Timestamp (毫秒), 能自定义起始时间 epoch
+- 13 bits 表示 每个 logic Shard 的代号 (最大支持 8 x 1024 个 logic Shards)
+- 10 bits 表示 sequence number; 每个 Shard 每毫秒最多可以生成 1024 个 ID
+
 ## 实现过程
 
 sequence 记录了最新的递增 ID，该 ID 用于计算分布式 ID 的最后 10 位序列号。
