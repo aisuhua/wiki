@@ -75,7 +75,7 @@ begin
     start transaction;
     while counter < num do
         insert into tb select next_id(seq_name);
-        set counter = counter +1;
+        set counter = counter + 1;
     end while;
     commit;
 
