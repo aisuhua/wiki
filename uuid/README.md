@@ -18,7 +18,7 @@ create table sequence (
 ) engine=innodb;
 ```
 
-`nextval` 更新 `sequence` 表并返回最新递增的 ID。
+`nextval` 更新 `sequence` 表并返回最新的值。
 
 ```sql
 create function nextval (sequence_name varchar(64)) returns bigint
