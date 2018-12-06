@@ -85,6 +85,7 @@ show procedure status where db = 'test'\G
 ```
 
 - [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](https://dev.mysql.com/doc/refman/5.7/en/create-procedure.html)
+- [MySQL参数log_bin_trust_function_creators介绍](http://www.cnblogs.com/kerrycode/p/7641835.html)
 
 ## 分布式 ID 的实现
 
