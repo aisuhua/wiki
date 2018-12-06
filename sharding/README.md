@@ -1,7 +1,7 @@
 ## 分布式 ID 的生成方式
 
 - 使用数据库的 auto_increment 来生成全局唯一递增 ID
-- 批量 ID 生成服务；
+- [批量 ID 生成服务](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651960223&idx=1&sn=121716347174eedd6636b1c2c0b96047)；
 - Redis 生成 ID
 - [UUID(GUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 - 取当前毫秒数（微秒数）
