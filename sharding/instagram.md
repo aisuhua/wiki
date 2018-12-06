@@ -1,4 +1,4 @@
-# Sharding & ids using MySQL
+# 在 MySQL 中实现类似 Instagram 的分布式 ID
 
 参考 [Instagram](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c)，使用 MySQL 来生成分布式的 ID。
 
@@ -181,7 +181,7 @@ echo date('Y-m-d H:i:s', substr($cur_millis + 1543939200000, 0, -3)), PHP_EOL;
 - [A BETTER ID GENERATOR FOR POSTGRESQL](https://rob.conery.io/2014/05/28/a-better-id-generator-for-postgresql/)
 - [Ticket Servers: Distributed Unique Primary Keys on the Cheap](http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/)
 - [PostgreSQL - 序列（Sequence）](https://n3xtchen.github.io/n3xtchen/postgresql/2015/04/10/postgresql-sequence)
-- [分布式ID生成器](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651960245&idx=1&sn=5cef3d8ca6a3e6e94f61e0edaf985d11&chksm=bd2d06698a5a8f7fc89056af619b9b7e79b158bceb91bdeb776475bc686721e36fb925904a67&scene=21#wechat_redirect)
+- [分布式ID生成器 | 架构师之路](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651960245&idx=1&sn=5cef3d8ca6a3e6e94f61e0edaf985d11&chksm=bd2d06698a5a8f7fc89056af619b9b7e79b158bceb91bdeb776475bc686721e36fb925904a67&scene=21#wechat_redirect)
 - [分布式系统中唯一 ID 的生成方法 ](http://einverne.github.io/post/2017/11/distributed-system-generate-unique-id.html)
 - [How many years of millisecond timestamps can be represented by 41 bits?](https://stackoverflow.com/questions/29109807/how-many-years-of-millisecond-timestamps-can-be-represented-by-41-bits)
 - [Leaf——美团点评分布式ID生成系统](https://tech.meituan.com/MT_Leaf.html)
