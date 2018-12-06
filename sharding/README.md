@@ -21,3 +21,4 @@
 - [分布式ID生成器](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651960245&idx=1&sn=5cef3d8ca6a3e6e94f61e0edaf985d11)
 - [分布式系统中唯一 ID 的生成方法](http://einverne.github.io/post/2017/11/distributed-system-generate-unique-id.html)
 - [分布式架构系统生成全局唯一序列号的一个思路](https://mp.weixin.qq.com/s/F7WTNeC3OUr76sZARtqRjw)
+- [UUID 简介](https://jin-yang.github.io/post/uuid-introduce.html)
