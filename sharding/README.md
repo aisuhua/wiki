@@ -8,8 +8,8 @@
 - Twitter Snowflake
 - [Flickr](http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/)
 - [Instagram](https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c)
-- 还有其他一些方案，比如京东淘宝等电商的订单号生成
 
+还有其他一些方案，比如京东淘宝等电商的订单号生成。
 因为订单号和用户 ID 在业务上的区别，订单号尽可能要多些冗余的业务信息，比如：
 
 - 滴滴：时间 + 起点编号 + 车牌号
