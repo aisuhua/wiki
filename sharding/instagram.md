@@ -36,7 +36,7 @@ begin
 end
 ```
 
-- nextval 还可以使用 `replace` 方法实现，可参考 [Flickr](http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/) 的做法。
+- ID 的递增还可以使用 `replace` 方法实现，可参考 [Flickr](http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/) 的做法。
 
 ### next_id
 
