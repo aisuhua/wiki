@@ -3,7 +3,7 @@
 - 使用数据库的 auto_increment 来生成全局唯一递增 ID
 - 批量 ID 生成服务；
 - Redis 生成 ID
-- UUID/GUID
+- UUID(GUID)
 - 取当前毫秒数（微秒数）
 - Twitter Snowflake
 - [Flickr](http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/)
