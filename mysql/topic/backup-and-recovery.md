@@ -12,6 +12,8 @@
 - 快照备份；
   - MySQL 本身并不支持，需借助如 LVM, or ZFS 等外部工具才能实现；
 
+## 物理备份
+
 对于已经停止服务的数据库，无论对于 MyISAM 还是 InnoDB 类型的表都可以进行物理备份，但它的局限性在于需要停止 MySQL 服务，这样会造成业务中断。以下是物理备份的操作过程，假设 MySQL 的数据目录在 `/var/lib/mysql`。
 
 ```
@@ -40,3 +42,33 @@ scp /tmp/mysql.tar ...
 ```
 UNLOCK TABLE;
 ```
+
+## 在线备份
+
+对于 InnoDB 类型的表来说，可以使用 `mysqldump` 实现在线备份而不用锁表，从而不影响线上业务。该命令也可以用来备份 MyISAM 表，但是备份期间这些不支持事务的表不能发生数据修改，否则将无法保证数据的一致性。下面是使用 `mysqldump` 在线备份 InnoDB 表的示例：
+
+```
+shell> mysqldump --single-transaction --flush-logs --master-data=2 \
+  --all-databases > backup_sunday_1_PM.sql
+```
+
+- `--single-transaction` 该选项用于创建一个一致性的快照，保证备份数据的一致性。
+- `--flush-logs` 在备份完成后刷新 binlog 日志并生成新的日志文件，方便日后进行增量备份和数据恢复。
+- `--master-data=2` 将 binlog 日志的信息以注释形式写入到备份文件中。
+
+使用了 `--master-data=2` 后，备份后的文件中将包含 binlog 日志文件名和位置，如下所示：
+
+```
+-- Position to start replication or point-in-time recovery from
+-- CHANGE MASTER TO MASTER_LOG_FILE='gbichot2-bin.000007',MASTER_LOG_POS=4;
+```
+
+下次使用该全量备份文件进行数据恢复时，将从该位置开始重做备份后发生的修改，以达到最完整的数据恢复。其恢复过程如下：
+
+```
+mysql < backup_sunday_1_PM.sql
+mysqlbinlog gbichot2-bin.000007 gbichot2-bin.000008 | mysql
+```
+
+- [Point-in-Time (Incremental) Recovery Using the Binary Log](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery.html)
+
