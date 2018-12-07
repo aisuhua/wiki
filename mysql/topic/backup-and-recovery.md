@@ -80,7 +80,7 @@ mysqlbinlog gbichot2-bin.000007 gbichot2-bin.000008 | mysql
 FLUSH TABLES tbl_list WITH READ LOCK;
 ```
 
-然后备份 MyISAM 表，因为 `--single-transaction` 只对支持事务的表有效，所以这里不需要该选项。
+然后备份 MyISAM 表，因为 `--single-transaction` 只对支持事务的表有效，所以这里不需要加该选项。
 
 ```
 mysqldump --flush-logs --master-data=2 --all-databases > backup_sunday_1_PM.sql
