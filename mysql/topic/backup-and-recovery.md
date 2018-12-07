@@ -86,3 +86,27 @@ mysql> FLUSH TABLES tbl_list WITH READ LOCK;
 mysqldump --flush-logs --master-data=2 --all-databases > backup_sunday_1_PM.sql
 ```
 
+## 故障恢复
+
+如果是由于 SQL 语句的误操作造成数据或表被删除的情况下，可以结合全量备份和 binlog 日志进行数据恢复。因为 binlog 日志的重要性，除了要进行全量的数据备份外，也必须定期进行 binlog 日志的备份（增量备份）。在存储上，MySQL 的数据和 binlog 最好存在不同的磁盘上，因为在磁盘坏掉的情况下，还可以根据上一次的全量备份和服务器上的 binlog 日志进行数据恢复。
+
+使用 binlog 进行数据恢复，有基于时间的恢复和基于位置的恢复。
+
+基于时间的恢复：
+
+```
+mysqlbinlog --stop-datetime="2005-04-20 9:59:59" \
+  /var/log/mysql/bin.123456 | mysql -u root -p
+mysqlbinlog --start-datetime="2005-04-20 10:01:00" \
+  /var/log/mysql/bin.123456 | mysql -u root -p
+```
+
+基于位置的恢复：
+
+```
+mysqlbinlog --stop-position=368312 /var/log/mysql/bin.123456 | mysql -u root -p
+mysqlbinlog --start-position=368315 /var/log/mysql/bin.123456 | mysql -u root -p
+```
+
+- [Point-in-Time Recovery Using Event Times](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery-times.html)
+- [Point-in-Time Recovery Using Event Positions](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery-positions.html)
