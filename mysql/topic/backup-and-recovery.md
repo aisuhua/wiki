@@ -12,8 +12,8 @@
 - 快照备份；
   - MySQL 本身并不支持，需借助如 LVM, or ZFS 等外部工具才能实现；
 
-对于已经停止服务的数据库，无论对于 MyISAM 还是 InnoDB 类型的表都可以采用以下方式备份，
-假设 MySQL 的数据目录在 `/var/lib/mysql`，但它的局限性在于需要停止 MySQL 服务，这样会造成业务中断。
+对于已经停止服务的数据库，无论对于 MyISAM 还是 InnoDB 类型的表都可以采用以下方式备份，但它的局限性在于需要停止 MySQL 服务，这样会造成业务中断。
+假设 MySQL 的数据目录在 `/var/lib/mysql`。
 
 ```sh
 mysqladmin shutdown
