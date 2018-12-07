@@ -21,3 +21,23 @@ tar cf /tmp/mysql.tar ./mysql
 scp /tmp/mysql.tar ...
 ```
 
+另外，MyISAM 类型的表时也可以在锁表后进行物理备份而无需停止服务，但是此时客户端无法对表进行更新。
+以下是执行锁表并刷新的操作：
+
+```
+FLUSH TABLES tbl_list WITH READ LOCK;
+```
+
+然后对数据文件进行备份。
+
+```
+cd /var/lib
+tar cf /tmp/mysql.tar ./mysql
+scp /tmp/mysql.tar ...
+```
+
+备份完成后，需要进行解锁。
+
+```
+
+```
