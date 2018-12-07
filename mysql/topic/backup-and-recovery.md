@@ -63,7 +63,7 @@ shell> mysqldump --single-transaction --flush-logs --master-data=2 \
 -- CHANGE MASTER TO MASTER_LOG_FILE='gbichot2-bin.000007',MASTER_LOG_POS=4;
 ```
 
-下次使用该备份文件进行数据恢复时，将从该位置开始重做备份后发生的修改，以达到最完整的数据恢复。其恢复过程如下：
+下次使用该备份文件进行数据恢复时，将从该文件开始重做备份后发生的修改，以达到最完整的数据恢复。其恢复过程如下：
 
 ```
 mysql < backup_sunday_1_PM.sql
