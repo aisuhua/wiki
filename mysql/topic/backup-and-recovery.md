@@ -72,3 +72,15 @@ mysqlbinlog gbichot2-bin.000007 gbichot2-bin.000008 | mysql
 
 - [Point-in-Time (Incremental) Recovery Using the Binary Log](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery.html)
 
+为了保证数据的一致性，使用 `mysqldump` 对 MyISAM 表进行备份时可以先锁表，跟 MyISAM 表的物理备份前要锁表是一样的。
+
+```
+mysql> FLUSH TABLES tbl_list WITH READ LOCK;
+```
+
+然后备份 MyISAM 表，因为 `--single-transaction` 只对支持事务的表才有效，所以这里不需要提供。
+
+```
+mysqldump --flush-logs --master-data=2 --all-databases > backup_sunday_1_PM.sql
+```
+
