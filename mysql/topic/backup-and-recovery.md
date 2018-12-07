@@ -35,7 +35,7 @@ tar cf /tmp/mysql.tar ./mysql
 scp /tmp/mysql.tar ...
 ```
 
-备份完成后，需要对表解除锁定。
+备份完成后，需要对表解除锁定，让数据库恢复正常服务。
 
 ```
 UNLOCK TABLE;
