@@ -72,7 +72,7 @@ mysql < backup_sunday_1_PM.sql
 mysqlbinlog gbichot2-bin.000007 gbichot2-bin.000008 | mysql
 ```
 
-- [Point-in-Time (Incremental) Recovery Using the Binary Log](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery.html)
+对于如何使用 binlog 恢复数据，官方有十分详尽的说明：[Point-in-Time (Incremental) Recovery Using the Binary Log](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery.html)
 
 为了保证数据的一致性，使用 `mysqldump` 对 MyISAM 表进行备份时应先锁表，跟 MyISAM 表的物理备份前要锁表是一样的。
 
