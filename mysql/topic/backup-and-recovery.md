@@ -55,7 +55,7 @@ shell> mysqldump --single-transaction --flush-logs --master-data=2 \
 ```
 
 - `--single-transaction` 该选项用于创建一个一致性的快照，保证备份数据的一致性。
-- `--flush-logs` 在备份完成后刷新 binlog 日志，从而使 binlog 写入新的日志文件，方便日后进行增量备份和数据恢复。
+- `--flush-logs` 在备份完成后刷新 binlog 日志，从而产生新的日志文件，方便日后进行增量备份和数据恢复。
 - `--master-data=2` 将 binlog 日志的信息以注释形式写入到备份文件中。
 
 使用了 `--master-data=2` 后，备份后的文件中将包含 binlog 日志文件名和位置，如下所示：
