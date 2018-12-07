@@ -108,3 +108,7 @@ mysqlbinlog --start-position=368315 /var/log/mysql/bin.123456 | mysql -u root -p
 
 - [Point-in-Time Recovery Using Event Times](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery-times.html)
 - [Point-in-Time Recovery Using Event Positions](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery-positions.html)
+
+## 参考文献
+
+- [Backup and Recovery](https://dev.mysql.com/doc/refman/5.7/en/backup-and-recovery.html) 官方文档对备份和恢复做了详细的说明，应视作日后主要的参考来源。
