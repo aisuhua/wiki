@@ -90,7 +90,12 @@ mysqldump --flush-logs --master-data=2 --all-databases > backup_sunday_1_PM.sql
 
 由于 SQL 语句的误操作或者数据盘损坏等原因造成的数据丢失，可以使用全量备份和 binlog 日志进行数据恢复。因为 binlog 比较重要，所以除了要进行全量的数据备份外，也应定期备份 binlog 日志（增量备份）。在数据存储上，MySQL 的数据和 binlog 日志最好存在不同的磁盘上，因为在数据盘损坏的情况下，还可以根据上一次的全量备份和服务器上的 binlog 日志进行数据恢复。
 
-使用 binlog 进行数据恢复，有基于时间的恢复和基于位置的恢复。
+使用 binlog 进行数据恢复，有基于时间的恢复和基于位置的恢复。如果由于误操作导致数据丢失，则先要将该 SQL 语句从 binlog 日志找出来并进行删除，或者在重做时跳过该语句。要想快速找出误操作 SQL 语句所在的位置，可以先将误操作时间前后的日志导入到文件，然后进行分析，比如该操作发生在 `10:00` 左右，则可使用以下方法：
+
+```
+mysqlbinlog --start-datetime="2005-04-20 9:55:00" --stop-datetime="2005-04-20 10:05:00" \
+  /var/log/mysql/bin.123456 > /tmp/mysql_restore.sql
+```
 
 基于时间的恢复：
 
