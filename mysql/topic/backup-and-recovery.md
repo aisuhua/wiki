@@ -77,7 +77,7 @@ mysqlbinlog gbichot2-bin.000007 gbichot2-bin.000008 | mysql
 为了保证数据的一致性，使用 `mysqldump` 对 MyISAM 表进行备份前应先锁表，跟它的物理备份前要锁表一样。
 
 ```
-mysql> FLUSH TABLES tbl_list WITH READ LOCK;
+FLUSH TABLES tbl_list WITH READ LOCK;
 ```
 
 然后备份 MyISAM 表，因为 `--single-transaction` 只对支持事务的表有效，所以这里不需要该选项。
