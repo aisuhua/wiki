@@ -18,5 +18,6 @@
 mysqladmin shutdown
 cd /var/lib
 tar cf /tmp/mysql.tar ./mysql
+scp /tmp/mysql.tar ...
 ```
 
