@@ -95,10 +95,8 @@ mysqldump --flush-logs --master-data=2 --all-databases > backup_sunday_1_PM.sql
 基于时间的恢复：
 
 ```
-mysqlbinlog --stop-datetime="2005-04-20 9:59:59" \
-  /var/log/mysql/bin.123456 | mysql -u root -p
-mysqlbinlog --start-datetime="2005-04-20 10:01:00" \
-  /var/log/mysql/bin.123456 | mysql -u root -p
+mysqlbinlog --stop-datetime="2005-04-20 9:59:59" /var/log/mysql/bin.123456 | mysql -u root -p
+mysqlbinlog --start-datetime="2005-04-20 10:01:00" /var/log/mysql/bin.123456 | mysql -u root -p
 ```
 
 基于位置的恢复：
