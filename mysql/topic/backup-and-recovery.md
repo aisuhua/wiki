@@ -12,6 +12,8 @@
 - 快照备份；
   - MySQL 本身并不支持，需借助如 LVM, or ZFS 等外部工具才能实现；
 
+官方文档对此有详细的介绍：[Database Backup Methods](https://dev.mysql.com/doc/refman/5.7/en/backup-methods.html)
+
 ## 物理备份
 
 对于已经停止服务的数据库，无论对于 MyISAM 还是 InnoDB 类型的表都可以进行物理备份，但它的局限性在于需要停止 MySQL 服务，这样会造成业务中断。以下是物理备份的操作过程，假设 MySQL 的数据目录在 `/var/lib/mysql`。
@@ -78,7 +80,7 @@ mysqlbinlog gbichot2-bin.000007 gbichot2-bin.000008 | mysql
 mysql> FLUSH TABLES tbl_list WITH READ LOCK;
 ```
 
-然后备份 MyISAM 表，因为 `--single-transaction` 只对支持事务的表才有效，所以这里不需要提供。
+然后备份 MyISAM 表，因为 `--single-transaction` 只对支持事务的表有效，所以这里不需要该选项。
 
 ```
 mysqldump --flush-logs --master-data=2 --all-databases > backup_sunday_1_PM.sql
