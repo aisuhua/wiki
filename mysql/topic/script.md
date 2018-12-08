@@ -1,0 +1,2 @@
+- [Simple shell script to backup MySQL databases](https://blog.sleeplessbeastie.eu/2012/11/22/simple-shell-script-to-backup-mysql-databases/)
+- [db_backup.sh](https://gist.github.com/NARKOZ/642511)
