@@ -54,9 +54,12 @@ shell> mysqldump --single-transaction --flush-logs --master-data=2 \
   --all-databases > backup_sunday_1_PM.sql
 ```
 
-- `--single-transaction` 该选项用于创建一个一致性的快照，保证备份数据的一致性。
+- `--single-transaction` 该选项用于创建一个一致性的快照，保证备份数据的一致性。当启用该参数进行备份时，要确保没有任何其他的 DDL 语句执行，因为一致性读并不能隔离 DDL 操作。
 - `--flush-logs` 在备份完成后刷新 binlog 日志，从而产生新的日志文件，方便日后进行增量备份和数据恢复。
 - `--master-data=2` 将 binlog 日志的信息以注释形式写入到备份文件中。
+- `--envents` 备份事件调度器，默认关闭。
+- `--routines` 备份存储过程和函数，默认关闭。
+- `--triggers` 备份触发器，默认开启。
 
 使用了 `--master-data=2` 后，备份后的文件中将包含 binlog 日志文件名和位置信息，如下所示：
 
