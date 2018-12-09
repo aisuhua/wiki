@@ -45,7 +45,15 @@ mysql> show slave status\G
               Relay_Log_Space: 2763
               Until_Condition: None
               
+# 需记录下此时的 binlog 位置，进行数据恢复时需要用到
+Relay_Master_Log_File: mysql-bin.000001
+Exec_Master_Log_Pos: 3640
+              
+# 开始备份
+mysqldump --all-databases > fulldb.dump
 
+# 备份完成后释放锁
+unlock tables;
 ```
 
 - [Using Replication for Backups](https://dev.mysql.com/doc/mysql-backup-excerpt/5.7/en/replication-solutions-backups.html)
