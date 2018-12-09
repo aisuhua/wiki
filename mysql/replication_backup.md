@@ -56,4 +56,6 @@ mysqldump --all-databases > fulldb.dump
 unlock tables;
 ```
 
+以上过程可以参考 [mydumper](https://github.com/maxbube/mydumper) 的实现过程。
+
 - [Using Replication for Backups](https://dev.mysql.com/doc/mysql-backup-excerpt/5.7/en/replication-solutions-backups.html)
