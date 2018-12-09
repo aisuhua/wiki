@@ -16,7 +16,7 @@ mysql> show processlist;
 +----+-------------+-----------+----------+---------+------+----------------------------------+------------------+
 3 rows in set (0.00 sec)
 
-# 复制状态显示  Master_Log_File 和 Read_Master_Log_Pos 都与主库保持一致，因为 IO 线程能正常工作
+# 复制状态显示  Master_Log_File 和 Read_Master_Log_Pos 都与主库保持一致，因为 IO 线程能正常接收 binlog 日志。
 # 而 Exec_Master_Log_Pos 说明有一部分 relay log 还没有执行。
 mysql> show slave status\G
 *************************** 1. row ***************************
