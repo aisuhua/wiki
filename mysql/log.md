@@ -168,18 +168,6 @@ binlog_do_db = test
 binlog_ignore_db = tutorial
 ```
 
-删除所有日志，新日志编号从 000001 开始。
-
-```sql
-mysql> reset master
-```
-
-刷新日志，将会产生一个新的日志
-
-```
-mysql> flush logs
-```
-
 日志格式
 
 ```log
@@ -218,6 +206,31 @@ COMMIT/*!*/;
 ```
 
 - [The Binary Log](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html)
+
+### 常用操作
+
+刷新日志，将会产生一个新的日志
+
+```
+mysql> flush logs
+```
+
+删除所有日志，新日志编号从 000001 开始。
+
+```sql
+mysql> reset master
+```
+
+清理日志 mysql-bin.000003 之前的旧日志
+
+```
+shell> ls /var/log/mysql
+mysql-bin.000001  mysql-bin.000002  mysql-bin.000003  mysql-bin.000004  mysql-bin.index
+mysql> purge binary logs to 'mysql-bin.000003';
+shell> mysql-bin.000003  mysql-bin.000004  mysql-bin.index
+```
+
+- [PURGE BINARY LOGS Syntax](https://dev.mysql.com/doc/refman/5.7/en/purge-binary-logs.html)
 
 ### mysqlbinlog
 
