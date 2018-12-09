@@ -174,6 +174,12 @@ binlog_ignore_db = tutorial
 mysql> reset master
 ```
 
+刷新日志，将会产生一个新的日志
+
+```
+mysql> flush logs
+```
+
 日志格式
 
 ```log
