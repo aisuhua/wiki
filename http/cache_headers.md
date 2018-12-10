@@ -6,7 +6,7 @@
 
 ### 首次请求 style.css
 
-```http
+```
 GET /style.css HTTP/1.1
 Host: demo.aisuhua.com
 Connection: keep-alive
