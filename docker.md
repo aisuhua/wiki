@@ -57,7 +57,7 @@ shell> docker ps -a
 创建并运行容器
 
 ```sh
-shell> docker run --name demo -v /www/web:/www/web -p 80:80 --dns 223.5.5.5 -i -t ubuntu /bin/bash
+shell> docker run -v /www/web:/www/web -p 80:80 --dns 223.5.5.5 --name demo ubuntu
 ```
 
 查看容器信息
