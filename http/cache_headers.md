@@ -50,7 +50,7 @@ Cache-Control: max-age=86400
 
 ![Alt text](img/cache_style_0.jpg)
 
-第二次请求 style.css 时，浏览器没有向服务器发起请求，而是直接读取本地缓存。
+浏览器没有向服务器发起请求，而是直接读取本地缓存。
 
 ![Alt text](img/cache_style_1.jpg)
 
