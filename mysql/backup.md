@@ -98,4 +98,5 @@ mysqldump --all-databases > all.sql
 ```
 
 - [mysqldump — A Database Backup Program](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html)
+- [MySQL备份恢复：单线程mysqldump工具原理](http://www.ywnds.com/?p=8059)
 
