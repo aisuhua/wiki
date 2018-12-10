@@ -142,7 +142,7 @@ X-Powered-By: aisuhua
 X-Server-Name: HN1_wp-web1
 ```
 
-浏览器询问服务器文件的 hash 值是否一致或者文件是否发生过修改。
+浏览器会带上文件的 hash 和最近一次修改时间，用于给服务器校验文件是否发生修改。
 
 ```
 If-None-Match: "5c0dde83-66"
