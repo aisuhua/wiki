@@ -178,3 +178,31 @@ Accept-Ranges: bytes
 </body>
 </html>
 ```
+
+## 在 Nginx 中实现强缓存
+
+默认请求下 Nginx 对于静态页面就已经开启了协商缓存。
+
+```
+http {
+    etag on;
+}
+```
+
+对静态资源使用强缓存，默认缓存 24 小时。
+
+```
+server {
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
+        expires 24h;
+    }
+}
+```
+
+- [Module ngx_http_headers_module](http://nginx.org/en/docs/http/ngx_http_headers_module.html)
+
+## 参考文献
+
+- [HTTP 缓存机制一二三](http://web.jobbole.com/92773/)
+- [彻底弄懂HTTP缓存机制及原理](https://www.cnblogs.com/chenqf/p/6386163.html)
+- [浅谈浏览器http的缓存机制](https://www.cnblogs.com/vajoy/p/5341664.html)
