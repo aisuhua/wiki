@@ -2,7 +2,9 @@
 
 ## 强缓存
 
-无须验证的缓存策略，主要利用 `Expires` 和 `Cache-Control` 两个响应头来实现。其中 `Expires` 是 HTTP 1.0 版本的产物。
+无须验证的缓存策略，主要利用 `Expires` 和 `Cache-Control` 两个响应头来实现。
+
+其中 `Expires` 是 HTTP 1.0 版本的产物。
 
 ### 首次请求 style.css
 
