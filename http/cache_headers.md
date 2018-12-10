@@ -181,7 +181,7 @@ Accept-Ranges: bytes
 
 ## 在 Nginx 中实现强缓存
 
-默认请求下 Nginx 对于静态页面就已经开启了协商缓存。
+默认情况下 Nginx 对于静态页面就已经开启了协商缓存。
 
 ```
 http {
