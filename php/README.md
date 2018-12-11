@@ -143,7 +143,7 @@ shell> service php7.2-fpm reload
 shell> php -i | grep extension_dir
 ```
 
-启用 PHP 扩展，该方法跟上面增加软连接的方式效果一样。
+启用 PHP 扩展，该方法跟添加软连接的效果一样。
 
 ```sh
 phpenmod -v 7.2 yar
