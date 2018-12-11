@@ -18,5 +18,5 @@ git config --global user.email 1079087531@qq.com
 清理未加入版本的文件
 
 ```sh
-shell> git clean -d -f ""
+git clean -d -f ""
 ```
