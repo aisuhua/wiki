@@ -143,6 +143,23 @@ shell> service php7.2-fpm reload
 shell> php -i | grep extension_dir
 ```
 
+启用 PHP 扩展，该方法跟上面增加软连接的方式效果一样。
+
+```sh
+phpenmod -v 7.2 yar
+phpenmod -s cli yar
+phpenmod -s fpm yar
+```
+
+停用 PHP 扩展
+
+```sh
+phpdismod -v 7.2 yar
+phpenmod -s cli yar
+```
+
+- [How to Enable/Disable PHP Modules on Ubuntu 18.04 & 16.04](https://tecadmin.net/enable-disable-php-modules-ubuntu/)
+
 ## 内置服务器
 
 基本使用
