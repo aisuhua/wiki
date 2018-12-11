@@ -110,6 +110,12 @@ shell> ln -s /etc/php/7.2/mods-available/couchbase.ini /etc/php/7.2/fpm/conf.d/2
 
 - [Install and Start Using the PHP SDK with Couchbase Server](https://docs.couchbase.com/php-sdk/2.6/start-using-sdk.html)
 
+#### Phalcon
+
+```sh
+shell> apt-get install php-phalcon
+```
+
 ## 修改配置
 
 可上传的最大文件大小
