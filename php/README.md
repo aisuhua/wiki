@@ -174,3 +174,8 @@ shell> php -S 0.0.0.0:8000
 ```
 
 - [Built-in web server](http://docs.php.net/manual/da/features.commandline.webserver.php)
+
+## 参考文献
+
+- [PostgreSQL UNIX domain sockets vs TCP sockets](https://stackoverflow.com/questions/257433/postgresql-unix-domain-sockets-vs-tcp-sockets/257479#257479)
+- [nginx和php-fpm 是使用 tcp socket 还是 unix socket ？](https://github.com/gaoxt/blog/issues/9)
