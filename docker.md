@@ -98,5 +98,10 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
 
+删除所有 <none> 镜像
+  
+```sh
+docker rmi $(docker images -f "dangling=true" -q)
+```
 
 - [How to edit files in stopped/not starting docker container](https://stackoverflow.com/questions/32750748/how-to-edit-files-in-stopped-not-starting-docker-container)
