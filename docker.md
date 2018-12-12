@@ -105,3 +105,10 @@ docker rmi $(docker images -f "dangling=true" -q)
 ```
 
 - [How to edit files in stopped/not starting docker container](https://stackoverflow.com/questions/32750748/how-to-edit-files-in-stopped-not-starting-docker-container)
+
+## 目录权限
+
+- [【docker】 bind-mount或者COPY时需要注意 用户、文件权限 的问题](https://segmentfault.com/a/1190000015233229)
+- [Application can't write files](https://github.com/docker-library/php/issues/222)
+- [Docker and permission management](https://blog.ippon.tech/docker-and-permission-management/)
+- [Docker & File Permissions](https://serversforhackers.com/c/dckr-file-permissions)
