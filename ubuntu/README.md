@@ -189,6 +189,7 @@ shell> reboot
 ## 字符编码
 
 - [Configure Locales in Ubuntu](https://www.thomas-krenn.com/en/wiki/Configure_Locales_in_Ubuntu)
+- [修改locale](http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale)
 
 ## 参考文献
 
