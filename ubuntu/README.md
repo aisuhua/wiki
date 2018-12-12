@@ -186,6 +186,10 @@ blacklist nouveau
 shell> reboot
 ```
 
+## 字符编码
+
+- [Configure Locales in Ubuntu](https://www.thomas-krenn.com/en/wiki/Configure_Locales_in_Ubuntu)
+
 ## 参考文献
 
 - [Official Ubuntu Documentation](https://help.ubuntu.com/)
