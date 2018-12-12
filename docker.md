@@ -52,6 +52,13 @@ shell> docker ps
 shell> docker ps -a
 ```
 
+拉取镜像
+
+```
+docker login registry.aisuhua.com -u aisuhua -p 123456
+docker pull registry.aisuhua.com/aisuhua/phpdev
+```
+
 ### container
 
 创建并运行容器
