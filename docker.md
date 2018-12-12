@@ -91,4 +91,12 @@ shell> docker cp demo:/etc/supervisor/conf.d/program.conf .
 shell> docker cp my_file demo:/www/web
 ```
 
+停止和删除所有容器
+
+```sh
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+```
+
+
 - [How to edit files in stopped/not starting docker container](https://stackoverflow.com/questions/32750748/how-to-edit-files-in-stopped-not-starting-docker-container)
