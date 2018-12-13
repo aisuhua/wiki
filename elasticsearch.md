@@ -58,6 +58,8 @@ _cat/shards/my_index
 /cluster1:my_index*,cluster2:my_index*,cluster3:my_index*/_search
 ```
 
+- [Cross Cluster Search](https://www.elastic.co/guide/en/kibana/current/management-cross-cluster-search.html#management-cross-cluster-search)
+
 ## 分词
 
 测试分词器
