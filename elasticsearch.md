@@ -44,6 +44,20 @@ _cat/shards/my_index
 
 - [_routing field](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html)
 
+## Cross Cluster Search
+
+查看跨集群配置
+
+```
+/_cluster/settings
+```
+
+跨集群搜索
+
+```
+/cluster1:my_index*,cluster2:my_index*,cluster3:my_index*/_search
+```
+
 ## 分词
 
 测试分词器
