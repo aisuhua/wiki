@@ -108,3 +108,15 @@ mysql> REVOKE CREATE ON dbname.* FROM 'username'@'172.16.%';
 ```sql
 mysql> INSERT IGNORE INTO `table_name` (`id`, `name`) VALUES ('1', 'suhua');
 ```
+
+挂载数据目录到新的硬盘
+
+```sh
+shell> vim /etc/apparmor.d/usr.sbin.mysqld
+# Allow data dir access
+  /www/shared/mysql/ r,
+  /www/shared/mysql/** rwk,
+shell> service mysql stop
+shell> systemctl restart apparmor.service
+shell> service mysql start
+```
