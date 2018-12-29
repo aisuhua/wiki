@@ -33,6 +33,16 @@ shell> ifstat
 
 - [Ifstat](http://gael.roualland.free.fr/ifstat/)
 
+## iostat
+
+查看磁盘写入速度
+
+```sh
+iostat -d -k 1 10 
+```
+
+- [Linux查看磁盘读写性能(iostat命令)的方法](https://blog.csdn.net/n8765/article/details/52044862)
+
 ## ps
 
 查看进程状态
