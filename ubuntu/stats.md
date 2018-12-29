@@ -35,6 +35,12 @@ shell> ifstat
 
 ## iostat
 
+安装
+
+```sh
+apt-get install sysstat
+```
+
 查看磁盘写入速度
 
 ```sh
