@@ -26,8 +26,6 @@ show status
 show processlist
 ```
 
-
-
 查看错误信息
 
 ```sql
@@ -48,6 +46,10 @@ show engines
 
 ```sql
 show create table customers
+```
+
+```sql
+show table status like 'user' \G
 ```
 
 ## 字符集
