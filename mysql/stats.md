@@ -48,6 +48,8 @@ show engines
 show create table customers
 ```
 
+查看表的统计信息：总行数、每行平均大小等
+
 ```sql
 show table status like 'user' \G
 ```
