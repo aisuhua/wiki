@@ -79,7 +79,7 @@ SLAVEOF NO ONE
 原理展示
 
 ```sh
-telnet 192.168.1.10 6379
+shell> telnet 192.168.1.10 6379
 ping
 +PONG
 REPLCONF listening-port 6380
