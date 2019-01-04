@@ -76,7 +76,7 @@ info replication
 SLAVEOF NO ONE
 ```
 
-原理展示
+复制原理展示
 
 ```sh
 shell> telnet 192.168.1.10 6379
