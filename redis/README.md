@@ -89,6 +89,20 @@ $193
 REDIS0009�	redis-ver5.0.3....
 ```
 
+## Sentinel 
+
+配置哨兵监控的主数据库信息
+
+```sh
+shell> vim sentinel.conf
+sentinel monitor mymaster 192.168.1.229 6379 1
+```
+
+提示
+
+- 主库和从库都可配置哨兵，该部署方式会更加稳妥；
+- 主库若宕机，哨兵就会选出一个从库作为主库，并将其他从库的主库修改为该主库。
+
 ## Troubleshoot
 
 ```sh
