@@ -61,7 +61,7 @@ replicaof 192.168.1.10 6379
 运行时动态配置复制
 
 ```sh
-SLAVEOF 192.168.1.10 6379
+REPLICAOF 192.168.1.10 6379
 ```
 
 查看复制状态
@@ -73,7 +73,7 @@ info replication
 取消复制恢复为主数据库
 
 ```sh
-SLAVEOF NO ONE
+REPLICAOF NO ONE
 ```
 
 复制原理展示
