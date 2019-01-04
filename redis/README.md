@@ -48,6 +48,33 @@ return result
 src/redis-cli --eval scripts/hmgetall.lua posts:1 posts:2 posts:3
 ```
 
+## Replication
+
+只需在从库上配置好主库地址和端口即可
+
+```conf
+# replicaof <masterip> <masterport>
+replicaof 192.168.1.10 6379
+````
+
+运行时动态配置复制
+
+```sh
+SLAVEOF 192.168.1.10 6379
+```
+
+查看复制状态
+
+```sh
+info replication
+```
+
+取消复制恢复为主数据库
+
+```sh
+SLAVEOF NO ONE
+```
+
 ## Troubleshoot
 
 ```sh
