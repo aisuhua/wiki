@@ -7,6 +7,7 @@
 ```lua
 -- scripts/ratelimiting.lua
 local times = redis.call('incr', KEYS[1])
+
 if times == 1 then
     redis.call('expire', KEYS[1], ARGV[1])
 end
@@ -30,6 +31,7 @@ src/redis-cli --eval scripts/ratelimiting.lua rate.limiting:127.0.0.1 , 10 3
 
 ```lua
 local result = {}
+
 for i, v in ipairs(KEYS) do
     result[i] = redis.call('hgetall', v)
 end
