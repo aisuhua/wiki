@@ -52,7 +52,8 @@ src/redis-cli --eval scripts/hmgetall.lua posts:1 posts:2 posts:3
 
 只需在从库上配置好主库地址和端口即可
 
-```conf
+```sh
+shell> vim redis.conf
 # replicaof <masterip> <masterport>
 replicaof 192.168.1.10 6379
 ````
