@@ -1,4 +1,4 @@
-## Script
+## Lua scripting
 
 每个脚本都是原子性的。
 
