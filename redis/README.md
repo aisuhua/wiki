@@ -30,6 +30,7 @@ src/redis-cli --eval scripts/ratelimiting.lua rate.limiting:127.0.0.1 , 10 3
 添加获取多个散列键值的 lua 脚本
 
 ```lua
+-- scripts/hmgetall.lua
 local result = {}
 
 for i, v in ipairs(KEYS) do
