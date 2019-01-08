@@ -183,6 +183,36 @@ S: 38d8d8bb3271db1e741714748bf85d49c2a944ca 127.0.0.1:7003
 72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000@17000 myself,master - 0 1546928616000 1 connected 0-5460
 ```
 
+查看插槽的分配情况
+
+```sh
+127.0.0.1:7000> cluster slots
+1) 1) (integer) 5461
+   2) (integer) 10922
+   3) 1) "127.0.0.1"
+      2) (integer) 7001
+      3) "6a440cd87cb2403ed7d85e5c301deb1e6004030f"
+   4) 1) "127.0.0.1"
+      2) (integer) 7004
+      3) "40a10edc25695477a89456bf4530192a2c71d00c"
+2) 1) (integer) 10923
+   2) (integer) 16383
+   3) 1) "127.0.0.1"
+      2) (integer) 7002
+      3) "9dd01ffe2e5b01762bc54ffab637694ad288aa30"
+   4) 1) "127.0.0.1"
+      2) (integer) 7005
+      3) "138449d1ac998af1945e6e602b83bf3a43b9fb33"
+3) 1) (integer) 0
+   2) (integer) 5460
+   3) 1) "127.0.0.1"
+      2) (integer) 7000
+      3) "72b1e33fdeed54698e5f68066a8239f9557f871b"
+   4) 1) "127.0.0.1"
+      2) (integer) 7003
+      3) "38d8d8bb3271db1e741714748bf85d49c2a944ca"
+```
+
 - [Redis cluster tutorial](https://redis.io/topics/cluster-tutorial)
 
 ## Troubleshoot
