@@ -327,17 +327,17 @@ Moving slot 0 from 127.0.0.1:7000 to 127.0.0.1:7001:
 
 ### 加入新节点
 
-加入一个主节点 7006
+新加入的节点默认为主节点，但是它没有分配插槽，所以它还不能存储数据。
 
 ```sh
 redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000
 ```
 
-加入后就可以给该节点分配插槽，与上面步骤类似。
+可以使用上面的方法给该该节点分配插槽。
 
 ### 加入副本节点
 
-加入一个副本节点 7006，默认会随机选择一个节点作为其主节点。
+默认会随机选择一个节点作为其主节点
 
 ```sh
 redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000 --cluster-slave
@@ -353,6 +353,14 @@ redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000 --cluster-slave --clu
 
 ```sh
 redis-cli --cluster del-node 127.0.0.1:7000 `<node-id>`
+```
+
+### 副本节点切换
+
+在集群运行期间，可以将副本节点的主节点切换成其他节点
+
+```sh
+CLUSTER REPLICATE <master-node-id>
 ```
 
 ## Troubleshoot
