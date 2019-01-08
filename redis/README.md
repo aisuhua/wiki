@@ -325,6 +325,36 @@ Moving slot 0 from 127.0.0.1:7000 to 127.0.0.1:7001:
       3) "38d8d8bb3271db1e741714748bf85d49c2a944ca"
 ```
 
+### 加入新节点
+
+加入一个主节点 7006
+
+```sh
+redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000
+```
+
+加入后就可以给该节点分配插槽，与上面步骤类似。
+
+### 加入副本节点
+
+加入一个副本节点 7006，默认会随机选择一个节点作为其主节点。
+
+```sh
+redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000 --cluster-slave
+```
+
+指定主节点
+
+```sh
+redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000 --cluster-slave --cluster-master-id 3c3a0c74aae0b56170ccb03a76b60cfe7dc1912e
+```
+
+### 从集群中剔除节点
+
+```sh
+redis-cli --cluster del-node 127.0.0.1:7000 `<node-id>`
+```
+
 ## Troubleshoot
 
 优化系统参数
