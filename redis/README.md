@@ -108,6 +108,17 @@ sentinel monitor mymaster 192.168.1.10 6379 2
 
 ## Cluster
 
+开启集群功能
+
+```sh
+shell> vim /www/redis/7000/redis.conf 
+port 7000
+pidfile "/var/run/redis_7000.pid"
+dir "/www/redis/7000"
+cluster-enabled yes
+cluster-config-file "nodes-7000.conf"
+```
+
 构建集群
 
 ```sh
