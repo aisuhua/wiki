@@ -235,6 +235,96 @@ shell> ./redis-cli -c -p 7000
 OK
 ```
 
+## 重新分配插槽
+
+将 0 号插槽从 7000 迁移到 7001 节点，里面的数据也会转存过去。
+
+```sh
+./redis-cli --cluster reshard 127.0.0.1:7000
+>>> Performing Cluster Check (using node 127.0.0.1:7000)
+M: 72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+M: 6a440cd87cb2403ed7d85e5c301deb1e6004030f 127.0.0.1:7001
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+S: 138449d1ac998af1945e6e602b83bf3a43b9fb33 127.0.0.1:7005
+   slots: (0 slots) slave
+   replicates 9dd01ffe2e5b01762bc54ffab637694ad288aa30
+S: 40a10edc25695477a89456bf4530192a2c71d00c 127.0.0.1:7004
+   slots: (0 slots) slave
+   replicates 6a440cd87cb2403ed7d85e5c301deb1e6004030f
+M: 9dd01ffe2e5b01762bc54ffab637694ad288aa30 127.0.0.1:7002
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+S: 38d8d8bb3271db1e741714748bf85d49c2a944ca 127.0.0.1:7003
+   slots: (0 slots) slave
+   replicates 72b1e33fdeed54698e5f68066a8239f9557f871b
+[OK] All nodes agree about slots configuration.
+>>> Check for open slots...
+>>> Check slots coverage...
+[OK] All 16384 slots covered.
+How many slots do you want to move (from 1 to 16384)? 1
+What is the receiving node ID? 6a440cd87cb2403ed7d85e5c301deb1e6004030f
+Please enter all the source node IDs.
+  Type 'all' to use all the nodes as source nodes for the hash slots.
+  Type 'done' once you entered all the source nodes IDs.
+Source node #1: 72b1e33fdeed54698e5f68066a8239f9557f871b
+Source node #2: done
+
+Ready to move 1 slots.
+  Source nodes:
+    M: 72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000
+       slots:[0-5460] (5461 slots) master
+       1 additional replica(s)
+  Destination node:
+    M: 6a440cd87cb2403ed7d85e5c301deb1e6004030f 127.0.0.1:7001
+       slots:[5461-10922] (5462 slots) master
+       1 additional replica(s)
+  Resharding plan:
+    Moving slot 0 from 72b1e33fdeed54698e5f68066a8239f9557f871b
+Do you want to proceed with the proposed reshard plan (yes/no)? yes
+Moving slot 0 from 127.0.0.1:7000 to 127.0.0.1:7001:
+```
+
+查看插槽迁移后的分配信息
+
+```sh
+127.0.0.1:7000> cluster slots
+1) 1) (integer) 0
+   2) (integer) 0
+   3) 1) "127.0.0.1"
+      2) (integer) 7001
+      3) "6a440cd87cb2403ed7d85e5c301deb1e6004030f"
+   4) 1) "127.0.0.1"
+      2) (integer) 7004
+      3) "40a10edc25695477a89456bf4530192a2c71d00c"
+2) 1) (integer) 5461
+   2) (integer) 10922
+   3) 1) "127.0.0.1"
+      2) (integer) 7001
+      3) "6a440cd87cb2403ed7d85e5c301deb1e6004030f"
+   4) 1) "127.0.0.1"
+      2) (integer) 7004
+      3) "40a10edc25695477a89456bf4530192a2c71d00c"
+3) 1) (integer) 10923
+   2) (integer) 16383
+   3) 1) "127.0.0.1"
+      2) (integer) 7002
+      3) "9dd01ffe2e5b01762bc54ffab637694ad288aa30"
+   4) 1) "127.0.0.1"
+      2) (integer) 7005
+      3) "138449d1ac998af1945e6e602b83bf3a43b9fb33"
+4) 1) (integer) 1
+   2) (integer) 5460
+   3) 1) "127.0.0.1"
+      2) (integer) 7000
+      3) "72b1e33fdeed54698e5f68066a8239f9557f871b"
+   4) 1) "127.0.0.1"
+      2) (integer) 7003
+      3) "38d8d8bb3271db1e741714748bf85d49c2a944ca"
+```
+
 ## Troubleshoot
 
 优化系统参数
