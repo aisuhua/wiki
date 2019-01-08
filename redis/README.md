@@ -95,14 +95,16 @@ REDIS0009�	redis-ver5.0.3....
 
 ```sh
 shell> vim sentinel.conf
-sentinel monitor mymaster 192.168.1.10 6379 1
+# sentinel monitor <master-name> <ip> <redis-port> <quorum>
+sentinel monitor mymaster 192.168.1.10 6379 2
 ```
 
 提示
 
 - 哨兵是通过主库找到从库，然后对所有从库也进行监控；
 - 主库和从库都可配置哨兵，这种方式会更加稳妥；
-- 主库若宕机，哨兵就会选出一个从库作为主库，并将其他从库的主库修改为该主库。
+- 主库若宕机，哨兵就会选出一个从库作为主库，并将其他从库的主库修改为该主库；
+- quorum 表示执行故障恢复操作前至少需要几个哨兵节点同意。
 
 ## Troubleshoot
 
