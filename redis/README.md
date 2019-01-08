@@ -95,7 +95,7 @@ REDIS0009�	redis-ver5.0.3....
 
 ```sh
 shell> vim sentinel.conf
-sentinel monitor mymaster 192.168.1.10 6379 1
+sentinel monitor mymaster 127.0.0.1 6379 1
 ```
 
 提示
