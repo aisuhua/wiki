@@ -106,6 +106,85 @@ sentinel monitor mymaster 192.168.1.10 6379 2
 - 主库若宕机，哨兵就会选出一个从库作为主库，并将其他从库的主库修改为该主库；
 - quorum 表示执行故障恢复操作前至少需要几个哨兵节点同意。
 
+## Cluster
+
+构建集群
+
+```sh
+shell> ./redis-cli --cluster create \
+    127.0.0.1:7000 \
+    127.0.0.1:7001 \
+    127.0.0.1:7002 \
+    127.0.0.1:7003 \
+    127.0.0.1:7004 \
+    127.0.0.1:7005 \
+    --cluster-replicas 1
+>>> Performing hash slots allocation on 6 nodes...
+Master[0] -> Slots 0 - 5460
+Master[1] -> Slots 5461 - 10922
+Master[2] -> Slots 10923 - 16383
+Adding replica 127.0.0.1:7003 to 127.0.0.1:7000
+Adding replica 127.0.0.1:7004 to 127.0.0.1:7001
+Adding replica 127.0.0.1:7005 to 127.0.0.1:7002
+>>> Trying to optimize slaves allocation for anti-affinity
+[WARNING] Some slaves are in the same host as their master
+M: 72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000
+   slots:[0-5460] (5461 slots) master
+M: 6a440cd87cb2403ed7d85e5c301deb1e6004030f 127.0.0.1:7001
+   slots:[5461-10922] (5462 slots) master
+M: 9dd01ffe2e5b01762bc54ffab637694ad288aa30 127.0.0.1:7002
+   slots:[10923-16383] (5461 slots) master
+S: 38d8d8bb3271db1e741714748bf85d49c2a944ca 127.0.0.1:7003
+   replicates 72b1e33fdeed54698e5f68066a8239f9557f871b
+S: 40a10edc25695477a89456bf4530192a2c71d00c 127.0.0.1:7004
+   replicates 6a440cd87cb2403ed7d85e5c301deb1e6004030f
+S: 138449d1ac998af1945e6e602b83bf3a43b9fb33 127.0.0.1:7005
+   replicates 9dd01ffe2e5b01762bc54ffab637694ad288aa30
+Can I set the above configuration? (type 'yes' to accept): yes
+>>> Nodes configuration updated
+>>> Assign a different config epoch to each node
+>>> Sending CLUSTER MEET messages to join the cluster
+Waiting for the cluster to join
+.......
+>>> Performing Cluster Check (using node 127.0.0.1:7000)
+M: 72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+M: 6a440cd87cb2403ed7d85e5c301deb1e6004030f 127.0.0.1:7001
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+S: 138449d1ac998af1945e6e602b83bf3a43b9fb33 127.0.0.1:7005
+   slots: (0 slots) slave
+   replicates 9dd01ffe2e5b01762bc54ffab637694ad288aa30
+S: 40a10edc25695477a89456bf4530192a2c71d00c 127.0.0.1:7004
+   slots: (0 slots) slave
+   replicates 6a440cd87cb2403ed7d85e5c301deb1e6004030f
+M: 9dd01ffe2e5b01762bc54ffab637694ad288aa30 127.0.0.1:7002
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+S: 38d8d8bb3271db1e741714748bf85d49c2a944ca 127.0.0.1:7003
+   slots: (0 slots) slave
+   replicates 72b1e33fdeed54698e5f68066a8239f9557f871b
+[OK] All nodes agree about slots configuration.
+>>> Check for open slots...
+>>> Check slots coverage...
+[OK] All 16384 slots covered.
+```
+
+查看集群状态
+
+```sh
+shell> ./redis-cli -p 7000
+shell> cluster nodes 
+127.0.0.1:7000> cluster nodes
+6a440cd87cb2403ed7d85e5c301deb1e6004030f 127.0.0.1:7001@17001 master - 0 1546928620333 2 connected 5461-10922
+138449d1ac998af1945e6e602b83bf3a43b9fb33 127.0.0.1:7005@17005 slave 9dd01ffe2e5b01762bc54ffab637694ad288aa30 0 1546928618327 6 connected
+40a10edc25695477a89456bf4530192a2c71d00c 127.0.0.1:7004@17004 slave 6a440cd87cb2403ed7d85e5c301deb1e6004030f 0 1546928617324 5 connected
+9dd01ffe2e5b01762bc54ffab637694ad288aa30 127.0.0.1:7002@17002 master - 0 1546928619331 3 connected 10923-16383
+38d8d8bb3271db1e741714748bf85d49c2a944ca 127.0.0.1:7003@17003 slave 72b1e33fdeed54698e5f68066a8239f9557f871b 0 1546928618000 4 connected
+72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000@17000 myself,master - 0 1546928616000 1 connected 0-5460
+```
+
 ## Troubleshoot
 
 优化系统参数
