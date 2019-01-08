@@ -215,6 +215,15 @@ S: 38d8d8bb3271db1e741714748bf85d49c2a944ca 127.0.0.1:7003
 
 - [Redis cluster tutorial](https://redis.io/topics/cluster-tutorial)
 
+启动集群模式下的自动重定向
+
+```sh
+shell> ./redis-cli -c -p 7000
+127.0.0.1:7000> set name suhua
+-> Redirected to slot [5798] located at 127.0.0.1:7001
+OK
+```
+
 ## Troubleshoot
 
 优化系统参数
