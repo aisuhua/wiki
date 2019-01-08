@@ -1,3 +1,28 @@
+## 安装
+
+安装
+
+```sh
+wget http://download.redis.io/releases/redis-5.0.3.tar.gz
+tar xzf redis-5.0.3.tar.gz
+cd redis-5.0.3
+make
+```
+
+启动服务
+
+```sh
+src/redis-server redis.conf
+```
+
+与服务器交互
+
+```sh
+src/redis-cli
+```
+
+- [Installation](https://redis.io/download#installation)
+
 ## Lua scripting
 
 每个脚本都是原子性的。
