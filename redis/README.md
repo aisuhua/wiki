@@ -119,7 +119,7 @@ cluster-enabled yes
 cluster-config-file "nodes-7000.conf"
 ```
 
-构建集群
+创建集群
 
 ```sh
 shell> ./redis-cli --cluster create \
