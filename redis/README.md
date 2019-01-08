@@ -108,6 +108,8 @@ sentinel monitor mymaster 192.168.1.10 6379 2
 
 ## Troubleshoot
 
+优化系统参数
+
 ```sh
 shell> vim /etc/sysctl.conf
 net.core.somaxconn=65535
@@ -117,3 +119,17 @@ echo never > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
 - [WARNING: /proc/sys/net/core/somaxconn is set to the lower value of 128.](https://github.com/docker-library/redis/issues/35)
+
+一台机器启动多个 Redis 实例
+
+```sh
+shell> cp redis.conf redis_6380.conf
+shell> cp redis.conf redis_6381.conf
+shell> vim redis_6380.conf
+port 6380
+pidfile "/var/run/redis_6380.pid"
+dir "/www/redis/6380"
+shell> mkdir -p /www/redis/6380
+shell> ./redis-server redis_6380.conf
+```
+
