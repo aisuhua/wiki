@@ -131,6 +131,48 @@ sentinel monitor mymaster 192.168.1.10 6379 2
 - 主库若宕机，哨兵就会选出一个从库作为主库，并将其他从库的主库修改为该主库；
 - quorum 表示执行故障恢复操作前至少需要几个哨兵节点同意。
 
+## 安全
+
+添加连接密码
+
+```sh
+shell> vim redis.conf
+requirepass 123456
+```
+
+使用密码登录
+
+```sh
+auth 123456
+```
+
+配置复制时，若主库有密码则需要提供密码
+
+```conf
+masterauth <master-password>
+```
+
+## 监控
+
+记录慢日志
+
+```sh
+shell> vim redis.conf
+slowlog-log-slower-than 10000
+```
+
+查看慢日志
+
+```sh
+127.0.0.1:6379> slowlog get
+```
+
+监控并查看所有执行语句，此命令在生产环境下慎用
+
+```sh
+127.0.0.1:6379> monitor
+```
+
 ## Troubleshoot
 
 优化系统参数
