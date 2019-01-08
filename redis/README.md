@@ -183,6 +183,8 @@ S: 38d8d8bb3271db1e741714748bf85d49c2a944ca 127.0.0.1:7003
 72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000@17000 myself,master - 0 1546928616000 1 connected 0-5460
 ```
 
+- [Redis cluster tutorial](https://redis.io/topics/cluster-tutorial)
+
 ## Troubleshoot
 
 优化系统参数
