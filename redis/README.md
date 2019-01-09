@@ -192,7 +192,7 @@ echo never > /sys/kernel/mm/transparent_hugepage/enabled
 ```sh
 shell> mkdir -p /www/redis/6380
 shell> cp redis.conf /www/redis/6380/redis.conf
-shell> vim 6380/redis.conf
+shell> vim /www/redis/6380/redis.conf
 port 6380
 pidfile "/var/run/redis_6380.pid"
 dir "/www/redis/6380"
