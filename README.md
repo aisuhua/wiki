@@ -32,3 +32,8 @@
 - [Elasticsearch 权威指南](https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html) 快速入门，非书籍
 - [Elasticsearch 5.4 中文文档](http://cwiki.apachecn.org/display/Elasticsearch/Index)（英：[Elasticsearch Reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)）非书籍
 - [Kibana 用户手册](https://www.elastic.co/guide/cn/kibana/current/index.html)（英：[Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html)）非书籍
+
+### HTTP
+
+- [图解HTTP](https://book.douban.com/subject/25863515/) 入门好书
+- [HTTP权威指南](https://book.douban.com/subject/10746113/)
