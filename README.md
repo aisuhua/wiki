@@ -24,5 +24,5 @@
 
 #### 理论篇
 
-- [数据库系统概念（原书第6版）](http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/index.html)
+- [数据库系统概念（原书第6版）](https://book.douban.com/subject/10548379/) （英：[Database System Concepts](http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/index.html)）
 - [数据库索引设计与优化](https://book.douban.com/subject/26419771/)
