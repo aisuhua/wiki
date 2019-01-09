@@ -62,3 +62,9 @@ shell> ps -aux
 ```sh
 shell> ps -ef
 ```
+
+查看进程的线程数
+
+```sh
+pstree -p 进程号
+```
