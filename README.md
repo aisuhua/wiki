@@ -41,3 +41,12 @@
 ### Python
 
 - [Python编程：从入门到实践](https://book.douban.com/subject/26829016/)（英：[Python Crash Course](https://ehmatthes.github.io/pcc/)）入门好书，案例不是很好
+
+### MongoDB
+
+- [MongoDB权威指南（第2版）](https://book.douban.com/subject/25798102/)（英：[MongoDB: The Definitive Guide](http://shop.oreilly.com/product/0636920028031.do)）
+- [MongoDB实战](https://book.douban.com/subject/19977785/)（英：[MongoDB in Action](https://www.manning.com/books/mongodb-in-action-second-edition)）
+
+### PHP
+
+- [深入PHP：面向对象、模式与实践（第3版）](https://book.douban.com/subject/6559267/)（英：[PHP Objects, Patterns, and Practice, Fifth Edition](https://www.apress.com/la/book/9781484219959)）PHP 面向对象必读好书，中文版较旧
