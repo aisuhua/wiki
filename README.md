@@ -40,4 +40,4 @@
 
 ### Python
 
-- [Python编程：从入门到实践](https://book.douban.com/subject/26829016/)（英：[Python Crash Course](https://ehmatthes.github.io/pcc/)）入门好书，案例似乎一般
+- [Python编程：从入门到实践](https://book.douban.com/subject/26829016/)（英：[Python Crash Course](https://ehmatthes.github.io/pcc/)）入门好书，案例不是很好
