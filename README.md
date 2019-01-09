@@ -7,3 +7,8 @@
 - [Redis实战](https://book.douban.com/subject/26612779/)（[英：Redis IN ACTION](https://redislabs.com/community/ebook/)） 很多值得学习的真实小例子
 - [Redis开发与运维](https://book.douban.com/subject/26971561/) 搜狐视频工程师实战经验总结
 - [Redis设计与实现](https://book.douban.com/subject/25900156/) 源码解析
+
+### RabbitMQ
+
+- [RabbitMQ实战](https://book.douban.com/subject/26649178/)（英：·RabbitMQ in Action](https://www.manning.com/books/rabbitmq-in-action)）官方推荐，讲得很清楚
+- [RabbitMQ实战指南](https://book.douban.com/subject/27591386/) 国人编写，可供参考的书籍
