@@ -37,3 +37,7 @@
 
 - [图解HTTP](https://book.douban.com/subject/25863515/) 入门好书
 - [HTTP权威指南](https://book.douban.com/subject/10746113/)（英：[HTTP: The Definitive Guide](http://shop.oreilly.com/product/9781565925090.do)）深入理解
+
+### Python
+
+- [Python编程：从入门到实践](https://book.douban.com/subject/26829016/)（英：[Python Crash Course](https://ehmatthes.github.io/pcc/)）入门好书，案例似乎一般
