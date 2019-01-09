@@ -18,8 +18,8 @@
 - [MySQL必知必会](https://book.douban.com/subject/3354490/)（英：[MySQL Crash Course](http://www.forta.com/books/0672327120/)）基础入门，能快速全面了解 MySQL
 - [深入浅出MySQL：数据库开发、优化与管理维护（第2版）](https://book.douban.com/subject/25817684/) 入门教程，网易DBA的经验总结，有很多技巧值得参考
 - [MySQL技术内幕：InnoDB存储引擎（第2版）](https://book.douban.com/subject/24708143/) 国人出品，中高级必读
-- [高性能MySQL（第3版）](https://book.douban.com/subject/23008813/)
-- [高可用MySQL（第2版）](https://book.douban.com/subject/23008813/)
+- [高性能MySQL（第3版）](https://book.douban.com/subject/23008813/)（英：[High Performance MySQL](http://www.highperfmysql.com/)）
+- [高可用MySQL（第2版）](https://book.douban.com/subject/26630834/)（英：[MySQL High Availability](http://shop.oreilly.com/product/0636920026907.do)）
 - [MySQL排错指南](https://book.douban.com/subject/26591051/)
 
 #### 理论篇
