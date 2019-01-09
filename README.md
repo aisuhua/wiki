@@ -10,5 +10,5 @@
 
 ### RabbitMQ
 
-- [RabbitMQ实战](https://book.douban.com/subject/26649178/)（英：·RabbitMQ in Action](https://www.manning.com/books/rabbitmq-in-action)）官方推荐，讲得很清楚
+- [RabbitMQ实战](https://book.douban.com/subject/26649178/)（英：[RabbitMQ in Action](https://www.manning.com/books/rabbitmq-in-action)）官方推荐，讲得很清楚
 - [RabbitMQ实战指南](https://book.douban.com/subject/27591386/) 国人编写，可供参考的书籍
