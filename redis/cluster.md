@@ -132,7 +132,7 @@ OK
 将 0 号插槽从 7000 迁移到 7001 节点，里面的数据也会转存过去。
 
 ```sh
-./redis-cli --cluster reshard 127.0.0.1:7000
+shell> ./redis-cli --cluster reshard 127.0.0.1:7000
 >>> Performing Cluster Check (using node 127.0.0.1:7000)
 M: 72b1e33fdeed54698e5f68066a8239f9557f871b 127.0.0.1:7000
    slots:[0-5460] (5461 slots) master
