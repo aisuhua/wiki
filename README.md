@@ -36,4 +36,4 @@
 ### HTTP
 
 - [图解HTTP](https://book.douban.com/subject/25863515/) 入门好书
-- [HTTP权威指南](https://book.douban.com/subject/10746113/)
+- [HTTP权威指南](https://book.douban.com/subject/10746113/)（英：[HTTP: The Definitive Guide](http://shop.oreilly.com/product/9781565925090.do)）
