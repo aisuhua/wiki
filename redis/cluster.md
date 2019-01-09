@@ -249,7 +249,7 @@ redis-cli --cluster del-node 127.0.0.1:7000 `<node-id>`
 
 ### 副本节点切换
 
-在集群运行期间，可以将副本节点的主节点切换成其他节点
+在集群运行期间，可以将副本节点的主节点切换成其他节点。
 
 ```sh
 CLUSTER REPLICATE <master-node-id>
