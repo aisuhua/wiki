@@ -20,7 +20,7 @@
 - [MySQL技术内幕：InnoDB存储引擎（第2版）](https://book.douban.com/subject/24708143/) 国人出品，中高级必读
 - [高性能MySQL（第3版）](https://book.douban.com/subject/23008813/)（英：[High Performance MySQL](http://www.highperfmysql.com/)）
 - [高可用MySQL（第2版）](https://book.douban.com/subject/26630834/)（英：[MySQL High Availability](http://shop.oreilly.com/product/0636920026907.do)）
-- [MySQL排错指南](https://book.douban.com/subject/26591051/)
+- [MySQL排错指南](https://book.douban.com/subject/26591051/)（英：[MySQL Troubleshooting](http://shop.oreilly.com/product/0636920021964.do)）
 
 #### 理论篇
 
