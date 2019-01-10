@@ -110,3 +110,12 @@ chunk size(class i) = (default_size + item_size) * f^(i-1) + CHUNK_ALIGN_BYTES
 - CHUNK_ALIGN_BYTES 是一个修正值，用来保证 chunk 的大小是某个值的整数倍（在 32 位机器上要求 chunk 的大小是 4 的整数倍）；
 
 所以，我们可以根据自己的业务需求，通过 `-f` 和 `-n` 参数，来合理划分 chunk 的大小。
+
+```sh
+shell> memcached -p 11211 -m 64 -vv -n 80
+slab class   1: chunk size       128 perslab    8192
+slab class   2: chunk size       160 perslab    6553
+slab class   3: chunk size       200 perslab    5242
+```
+
+- class1 的 chunk 大小为 80 + 48 = 128；
