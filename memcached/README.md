@@ -31,9 +31,7 @@ memcached -p 11211 -m 64 -vv -u root
 
 ## Slab Allocation 内存分配机制
 
-其原理如下图：
-
-![Alt text](slab.png)
+![Alt text](img/01.png)
 
 - Memcached 在启动时就将内存空间划分为多个 Slab (Class)；
 - 每个 Slab 由多个 Page 组成，每个 Page 的大小默认为 1M；
@@ -136,5 +134,48 @@ memcached -p 11211 -m 64 -vv -I 5m
 
 Memcached 是基于客户端的分布式，服务端没有实现分布式的功能。
 
+![Alt text](img/02.png)
 
+客户端实现分布式有两种方法：
 
+- 根据余数计算分散
+- 一致性哈希算法（Consistent Hashing）
+
+### 一致性哈希算法
+
+为防止每增加或减少一台 Memcached 节点而造成大部分「缓存失效」的问题，所以采用一致性哈希算法会更加好。
+
+- 算法介绍：[一致性 hash 算法（ consistent hashing ）](https://blog.csdn.net/sparkliang/article/details/5279393)
+- PHP 实现：[flexihash](https://github.com/pda/flexihash)
+
+以下演示了其实现原理：
+
+```php
+require('vendor/autoload.php');
+use Flexihash\Flexihash;
+
+$hash = new Flexihash();
+
+// bulk add
+$hash->addTargets(array('cache-1', 'cache-2', 'cache-3'));
+
+// simple lookup
+$result = $hash->lookup('object-a'); // "cache-1"
+var_dump($result);
+$result = $hash->lookup('object-b'); // "cache-2"
+var_dump($result);
+
+// add and remove
+$hash
+    ->addTarget('cache-4')
+    ->removeTarget('cache-1');
+
+// lookup with next-best fallback (for redundant writes)
+$result = $hash->lookupList('object', 2); // ["cache-2", "cache-4"]
+var_dump($result);
+
+// remove cache-2, expect object to hash to cache-4
+$hash->removeTarget('cache-2');
+$result = $hash->lookup('object'); // "cache-4"
+var_dump($result);
+```
