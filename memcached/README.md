@@ -114,8 +114,18 @@ slab class   3: chunk size       200 perslab    5242
 
 - class1 的 chunk 大小为 80 + 48 = 128；
 
-在启动时通过参数 `-f` 设置 Growth Factor 因子，以调整每个 Slab 之间的 chunk 大小间隙。
+通过 `-f` 设置 Growth Factor 因子。
 
 ```sh
 memcached -p 11211 -m 64 -vv -f 1.25
 ```
+
+## 最大可存储的字节数
+
+默认支持存储最大 1M 的键值，官方不建议使用 Memcached 存储较大的数据集，如有需要可以通过 `-I` 参数调整。
+
+```sh
+memcached -p 11211 -m 64 -vv -I 5m
+```
+
+- [15.3.5 memcached FAQ](https://docs.oracle.com/cd/E17952_01/mysql-5.0-en/ha-memcached-faq.html)
