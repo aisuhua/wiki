@@ -157,34 +157,26 @@ Memcached 是基于客户端的分布式，服务端没有实现分布式的功�
 以下演示了其实现原理：
 
 ```php
-<?php
-require('vendor/autoload.php');
-use Flexihash\Flexihash;
-
 $hash = new Flexihash();
 
 // bulk add
 $hash->addTargets(array('cache-1', 'cache-2', 'cache-3'));
 
 // simple lookup
-$result = $hash->lookup('object-a'); // "cache-1"
-var_dump($result);
-$result = $hash->lookup('object-b'); // "cache-2"
-var_dump($result);
+$hash->lookup('object-a'); // "cache-1"
+$hash->lookup('object-b'); // "cache-2"
 
 // add and remove
 $hash
-    ->addTarget('cache-4')
-    ->removeTarget('cache-1');
+  ->addTarget('cache-4')
+  ->removeTarget('cache-1');
 
 // lookup with next-best fallback (for redundant writes)
-$result = $hash->lookupList('object', 2); // ["cache-2", "cache-4"]
-var_dump($result);
+$hash->lookupList('object', 2); // ["cache-2", "cache-4"]
 
 // remove cache-2, expect object to hash to cache-4
 $hash->removeTarget('cache-2');
-$result = $hash->lookup('object'); // "cache-4"
-var_dump($result);
+$hash->lookup('object'); // "cache-4"
 ```
 
 其中 PHP 客户端 [Memcache](https://pecl.php.net/package/memcache) 和 [Memcached](https://pecl.php.net/package/memcached) 都实现了该算法，在使用时启用即可。
@@ -192,7 +184,6 @@ var_dump($result);
 以下是 Memcached 扩展的使用示例，它已经具备了当节点发生故障时自动剔除的功能。
 
 ```php
-<?php
 $memcached = new Memcached();
 $memcached->setOption(Memcached::OPT_CONNECT_TIMEOUT, 10);
 $memcached->setOption(Memcached::OPT_DISTRIBUTION, Memcached::DISTRIBUTION_CONSISTENT);
