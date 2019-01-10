@@ -188,7 +188,7 @@ var_dump($result);
 
 其中 PHP 客户端 [Memcache](https://pecl.php.net/package/memcache) 和 [Memcached](https://pecl.php.net/package/memcached) 都实现了该算法，在使用时启用即可。
 
-以下是使用 Memcached 的使用示例，它已经具备了当节点发生故障时自动剔除的功能。
+以下是 Memcached 扩展的使用示例，它已经具备了当节点发生故障时自动剔除的功能。
 
 ```php
 $memcached = new Memcached();
