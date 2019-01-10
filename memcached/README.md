@@ -181,4 +181,4 @@ $result = $hash->lookup('object'); // "cache-4"
 var_dump($result);
 ```
 
-其中 PHP 的 [Memcache](https://pecl.php.net/package/memcache) 和 [Memcached](https://pecl.php.net/package/memcached) 都实现了该算法，在使用时启用即可。
+其中 PHP 客户端 [Memcache](https://pecl.php.net/package/memcache) 和 [Memcached](https://pecl.php.net/package/memcached) 都实现了该算法，在使用时启用即可。
