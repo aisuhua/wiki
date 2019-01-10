@@ -195,6 +195,31 @@ $memcached->addServers($servers);
 
 - [#118940](http://php.net/manual/en/memcached.addservers.php#118940)
 
+这两个客户端都支持将 PHP Session 存储在 Memcached。
+
+```php.ini
+# Memcache
+ini_set('session.save_handler', 'memcache');
+ini_set('session.save_path', 'tcp://127.0.0.1:11211,tcp://127.0.0.1:11212');
+
+# Memcached
+ini_set('session.save_handler', 'memcache');
+ini_set('session.save_path', 'tcp://127.0.0.1:11211,tcp://127.0.0.1:11212');
+```
+
+每次访问 Session 时会执行类似以下语句：
+
+```sh
+<28 set rkjmub7dj108ml5blnoluo7a59 0 1440 17
+>28 STORED
+<28 set rkjmub7dj108ml5blnoluo7a59.lock 768 15 1
+>28 STORED
+```
+
+- `1440` 是 Session 的过期时间。 
+
+- [#99646](http://php.net/manual/en/memcached.sessions.php#99646)
+
 ## 查看运行状态
 
 ```sh
