@@ -53,4 +53,4 @@
 
 ### Memcached
 
-- [Memcached全面剖析](https://charlee.li/memcached-001.html) 了解最核心的几个概念，非书籍
+- [Memcached全面剖析](https://charlee.li/memcached-001.html) 对全面了解 Memcached 很有帮助，非书籍
