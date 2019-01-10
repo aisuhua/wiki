@@ -50,3 +50,7 @@
 ### PHP
 
 - [深入PHP：面向对象、模式与实践（第3版）](https://book.douban.com/subject/6559267/)（英：[PHP Objects, Patterns, and Practice, Fifth Edition](https://www.apress.com/la/book/9781484219959)）PHP 面向对象必读好书，中文版较旧
+
+### Memcached
+
+- [Memcached全面剖析](https://charlee.li/memcached-001.html) 了解最核心的几个概念
