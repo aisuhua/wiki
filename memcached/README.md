@@ -185,6 +185,7 @@ var_dump($result);
 
 ## 参考文献
 
+- [wiki](https://github.com/memcached/memcached/wiki)
 - [Memcached 教程](http://www.runoob.com/memcached/memcached-tutorial.html)
 - [memcached完全剖析](https://charlee.li/memcached-001.html)
 - [Memcached详解系列](https://www.ktanx.com/blog/series/63)
