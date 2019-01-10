@@ -157,6 +157,7 @@ Memcached 是基于客户端的分布式，服务端没有实现分布式的功�
 以下演示了其实现原理：
 
 ```php
+<?php
 require('vendor/autoload.php');
 use Flexihash\Flexihash;
 
@@ -191,6 +192,7 @@ var_dump($result);
 以下是 Memcached 扩展的使用示例，它已经具备了当节点发生故障时自动剔除的功能。
 
 ```php
+<?php
 $memcached = new Memcached();
 $memcached->setOption(Memcached::OPT_CONNECT_TIMEOUT, 10);
 $memcached->setOption(Memcached::OPT_DISTRIBUTION, Memcached::DISTRIBUTION_CONSISTENT);
