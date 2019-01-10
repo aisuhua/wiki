@@ -143,7 +143,7 @@ Memcached 是基于客户端的分布式，服务端没有实现分布式的功�
 
 ### 一致性哈希算法
 
-为防止每增加或减少一台 Memcached 节点而造成大部分「缓存失效」的问题，所以采用一致性哈希算法会更加好。
+为防止每增加或减少一台 Memcached 节点而造成大部分「缓存失效」的问题，所以采用一致性哈希能减少应此而受影响的缓存。
 
 - 算法介绍：[一致性 hash 算法（ consistent hashing ）](https://blog.csdn.net/sparkliang/article/details/5279393)
 - PHP 实现：[flexihash](https://github.com/pda/flexihash)
