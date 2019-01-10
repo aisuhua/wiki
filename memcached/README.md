@@ -27,4 +27,10 @@ make install
 memcached -p 11211 -m 64 -vv -u root
 ```
 
+- [Installation](https://memcached.org/downloads)
+
 ## Slab Allocation 内存分配机制
+
+其原理如下图：
+
+
