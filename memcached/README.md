@@ -120,7 +120,7 @@ slab class   3: chunk size       200 perslab    5242
 memcached -p 11211 -m 64 -vv -f 1.25
 ```
 
-- [Memcached深入分析及内存调优](https://www.ktanx.com/blog/p/2248)
+- [彻底弄清楚memcached](https://www.zybuluo.com/phper/note/443547)
 
 ## 最大可存储的字节数
 
