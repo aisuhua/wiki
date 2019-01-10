@@ -1,4 +1,3 @@
-# Memcached
 
 Memcached 作为高速运行的分布式缓存服务器，具有以下的特点：
 
