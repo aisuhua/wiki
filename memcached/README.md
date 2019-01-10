@@ -195,7 +195,7 @@ $memcached->addServers($servers);
 
 - [#118940](http://php.net/manual/en/memcached.addservers.php#118940)
 
-这两个客户端都支持将 PHP Session 存储在 Memcached。
+这两个客户端都支持配置 PHP Session 存储在 Memcached。
 
 ```php.ini
 # Memcache
