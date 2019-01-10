@@ -182,3 +182,8 @@ var_dump($result);
 ```
 
 其中 PHP 客户端 [Memcache](https://pecl.php.net/package/memcache) 和 [Memcached](https://pecl.php.net/package/memcached) 都实现了该算法，在使用时启用即可。
+
+## 参考文献
+
+- [Memcached 教程](http://www.runoob.com/memcached/memcached-tutorial.html)
+- [Memcached详解系列](https://www.ktanx.com/blog/series/63)
