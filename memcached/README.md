@@ -147,6 +147,7 @@ Memcached 是基于客户端的分布式，服务端没有实现分布式的功�
 
 - 算法介绍：[一致性 hash 算法（ consistent hashing ）](https://blog.csdn.net/sparkliang/article/details/5279393)
 - PHP 实现：[flexihash](https://github.com/pda/flexihash)
+- [Flexihash - Consistent Hashing for PHP](https://paul.annesley.cc/2008/04/flexihash-consistent-hashing-php/)
 
 以下演示了其实现原理：
 
