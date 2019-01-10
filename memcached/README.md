@@ -26,6 +26,12 @@ make install
 memcached -p 11211 -m 64 -vv -u root
 ```
 
+连接客户端
+
+```sh
+telnet 127.0.0.1 11211
+```
+
 - [Installation](https://memcached.org/downloads)
 
 ## Slab Allocation 内存分配机制
@@ -181,6 +187,16 @@ var_dump($result);
 ```
 
 其中 PHP 客户端 [Memcache](https://pecl.php.net/package/memcache) 和 [Memcached](https://pecl.php.net/package/memcached) 都实现了该算法，在使用时启用即可。
+
+## 查看运行状态
+
+```sh
+stats
+stats settings
+stats items
+stats slabs
+scripts/memcached-tool 127.0.0.1:11211
+```
 
 ## 参考文献
 
