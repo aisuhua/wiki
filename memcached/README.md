@@ -188,6 +188,20 @@ var_dump($result);
 
 其中 PHP 客户端 [Memcache](https://pecl.php.net/package/memcache) 和 [Memcached](https://pecl.php.net/package/memcached) 都实现了该算法，在使用时启用即可。
 
+以下是使用 Memcached 的使用示例，它已经具备了当节点发生故障时自动剔除的功能。
+
+```php
+$memcached = new Memcached();
+$memcached->setOption(Memcached::OPT_CONNECT_TIMEOUT, 10);
+$memcached->setOption(Memcached::OPT_DISTRIBUTION, Memcached::DISTRIBUTION_CONSISTENT);
+$memcached->setOption(Memcached::OPT_SERVER_FAILURE_LIMIT, 2);
+$memcached->setOption(Memcached::OPT_REMOVE_FAILED_SERVERS, true);
+$memcached->setOption(Memcached::OPT_RETRY_TIMEOUT, 1);
+$memcached->addServers($servers);
+```
+
+- [#118940](http://php.net/manual/en/memcached.addservers.php#118940)
+
 ## 查看运行状态
 
 ```sh
