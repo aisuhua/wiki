@@ -92,7 +92,7 @@ slab class  39: chunk size    524288 perslab       2
 <27 server listening (auto-negotiate)
 ```
 
-Memcached 把 slab 分为 39 类（class1 ～ class39），在 class1 中，每个 chunk 的大小为 96 字节，由于一个 slab page 的大小固定的 1048576 字节（1M），应此在 class1 中最多可以有 10922 个 chunk，剩余的 64 字节因为不够一个 chunk 的大小（96byte），因此会被浪费掉。
+Memcached 把 slab 分为 39 类（class1 ～ class39），在 class1 中，每个 chunk 的大小为 96 字节，由于一个 slab page 的大小固定的 1048576 字节（1M），应此在 class1 中最多可以有 10922 个 chunk，剩余的 64 字节因为不够一个 chunk 的大小，因此会被浪费掉。
 
 ```math
 10922 x 96 + 64 = 1048576
