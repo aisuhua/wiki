@@ -31,12 +31,6 @@ memcached -p 11211 -m 64 -vv -u root
 
 ## Slab Allocation 内存分配机制
 
-在启动时可设置 Growth Factor 因子，以控制每个 Slab 之间的大小间隙。
-
-```sh
-memcached -p 11211 -m 64 -vv -u root -f 1.25
-```
-
 其原理如下图：
 
 ![Alt text](slab.png)
@@ -119,3 +113,9 @@ slab class   3: chunk size       200 perslab    5242
 ```
 
 - class1 的 chunk 大小为 80 + 48 = 128；
+
+在启动时通过参数 `-f` 设置 Growth Factor 因子，以调整每个 Slab 之间的 chunk 大小间隙。
+
+```sh
+memcached -p 11211 -m 64 -vv -f 1.25
+```
