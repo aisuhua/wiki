@@ -120,6 +120,8 @@ slab class   3: chunk size       200 perslab    5242
 memcached -p 11211 -m 64 -vv -f 1.25
 ```
 
+- [Memcached深入分析及内存调优](https://www.ktanx.com/blog/p/2248)
+
 ## 最大可存储的字节数
 
 默认可存储最大 1M 的键值，可以通过 `-I` 参数调整，最大可支持 128M，但是官方不建议这样做。
