@@ -101,12 +101,12 @@ Memcached 把 slab 分为 39 类（class1 ～ class39），在 class1 中，每�
 每类 chunk 的大小有一定的计算公式，假定 i 代表分类，class i 的计算公式如下：
 
 ```math
-chunk size(class i) = (default_size+item_size) * f^(i-1) + CHUNK_ALIGN_BYTES
+chunk size(class i) = (default_size + item_size) * f^(i-1) + CHUNK_ALIGN_BYTES
 ```
 
-- default_size：默认为 48 字节,也就是默认的 key + value 大小为 48 字节，可以通过 -n 参数来调整；
+- default_size：默认为 48 字节,也就是默认的 key + value 大小为 48 字节，可以通过 `-n` 参数来调整；
 - item_size：item 结构体的长度，固定为 48 字节。default_size 和 item_size 大小都为 48 字节，因此 class1 的 chunk 大小为 48 + 48 = 96 字节；
-- f 为 factor，是 chunk 大小变化的因子，默认值为 1.25，调节 f 可以影响 chunk 的步长大小，在启动时可以使用 -f 来指定；
+- f 即 factor 是 chunk 大小变化的因子，默认值为 1.25，调节 f 可以影响 chunk 的步长大小，在启动时可以使用 `-f` 来指定；
 - CHUNK_ALIGN_BYTES 是一个修正值，用来保证 chunk 的大小是某个值的整数倍（在 32 位机器上要求 chunk 的大小是 4 的整数倍）；
 
 所以，我们可以根据自己的业务需求，通过 `-f` 和 `-n` 参数，来合理划分 chunk 的大小。
