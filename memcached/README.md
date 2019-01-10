@@ -26,7 +26,7 @@ make install
 memcached -p 11211 -m 64 -vv -u root
 ```
 
-连接客户端
+连接 Memcached 服务
 
 ```sh
 telnet 127.0.0.1 11211
