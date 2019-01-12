@@ -3,7 +3,7 @@
 安装
 
 ```sh
-shell> apt-get install rsync
+apt-get install rsync
 ```
 
 开启 rsync 服务 
@@ -36,7 +36,7 @@ path = /www/web
 重启服务
 
 ```sh
-shell> service rsync restart
+service rsync restart
 ```
 
 ## 使用示例
@@ -44,13 +44,13 @@ shell> service rsync restart
 同步本地文件
 
 ```sh
-shell> rsync -avz /data /backup
+rsync -avz /data /backup
 ```
 
 将本地文件同步到远程服务器
 
 ```sh
-shell> rsync -avz --exclude="*.log" --delete --progress test 192.168.1.2::www
+rsync -avz --exclude="*.log" --delete --progress test 192.168.1.2::www
 ```
 
 支持断点续传
@@ -62,7 +62,7 @@ rsync -avzP test 192.168.1.2::www
 将文件的权限和时间一起同步过去
 
 ```sh
-shell> rsync -vzrtopg --progress test 192.168.1.2::www
+rsync -vzrtopg --progress test 192.168.1.2::www
 ```
 
 
