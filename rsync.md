@@ -53,6 +53,12 @@ shell> rsync -avz /data /backup
 shell> rsync -avz --exclude="*.log" --delete --progress test 192.168.1.2::www
 ```
 
+支持断点续传
+
+```sh
+rsync -avzP test 192.168.1.2::www
+```
+
 将文件的权限和时间一起同步过去
 
 ```sh
