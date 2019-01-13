@@ -20,3 +20,16 @@ git config --global user.email 1079087531@qq.com
 ```sh
 git clean -d -f ""
 ```
+
+使用代理
+
+```sh
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+```
+
+或在命令行中设置
+
+```sh
+git -c "http.proxy=socks5://127.0.0.1:1080" clone git@github.com:...
+```
