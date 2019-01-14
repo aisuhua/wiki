@@ -61,6 +61,22 @@ shell> dpkg -l
 shell> dpkg -l | grep ftp
 ```
 
+## du
+
+计算一个目录的大小
+
+```sh
+du -sh folder
+```
+
+只显示一级目录的大小
+
+```sh
+du -sh --max-depth=0
+```
+
+- [Linux中查看各文件夹大小命令du -h --max-depth=1](https://blog.csdn.net/ouyang_peng/article/details/10414499)
+
 ## 进程
 
 后台执行进程
