@@ -112,11 +112,27 @@ mysql> INSERT IGNORE INTO `table_name` (`id`, `name`) VALUES ('1', 'suhua');
 挂载数据目录到新的硬盘
 
 ```sh
+shell> sudo chown -R mysql:mysql /data/mysql
+shell> sudo chmod 755 /data/mysql
 shell> vim /etc/apparmor.d/usr.sbin.mysqld
 # Allow data dir access
-  /www/shared/mysql/ r,
-  /www/shared/mysql/** rwk,
+  /data/mysql/ r,
+  /data/mysql/** rwk,
 shell> service mysql stop
 shell> systemctl restart apparmor.service
 shell> service mysql start
 ```
+
+若发现切换数据目录后无法启动，可以关闭或卸载 apparmor
+
+```sh
+/etc/init.d/apparmor stop
+/etc/init.d/apparmor teardown
+
+# 卸载
+update-rc.d -f apparmor remove
+apt-get purge apparmor
+reboot
+```
+
+- [Can't create file /var/lib/mysql/user.lower-test](https://dba.stackexchange.com/questions/106085/cant-create-file-var-lib-mysql-user-lower-test)
