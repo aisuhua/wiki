@@ -52,6 +52,14 @@ shell> cp -R /path/to/src/. /path/to/dest/
 
 - [Linux下cp目录下的带隐藏文件的子目录](https://blog.csdn.net/yockie/article/details/52872623)
 
+删除超过特定大小的文件
+
+```sh
+find . -size +100k -delete
+```
+
+- [How to get all the files exceeding certain size and deleting them](https://stackoverflow.com/questions/5057041/how-to-get-all-the-files-exceeding-certain-size-and-deleting-them)
+
 ## dpkg
 
 查看安装的所有软件
