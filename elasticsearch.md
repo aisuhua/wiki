@@ -73,3 +73,11 @@ _cat/shards/my_index
 ```
 _analyze?field=username&text=suhuazizi
 ```
+
+## Version
+
+修改文档的版本号
+
+```sh
+POST /sequence/sequence/sp?version=100&version_type=external
+```
