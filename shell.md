@@ -140,6 +140,14 @@ shell> grep -vFf test1.csv test2.csv
 shell> grep -Ff test1.csv test2.csv
 ```
 
+根据前面两列的值是否相同去重
+
+```sh
+sort -u -t, -k1,2 test.txt
+```
+
+- [Is there a way to 'uniq' by column?](https://stackoverflow.com/questions/1915636/is-there-a-way-to-uniq-by-column)
+
 ## 快捷键
 
 ```sh
