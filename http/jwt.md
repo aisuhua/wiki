@@ -23,3 +23,77 @@ JWT 实际上就是一段由头部、载荷和签名所组成的字符串，它�
 
 - 激活帐号、邮箱验证；
 - 用户登录、单点登录（密钥泄漏有危险，服务端仍然需存储验证信息）；
+
+由于 Payload 是明文，因此敏感的业务数据不应该放在 JWT。
+
+## 示例
+
+生成 JWT
+
+```php
+// Create token header as a JSON string
+$header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
+
+// Create token payload as a JSON string
+$payload = json_encode(['user_id' => 123]);
+
+// Encode Header to Base64Url String
+$base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
+
+// Encode Payload to Base64Url String
+$base64UrlPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payload));
+
+// Create Signature Hash
+$signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, 'abC123!', true);
+
+// Encode Signature to Base64Url String
+$base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
+
+// Create JWT
+$jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
+
+// eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.NYlecdiqVuRg0XkWvjFvpLvglmfR1ZT7f8HeDDEoSx8
+echo $jwt;
+```
+
+- [How to Create a JSON Web Token Using PHP](https://dev.to/robdwaller/how-to-create-a-json-web-token-using-php-3gml)
+
+验证和解析 JWT
+
+```php
+
+$jwt = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.NYlecdiqVuRg0XkWvjFvpLvglmfR1ZT7f8HeDDEoSx8';
+
+list($base64UrlHeader, $base64UrlPayload, $base64UrlSignature) = explode('.', $jwt);
+
+// Check signature
+$signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, 'abC123!', true);
+$base64UrlSignatureCheck = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
+if ($base64UrlSignature !== $base64UrlSignatureCheck)
+{
+    exit('Invalid signature.');
+}
+
+$header = base64_decode(str_pad(
+    str_replace(['-', '_'], ['+', '/'], $base64UrlHeader),
+    strlen($base64UrlHeader) % 4,
+    '=',
+STR_PAD_RIGHT
+));
+
+$payload = base64_decode(str_pad(
+    str_replace(['-', '_'], ['+', '/'], $base64UrlPayload),
+    strlen($base64UrlPayload) % 4,
+    '=',
+    STR_PAD_RIGHT
+));
+
+// {"typ":"JWT","alg":"HS256"}
+echo $header;
+
+// {"user_id":123}
+echo $payload;
+```
+
+
+
