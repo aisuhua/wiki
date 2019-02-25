@@ -55,7 +55,7 @@ $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
 echo $jwt;
 ```
 
-输出的格式如下：
+输出的格式
 
 ```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.NYlecdiqVuRg0XkWvjFvpLvglmfR1ZT7f8HeDDEoSx8
