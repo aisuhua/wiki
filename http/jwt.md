@@ -55,7 +55,11 @@ $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
 echo $jwt;
 ```
 
+输出的格式如下：
+
+```
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.NYlecdiqVuRg0XkWvjFvpLvglmfR1ZT7f8HeDDEoSx8
+```
+
 - [How to Create a JSON Web Token Using PHP](https://dev.to/robdwaller/how-to-create-a-json-web-token-using-php-3gml)
-
-
 
