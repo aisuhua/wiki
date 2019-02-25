@@ -52,7 +52,6 @@ $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode
 // Create JWT
 $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
 
-// eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.NYlecdiqVuRg0XkWvjFvpLvglmfR1ZT7f8HeDDEoSx8
 echo $jwt;
 ```
 
