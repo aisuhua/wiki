@@ -19,11 +19,15 @@ You application then gets an authorization code, which it will exchange for an a
 
 ## 示例
 
-说明
+OAuth 定义了四种角色
 
-- 客户端：webapi.115.com 网站
-- 服务端：github.com
-- 用户：aisuhua
+- 资源拥有者 (Resource Owner) 用户 aisuhua
+- 客户端 (Client) webapi.115.com
+- 授权服务器 (Authorization Server) github.com
+- 资源服务器 (Resource Server) github.com
+
+
+### 交互过程
 
 用户点击客户端提供的授权请求按钮
 
@@ -46,7 +50,7 @@ scope=user:email&redirect_uri=https://webapi.115.com/oauth/callback.php">Authori
 https://webapi.115.com/oauth/callback.php?code=7d539c86c74b32f17b39
 ```
 
-客户端使用 authorization code 和 client secret 等信息获取 access token.
+客户端使用 authorization code 和 client secret 等信息获取 access token
 
 ```php
 $client_id = '';
