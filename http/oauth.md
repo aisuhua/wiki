@@ -44,13 +44,13 @@ scope=user:email&redirect_uri=https://webapi.115.com/oauth/callback.php">Authori
 
 ![Alt text](img/oauth_authorization.png)
 
-用户点击确认授权后服务端返回授权许可凭证 authorization code 给客户端
+用户点击确认授权后服务端返回授权许可凭证 authorization code 给客户端。
 
 ```
 https://webapi.115.com/oauth/callback.php?code=7d539c86c74b32f17b39
 ```
 
-客户端使用 authorization code 和 client secret 等信息获取 access token
+客户端使用 authorization code 和 client secret 等信息获取 access token。
 
 ```php
 $client_id = '';
