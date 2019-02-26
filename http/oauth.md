@@ -19,6 +19,12 @@ You application then gets an authorization code, which it will exchange for an a
 
 ## 示例
 
+说明
+
+- 客户端：webapi.115.com 网站
+- 服务端：github.com
+- 用户：aisuhua
+
 用户点击客户端提供的授权请求按钮
 
 ![Alt text](img/oauth_index.png)
@@ -67,7 +73,7 @@ $result = file_get_contents($url, false, $context);
 var_dump($result);
 ```
 
-最好，客户端通过获取到的 access token 请求服务端获取资源。
+客户端通过获取到的 access token 请求服务端获取资源。
 
 ```php
 $access_token = json_decode($result)->access_token;
@@ -90,8 +96,6 @@ $result = file_get_contents($url, false, $context);
 $email = json_decode($result)->email;
 var_dump($email);
 ```
-
-
 
 
 ## 参考文献
