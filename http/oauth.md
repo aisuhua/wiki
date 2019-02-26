@@ -2,17 +2,13 @@
 
 让用户可以在不提供帐号密码给第三方网站的情况下，授权第三方网站访问他的个人信息。
 
-维基百科 [OAuth](https://en.wikipedia.org/wiki/OAuth)
+维基百科 [OAuth](https://en.wikipedia.org/wiki/OAuth)。
 
 ## 原理图
 
 ![Alt text](img/oauth.png)
 
-At its core, OAuth requires you to redirect users to a special URL on Square’s site that includes your application id. 
-The merchant then decides whether or not to allow your application access, and which permissions your app will have. 
-You application then gets an authorization code, which it will exchange for an access token with an authenticated request.
-
-- [OAuth with PHP, Part One: getting access tokens.](https://medium.com/square-corner-blog/oauth-with-php-part-one-getting-access-tokens-5a18b0b70099)
+参考 [OAuth with PHP, Part One: getting access tokens.](https://medium.com/square-corner-blog/oauth-with-php-part-one-getting-access-tokens-5a18b0b70099)
 
 ## 示例
 
