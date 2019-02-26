@@ -1,8 +1,4 @@
 <?php
-/**
- * @see https://dev.to/robdwaller/how-to-create-a-json-web-token-using-php-3gml
- */
-
 // Create token header as a JSON string
 $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
 

@@ -1,7 +1,6 @@
 <?php
 
 $jwt = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.NYlecdiqVuRg0XkWvjFvpLvglmfR1ZT7f8HeDDEoSx8';
-
 list($base64UrlHeader, $base64UrlPayload, $base64UrlSignature) = explode('.', $jwt);
 
 // Check signature
