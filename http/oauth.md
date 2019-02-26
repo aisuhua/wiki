@@ -1,6 +1,8 @@
 # OAuth
 
-让用户可以在不提供帐号密码给第三方网站的情况下，授权第三方网站访问他的个人信息。参考维基百科：[OAuth](https://en.wikipedia.org/wiki/OAuth)
+让用户可以在不提供帐号密码给第三方网站的情况下，授权第三方网站访问他的个人信息。
+
+维基百科 [OAuth](https://en.wikipedia.org/wiki/OAuth)
 
 ## 原理图
 
