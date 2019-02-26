@@ -3,7 +3,7 @@
 OAuth is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords.
 This mechanism is used by companies such as Amazon,Google, Facebook, Microsoft and Twitter to permit the users to share information about their accounts with third party applications or websites.
 
-OAuth 能够让第三方网站在用户不提供帐号密码的情况下访问他的个人信息。
+OAuth 用户可以在不提供帐号密码给第三方网站的情况下，让第三方网站有权访问他的个人信息。
 
 - [OAuth](https://en.wikipedia.org/wiki/OAuth)
 
