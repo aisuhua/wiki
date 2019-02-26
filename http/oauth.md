@@ -19,29 +19,30 @@ You application then gets an authorization code, which it will exchange for an a
 
 ## 示例
 
-用户授权
-
-```html
-<a href="https://github.com/login/oauth/authorize?client_id=CLIENT_ID&response_type=code<br>
-&scope=user:email&<br>redirect_uri=https://webapi.115.com/oauth/callback.php">Authorize App</a>
-```
+用户点击客户端提供的授权请求按钮
 
 ![Alt text](img/oauth_index.png)
 
-点击进入授权询问页面
+页面的源代码
+
+```html
+<a href="https://github.com/login/oauth/authorize?client_id=CLIENT_ID&response_type=code&
+scope=user:email&<br>redirect_uri=https://webapi.115.com/oauth/callback.php">Authorize App</a>
+```
+
+进入授权询问页面
 
 ![Alt text](img/oauth_authorization.png)
 
-用户确定授权后，页面会重定向到 `redirect_uri` 并附上 authorization code。
+用户点击确认授权后服务端返回授权许可凭证 authorization code 给客户端
 
 ```
 https://webapi.115.com/oauth/callback.php?code=7d539c86c74b32f17b39
 ```
 
-接着，客户端使用 authorization code 和 client secret 获取 access token.
+客户端使用 authorization code 和 client secret 等信息获取 access token.
 
 ```php
-<?php
 $client_id = '';
 $client_secret = '';
 $authorization_code = $_GET['code'];
@@ -66,10 +67,38 @@ $result = file_get_contents($url, false, $context);
 var_dump($result);
 ```
 
+最好，客户端通过获取到的 access token 请求服务端获取资源。
+
+```php
+$access_token = json_decode($result)->access_token;
+
+$url = 'https://api.github.com/user';
+$options = array(
+    'http'=> array(
+        'method'=> 'GET',
+        'header'  => array(
+            "Authorization: token {$access_token}",
+            "Accept: application/json",
+            "User-Agent: aisuhua"
+        )
+    )
+);
+
+$context = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+
+$email = json_decode($result)->email;
+var_dump($email);
+```
+
+
+
+
 ## 参考文献
 
 - [OAuth with PHP, Part One: getting access tokens.](https://medium.com/square-corner-blog/oauth-with-php-part-one-getting-access-tokens-5a18b0b70099)
 - [OAuth with PHP Part Two: refreshing & revoking tokens](https://medium.com/square-corner-blog/oauth-with-php-part-two-refreshing-revoking-tokens-9ae065537c41)
 - [Authorizing OAuth Apps](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
+- [OAuth 2 详解](https://zhuanlan.zhihu.com/p/30720675)
 
 
