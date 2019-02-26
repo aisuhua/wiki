@@ -25,8 +25,10 @@ You application then gets an authorization code, which it will exchange for an a
 
 ```html
 <a href="https://github.com/login/oauth/authorize?client_id=CLIENT_ID&response_type=code&
-scope=user:email&<br>redirect_uri=https://webapi.115.com/oauth/callback.php">Authorize App</a>
+scope=user:email&redirect_uri=https://webapi.115.com/oauth/callback.php">Authorize App</a>
 ```
+
+- [Authorizing OAuth Apps](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
 
 进入授权询问页面
 
@@ -96,7 +98,6 @@ var_dump($email);
 
 - [OAuth with PHP, Part One: getting access tokens.](https://medium.com/square-corner-blog/oauth-with-php-part-one-getting-access-tokens-5a18b0b70099)
 - [OAuth with PHP Part Two: refreshing & revoking tokens](https://medium.com/square-corner-blog/oauth-with-php-part-two-refreshing-revoking-tokens-9ae065537c41)
-- [Authorizing OAuth Apps](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
 - [OAuth 2 详解](https://zhuanlan.zhihu.com/p/30720675)
 
 
