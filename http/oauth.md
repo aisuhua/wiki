@@ -23,8 +23,6 @@ You application then gets an authorization code, which it will exchange for an a
 
 ![Alt text](img/oauth_index.png)
 
-页面的源代码
-
 ```html
 <a href="https://github.com/login/oauth/authorize?client_id=CLIENT_ID&response_type=code&
 scope=user:email&<br>redirect_uri=https://webapi.115.com/oauth/callback.php">Authorize App</a>
