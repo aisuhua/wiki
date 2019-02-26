@@ -26,6 +26,7 @@ OAuth 定义了四种角色
 - 授权服务器 (Authorization Server) github.com
 - 资源服务器 (Resource Server) github.com
 
+过程可以参考 [Coding](https://coding.net/login) 的登录。
 
 ### 交互过程
 
