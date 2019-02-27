@@ -1,10 +1,13 @@
 tab 修改为 4 个空格
 
 ```sh
-# 全局
 shell> vim /etc/vim/vimrc.local
 set tabstop=4
-# 当前用户
+```
+
+只作用于当前用户
+
+```sh
 shell> vim ~/.vimrc
 set tabstop=4
 ```
@@ -15,6 +18,8 @@ set tabstop=4
 shell> vim ~/.vimrc
 syntax on
 ```
+
+- [Turn On or Off Color Syntax Highlighting In vi or vim Editor](https://www.cyberciti.biz/faq/turn-on-or-off-color-syntax-highlighting-in-vi-or-vim/)
 
 替换文本
 
