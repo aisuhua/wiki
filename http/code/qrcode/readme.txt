@@ -75,14 +75,3 @@ Cookie: MM_WX_NOTIFY_STATE=1; MM_WX_SOUND_STATE=1; wxuin=2663483803; wxsid=GLREC
 curl 'https://login.wx.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid=QYRItUzjZQ==&tip=0&r=-687339686&_=1551170229235' -H 'Pragma: no-cache' -H 'Accept-Encoding: gzip, deflate, sdch, br' -H 'Accept-Language: zh-CN,zh;q=0.8,en;q=0.6' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36' -H 'Accept: */*' -H 'Referer: https://wx.qq.com/' -H 'Cookie: mm_lang=zh_CN' -H 'Connection: keep-alive' -H 'Cache-Control: no-cache' --compressed
 
 window.code=400;
-
-
-
-
-
-
-
-
-
-
-
