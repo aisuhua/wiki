@@ -72,7 +72,7 @@ Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
 Cookie: MM_WX_NOTIFY_STATE=1; MM_WX_SOUND_STATE=1; wxuin=2663483803; wxsid=GLRECysse3NhRQe2; wxloadtime=1551166593; mm_lang=zh_CN; webwx_data_ticket=gSeQqWLSMdWtXWd5shc7+gG9; webwxuvid=900475e82e60d3d7dd2f4ddfb827abf129ad28e69d0210609875d885ad79de1ec37d7e99282234116f472e138e3ad00f; webwx_auth_ticket=CIsBEPuS+64MGoABTUJaN1gybFXvZNhlc6st/1GLdDpemdDDtvPimK8raUtLk3jjq7Y8Yr3aAelBWI5zdveeuU0RioZw5FMxdn5sdH8swjGY3r1tkCRNtjWSgvj853BXXe41pKdQ9OSfVTc/WeT5yE/8EUBRmip4qxGaFy9ouX8OSzIzue96Xpy/BmY=; login_frequency=1; last_wxuin=2663483803
 
 
-如何长时间没有扫该二维码，接口会提示该 uuid 已经失败，此时页面停止检测登录状态并提示：二维码失效，点击刷新
+如果长时间没有扫该二维码，接口会提示该 uuid 已经失败，此时页面停止检测登录状态并提示：二维码失效，点击刷新
 curl 'https://login.wx.qq.com/cgi-bin/mmwebwx-bin/login?loginicon=true&uuid=QYRItUzjZQ==&tip=0&r=-687339686&_=1551170229235' -H 'Pragma: no-cache' -H 'Accept-Encoding: gzip, deflate, sdch, br' -H 'Accept-Language: zh-CN,zh;q=0.8,en;q=0.6' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36' -H 'Accept: */*' -H 'Referer: https://wx.qq.com/' -H 'Cookie: mm_lang=zh_CN' -H 'Connection: keep-alive' -H 'Cache-Control: no-cache' --compressed
 
 window.code=400;
