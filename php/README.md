@@ -156,7 +156,6 @@ phpenmod -s fpm yar
 
 ```sh
 phpdismod -v 7.2 yar
-phpenmod -s cli yar
 ```
 
 - [How to Enable/Disable PHP Modules on Ubuntu 18.04 & 16.04](https://tecadmin.net/enable-disable-php-modules-ubuntu/)
