@@ -38,7 +38,7 @@ scope=user:email&redirect_uri=https://webapi.115.com/oauth/callback.php">Authori
 
 ![Alt text](img/oauth_authorization.png)
 
-用户点击确认授权后服务端返回授权许可凭证 authorization code 给客户端。
+用户点击确认授权后，授权服务器返回授权许可凭证 authorization code 给客户端。
 
 ```
 https://webapi.115.com/oauth/callback.php?code=7d539c86c74b32f17b39
@@ -71,7 +71,7 @@ $result = file_get_contents($url, false, $context);
 var_dump($result);
 ```
 
-客户端通过获取到的 access token 请求服务端获取资源。
+客户端通过获取到的 access token 请求资源服务端获取用户的资源。
 
 ```php
 $access_token = json_decode($result)->access_token;
