@@ -82,3 +82,4 @@ shell> curl ip.cn
 
 - [fq-book](https://github.com/loremwalker/fq-book)
 - [WebSiteUseful](https://github.com/loremwalker/WebSiteUseful)
+- [ubuntu16.04安装shadowsocks-qt5并支持chacha20-ietf-poly1305协议](https://www.shangyexin.com/2018/04/20/shadowsocks-qt5/)
