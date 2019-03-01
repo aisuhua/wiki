@@ -110,7 +110,7 @@ shell> vim ss1.json
 	"y.y.y.y"
   ],
   "server_port": "",
-  "local_port": 1080,
+  "local_port": 1081,
   "password": "",
   "timeout": 600,
   "method": "aes-256-cfb"
