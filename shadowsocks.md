@@ -94,7 +94,7 @@ sudo apt install shadowsocks-libev
 启动多个 ss-local 实例
 
 ```
-shell> vim ss0.json
+shell> vim /etc/ss0.json
 {
   "server": "", 
   "server_port": "",
@@ -103,7 +103,7 @@ shell> vim ss0.json
   "timeout": 600,
   "method": "chacha20-ietf-poly1305"
 }
-shell> vim ss1.json
+shell> vim /etc/ss1.json
 {
   "server": [
 	"x.x.x.x", 
@@ -115,11 +115,21 @@ shell> vim ss1.json
   "timeout": 600,
   "method": "aes-256-cfb"
 }
-shell> nohup ss-local -c ss0.json > ss0.log 2>&1 &
-shell> nohup ss-local -c ss1.json > ss1.log 2>&1 &
+shell> nohup ss-local -c /etc/ss0.json > ss0.log 2>&1 &
+shell> nohup ss-local -c /etc/ss1.json > ss1.log 2>&1 &
 ```
 
 - [Shadowsocks](https://wiki.archlinux.org/index.php/Shadowsocks_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+
+开机启动
+
+```bash
+shell> /etc/rc.local
+ss-local -c /etc/ss0.json
+ss-local -c /etc/ss1.json
+```
+
+- [ubuntu16.04 配置shadowshocks客户端开机启动](https://blog.csdn.net/H12590400327/article/details/81091306)
 
 ## 参考文献
 
