@@ -78,6 +78,49 @@ shell> curl ip.cn
 
 - [Polipo](https://www.irif.fr/~jch/software/polipo/)
 
+## 其他
+
+支持 chacha20-ietf-poly1305 加密算法
+
+```
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
+sudo apt-get update
+sudo apt install shadowsocks-libev
+```
+
+- [ubuntu16.04 配置ss及使用教程，支持chacha20-ietf-poly1305加密方式](https://blog.csdn.net/qq_36265860/article/details/83379138)
+
+启动多个 ss-local 实例
+
+```
+shell> vim ss0.json
+{
+  "server": "", 
+  "server_port": "",
+  "local_port": 1080,
+  "password": "",
+  "timeout": 600,
+  "method": "chacha20-ietf-poly1305"
+}
+shell> vim ss1.json
+{
+  "server": [
+	"x.x.x.x", 
+	"y.y.y.y"
+  ],
+  "server_port": "",
+  "local_port": 1080,
+  "password": "",
+  "timeout": 600,
+  "method": "aes-256-cfb"
+}
+shell> nohup ss-local -c ss0.json > ss0.log 2>&1 &
+shell> nohup ss-local -c ss1.json > ss1.log 2>&1 &
+```
+
+- [Shadowsocks](https://wiki.archlinux.org/index.php/Shadowsocks_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+
 ## 参考文献
 
 - [fq-book](https://github.com/loremwalker/fq-book)
