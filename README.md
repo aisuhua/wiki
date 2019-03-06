@@ -55,3 +55,7 @@
 ### Memcached
 
 - [Memcached全面剖析](https://charlee.li/memcached-001.html) 对全面了解 Memcached 很有帮助，非书籍
+
+### FFmpeg
+
+- [FFmpeg从入门到精通](https://www.amazon.cn/dp/B07CLW1VC3)
