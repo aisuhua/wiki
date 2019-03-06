@@ -58,4 +58,5 @@
 
 ### FFmpeg
 
+- [雷霄骅(leixiaohua1020)的专栏](https://blog.csdn.net/leixiaohua1020) 国内视频编码入门必读博客
 - [FFmpeg从入门到精通](https://www.amazon.cn/dp/B07CLW1VC3)
