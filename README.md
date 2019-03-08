@@ -61,7 +61,7 @@
 - [雷霄骅(leixiaohua1020)的专栏](https://blog.csdn.net/leixiaohua1020) 国内视频编码入门必读博客
 - [FFmpeg从入门到精通](https://www.amazon.cn/dp/B07CLW1VC3)
 
-### C
+### C 语言
 
 - [C Primer Plus（第6版）](https://book.douban.com/subject/26792521/) 讲得细致入微，零基础入门首选
 - [C程序设计语言](https://book.douban.com/subject/1139336/) C 语言发明者编写，内容精炼而淳朴，适合有经验的开发人员阅读
