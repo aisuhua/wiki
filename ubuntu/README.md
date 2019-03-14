@@ -118,6 +118,10 @@ root hard nofile 65535
 - [Increase the open files limit on Linux](https://ro-che.info/articles/2017-03-26-increase-open-files-limit)
 - [Cannot Increase open file limit past 4096 (Ubuntu)](https://superuser.com/questions/1200539/cannot-increase-open-file-limit-past-4096-ubuntu)
 
+## PPA 使用国内源
+
+[点击查看](https://github.com/ustclug/mirrorrequest/issues/43)
+
 ## 对命令进行版本切换
 
 查看当前默认使用的 PHP 版本
