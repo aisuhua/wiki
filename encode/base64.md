@@ -7,3 +7,4 @@ Three 8-bit bytes (i.e., a total of 24 bits) can therefore be represented by fou
 
 - [Base64](https://en.wikipedia.org/wiki/Base64)
 - [base64_encode](http://php.net/manual/en/function.base64-encode.php)
+- [Base64的介绍以及Base64URL介绍](https://blog.csdn.net/qq_35725321/article/details/52126402)

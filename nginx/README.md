@@ -202,7 +202,7 @@ stream {
 - [TCP/UDP Load Balancing with NGINX: Overview, Tips, and Tricks](https://www.nginx.com/blog/tcp-load-balancing-udp-load-balancing-nginx-tips-tricks/)
 
 ## 基本操作
-
+    
 重新加载配置文件
 
 ```sh
@@ -214,6 +214,38 @@ shell> nginx -s reload
 ```sh
 shell> nginx -V
 ```
+
+### 重新编译 Nginx，添加新的模块
+
+下载与当前已安装版本一致的安装包
+
+```bash
+wget http://nginx.org/download/nginx-1.14.1.tar.gz
+tar -zxvf nginx-1.14.1.tar.gz
+cd nginx-1.14.1
+```
+
+查看原来的编译参数
+
+```bash
+nginx -V
+```
+
+在编译参数最后面添加所需模块
+
+```bash
+./configure --with-http_secure_link_module
+make 
+```
+
+此时在 objs 文件夹里就有新编译后的 nginx 二进制文件，将它覆盖之前的即可
+
+```bash
+mv /usr/sbin/nginx /usr/sbin/nginx.bak
+cp objs/nginx /usr/sbin
+```
+
+参考[Nginx-重新编译安装模块及平滑升级](https://www.zybuluo.com/cdmonkey/note/712348)
 
 ## 参考文献
 
