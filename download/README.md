@@ -1,5 +1,3 @@
-# 下载
-
 ## 基础示例
 
 单纯使用 Nginx 实现文件下载，需具备以下特征：
@@ -12,20 +10,22 @@
 - [ngx_http_autoindex_module](http://nginx.org/en/docs/http/ngx_http_autoindex_module.html)
 - [ngx_http_auth_basic_module](http://nginx.org/en/docs/http/ngx_http_auth_basic_module.html)
 
+Nginx 配置示例
+
 ```nginx
 server {
     listen 80 default_server;
     server_name download.example.com;
-
-	# auth
+    
+    # auth
     auth_basic "Restricted site";
     auth_basic_user_file /etc/nginx/.htpasswd;
     
-	autoindex on;               # enable directory listing output
+    autoindex on;               # enable directory listing output
     autoindex_exact_size off;   # output file sizes rounded to kilobytes, megabytes, and gigabytes
     autoindex_localtime on;
-
-	location / {
+    
+    location / {
         root /tmp/files;
     }
 }
@@ -51,12 +51,12 @@ foo:$apr1$jZqtEmFt$EpceKA4NqfxgXUgjQPuCN1
 目标
 
 - 当文件下载了 200K 后，将速度限制为 10K/s；
-- 单个 IP 最多只能发起 2 个并发下载连接；
+- 单个 IP 最多只能发起 2 个并发下载请求；
 
 需用到的模块
 
 - [ngx_http_limit_conn_module](http://nginx.org/en/docs/http/ngx_http_limit_conn_module.html)
-- [ngx_http_core_module](http://nginx.org/en/docs/http/ngx_http_core_module.html#limit_rate)
+- [ngx_http_core_module#limit_rate](http://nginx.org/en/docs/http/ngx_http_core_module.html#limit_rate)
 
 Nginx 配置示例
 
@@ -82,7 +82,7 @@ http {
 }
 ```
 
-参考[Nginx实现文件下载限速的功能](https://junzhou2016.github.io/2018/01/14/Nginx%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%99%90%E9%80%9F%E5%8A%9F%E8%83%BD/)
+参考 [Nginx实现文件下载限速的功能](https://junzhou2016.github.io/2018/01/14/Nginx%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%99%90%E9%80%9F%E5%8A%9F%E8%83%BD/)
 
 ## 安全下载1
 
@@ -99,6 +99,8 @@ http {
 生成下载文件地址
 
 ```php
+<?php
+
 $host = 'http://download.example.com';
 $uri = '/download/nginx-1.14.1.tar.gz';
 $key = '123456';
@@ -111,14 +113,14 @@ echo $download_url, PHP_EOL;
 
 > http://download.example.com/download/nginx-1.14.1.tar.gz?md5=OhDHs93Zfnfexwl2Am7DOg&expires=1553503005
 
-配置 nginx 验证参数合法性
+Nginx 配置示例
 
 ```nginx
 server {
     listen 80;
     server_name download.example.com;
 
-    # /download/nginx-1.14.1.tar.gz => /tmp/files/nginx-1.14.1.tar.gz 
+    # /tmp/files/nginx-1.14.1.tar.gz 
     location /download {
         secure_link $arg_md5,$arg_expires;
         secure_link_md5 "123456$secure_link_expires$uri";
@@ -143,7 +145,7 @@ server {
 - 验证下载链接的签名是否正确；
 - 验证下载链接是否过期；
 - User-Agent 限制；
-- 验证用户的登录状态（Cookie 校验）；
+- 验证用户的登录状态（Cookie）；
 - 验证用户是否有权限访问该资源；
 - 限制下载速度；
 
@@ -154,12 +156,14 @@ server {
 生成下载地址脚本
 
 ```php
+<?php
+
 $host = 'http://download.example.com';
 $key = '123456';
 $expires = time() + 3600;
 $file = 'myfile';
 $ua = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
-$user_id = '10086'; // Get from login state
+$user_id = '10086'; // Login info
 $speed = 200 * 1024; // 100KB
 
 $hash = md5($key . "{$expires}{$file}{$ua}{$speed}{$user_id}");
@@ -184,6 +188,7 @@ server {
         fastcgi_pass 127.0.0.1:9000;
     }
     
+    # /tmp/files/myfile
     location /download {
         internal;
         alias /tmp/files;
@@ -194,6 +199,8 @@ server {
 下载地址验证脚本
 
 ```php
+<?php
+
 $file = $_GET['file'];
 $expires = $_GET['expires'];
 $ua = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
@@ -241,7 +248,5 @@ header("X-Accel-Limit-Rate: {$speed}"); // 限速
 header("X-Accel-Redirect: /download/{$file}");
 ```
 
-参考：
-
-- [使用 Nginx 的 X-Sendfile 机制提升 PHP 文件下载性能](https://www.lovelucy.info/x-sendfile-in-nginx.html)
+参考 [使用 Nginx 的 X-Sendfile 机制提升 PHP 文件下载性能](https://www.lovelucy.info/x-sendfile-in-nginx.html)
 
