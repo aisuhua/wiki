@@ -100,7 +100,6 @@ http {
 
 ```php
 <?php
-
 $host = 'http://download.example.com';
 $uri = '/download/nginx-1.14.1.tar.gz';
 $key = '123456';
@@ -157,7 +156,6 @@ server {
 
 ```php
 <?php
-
 $host = 'http://download.example.com';
 $key = '123456';
 $expires = time() + 3600;
@@ -200,7 +198,6 @@ server {
 
 ```php
 <?php
-
 $file = $_GET['file'];
 $expires = $_GET['expires'];
 $ua = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
