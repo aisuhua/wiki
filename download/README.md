@@ -258,7 +258,7 @@ header("X-Accel-Redirect: /download/{$file}");
 - 浏览器重新发起请求，并使用报头 `Range:bytes=start-end` 请求所需的文件片段；
 - 服务器响应 `206 Partial Content` 状态码并返回对应的文件片段内容；
 
-### 是否支持分段下载
+### 判断服务器是否支持分段下载
 
 请求
 
@@ -276,7 +276,7 @@ Accept-Ranges: bytes
 ETag: "5c998a53-9f60fe"
 ```
 
-### 请求分段数据
+### 分段请求数据
 
 请求前面 1024 个字节
 
