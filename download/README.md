@@ -247,3 +247,71 @@ header("X-Accel-Redirect: /download/{$file}");
 
 参考 [使用 Nginx 的 X-Sendfile 机制提升 PHP 文件下载性能](https://www.lovelucy.info/x-sendfile-in-nginx.html)
 
+## 分段下载
+
+实际上 Nginx 默认是支持分段下载文件的，比较常见的应用场景是在线播放 MP4、预览 PDF 等。
+
+过程描述：
+
+- 浏览器请求下载地址；
+- 服务器响应 `Accept-Ranges:bytes` 告知其支持分段下载；
+- 浏览器重新发起请求，并使用报头 `Range:bytes=start-end` 请求所需的文件片段；
+- 服务器响应 `206 Partial Content` 状态码并返回对应的文件片段内容；
+
+### 是否支持分段下载
+
+请求
+
+```
+GET /sample.mp4 HTTP/1.1
+Host: download.example.com
+```
+
+响应
+
+```
+HTTP/1.1 200 OK
+Content-Length: 2048
+Accept-Ranges: bytes
+ETag: "5c998a53-9f60fe"
+```
+
+### 请求分段数据
+
+请求前面 1024 个字节
+
+```
+GET /sample.mp4 HTTP/1.1
+Host: download.example.com
+Range: bytes=0-1023
+```
+
+响应
+
+```
+HTTP/1.1 206 Partial Content
+Content-Length: 1024
+Content-Range: bytes 0-1023/2048
+
+(1024 bytes data...)
+```
+
+请求最后 1024 个字节
+
+```
+GET /sample.mp4 HTTP/1.1
+Host: download.example.com
+Range: bytes=1024-2047
+```
+
+响应
+
+```
+HTTP/1.1 206 Partial Content
+Content-Length: 1024
+Content-Range: bytes 1024-2047/2048
+
+(1024 bytes data...)
+```
+
+参考 [Node.js 中实现 HTTP 206 内容分片](https://www.oschina.net/translate/http-partial-content-in-node-js)
