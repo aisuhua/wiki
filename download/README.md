@@ -317,3 +317,8 @@ Content-Range: bytes 1024-2047/2048
 参考 [Node.js 中实现 HTTP 206 内容分片](https://www.oschina.net/translate/http-partial-content-in-node-js)
 
 [PDF.js](https://github.com/mozilla/pdf.js/wiki/Setup-pdf.js-in-a-website) 可以实现分段下载 PDF 文件并进行在线预览。
+
+
+## 其他
+
+- [nginx secure_link下载防盗链](http://www.ttlsa.com/nginx/nginx-modules-secure_link/)
