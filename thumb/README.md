@@ -33,7 +33,7 @@ server {
 http://thumb.example.com/goods.jpg
 ```
 
-则通过以下地址访问缩略图：
+则可以通过以下地址访问缩略图：
 
 ```
 http://thumb.example.com/small_light(dw=300,dh=300)/goods.jpg
