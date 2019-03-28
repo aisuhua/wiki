@@ -241,6 +241,7 @@ http://thumb.example.com/small_light/goods.jpg?dw=120&dh=120
 X-Sendfile 的用法，可参考以下文章：
 
 - [X-Accel][3]
+- [Nginx+PHP 做下载服务器配置—X-Accel-Redirect][13]
 - [Using X-Accel-Redirect in Nginx to Implement Controlled Downloads][6]
 - [Nginx-Fu: X-Accel-Redirect From Remote Servers][7]
 - [Using NGINX’s X-Accel with Remote URLs][10]
@@ -266,3 +267,4 @@ X-Sendfile 的用法，可参考以下文章：
 [10]: https://www.mediasuite.co.nz/blog/proxying-s3-downloads-nginx/
 [11]: https://github.com/cubicdaiya/ngx_small_light/issues/30
 [12]: https://aotu.io/notes/2018/06/06/ImageMagick_intro/index.html
+[13]: http://tuyile.com/blog/20160118/nginx_php_download_server_configuration.html
