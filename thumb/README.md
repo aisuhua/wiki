@@ -4,7 +4,7 @@
 
 ## 安装
 
-参考 Github 上的 README 进行安装即可，在 Ubuntu 16.04 安装前先确保已安装以下两个依赖：
+参考 [README][1] 进行安装即可，在 Ubuntu 16.04 安装前先确保已安装以下两个依赖：
 
 ```bash
 apt-get install imagemagick libmagickwand-dev
