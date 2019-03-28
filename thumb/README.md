@@ -54,37 +54,37 @@ http://thumb.example.com/small_light(dw=300,dh=300)/goods.jpg
 server {
     listen 80;
     server_name thumb.example.com;
-
+    
     small_light on;
     location ~ small_light[^/]*/(.+)$ {
         set $file $1;
         rewrite ^ /get_image.php?file=$file;
     }
-
-	location ~ \.php$ {
-		root /www/web;
+    
+    location ~ \.php$ {
+        root /www/web;
         include fastcgi.conf;
         fastcgi_pass 127.0.0.1:9000;
     }
-
+    
     location ~* ^/internal_redirect/(.*?)/(.*?)/(.*) {
         internal;
-
+        
         resolver 114.114.114.114;
-
+        
         set $download_protocol $1;
         set $download_host $2;
         set $download_uri $3;
         set $download_url $download_protocol://$download_host/$download_uri$is_args$args;
-
+        
         proxy_max_temp_file_size 0;
-
+        
         proxy_pass $download_url;
     }
 }
 ```
 
-get_image.php 文件用于获取图片的下载地址，并让 Nginx 完成文件下载。
+get_image.php 文件用于获取图片的下载地址，并提供给 Nginx 完成下载。
 
 ```php
 <?php
@@ -144,14 +144,16 @@ server {
 }
 ```
 
-需要创建缓存目录并赋予写入权限（假设以 www-data 用于运行 Nginx）
+需要创建缓存目录并赋予写入权限（假设以 www-data 用户运行 Nginx）
 
-```
+```bash
 mkdir /tmp/cache
 chown www-data:www-data /tmp/cache
 ```
 
-### 生成缩略图层配置
+### 缩图层配置
+
+缩图层是执行生成图片缩略图的一层。
 
 ```nginx
 server {
@@ -168,8 +170,9 @@ server {
 }
 ```
 
-缓存层和缩图层可以在同一台机器上或不同的多台机器上，
-例如：缓存层用 2 台硬盘性能较好，空间较大的机器，而缩图层用 10 台 CPU 性能较好的机器做负载均衡。
+缓存层和缩图层可以在同一台机器上或不同的多台机器上。
+
+例如：缓存层用 2 台硬盘性能好、空间大的机器，而缩图层用 10 台 CPU 性能较好的机器做负载均衡。
 
 ### 测试
 
@@ -197,7 +200,7 @@ X-Cache-Status:HIT
 
 ## 自定义缩图模板
 
-为了方便处理，可以先定义好几个缩略图模板，然后在地址栏中使用模板名称即可调用生成此规则的缩略图。
+为了方便调用，可以先定义好几个缩略图模板，然后在地址栏中使用模板名称调用对应规格的缩略图。
 
 ```nginx
 server {
@@ -225,7 +228,7 @@ server {
 }
 ```
 
-此时可通过方式访问缩略图，需要注意的时，此时不能再使用 small_light function。
+此时可通过以下方式访问缩略图，需要注意的是此时不能再使用 small_light function 的调用方式。
 
 ```
 http://thumb.example.com/small_light/goods.jpg?dw=120&dh=120
@@ -233,9 +236,9 @@ http://thumb.example.com/small_light/goods.jpg?dw=120&dh=120
 
 ## 其他
 
-使用 `proxy_pass` 访问外部地址时，需要配置 `resolver`，如有问题可参考 [Nginx resolver DNS 解析超时问题分析及解决][5] 解决。
+使用 `proxy_pass` 访问外部地址时，需要配置 `resolver`，可参考 [Nginx resolver DNS 解析超时问题分析及解决][5] 解决。
 
-X-Sendfile 的相关用法，可参考以下文章：
+X-Sendfile 的用法，可参考以下文章：
 
 - [X-Accel][3]
 - [Using X-Accel-Redirect in Nginx to Implement Controlled Downloads][6]
@@ -243,7 +246,7 @@ X-Sendfile 的相关用法，可参考以下文章：
 - [Using NGINX’s X-Accel with Remote URLs][10]
 - [X accell redirect s3][9]
 
-缓存相关的用法，可参考以下文章：
+缓存的用法，可参考以下文章：
 
 - [Does ngx_small_light cache resized images?][11]
 - [ngx_http_proxy_module][4]
