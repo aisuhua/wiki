@@ -27,7 +27,7 @@ server {
 }
 ```
 
-`rewrite` 重写到的地址必须是能读取到图片内容的地址，如以下地址能访问到原图：
+`rewrite` 重写到的地址必须是能读取到图片内容的地址，若以下地址能访问到原图：
 
 ```
 http://thumb.example.com/goods.jpg
