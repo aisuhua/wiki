@@ -118,29 +118,27 @@ http://thumb.example.com/small_light(dw=100,dh=100)/2.png
 ### 缓存层配置
 
 ```nginx
-http {
-    proxy_cache_path /tmp/cache levels=1:2 keys_zone=images:10m inactive=1h max_size=10G use_temp_path=off;
+proxy_cache_path /tmp/cache levels=1:2 keys_zone=images:10m inactive=1h max_size=10G use_temp_path=off;
 
-    server {
-        listen 80;
-        server_name thumb.example.com;	
+server {
+    listen 80;
+    server_name thumb.example.com;	
 
-        location / {
-            # 可选，可在这里实现防盗链等限制
-            valid_referers none blocked *.example.com;
-            if ($invalid_referer) {
-                return 403;
-            }
-
-            proxy_cache images;
-            proxy_cache_valid 200 1h;
-            proxy_cache_key "$scheme://$host$request_uri$is_args$args";
-            proxy_pass http://127.0.0.1:81;
-            proxy_set_header Host $host;
-
-            # 用于判断缓存是否命中
-            add_header X-Cache-Status $upstream_cache_status;
+    location / {
+        # 可选，可在这里实现防盗链等限制
+        valid_referers none blocked *.example.com;
+        if ($invalid_referer) {
+            return 403;
         }
+
+        proxy_cache images;
+        proxy_cache_valid 200 1h;
+        proxy_cache_key "$scheme://$host$request_uri$is_args$args";
+        proxy_pass http://127.0.0.1:81;
+        proxy_set_header Host $host;
+
+        # 用于判断缓存是否命中
+        add_header X-Cache-Status $upstream_cache_status;
     }
 }
 ```
