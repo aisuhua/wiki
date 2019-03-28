@@ -224,7 +224,7 @@ http://thumb.example.com/small_light(p=ssize)/goods.jpg
 ```nginx
 server {
     small_light on;
-    small_light_getparam_mode: on;
+    small_light_getparam_mode on;
 }
 ```
 
