@@ -236,7 +236,7 @@ http://thumb.example.com/small_light/goods.jpg?dw=120&dh=120
 
 ## 其他
 
-使用 `proxy_pass` 访问外部地址时，需要配置 `resolver`，可参考 [Nginx resolver DNS 解析超时问题分析及解决][5] 解决。
+使用 `proxy_pass` 访问外部地址时，需要配置 `resolver`，可参考 [Nginx resolver DNS 解析超时问题分析及解决][5]。
 
 X-Sendfile 的用法，可参考以下文章：
 
