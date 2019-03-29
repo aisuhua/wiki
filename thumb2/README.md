@@ -74,9 +74,9 @@ server {
         resolver_timeout 5s;
 
         set $backend_host https://raw.githubusercontent.com;
-        set $backend_uri /aisuhua/upload-demo/master/basic/uploads/$image;
+        set $backend_uri aisuhua/upload-demo/master/basic/uploads/$image;
 
-        proxy_pass $backend_host$backend_uri;
+        proxy_pass $backend_host/$backend_uri;
 
         image_filter_interlace on;
         image_filter_buffer 20M;
@@ -111,7 +111,7 @@ http://avatar.example.com/resize/2.png?w=200&h=200
 
 缓存层配置文件
 
-```
+```nginx
 proxy_cache_path /tmp/cache levels=1:2 keys_zone=images:10m inactive=1h max_size=10G use_temp_path=off;
 
 server {
@@ -172,7 +172,7 @@ server {
         resolver_timeout 5s;
         
         set $backend_host raw.githubusercontent.com;
-        set $backend_uri /aisuhua/upload-demo/master/basic/uploads/$image;
+        set $backend_uri aisuhua/upload-demo/master/basic/uploads/$image;
         
         proxy_buffering off;
         proxy_pass_request_body off; 
@@ -183,7 +183,7 @@ server {
         proxy_hide_header X-GitHub-Request-Id;
         
         proxy_set_header Host $backend_host;
-        proxy_pass https://$backend_host$backend_uri;
+        proxy_pass https://$backend_host/$backend_uri;
         
         image_filter_interlace on;
         image_filter_buffer 20M;
@@ -201,7 +201,7 @@ server {
 
 ## 最后
 
-更多 image_filter 的用法请参考：
+更多 image_filter 的用法可参考：
 
 - [NGINX: Image Server with image_filter & secure_link modules][5]
 
@@ -209,3 +209,4 @@ server {
 [2]: https://github.com/cubicdaiya/ngx_small_light
 [3]: https://github.com/aisuhua/wiki/blob/master/thumb/README.md
 [4]: https://www.slideshare.net/cubicdaiya/ngx-small-light-24010386
+[5]: https://zaiste.net/nginx_image_server_with_image_filter_secure_link_modules/
