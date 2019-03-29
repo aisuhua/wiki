@@ -13,6 +13,7 @@ apt-get install imagemagick libmagickwand-dev
 ## 基础示例
 
 ```nginx
+# /www/web/nginx_basic.conf
 server {
     listen 80;
     server_name thumb.example.com;
@@ -51,6 +52,7 @@ http://thumb.example.com/small_light(dw=300,dh=300)/goods.jpg
 实际上 `X-Accel-Redirect` 一般只用于让 Nginx 下载本地的文件，所以这里需要结合 `proxy_pass` 功能，让它能下载远程服务器上的文件。
 
 ```nginx
+# /www/web/nginx_remote_img.conf
 server {
     listen 80;
     server_name thumb.example.com;
@@ -118,6 +120,7 @@ http://thumb.example.com/small_light(dw=100,dh=100)/2.png
 ### 缓存层配置
 
 ```nginx
+# /etc/nginx/thumb_cache.conf
 proxy_cache_path /tmp/cache levels=1:2 keys_zone=images:10m inactive=1h max_size=10G use_temp_path=off;
 
 server {
@@ -155,6 +158,7 @@ chown www-data:www-data /tmp/cache
 缩图层是执行生成图片缩略图的一层。
 
 ```nginx
+# /etc/nginx/thumb.conf
 server {
     listen 81;
     server_name thumb.example.com;
