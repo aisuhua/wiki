@@ -201,7 +201,7 @@ GET http://thumb.example.com/small_light(dw=50,dh=50)/goods.jpg
 X-Cache-Status:HIT
 ```
 
-`HIT` 说明命中了缓存，第二次请求的缩略图是从缓存拿取，没有再次生成。
+`HIT` 说明命中了缓存，第二次请求的缩略图是从缓存取，没有再次生成。
 
 ## 自定义缩图模板
 
