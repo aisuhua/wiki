@@ -13,7 +13,7 @@ apt-get install imagemagick libmagickwand-dev
 ## 基础示例
 
 ```nginx
-# /www/web/nginx_basic.conf
+# /www/web/thumb_basic.conf
 server {
     listen 80;
     server_name thumb.example.com;
@@ -52,7 +52,7 @@ http://thumb.example.com/small_light(dw=300,dh=300)/goods.jpg
 实际上 `X-Accel-Redirect` 一般只用于让 Nginx 下载本地的文件，所以这里需要结合 `proxy_pass` 功能，让它能下载远程服务器上的文件。
 
 ```nginx
-# /www/web/nginx_remote_img.conf
+# /www/web/thumb_remote_img.conf
 server {
     listen 80;
     server_name thumb.example.com;
