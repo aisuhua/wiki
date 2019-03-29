@@ -260,6 +260,17 @@ X-Sendfile 的用法，可参考以下文章：
 
 最后，如果你想对 [ImageMagick][2] 有更多了解，可参考 [图像处理 - ImageMagick 简单介绍与案例][12]。
 
+补充 [ngx_small_light][1] 作者演讲的 PPT 和个人博客
+
+- [ngx_small_light at 第2回闇鍋プログラミング勉強会][14]
+- [ngx_small_light][15]
+- [mod_small_lightのNginx版ngx_small_lightをつくってみた][16]
+
+还可以搭建一个可以生成任何图片的缩图服务，只需要提供一个下载地址给它，相关资料：
+
+- [thumbor][17]
+- [OpenRoss – fast, scalable, on-demand image resizer][18]
+
 [1]: https://github.com/cubicdaiya/ngx_small_light
 [2]: http://www.imagemagick.org/script/index.php
 [3]: https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/
@@ -273,3 +284,8 @@ X-Sendfile 的用法，可参考以下文章：
 [11]: https://github.com/cubicdaiya/ngx_small_light/issues/30
 [12]: https://aotu.io/notes/2018/06/06/ImageMagick_intro/index.html
 [13]: http://tuyile.com/blog/20160118/nginx_php_download_server_configuration.html
+[14]: https://www.slideshare.net/cubicdaiya/ngx-small-lightyaminabe
+[15]: https://www.slideshare.net/cubicdaiya/ngx-small-light-24010386
+[16]: http://cubicdaiya.github.io/blog/ja/blog/2012/06/13/ngx-small-light/
+[17]: https://github.com/thumbor/thumbor
+[18]: https://news.ycombinator.com/item?id=7931744
