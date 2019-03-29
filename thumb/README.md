@@ -119,6 +119,8 @@ http://thumb.example.com/small_light(dw=100,dh=100)/2.png
 
 ### 缓存层配置
 
+缓存层的主要作用是缓存缩略图，它并不执行生成缩略图，缩略图的生成在下面即将所说的缩图层完成。
+
 ```nginx
 # /etc/nginx/thumb_cache.conf
 proxy_cache_path /tmp/cache levels=1:2 keys_zone=images:10m inactive=1h max_size=10G use_temp_path=off;
