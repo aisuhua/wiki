@@ -239,6 +239,10 @@ server {
 http://thumb.example.com/small_light/goods.jpg?dw=120&dh=120
 ```
 
+## 缩略图系统的架构图
+
+![](thumb_architecture.png)
+
 ## 其他
 
 使用 `proxy_pass` 访问外部地址时，需要配置 `resolver`，可参考 [Nginx resolver DNS 解析超时问题分析及解决][5]。
