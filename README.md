@@ -45,6 +45,7 @@
 
 ### MongoDB
 
+- [MongoDB权威指南（第3版）](https://www.amazon.com/MongoDB-Definitive-Powerful-Scalable-Storage/dp/1491954469/) 即将在 6 月 5 日上市
 - [MongoDB权威指南（第2版）](https://book.douban.com/subject/25798102/)（英：[MongoDB: The Definitive Guide](http://shop.oreilly.com/product/0636920028031.do)）
 - [MongoDB实战](https://book.douban.com/subject/19977785/)（英：[MongoDB in Action](https://www.manning.com/books/mongodb-in-action-second-edition)）
 
@@ -65,3 +66,8 @@
 
 - [C Primer Plus（第6版）](https://book.douban.com/subject/26792521/) 讲得细致入微，零基础入门首选
 - [C程序设计语言](https://book.douban.com/subject/1139336/) C 语言发明者编写，内容精炼而朴素，适合有经验的开发人员阅读
+
+### 计算机
+
+- [计算机科学导论（原书第2版）](https://book.douban.com/subject/26726452/)
+- [深入理解计算机系统(原书第3版)](https://book.douban.com/subject/26912767/)
