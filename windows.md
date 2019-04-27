@@ -25,3 +25,7 @@ bootmgr is missing
 6、修复完成后,取出光盘!
 7、重启电脑,看问题有没有解决。
 ```
+
+- [linux 下 格式化u盘 并分区 为fat32文件系统][1]
+
+[1]: https://blog.csdn.net/linkedin_35878439/article/details/82020925
