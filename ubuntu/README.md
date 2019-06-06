@@ -195,6 +195,10 @@ shell> reboot
 - [Configure Locales in Ubuntu](https://www.thomas-krenn.com/en/wiki/Configure_Locales_in_Ubuntu)
 - [修改locale](http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale)
 
+## 制作启动盘
+
+使用 [Startup Disk Creator](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-ubuntu)
+
 ## 参考文献
 
 - [Official Ubuntu Documentation](https://help.ubuntu.com/)
