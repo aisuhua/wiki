@@ -2,14 +2,28 @@ tab 修改为 4 个空格
 
 ```sh
 shell> vim /etc/vim/vimrc.local
+filetype plugin indent on
+" show existing tab with 4 spaces width
 set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 ```
+
+- [Tab key == 4 spaces and auto-indent after curly braces in Vim](https://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim)
 
 只作用于当前用户
 
 ```sh
 shell> vim ~/.vimrc
+filetype plugin indent on
+" show existing tab with 4 spaces width
 set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 ```
 
 语法高亮
