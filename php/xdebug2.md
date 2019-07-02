@@ -2,9 +2,13 @@
 
 ### PhpStorm
 
+#### step1
+
 设置 PhpStorm 监听 9005 端口，这样就可以接收来自于 Xdebug 的调试信息。 
 
 File > Settings > Languages & Frameworks > PHP > Debug > [Xdebug] Debug port: **9005**。
+
+#### step1
 
 配置项目的 mapping 信息
 
@@ -17,9 +21,13 @@ File > Settings > Languages & Frameworks > PHP > Debug > Servers
 
 Use path mappings 这个可选，一般只有在网站目录跟本地目录路径不一致时才需要填写，而且一般填写只需要填写根目录即可。
 
+#### step3
+
 点击开始监听端口即可，此时 PhpStorm 就监听着 9005 端口，一旦收到数据就会进入 debug 模式。
 
 ### Xdebug
+
+#### step1
 
 填写你本机的 IP 地址即 PhpStorm 所在机器，以及监听端口等信息。
 
@@ -37,4 +45,6 @@ xdebug.remote_port=9005
 xdebug.remote_connect_back=1
 ```
 
+#### step2
 
+service php7.2-fpm reload 
