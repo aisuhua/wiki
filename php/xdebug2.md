@@ -88,6 +88,16 @@ export PYTHONPATH=./pythonlib:./python3lib:$PYTHONPATH
 
 > The arguments define which IP address and port to listen for debugger connections from the web server and on which IP address and port to listen for developers.
 
+修改 Xdebug 配置，让它将信息发送给 DBGp proxy 。
+
+```
+zend_extension=xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_host=127.0.0.1
+xdebug.remote_port=9002
+xdebug.remote_handler=dbgp
+```
+
 ### PhpStorm
 
 向 DBGp proxy 注册本机信息，主要是告知它我本机的 IP、端口、idekey 是多少，注意这里的 idekey 是必须每个调试客户端都不一样。
