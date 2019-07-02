@@ -38,7 +38,7 @@ xdebug.remote_host=192.168.1.229
 xdebug.remote_port=9005
 ```
 
-来源的 IP 信息也可以让 Xdebug 自动判断，它也会正确地将数据发回来源主机。
+IP 信息也可以让 Xdebug 自动判断，它也会正确地将数据发回来源主机。因为一般你会在本机通过 XDEBUG_SESSION 触发 Xdebug，那么它就知道你的 IP 了。
 
 ```
 # xdebug.remote_host=192.168.1.229
@@ -48,3 +48,14 @@ xdebug.remote_connect_back=1
 #### step2
 
 service php7.2-fpm reload 
+
+### 调试
+
+通过在地址栏加上 XDEBUG_SESSION_START 或者在 Cookie 加入 XDEBUG_SESSION 都是可以的。session_name 可以随便填，在没有使用 DBGp proxy 的情况下，它没有其他作用。
+
+```
+?XDEBUG_SESSION_START=session_name
+Cookie: XDEBUG_SESSION=session_name
+```
+
+
