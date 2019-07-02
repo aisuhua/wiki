@@ -135,4 +135,8 @@ export PYTHONPATH=/usr/local/dbgpproxy/pythonlib:/usr/local/dbgpproxy/python3lib
 
 ## 参考
 
-- []
+- [Remote Debugging](https://xdebug.org/docs/remote)
+- [Multiuser Debugging via Xdebug Proxies](https://www.jetbrains.com/help/phpstorm/multiuser-debugging-via-xdebug-proxies.html)
+- [Multi-user Debugging with Xdebug, DBGp and PHPStorm](https://tech-tamer.com/multi-user-debugging-with-xdebug-dbgp-and-phpstorm/)
+- [Multi-User Debugging in PhpStorm](https://www.freecodecamp.org/news/multi-user-debugging-in-phpstorm-75ef628ed50f/)
+- [PhpStorm, XDebug, and DBGp Proxy](https://www.cnblogs.com/jice/p/5064838.html)
