@@ -8,7 +8,7 @@
 
 File > Settings > Languages & Frameworks > PHP > Debug > [Xdebug] Debug port: **9005**。
 
-#### step1
+#### step2
 
 配置项目的 mapping 信息
 
