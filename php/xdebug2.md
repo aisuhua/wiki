@@ -19,7 +19,7 @@ File > Settings > Languages & Frameworks > PHP > Debug > Servers
 - Port: 访问网站的端口，一般 80。
 - Debugger: Xdebug，因为这里我们用的就是它。
 
-Use path mappings 这个可选，一般只有在网站目录跟本地目录路径不一致时才需要填写，而且一般填写只需要填写根目录即可。
+Use path mappings 这个可选，一般只有在服务器目录跟本地目录路径不一致时才需要填写，而且一般填写只需要填写根目录即可。
 
 #### step3
 
