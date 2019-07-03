@@ -100,7 +100,7 @@ curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
 
 ## 常见问题
 
-如果有时无法正常的触发 debug，那么请再次向 DBGp proxy 注册一下你的 PhpStorm，参考步骤：[向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)。
+**如果有时无法正常的触发 debug，那么请再次执行[向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)**。
 
 ## 浏览器插件
 
