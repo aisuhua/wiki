@@ -18,19 +18,25 @@
 
 ## 实现过程
 
-实现过程分为准备工作、开始 debug 两个部分来进行说明。
+### 准备阶段
 
-准备工作，对于每个项目，以下步骤只需要配置一次。
+对于每一个项目，以下步骤只需要执行一次：
 
 1. [填写 PhpStorm 要监听的 debug 端口](#填写-phpstorm-要监听的-debug-端口)
 2. [填写 DBGp proxy 配置信息](#填写-dbgp-proxy-配置信息)
 3. [新增一个 debug 服务配置](#新增一个-debug-服务配置)
+4. [向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)
 
-开始 debug，对于每次执行 debug 的时候，请依次执行以下步骤。
+### 开始 debug
 
-1. [向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)
-2. [启动 PhpStorm 对 debug 端口的监听](#启动-phpstorm-对-debug-端口的监听)
-3. [开始 debug](#开始-debug)
+每次进行 debug 时，请依次执行以下步骤：
+
+1. [启动 PhpStorm 对 debug 端口的监听](#启动-phpstorm-对-debug-端口的监听)
+2. [给文件打断点](#给文件打断点)
+3. [触发 Xdebug 进入调试模式](#触发 Xdebug 进入调试模式)
+4. [开始 debug](#开始 debug)
+
+## 准备阶段
 
 ### 填写 PhpStorm 要监听的 debug 端口
 
@@ -60,6 +66,8 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 
 ![](img/11-remote-settings-dbproxy-register-success.jpg)
 
+## 开始 debug
+
 ### 启动 PhpStorm 对 debug 端口的监听
 
 点击 PhpStorm 工具栏上的「打电话图标」，对 9000 端口进行监听。此时的 PhpStorm 就会等待灰度服务器上的 Xdebug 发送信息过来，一旦收到信息 PhpStorm 就会进入 debug 模式。
@@ -68,19 +76,23 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 
 提示：如果你的 PhpStorm 没有显示该工具栏，可以勾选菜单 View > Toolbar 将它显示出来。
 
-### 开始 debug
+### 给文件打断点
 
 首先，要在你想进行 debug 的文件上打上断点。这里以在根目录的 init.php 文件为例打一个断点。
 
 ![](img/21-remote-breakpoint.jpg)
 
-然后，通过在请求时加上 `XDEBUG_SESSION=IDE key` 参数触发灰度服务器的 Xdebug 进入 debug 模式。
+### 触发 Xdebug 进入调试模式
+
+请求网站时请加上 `XDEBUG_SESSION=IDE key` 参数，让其触发灰度服务器的 Xdebug 进入 debug 模式。
   
 ```bash
 curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
 ```
 
-注意，这里的 IDE key 必须要跟步骤 [填写 DBGp proxy 配置信息] 时所填写的一样。另外，在每次 debug 前最好再次执行一下 Register IDE。
+注意，这里的 IDE key 必须要跟步骤 [填写 DBGp proxy 配置信息] 时所填写的一样。
+
+### 开始 debug
 
 ## 其他
 
