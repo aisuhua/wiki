@@ -9,13 +9,13 @@
 
 主要步骤如下：
 
-1. 填写 PhpStorm 要监听的 debug 端口
-2. 填写 DBGp proxy 配置信息
-3. 新增一个 debug 服务配置
-4. 向 DBGp proxy 注册自己的 PhpStorm
-5. 启动 PhpStorm 对 debug 端口的监听
-6. 开始 debug
-7. 浏览器插件
+1. [填写 PhpStorm 要监听的 debug 端口](#填写-phpstorm-要监听的-debug-端口)
+2. [填写 DBGp proxy 配置信息](#填写-dbgp-proxy-配置信息)
+3. [新增一个 debug 服务配置](新增一个-debug-服务配置)
+4. [向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)
+5. [启动 PhpStorm 对 debug 端口的监听](#启动-phpstorm-对-debug-端口的监听)
+6. [开始 debug](#开始-debug)
+7. [浏览器插件](#浏览器插件)
 
 ## 填写 PhpStorm 要监听的 debug 端口
 
