@@ -2,10 +2,19 @@
 
 下面就如何使用 PhpStorm 对灰度服务器上的 api.yun.115.com 项目进行远程 debug 进行详细说明。
 
+为什么需要灰度进行 Xdebug 调试？ 
+
+不得不说 tickdebug 已经能排查大部分的线上问题，而且使用方便。但是它也存在一些不足的地方：
+
+- tickdebug 存在一些「奇怪的 bug」；
+- tickdebug 必须接入才能使用；
+- Xdebug 提供的信息更加丰富。如能实时观察到所有全局变量的变化情况等。
+
 前提条件：
 
-- ping 172.16.200.200 能通
-- 本地项目的代码跟灰度服务器一致
+- ping 172.16.200.200 能通；
+- 该项目有部署在灰度服务器；
+- 本地项目的代码跟灰度服务器上的代码一致；
 
 步骤如下：
 
@@ -65,7 +74,7 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
 ```
 
-注意，这里的 IDE key 必须要跟步骤 [填写 DBGp proxy 配置信息] 时所填写的一样。
+注意，这里的 IDE key 必须要跟步骤 [填写 DBGp proxy 配置信息] 时所填写的一样。另外，在每次 debug 前最好再次执行一下 Register IDE。
 
 ## 浏览器插件
 
