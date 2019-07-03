@@ -33,8 +33,8 @@
 
 1. [启动 PhpStorm 对 debug 端口的监听](#启动-phpstorm-对-debug-端口的监听)
 2. [给文件打断点](#给文件打断点)
-3. [触发 Xdebug 进入调试模式](#触发 Xdebug 进入调试模式)
-4. [开始 debug](#开始 debug)
+3. [触发 Xdebug 进入调试模式](#触发-xdebug-进入调试模式)
+4. [开始 debug](#开始-debug)
 
 ## 准备阶段
 
