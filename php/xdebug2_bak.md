@@ -24,7 +24,7 @@
 
 ### 4. 配置服务器上 Xdebug
 
-我们需要将本地的 IP、用于 Xdebug 的端口告知服务器上的 Xdebug，好让它能将调试信息发送到本地的 PhpStorm。将这些信息填写到 xdebug.ini 文件即可。
+我们需要将本地的 IP、用于监听 Xdebug 的端口告知服务器上的 Xdebug，好让它能将调试信息发送到本地的 PhpStorm。将这些信息填写到 xdebug.ini 文件即可。
 
 ```php.ini
 # /etc/php/7.2/fpm/conf.d/20-xdebug.ini 
@@ -46,18 +46,27 @@ service php7.2-fpm reload
 
 ### 5. 开始 debug
 
-为了让 Xdebug 进入调试模式，在发起请求时我们可以使用一些特殊参数来触发。有三种方法进行触发，如下所示：
+为了让 Xdebug 进入调试模式，在发起请求时我们需要使用几个特殊参数来触发。有三种方法进行触发，如下所示：
 
 ```bash
-# Cookie 添加 XDEBUG_SESSION
+# 1. Cookie 添加 XDEBUG_SESSION
 curl 'http://yun.115rc.com' -H "Cookie: XDEBUG_SESSION=1"
 
-# URL 添加 XDEBUG_SESSION_START
+# 2. URL 添加 XDEBUG_SESSION_START
 curl 'http://yun.115rc.com?XDEBUG_SESSION_START=1'
-# POST parameter 添加 XDEBUG_SESSION_START
+# 3. POST parameter 添加 XDEBUG_SESSION_START
 curl 'http://yun.115rc.com' -d 'XDEBUG_SESSION_START=1'
 ```
 
-此时本地的 PhpStorm 会接收到服务器上 Xdebug 发送过来的数据，随即进入 debug 模式。
+此时本地的 PhpStorm 会接收到来自服务器上 Xdebug 发送过来的数据，随即进入 debug 模式。
 
 ![](img/04-local-settings-xdebug-debug2.jpg)
+
+### 最后
+
+每次都需要自行添加 XDEBUG_SESSION 等参数并不方便，可安装以下两个浏览器插件，安装好后就可以一键切换。
+
+- [Xdebug Helper Chrome](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc)
+- [Xdebug Helper Firefox](https://addons.mozilla.org/en-US/firefox/addon/xdebug-helper-for-firefox/)
+
+![](img/04-local-settings-xdebug-debug3.jpg)
