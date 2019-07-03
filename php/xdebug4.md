@@ -1,5 +1,7 @@
 # 如何使用 Xdebug 调试灰度环境的项目
 
+下面就如何使用 PhpStorm 对灰度服务器上的 api.yun.115.com 项目进行远程 debug 进行详细说明。
+
 ## 为什么
 
 为什么需要灰度进行 Xdebug 调试？不得不说 tickdebug 已经能排查大部分的线上问题，而且使用方便。但是它也存在一些不足的地方：
@@ -14,9 +16,9 @@
 - 该项目有部署在灰度服务器；
 - 本地项目的代码跟灰度服务器上的代码一致；
 
-## 怎么做
+## 实现过程
 
-下面就如何使用 PhpStorm 对灰度服务器上的 api.yun.115.com 项目进行远程 debug 进行详细说明。
+实现过程分为准备工作、开始 debug 两个部分来进行说明。
 
 ### 准备工作
 
@@ -26,7 +28,25 @@
 2. [填写 DBGp proxy 配置信息](#填写-dbgp-proxy-配置信息)
 3. [新增一个 debug 服务配置](#新增一个-debug-服务配置)
 
-### debug 阶段
+#### 填写 PhpStorm 要监听的 debug 端口
+
+填写 PhpStorm 与灰度服务器上的 Xdebug 进行通讯的端口。填写一个未被占用的端口即可，本示例使用默认端口 9000。
+
+![](img/01-local-settings-xdebug-port.jpg)
+
+#### 填写 DBGp proxy 配置信息
+
+DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多用户 debug 的环境。我们只需要填写自己的 IDE key 即可，其他照抄。
+
+![](img/11-remote-settings-dbproxy.jpg)
+
+#### 新增一个 debug 服务配置
+
+填写项目的域名、项目在灰度服务器上的目录路径，只需要填写根目录即可。
+
+![](img/10-local-settings-xdebug-servers.jpg)
+
+### 开始 debug
 
 每次执行 debug 的时候，执行以下 3 步即可。
 
@@ -34,32 +54,8 @@
 2. [启动 PhpStorm 对 debug 端口的监听](#启动-phpstorm-对-debug-端口的监听)
 3. [开始 debug](#开始-debug)
 
-### 其他
 
-
-
-- [浏览器插件](#浏览器插件)
-- [参考文献](#参考文献)
-
-## 填写 PhpStorm 要监听的 debug 端口
-
-填写 PhpStorm 与灰度服务器上的 Xdebug 进行通讯的端口。填写一个未被占用的端口即可，本示例使用默认端口 9000。
-
-![](img/01-local-settings-xdebug-port.jpg)
-
-## 填写 DBGp proxy 配置信息
-
-DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多用户 debug 的环境。我们只需要填写自己的 IDE key 即可，其他照抄。
-
-![](img/11-remote-settings-dbproxy.jpg)
-
-## 新增一个 debug 服务配置
-
-填写项目的域名、项目在灰度服务器上的目录路径，只需要填写根目录即可。
-
-![](img/10-local-settings-xdebug-servers.jpg)
-
-## 向 DBGp proxy 注册自己的 PhpStorm
+#### 向 DBGp proxy 注册自己的 PhpStorm
 
 点击一下菜单里的 Register IDE 即可完成注册。
 
@@ -69,7 +65,7 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 
 ![](img/11-remote-settings-dbproxy-register-success.jpg)
 
-## 启动 PhpStorm 对 debug 端口的监听
+#### 启动 PhpStorm 对 debug 端口的监听
 
 点击 PhpStorm 工具栏上的「打电话图标」，对 9000 端口进行监听。此时的 PhpStorm 就会等待灰度服务器上的 Xdebug 发送信息过来，一旦收到信息 PhpStorm 就会进入 debug 模式。
 
@@ -77,7 +73,7 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 
 提示：如果你的 PhpStorm 没有显示该工具栏，可以勾选菜单 View > Toolbar 将它显示出来。
 
-## 开始 debug
+#### 开始 debug
 
 首先，要在你想进行 debug 的文件上打上断点。这里以在根目录的 init.php 文件为例打一个断点。
 
@@ -91,7 +87,12 @@ curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
 
 注意，这里的 IDE key 必须要跟步骤 [填写 DBGp proxy 配置信息] 时所填写的一样。另外，在每次 debug 前最好再次执行一下 Register IDE。
 
-## 浏览器插件
+## 其他
+
+- [浏览器插件](#浏览器插件)
+- [参考文献](#参考文献)
+
+### 浏览器插件
 
 如果你想在浏览器中点一下按钮就可以开启或关闭调试，那么可以安装下面这些插件。
 
@@ -108,7 +109,7 @@ curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
 
 这些插件实际上只是在你每次请求的时候，在 Cookie 里加上了 XDEBUG_SESSION=IDE key，实际上自己在使用 curl 的时候自行设置就可以了，插件只是便于操作。
 
-## 参考文献
+### 参考文献
 
 - [Remote Debugging](https://xdebug.org/docs/remote)
 - [Multiuser Debugging via Xdebug Proxies](https://www.jetbrains.com/help/phpstorm/multiuser-debugging-via-xdebug-proxies.html)
