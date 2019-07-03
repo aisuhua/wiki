@@ -18,25 +18,22 @@
 
 ## 实现过程
 
-### 准备阶段
+实现的过程分成环境配置和开始 debug 两个主要阶段。下面给出这两个阶段的操作目录：
+
+- 环境配置
+  - [填写 PhpStorm 要监听的 debug 端口](#填写-phpstorm-要监听的-debug-端口) 
+  - [填写 DBGp proxy 配置信息](#填写-dbgp-proxy-配置信息)
+  - [新增一个 debug 服务配置](#新增一个-debug-服务配置)
+  - [向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)
+- 开始 debug
+  - [启动 PhpStorm 对 debug 端口的监听](#启动-phpstorm-对-debug-端口的监听)
+  - [给文件打断点](#给文件打断点)
+  - [触发 Xdebug 进入调试模式](#触发-xdebug-进入调试模式)
+  - [开始 debug](#开始-debug)
+
+## 环境配置
 
 对于每一个项目，以下步骤只需要执行一次：
-
-1. [填写 PhpStorm 要监听的 debug 端口](#填写-phpstorm-要监听的-debug-端口)
-2. [填写 DBGp proxy 配置信息](#填写-dbgp-proxy-配置信息)
-3. [新增一个 debug 服务配置](#新增一个-debug-服务配置)
-4. [向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)
-
-### 开始 debug
-
-每次进行 debug 时，请依次执行以下步骤：
-
-1. [启动 PhpStorm 对 debug 端口的监听](#启动-phpstorm-对-debug-端口的监听)
-2. [给文件打断点](#给文件打断点)
-3. [触发 Xdebug 进入调试模式](#触发-xdebug-进入调试模式)
-4. [开始 debug](#开始-debug)
-
-## 准备阶段
 
 ### 填写 PhpStorm 要监听的 debug 端口
 
@@ -67,6 +64,8 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 ![](img/11-remote-settings-dbproxy-register-success.jpg)
 
 ## 开始 debug
+
+每次进行 debug 时，请依次执行以下步骤。
 
 ### 启动 PhpStorm 对 debug 端口的监听
 
