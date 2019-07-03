@@ -77,13 +77,13 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 
 ### 给文件打断点
 
-首先，要在你想进行 debug 的文件上打上断点。这里以在根目录的 init.php 文件为例打一个断点。
+给要进行 Debug 的文件上打上断点。本示例给根目录的 init.php 文件打一个断点。
 
 ![](img/21-remote-breakpoint.jpg)
 
 ### 触发 Xdebug 进入调试模式
 
-请求网站时请加上 `XDEBUG_SESSION=IDE key` 参数，让其触发灰度服务器的 Xdebug 进入 debug 模式。
+请求时加上 `XDEBUG_SESSION=IDE key` 参数，让其触发灰度服务器的 Xdebug 进入 debug 模式。
   
 ```bash
 curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
