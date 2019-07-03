@@ -18,7 +18,7 @@
 
 ## 实现过程
 
-实现的过程分成了环境配置和 Debug 两个阶段。下面给出它们的目录：
+实现的过程分成了环境配置和 Debug 两个阶段。
 
 - [环境配置](#环境配置)
   - [填写 PhpStorm 要监听的 debug 端口](#填写-phpstorm-要监听的-debug-端口) 
@@ -30,6 +30,9 @@
   - [给文件打断点](#给文件打断点)
   - [触发 Xdebug 进入调试模式](#触发-xdebug-进入调试模式)
   - [开始 debug](#开始-debug)
+- [常见问题](#常见问题)
+- [浏览器插件](#浏览器插件)
+- [参考文献](#参考文献)
 
 ## 环境配置
 
@@ -89,16 +92,17 @@ DBGp proxy 已经装好在灰度服务器，它提供了一个安全且支持多
 curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
 ```
 
-注意，这里的 IDE key 必须要跟步骤 [填写 DBGp proxy 配置信息] 时所填写的一样。
+注意，这里的 IDE key 必须要跟步骤 [填写 DBGp proxy 配置信息](#填写-dbgp-proxy-配置信息) 时所填写的一样。
 
 ### 开始 debug
 
-## 其他
+![](img/04-local-settings-xdebug-debug2.jpg)
 
-- [浏览器插件](#浏览器插件)
-- [参考文献](#参考文献)
+## 常见问题
 
-### 浏览器插件
+如果有时无法正常的触发 debug，那么请再次向 DBGp proxy 注册一下你的 PhpStorm，参考步骤：[向 DBGp proxy 注册自己的 PhpStorm](#向-dbgp-proxy-注册自己的-phpstorm)。
+
+## 浏览器插件
 
 如果你想在浏览器中点一下按钮就可以开启或关闭调试，那么可以安装下面这些插件。
 
@@ -115,7 +119,7 @@ curl 'http://yun.115.com' -H "Cookie: GIVEMEFIVE=1; XDEBUG_SESSION=suhua;"
 
 这些插件实际上只是在你每次请求的时候，在 Cookie 里加上了 XDEBUG_SESSION=IDE key，实际上自己在使用 curl 的时候自行设置就可以了，插件只是便于操作。
 
-### 参考文献
+## 参考文献
 
 - [Remote Debugging](https://xdebug.org/docs/remote)
 - [Multiuser Debugging via Xdebug Proxies](https://www.jetbrains.com/help/phpstorm/multiuser-debugging-via-xdebug-proxies.html)
