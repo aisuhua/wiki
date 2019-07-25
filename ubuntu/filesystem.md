@@ -1,7 +1,8 @@
-## 文件
+# 文件系统
 
-查看文件类型
+umount: /mnt/www1: target is busy 解决方法
 
-```sh
-file filename
 ```
+# 查看有那些用户正在使用该分区
+fuser -vm /mnt/www1 
+````
