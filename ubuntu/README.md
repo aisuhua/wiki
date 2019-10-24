@@ -9,6 +9,7 @@ shell> echo `hostname` > /etc/hostname && echo "127.0.0.1 `hostname` `hostname -
 
 - [ubuntu永久修改主机名](https://blog.csdn.net/ruglcc/article/details/7802077)
 
+
 配置静态 IP
 
 ```sh
@@ -45,6 +46,7 @@ shell> apt-get update
 ```
 
 - [repository file generator](https://mirrors.ustc.edu.cn/repogen/)
+- https://opsx.alibaba.com/guide
 
 更新系统
 
