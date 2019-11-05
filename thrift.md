@@ -1,20 +1,22 @@
 ## 安装
 
-安装
-
 ```sh
-shell> apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libboost-system-dev libboost-filesystem-dev libevent-dev automake libtool flex bison pkg-config g++ make libssl-dev
-shell> wget http://archive.apache.org/dist/thrift/0.9.3/thrift-0.9.3.tar.gz
-shell> tar -zxvf thrift-0.9.3.tar.gz
-shell> cd thrift-0.9.3
-shell> ./configure
-shell> make
-shell> make install
+apt-get install thrift-compiler
+thrift --version
 ```
 
-查看版本信息
+## 使用
 
-```sh
-shell> thrift --version
-Thrift version 0.9.3
-```
+官网文档有详细说明，https://github.com/apache/thrift/tree/master/tutorial#tutorial
+
+步骤总得来讲有以下几步：
+
+1. 编写 xxx.thrift 文件
+2. 构建出所需要的 server and client stubs, 命令：`thrift --gen php:server xxx.thrift`
+3. 利用 Apache Thrift library 和 server and client stubs 文件编写 demo。
+
+## 参考
+
+- http://www.thrift.pl/
+- https://thrift-tutorial.readthedocs.io/en/latest/index.html
+- https://segmentfault.com/a/1190000013329497
