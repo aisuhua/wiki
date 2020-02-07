@@ -34,6 +34,10 @@ apt install -f
 - https://pinyin.sogou.com/linux/
 - https://blog.csdn.net/lupengCSDN/article/details/80279177
 
+Install baidu pan
+
+- http://pan.baidu.com/download
+
 Install git
 
 ```
