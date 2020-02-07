@@ -1,3 +1,10 @@
+Setting sudo without password
+
+```
+vim /etc/sudoers
+suhua ALL=(ALL) NOPASSWD: ALL
+```
+
 Install Shadowsocks
 
 - https://github.com/shadowsocks/shadowsocks-qt5
@@ -26,3 +33,4 @@ apt install -f
 
 - https://pinyin.sogou.com/linux/
 - https://blog.csdn.net/lupengCSDN/article/details/80279177
+
