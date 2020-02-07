@@ -13,3 +13,8 @@ dpkg -i google-chrome-stable_current_amd64.deb
 apt-get install
 ```
 
+Install SwitchyOmega
+
+- https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif
+
+
