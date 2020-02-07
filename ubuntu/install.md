@@ -45,8 +45,18 @@ git config --global user.name "aisuhua"
 git config --global user.email 1079087531@qq.com
 ```
 
+Install Docker
+
+- https://github.com/aisuhua/wiki/blob/master/docker.md
+
+Install Phpstorm
+
+- https://gist.github.com/invinciblycool/ecc1c6e32b581b68932ac7452f4c911c
+
 Other
 
 ```
 7z a gx.7z gx
 ```
+
+
