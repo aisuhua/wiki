@@ -17,4 +17,12 @@ Install SwitchyOmega
 
 - https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif
 
+Install Sogou Pinyin
 
+```
+dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
+apt install -f
+```
+
+- https://pinyin.sogou.com/linux/
+- https://blog.csdn.net/lupengCSDN/article/details/80279177
