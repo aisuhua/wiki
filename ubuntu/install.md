@@ -44,3 +44,9 @@ Install git
 git config --global user.name "aisuhua"
 git config --global user.email 1079087531@qq.com
 ```
+
+Other
+
+```
+7z a gx.7z gx
+```
