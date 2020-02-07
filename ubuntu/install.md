@@ -34,3 +34,9 @@ apt install -f
 - https://pinyin.sogou.com/linux/
 - https://blog.csdn.net/lupengCSDN/article/details/80279177
 
+Install git
+
+```
+git config --global user.name "aisuhua"
+git config --global user.email 1079087531@qq.com
+```
