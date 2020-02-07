@@ -1,8 +1,8 @@
-shadowsocks
+Install Shadowsocks
 
 - https://github.com/shadowsocks/shadowsocks-qt5
 
-Install chrome
+Install Chrome
 
 ```
 export http_proxy="socks5://127.0.0.1:1082"
