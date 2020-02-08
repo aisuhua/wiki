@@ -89,4 +89,5 @@ Other
 7z a gx.7z gx
 ```
 
+- Startup Application
 
