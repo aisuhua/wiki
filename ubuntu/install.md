@@ -81,6 +81,8 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'myPasswo
 # 新增用户
 CREATE USER 'root'@'%' IDENTIFIED BY '123456';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+
+apt install mydumper
 ```
 
 Other
