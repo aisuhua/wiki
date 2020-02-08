@@ -70,6 +70,10 @@ Install MySQL
 apt install mysql-client
 apt install mysql-server
 
+# 修改监听主机
+# /etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address = 0.0.0.0
+
 # 修改密码
 sudo mysql -u root
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'myPasswordHere';
