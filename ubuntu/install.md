@@ -54,6 +54,14 @@ Install Phpstorm
 
 - https://gist.github.com/invinciblycool/ecc1c6e32b581b68932ac7452f4c911c
 
+Install Postman
+
+```
+sudo snap install postman
+```
+
+- https://gist.github.com/invinciblycool/ecc1c6e32b581b68932ac7452f4c911c
+
 Other
 
 ```
