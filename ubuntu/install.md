@@ -64,6 +64,21 @@ sudo snap install postman
 
 - https://gist.github.com/invinciblycool/ecc1c6e32b581b68932ac7452f4c911c
 
+Install MySQL
+
+```
+apt install mysql-client
+apt install mysql-server
+
+# 修改密码
+sudo mysql -u root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'myPasswordHere';
+
+# 新增用户
+CREATE USER 'root'@'%' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+```
+
 Other
 
 ```
