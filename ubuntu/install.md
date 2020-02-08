@@ -45,6 +45,8 @@ git config --global user.name "aisuhua"
 git config --global user.email 1079087531@qq.com
 ```
 
+- https://github.com/aisuhua/wiki/blob/master/git.md
+
 Install Docker
 
 - https://github.com/aisuhua/wiki/blob/master/docker.md
