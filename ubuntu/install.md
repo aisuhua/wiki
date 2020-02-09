@@ -85,6 +85,18 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
 apt install mydumper
 ```
 
+Install SecureCRT
+
+```
+wget https://raw.githubusercontent.com/aisuhua/securecrt-arch-linux/master/scrt-7.3.5-903.ubuntu13-64.x86_64.deb
+dpkg -i scrt-7.3.5-903.ubuntu13-64.x86_64.deb
+
+wget https://raw.githubusercontent.com/aisuhua/securecrt-arch-linux/master/securecrt_linux_crack.pl
+perl securecrt_linux_crack.pl /usr/bin/SecureCRT
+```
+
+- https://github.com/aisuhua/securecrt-arch-linux
+
 Other
 
 ```
