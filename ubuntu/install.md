@@ -103,7 +103,7 @@ Other
 7z a gx.7z gx
 
 # 安装常用软件
-apt install pinta vlc
+apt install pinta vlc mpv
 ```
 
 - Startup Application
