@@ -101,7 +101,6 @@ perl securecrt_linux_crack.pl /usr/bin/SecureCRT
 
 ```
 apt install pinta vlc mpv
-
 ```
 
 安装 gif 录制软件
@@ -119,7 +118,6 @@ Other
 
 ``` 
 7z a gx.7z gx
-
 ```
 
 - Startup Application
