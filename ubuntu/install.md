@@ -97,13 +97,29 @@ perl securecrt_linux_crack.pl /usr/bin/SecureCRT
 
 - https://github.com/aisuhua/securecrt-arch-linux
 
-Other
+安装视频软件
 
 ```
+apt install pinta vlc mpv
+
+```
+
+安装 gif 录制软件
+
+```
+sudo add-apt-repository ppa:peek-developers/stable
+sudo apt update
+sudo apt install peek
+```
+
+- https://github.com/phw/peek
+
+
+Other
+
+``` 
 7z a gx.7z gx
 
-# 安装常用软件
-apt install pinta vlc mpv
 ```
 
 - Startup Application
