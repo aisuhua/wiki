@@ -76,11 +76,11 @@ StrictHostKeyChecking no
 防止自动断开
 
 ```
-# vim /etc/ssh/sshd_config
+shell> vim /etc/ssh/sshd_config
 ClientAliveInterval 30
 ClientAliveCountMax 86400
 
-service sshd restart
+shell> service sshd restart
 ```
 
 - https://cloud.tencent.com/developer/article/1163845
