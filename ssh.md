@@ -73,6 +73,18 @@ StrictHostKeyChecking no
 
 - [ssh-keygen 中文手册](http://www.jinbuguo.com/openssh/ssh-keygen.html)
 
+防止自动断开
+
+```
+# vim /etc/ssh/sshd_config
+ClientAliveInterval 30
+ClientAliveCountMax 86400
+
+service sshd restart
+```
+
+- https://cloud.tencent.com/developer/article/1163845
+
 ## pssh
 
 安装
