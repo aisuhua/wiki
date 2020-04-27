@@ -13,6 +13,14 @@ tasklist |findstr 17944
 
 - [以一种访问权限不允许的方式做了一个访问套接字的尝试](https://www.cnblogs.com/zhengdongdong/p/12001152.html)
 
+开机启动
+
+```
+%programdata%\Microsoft\Windows\Start Menu\Programs\Startup
+```
+
+- https://jingyan.baidu.com/article/eae07827ad2bba1fec5485ae.html
+
 ## 其他
 
 无法将windows安装到磁盘0的分区1
