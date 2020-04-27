@@ -16,6 +16,9 @@ tasklist |findstr 17944
 开机启动
 
 ```
+# 方法1：输入 startup 查找
+
+# 方法2：打开以下目录，将启动快捷方式复制进去即可
 %programdata%\Microsoft\Windows\Start Menu\Programs\Startup
 ```
 
