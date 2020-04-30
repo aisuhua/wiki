@@ -17,6 +17,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 - [淘宝 NPM 镜像](https://developer.aliyun.com/mirror/NPM)
+- [中科大 NPM 镜像](https://lug.ustc.edu.cn/wiki/mirrors/help/npm)
 
 安装第三方模块
 
