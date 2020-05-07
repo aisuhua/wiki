@@ -113,6 +113,17 @@ docker rmi $(docker images -f "dangling=true" -q)
 
 - [How to edit files in stopped/not starting docker container](https://stackoverflow.com/questions/32750748/how-to-edit-files-in-stopped-not-starting-docker-container)
 
+## 其他
+
+自动启动容器
+
+```
+docker update --restart=always php72
+docker update --restart=no php72
+```
+
+- [开机自启docker后 开启或关闭自启容器](https://www.cqmaple.com/201801/when-system-startup-docker-restart-container.html)
+
 ## 目录权限
 
 - [【docker】 bind-mount或者COPY时需要注意 用户、文件权限 的问题](https://segmentfault.com/a/1190000015233229)
