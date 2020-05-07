@@ -25,4 +25,12 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install [name]
 ```
 
+升级 nodejs
 
+```
+sudo npm install -g n
+sudo n latest
+sudo n 8.9.0
+```
+
+- [updating nodejs on ubuntu 16.04](https://stackoverflow.com/questions/41195952/updating-nodejs-on-ubuntu-16-04)
