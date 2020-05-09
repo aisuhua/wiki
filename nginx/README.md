@@ -247,6 +247,21 @@ cp objs/nginx /usr/sbin
 
 参考[Nginx-重新编译安装模块及平滑升级](https://www.zybuluo.com/cdmonkey/note/712348)
 
+## 其他
+
+proxy_pass 不传递路径
+
+```
+location = /en {
+    return 302 /en/;
+}
+location /en/ {
+    proxy_pass http://luscious/;  # note the trailing slash here, it matters!
+}
+```
+
+- [How to remove the path with an nginx proxy_pass](https://serverfault.com/questions/562756/how-to-remove-the-path-with-an-nginx-proxy-pass)
+
 ## 参考文献
 
 - [Welcome to NGINX Wiki!](https://www.nginx.com/resources/wiki/)
