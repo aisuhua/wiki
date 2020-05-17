@@ -4,16 +4,25 @@
 apt-get install npm
 ```
 
+设置使用国内源
+
+```
+npm config set registry https://registry.npm.taobao.org
+npm config get registry
+```
+
+安装 cnpm 
+
+```
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+
+- [淘宝npm镜像使用方法](https://blog.csdn.net/quuqu/article/details/64121812)
+
 升级 npm
 
 ```
 npm install -g npm
-```
-
-设置使用国内源
-
-```
-npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 - [淘宝 NPM 镜像](https://developer.aliyun.com/mirror/NPM)
