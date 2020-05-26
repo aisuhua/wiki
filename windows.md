@@ -24,6 +24,14 @@ tasklist |findstr 17944
 
 - https://jingyan.baidu.com/article/eae07827ad2bba1fec5485ae.html
 
+打开网络设置
+
+```
+ncpa.cpl
+```
+
+- [打开win7网络连接三种方法](https://jingyan.baidu.com/article/425e69e6144a72be15fc16d5.html)
+
 ## 其他
 
 无法将windows安装到磁盘0的分区1
