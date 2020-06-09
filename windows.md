@@ -34,6 +34,10 @@ ncpa.cpl
 
 ## 其他
 
+录屏软件
+
+- [licecap](https://github.com/justinfrankel/licecap)
+
 无法将windows安装到磁盘0的分区1
 
 ```
