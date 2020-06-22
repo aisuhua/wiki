@@ -8,7 +8,7 @@ sudo apt install openvpn -y
  连接服务器
  
  ```
-openvpn --config client.ovpn
+sudo openvpn --config client.ovpn
  ```
  
  - [How to Install & Connect OpenVPN Client on Ubuntu](https://tecadmin.net/install-openvpn-client-on-ubuntu/)
