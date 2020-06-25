@@ -11,7 +11,7 @@ sudo apt install apt-mirror
 ```
 ############# config ##################
 #
-set base_path    /mnt/apt-mirror/ubuntu
+set base_path    /media/suhua/073E10A30275844E/mirrors/20.04
 #
 # set mirror_path  $base_path/mirror
 # set skel_path    $base_path/skel
@@ -25,10 +25,17 @@ set _tilde 0
 #
 ############# end config ##############
 
-deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ bionic main restricted universe multiverse
-deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ focal main restricted universe multiverse
+deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ focal-security main restricted universe multiverse
+deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ focal-backports main restricted universe multiverse
+deb-amd64 http://mirrors.cloud.tencent.com/ubuntu/ focal-proposed main restricted universe multiverse
+
+deb-src http://mirrors.cloud.tencent.com/ubuntu/ focal main restricted universe multiverse
+deb-src http://mirrors.cloud.tencent.com/ubuntu/ focal-security main restricted universe multiverse
+deb-src http://mirrors.cloud.tencent.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-src http://mirrors.cloud.tencent.com/ubuntu/ focal-backports main restricted universe multiverse
+deb-src http://mirrors.cloud.tencent.com/ubuntu/ focal-proposed main restricted universe multiverse
 
 clean http://mirrors.cloud.tencent.com/ubuntu/
 ```
@@ -37,6 +44,25 @@ clean http://mirrors.cloud.tencent.com/ubuntu/
 
 ```
 sudo apt-mirror 
+```
+
+使用本地源
+
+```
+deb [arch=amd64] http://mirrors.aisuhua.com/ubuntu/ focal main restricted universe multiverse
+deb-src http://mirrors.aisuhua.com/ubuntu/ focal main restricted universe multiverse
+
+deb [arch=amd64] http://mirrors.aisuhua.com/ubuntu/ focal-security main restricted universe multiverse
+deb-src http://mirrors.aisuhua.com/ubuntu/ focal-security main restricted universe multiverse
+
+deb [arch=amd64] http://mirrors.aisuhua.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-src http://mirrors.aisuhua.com/ubuntu/ focal-updates main restricted universe multiverse
+
+deb [arch=amd64] http://mirrors.aisuhua.com/ubuntu/ focal-backports main restricted universe multiverse
+deb-src http://mirrors.aisuhua.com/ubuntu/ focal-backports main restricted universe multiverse
+ 
+deb [arch=amd64] http://mirrors.aisuhua.com/ubuntu/ focal-proposed main restricted universe multiverse
+deb-src http://mirrors.aisuhua.com/ubuntu/ focal-proposed main restricted universe multiverse
 ```
 
 - [Set Up A Local Ubuntu / Debian Mirror with Apt-Mirror](https://blog.programster.org/set-up-a-local-ubuntu-mirror-with-apt-mirror)
