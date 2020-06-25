@@ -46,9 +46,19 @@ clean http://mirrors.cloud.tencent.com/ubuntu/
 sudo apt-mirror 
 ```
 
-使用本地源
+## 使用源
+
+配置 Nginx 能访问源
 
 ```
+ls -s /media/suhua/073E10A30275844E/mirrors/20.04/mirror/mirrors.cloud.tencent.com/ubuntu /var/html/ubuntu
+```
+
+使用源，假设通过 mirrors.aisuhua.com 能访问到源
+
+```
+# vim /etc/apt/sources.list
+
 deb [arch=amd64] http://mirrors.aisuhua.com/ubuntu/ focal main restricted universe multiverse
 deb-src http://mirrors.aisuhua.com/ubuntu/ focal main restricted universe multiverse
 
