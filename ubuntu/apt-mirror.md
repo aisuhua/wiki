@@ -82,5 +82,6 @@ deb-src http://mirrors.aisuhua.com/ubuntu/ focal-proposed main restricted univer
 
 Added support for cnf directories
 
+参考 [#136](https://github.com/apt-mirror/apt-mirror/pull/136/files) 直接修改 /usr/bin/apt-mirror 文件即可。
+
 - [Ubuntu 19.04 Disco Dingo needs cnf (http://archive.ubuntu.com/ubuntu/dists/disco/main/cnf/)](https://github.com/apt-mirror/apt-mirror/issues/118)
-- [Added support for cnf directories](https://github.com/apt-mirror/apt-mirror/pull/136/files)
