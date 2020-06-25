@@ -1,4 +1,4 @@
-## 创建私有软件 mirror
+## 创建私有 mirror
 
 安装 apt-mirror
 
@@ -41,3 +41,10 @@ sudo apt-mirror
 
 - [Set Up A Local Ubuntu / Debian Mirror with Apt-Mirror](https://blog.programster.org/set-up-a-local-ubuntu-mirror-with-apt-mirror)
 - [使用 apt-mirror 和 apt-cacher 创建本地 Ubuntu 仓库](https://blog.fleeto.us/post/build-ubuntu-repository-with-apt-mirror-and-apt-cacher/)
+
+## 常见问题
+
+Added support for cnf directories
+
+- [Ubuntu 19.04 Disco Dingo needs cnf (http://archive.ubuntu.com/ubuntu/dists/disco/main/cnf/)](https://github.com/apt-mirror/apt-mirror/issues/118)
+- [Added support for cnf directories](https://github.com/apt-mirror/apt-mirror/pull/136/files)
