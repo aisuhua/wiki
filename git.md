@@ -36,3 +36,11 @@ git config --global --unset https.proxy
 ```sh
 git -c "http.proxy=socks5://127.0.0.1:1080" clone git@github.com:...
 ```
+
+保存账号密码
+
+```
+git config --global credential.helper store
+```
+
+- [How to save username and password in GIT](https://stackoverflow.com/questions/35942754/how-to-save-username-and-password-in-git-gitextension)
