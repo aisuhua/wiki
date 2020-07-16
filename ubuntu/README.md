@@ -168,7 +168,7 @@ shell> mount /dev/sdx1 /mnt/myNtfsDevice
 
 ```sh
 shell> swapon -s
-shell> fallocate -l 10G /swapfile
+shell> fallocate -l 10G /www/swapfile
 shell> chmod 600 /www/swapfile
 shell> mkswap /www/swapfile
 shell> swapon /www/swapfile
