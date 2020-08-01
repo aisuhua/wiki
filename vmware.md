@@ -12,3 +12,18 @@
 ```
 
 - https://beikeit.com/post-513.html
+
+
+## 办公软件
+
+Fireworks 8 激活码
+
+```
+WPD800-57333-52432-51868
+WPD800-59739-38832-62882
+WPD800-50238-69332-38488
+WPD800-58632-41632-17028
+WPD800-53535-11932-17064
+```
+
+- https://www.yutu.cn/question/tiwen_10388.html
