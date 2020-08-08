@@ -26,6 +26,7 @@ grep -A 2 -B 2 keyword suhua.txt
 
 ```
 grep -r -A 2 -B 2 -m 1 keyword dir1
+grep -r -A 2 -B 2 keyword dir1 | head -100
 ```
 
 ## 高级使用
