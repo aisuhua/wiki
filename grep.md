@@ -7,7 +7,7 @@
 从文件中查找
 
 ```
-grep 1 suhua.txt
+grep keyword suhua.txt
 ```
 
 遍历查找
