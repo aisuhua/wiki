@@ -247,6 +247,10 @@ cp objs/nginx /usr/sbin
 
 参考[Nginx-重新编译安装模块及平滑升级](https://www.zybuluo.com/cdmonkey/note/712348)
 
+## 日志配置
+
+- [Configuring Logging](https://docs.nginx.com/nginx/admin-guide/monitoring/logging/)
+
 ## 其他
 
 proxy_pass 不传递路径
