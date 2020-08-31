@@ -27,12 +27,14 @@ stream {
 如果需要同时需要支持 HTTP 代理，则需要添加以下配置
 
 ```nginx.conf
-server {
-  listen  80;
-  resolver  114.114.114.114;
-  
-  location ~/* {
-    proxy_pass http://$http_host$request_uri;
+http {
+  server {
+    listen  80;
+    resolver  114.114.114.114;
+
+    location ~/* {
+      proxy_pass http://$http_host$request_uri;
+    }
   }
 }
 ```
@@ -46,26 +48,28 @@ server {
 配置如下
 
 ```
-server {
-  listen  8443;
-  resolver  114.114.114.114 ipv6=off;
-  resolver_timeout 500ms;
-  
-  if ($host !~ '^(.*?\.)?(baidu\.com|google\.com)$') {
-    return 404;
-  }
-  
-  # forward proxy for CONNECT request
-  proxy_connect;
-  proxy_connect_allow            443;
-  proxy_connect_connect_timeout  10s;
-  proxy_connect_read_timeout     15s;
-  proxy_connect_send_timeout     15s;
-  
-  # forward proxy for non-CONNECT request
-  location / {
-    proxy_pass http://$host;
-    proxy_set_header Host $host;
+http {
+  server {
+    listen  8443;
+    resolver  114.114.114.114 ipv6=off;
+    resolver_timeout 500ms;
+
+    if ($host !~ '^(.*?\.)?(baidu\.com|google\.com)$') {
+      return 404;
+    }
+
+    # forward proxy for CONNECT request
+    proxy_connect;
+    proxy_connect_allow            443;
+    proxy_connect_connect_timeout  10s;
+    proxy_connect_read_timeout     15s;
+    proxy_connect_send_timeout     15s;
+
+    # forward proxy for non-CONNECT request
+    location / {
+      proxy_pass http://$host;
+      proxy_set_header Host $host;
+    }
   }
 }
 ```
