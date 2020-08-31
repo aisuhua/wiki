@@ -131,6 +131,10 @@ ss-local -c /etc/ss1.json
 
 - [ubuntu16.04 配置shadowshocks客户端开机启动](https://blog.csdn.net/H12590400327/article/details/81091306)
 
+windows终端命令行下如何使用代理？ 
+
+- [https://github.com/shadowsocks/shadowsocks-windows/issues/1489]
+
 ## 参考文献
 
 - [fq-book](https://github.com/loremwalker/fq-book)
