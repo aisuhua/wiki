@@ -29,7 +29,7 @@ stream {
 ```nginx.conf
 server {
   listen  80;
-  resolver  223.5.5.5;
+  resolver  114.114.114.114;
   
   location ~/* {
     proxy_pass http://$http_host$request_uri;
@@ -48,7 +48,7 @@ server {
 ```
 server {
   listen  8443;
-  resolver  223.5.5.5 ipv6=off;
+  resolver  114.114.114.114 ipv6=off;
   resolver_timeout 500ms;
   
   if ($host !~ '^(.*?\.)?(baidu\.com|google\.com)$') {
