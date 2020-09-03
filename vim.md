@@ -40,3 +40,10 @@ syntax on
 # 删除 10 行
 10dd 
 ```
+
+## 技巧
+
+快速排版代码
+
+- [Shifting blocks visually](https://vim.fandom.com/wiki/Shifting_blocks_visually)
+- [indenting](https://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html)
