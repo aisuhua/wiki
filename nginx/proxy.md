@@ -121,3 +121,4 @@ make install
 ## 参考
 
 - [使用 NGINX 作为 HTTPS 正向代理服务器](https://www.infoq.cn/article/TaUjWGLN6D_6Qls6yj6S)
+- [NGINX TCP Load Balancing “if” directive is NOT allowed here in “stream” context](https://serverfault.com/questions/886997/nginx-tcp-load-balancing-if-directive-is-not-allowed-here-in-stream-context)
