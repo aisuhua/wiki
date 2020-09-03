@@ -1,3 +1,16 @@
+## 安装
+
+找不到网卡接口
+
+```
+sudo dpkg-reconfigure wireshark-common
+sudo usermod -a -G wireshark suhua
+```
+
+- [Why doesn't wireshark detect my interface?](https://stackoverflow.com/questions/8255644/why-doesnt-wireshark-detect-my-interface)
+
+## 使用
+
 查询特定 IP 的网络数据
 
 ```
@@ -22,3 +35,4 @@ tcp.port == 34642
 ```
 tcp.port == 34642 || tcp.port == 1318 || ip.addr == 58.215.175.47
 ```
+
