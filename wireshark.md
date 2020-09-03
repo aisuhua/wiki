@@ -42,3 +42,8 @@ tcp.port == 34642
 tcp.port == 34642 || tcp.port == 1318 || ip.addr == 58.215.175.47
 ```
 
+## 其他
+
+查看 HTTPS 的 SNI
+
+- [HTTPS 深入浅出 - 什么是 SNI？](https://blog.csdn.net/firefile/article/details/80532161)
