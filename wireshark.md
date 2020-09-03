@@ -11,6 +11,12 @@ sudo usermod -a -G wireshark suhua
 
 ## 使用
 
+来源和目标IP
+
+```
+ip.src eq 122.51.144.50 or ip.dst eq 122.51.144.50
+```
+
 查询特定 IP 的网络数据
 
 ```
