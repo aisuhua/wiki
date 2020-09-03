@@ -47,3 +47,7 @@ syntax on
 
 - [Shifting blocks visually](https://vim.fandom.com/wiki/Shifting_blocks_visually)
 - [indenting](https://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html)
+
+## 参考
+
+- [VIM快捷键](https://www.cnblogs.com/joeblackzqq/archive/2011/04/11/2012037.html)
