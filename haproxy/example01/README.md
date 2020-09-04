@@ -75,7 +75,7 @@ tail -f /var/log/haproxy.log
 server {
 	listen 80;
 	server_name foo.com www.foo.com;
-	
+
 	index index.html index.htm;
 	root /www/web/foo.com;
 
