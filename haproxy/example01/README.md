@@ -29,8 +29,7 @@ defaults
     mode http
     option httplog
     log /dev/log local0 debug
-    
-	timeout connect 1000ms
+    timeout connect 1000ms
     timeout client 1000ms
     timeout server 1000ms
 
@@ -38,22 +37,22 @@ listen http-server
     bind :80
     mode http
 
-	acl is-foo hdr_dom(host) -i foo.com
-	acl is-bar hdr_dom(host) -i bar.com
-    
-	use_backend backend-foo if is-foo
-	use_backend backend-bar if is-bar
+    acl is-foo hdr_dom(host) -i foo.com
+    acl is-bar hdr_dom(host) -i bar.com
+
+    use_backend backend-foo if is-foo
+    use_backend backend-bar if is-bar
 
     default_backend backend-no-match
 
 backend backend-foo
-	server server1 192.168.0.10:80
+    server server1 192.168.0.10:80
 
 backend backend-bar
-	server server1 192.168.0.20:80
+    server server1 192.168.0.20:80
 
 backend backend-no-match
-  http-request deny deny_status 400
+    http-request deny deny_status 400
 ```
 
 启动 haproxy
