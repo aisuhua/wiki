@@ -146,18 +146,9 @@ curl notfound.com
 
 观察 haproxy-master、nginx-node1、nginx-node2 的日志以及页面输出，判断代理是否工作正常。
 
+## 参考
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [Web Service Fronting](https://gist.github.com/mhofman/a01df56480b3791d526b77dbebef43a2)
+- [HAProxy: Routing by domain name](https://timogin.com/haproxy-routing-by-domain-name-4e1ff877cc42)
+- [How to stop requests with empty or incorrect host header](https://blog.sleeplessbeastie.eu/2020/01/13/how-to-stop-requests-with-empty-or-incorrect-host-header/)
+- [docker设置容器固定ip](https://blog.csdn.net/wanghao_0206/article/details/79583325)
