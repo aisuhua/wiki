@@ -44,3 +44,11 @@ git config --global credential.helper store
 ```
 
 - [How to save username and password in GIT](https://stackoverflow.com/questions/35942754/how-to-save-username-and-password-in-git-gitextension)
+
+提示 warning: LF will be replaced by CRLF
+
+```
+git config --global core.autocrlf false
+```
+
+- [git如何避免”warning: LF will be replaced by CRLF“提示？](https://www.zhihu.com/question/50862500)
