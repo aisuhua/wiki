@@ -1,5 +1,12 @@
 # Docker
 
+## CheatSheet
+
+```
+# 删除没使用的卷，回收空间
+docker volume prune
+```
+
 ## Dockerfile
 
 使用代理
